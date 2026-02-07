@@ -4,7 +4,7 @@ A collection of demo landing pages showcasing different UI/UX styles for small b
 
 Each demo includes: **Navbar → Hero → About → Services → Contact → Footer**
 
-Built using the [UI/UX Pro Max](https://github.com/yojahny55/clawd/tree/main/skills/ui-ux-pro-max) skill.
+Built using the [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/) skill.
 
 ## Demos
 
