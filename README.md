@@ -10,7 +10,7 @@ Built using the [UI/UX Pro Max](https://github.com/yojahny55/clawd/tree/main/ski
 
 | # | Style | Preview | Date |
 |---|-------|---------|------|
-| 1 | Minimalism & Swiss Style | [View](demos/01-minimalism-swiss/) | Coming soon |
+| 1 | Minimalism & Swiss Style | [View](demos/01-minimalism-swiss/) | 2026-02-06 |
 | 2 | Neumorphism | [View](demos/02-neumorphism/) | Coming soon |
 | 3 | Glassmorphism | [View](demos/03-glassmorphism/) | Coming soon |
 | 4 | Brutalism | [View](demos/04-brutalism/) | Coming soon |

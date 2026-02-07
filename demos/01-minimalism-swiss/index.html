@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acme Solutions | Clarity Through Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="#" class="logo" aria-label="Acme Solutions home">ACME</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="container hero-content">
+            <h1>Less is More</h1>
+            <p class="hero-tagline">We distill complexity into clarity. Strategic solutions that speak for themselves.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container grid-2">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Acme Solutions was founded on a simple principle: the best solutions are the ones you don't notice. We eliminate noise and focus on what matters—delivering results that stand the test of time.</p>
+                <p>Our approach combines Swiss precision with modern innovation. No unnecessary features. No distractions. Just clean, functional excellence.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Retention</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <span class="service-number">01</span>
+                    <h3>Strategy</h3>
+                    <p>Clear roadmaps that cut through ambiguity. We define objectives and remove obstacles.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-number">02</span>
+                    <h3>Design</h3>
+                    <p>Functional aesthetics rooted in grid systems and typographic hierarchy. Form follows function.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-number">03</span>
+                    <h3>Development</h3>
+                    <p>Clean code, efficient systems. We build solutions that scale without accumulating debt.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-number">04</span>
+                    <h3>Consulting</h3>
+                    <p>Expert guidance for organizations seeking clarity. We simplify the complex.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2>Client Voices</h2>
+            <div class="testimonials-grid">
+                <blockquote class="testimonial">
+                    <p>"They stripped away everything we didn't need and revealed what we actually wanted. The result speaks for itself."</p>
+                    <cite>
+                        <strong>Sarah Chen</strong>
+                        <span>CEO, Minimal Co.</span>
+                    </cite>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>"No jargon, no fluff. Just clear thinking and precise execution. Exactly what we needed."</p>
+                    <cite>
+                        <strong>Marcus Lindberg</strong>
+                        <span>Director, Nordic Systems</span>
+                    </cite>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>"Their Swiss approach to problem-solving transformed our operations. Elegantly simple."</p>
+                    <cite>
+                        <strong>Elena Vasquez</strong>
+                        <span>COO, Precision Labs</span>
+                    </cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container grid-2">
+            <div class="contact-text">
+                <h2>Let's Talk</h2>
+                <p>Ready to simplify? We're here to help you cut through the noise and find clarity.</p>
+                <address>
+                    <p>hello@acmesolutions.com</p>
+                    <p>+1 (555) 000-0000</p>
+                </address>
+            </div>
+            <form class="contact-form" aria-label="Contact form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; 2026 Acme Solutions. All rights reserved.</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
