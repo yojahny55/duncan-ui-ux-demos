@@ -1,10 +1,10 @@
 {
-  "nextIndex": 3,
+  "nextIndex": 4,
   "totalStyles": 54,
   "styles": [
     {"id": 1, "name": "Minimalism & Swiss Style", "slug": "01-minimalism-swiss", "status": "done", "date": "2026-02-06"},
     {"id": 2, "name": "Neumorphism", "slug": "02-neumorphism", "status": "done", "date": "2026-02-07"},
-    {"id": 3, "name": "Glassmorphism", "slug": "03-glassmorphism", "status": "pending"},
+    {"id": 3, "name": "Glassmorphism", "slug": "03-glassmorphism", "status": "done", "date": "2026-02-07"},
     {"id": 4, "name": "Brutalism", "slug": "04-brutalism", "status": "pending"},
     {"id": 5, "name": "3D & Hyperrealism", "slug": "05-3d-hyperrealism", "status": "pending"},
     {"id": 6, "name": "Vibrant & Block-based", "slug": "06-vibrant-block", "status": "pending"},

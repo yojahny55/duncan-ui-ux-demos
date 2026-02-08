@@ -12,7 +12,7 @@ Built using the [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-ma
 |---|-------|---------|------|
 | 1 | Minimalism & Swiss Style | [View](demos/01-minimalism-swiss/) | 2026-02-06 |
 | 2 | Neumorphism | [View](demos/02-neumorphism/) | 2026-02-07 |
-| 3 | Glassmorphism | [View](demos/03-glassmorphism/) | Coming soon |
+| 3 | Glassmorphism | [View](demos/03-glassmorphism/) | 2026-02-07 |
 | 4 | Brutalism | [View](demos/04-brutalism/) | Coming soon |
 | 5 | 3D & Hyperrealism | [View](demos/05-3d-hyperrealism/) | Coming soon |
 | 6 | Vibrant & Block-based | [View](demos/06-vibrant-block/) | Coming soon |
