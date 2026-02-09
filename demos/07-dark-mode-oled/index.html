@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightShift Studio - Dark Mode OLED Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i data-lucide="moon" class="logo-icon"></i>
+                <span>NightShift</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cta">
+                <i data-lucide="zap"></i>
+                Get Started
+            </button>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i data-lucide="sparkles"></i>
+                <span>OLED Optimized Experience</span>
+            </div>
+            <h1>Design That <span class="gradient-text">Shines</span> in the Dark</h1>
+            <p>Premium dark-mode interfaces crafted for eye comfort, battery efficiency, and stunning visual impact on OLED displays.</p>
+            <div class="hero-actions">
+                <button class="btn btn-primary">
+                    <i data-lucide="play"></i>
+                    Watch Demo
+                </button>
+                <button class="btn btn-outline">
+                    <i data-lucide="download"></i>
+                    Download Kit
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <i data-lucide="battery-charging" class="stat-icon"></i>
+                    <span class="stat-value">40%</span>
+                    <span class="stat-label">Battery Saved</span>
+                </div>
+                <div class="stat">
+                    <i data-lucide="eye" class="stat-icon"></i>
+                    <span class="stat-value">85%</span>
+                    <span class="stat-label">Less Eye Strain</span>
+                </div>
+                <div class="stat">
+                    <i data-lucide="users" class="stat-icon"></i>
+                    <span class="stat-value">12K+</span>
+                    <span class="stat-label">Happy Users</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="device-mockup">
+                <div class="device-screen">
+                    <div class="mockup-header">
+                        <span class="mockup-dot"></span>
+                        <span class="mockup-dot"></span>
+                        <span class="mockup-dot"></span>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-sidebar"></div>
+                        <div class="mockup-main">
+                            <div class="mockup-card"></div>
+                            <div class="mockup-card"></div>
+                            <div class="mockup-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="info"></i>
+                    About Us
+                </span>
+                <h2>Built for the <span class="accent-blue">Night Owls</span></h2>
+                <p>We specialize in creating interfaces that look stunning on OLED displays while reducing eye strain and saving battery.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon icon-green">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>True Black</h3>
+                    <p>Pure #000000 black backgrounds mean pixels actually turn off on OLED screens, saving power and creating infinite contrast.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon icon-blue">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Neon Accents</h3>
+                    <p>Vibrant accent colors pop against deep blacks, creating visual hierarchy without relying on brightness.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon icon-purple">
+                        <i data-lucide="accessibility"></i>
+                    </div>
+                    <h3>WCAG AAA</h3>
+                    <p>High contrast ratios ensure readability for everyone, meeting the strictest accessibility standards.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon icon-gold">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <h3>Night Friendly</h3>
+                    <p>Designed for low-light environments without causing eye fatigue during extended use sessions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="briefcase"></i>
+                    Services
+                </span>
+                <h2>What We <span class="accent-green">Offer</span></h2>
+                <p>Comprehensive dark mode design solutions for modern applications.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3>Mobile App Design</h3>
+                    <p>Native iOS and Android dark mode interfaces optimized for OLED displays.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> System dark mode integration</li>
+                        <li><i data-lucide="check"></i> Battery optimization</li>
+                        <li><i data-lucide="check"></i> Adaptive brightness</li>
+                    </ul>
+                    <span class="service-price">From $2,500</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="monitor"></i>
+                    </div>
+                    <h3>Web Applications</h3>
+                    <p>Dark-first web apps with automatic theme switching and smooth transitions.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> CSS custom properties</li>
+                        <li><i data-lucide="check"></i> Prefers-color-scheme</li>
+                        <li><i data-lucide="check"></i> Zero flash on load</li>
+                    </ul>
+                    <span class="service-price">From $3,000</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3>Design Systems</h3>
+                    <p>Complete dark mode design systems with tokens, components, and guidelines.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Color token systems</li>
+                        <li><i data-lucide="check"></i> Component library</li>
+                        <li><i data-lucide="check"></i> Documentation</li>
+                    </ul>
+                    <span class="service-price">From $5,000</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3>Theme Migration</h3>
+                    <p>Convert existing light-mode applications to premium dark experiences.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Color analysis</li>
+                        <li><i data-lucide="check"></i> Contrast auditing</li>
+                        <li><i data-lucide="check"></i> Gradual rollout</li>
+                    </ul>
+                    <span class="service-price">From $1,800</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="message-square"></i>
+                    Testimonials
+                </span>
+                <h2>Loved by <span class="accent-purple">Night Coders</span></h2>
+                <p>What our clients say about our dark mode designs.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p>"Finally, a design that doesn't burn my eyes at 2am. The OLED optimization is real—my phone battery thanks me."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Chen</span>
+                            <span class="author-role">Senior Developer, TechFlow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card highlight">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p>"We switched our entire platform to their dark mode system. User engagement increased 23% during evening hours."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Marcus Johnson</span>
+                            <span class="author-role">Product Lead, NightOwl</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p>"The attention to contrast ratios and accessibility was impressive. Our app now passes WCAG AAA easily."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Emma Rodriguez</span>
+                            <span class="author-role">UX Director, Accessible.io</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">
+                        <i data-lucide="mail"></i>
+                        Contact
+                    </span>
+                    <h2>Ready to Go <span class="accent-gold">Dark</span>?</h2>
+                    <p>Let's discuss how we can transform your application with a stunning dark mode experience.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>hello@nightshift.studio</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="github"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="dribbble"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">
+                            <i data-lucide="user"></i>
+                            Name
+                        </label>
+                        <input type="text" id="name" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            <i data-lucide="mail"></i>
+                            Email
+                        </label>
+                        <input type="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="project">
+                            <i data-lucide="folder"></i>
+                            Project Type
+                        </label>
+                        <select id="project">
+                            <option value="">Select a service</option>
+                            <option value="mobile">Mobile App Design</option>
+                            <option value="web">Web Application</option>
+                            <option value="system">Design System</option>
+                            <option value="migration">Theme Migration</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">
+                            <i data-lucide="message-square"></i>
+                            Message
+                        </label>
+                        <textarea id="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i data-lucide="send"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <i data-lucide="moon"></i>
+                        <span>NightShift</span>
+                    </a>
+                    <p>Premium dark mode design studio crafting interfaces for the modern OLED era.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Mobile Design</a></li>
+                        <li><a href="#">Web Applications</a></li>
+                        <li><a href="#">Design Systems</a></li>
+                        <li><a href="#">Theme Migration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Color Guide</a></li>
+                        <li><a href="#">OLED Best Practices</a></li>
+                        <li><a href="#">Accessibility Tips</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NightShift Studio. All rights reserved.</p>
+                <p class="footer-meta">
+                    <i data-lucide="code"></i>
+                    Dark Mode (OLED) UI Demo by Duncan
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
