@@ -19,8 +19,9 @@
         mobileMenuBtn.addEventListener('click', function() {
             navbar.classList.toggle('menu-open');
             const isOpen = navbar.classList.contains('menu-open');
-            mobileMenuBtn.textContent = isOpen ? '✕' : '☰';
+            mobileMenuBtn.innerHTML = isOpen ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
             mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+            lucide.createIcons();
         });
     }
 
@@ -29,7 +30,8 @@
     navLinks.forEach(function(link) {
         link.addEventListener('click', function() {
             navbar.classList.remove('menu-open');
-            mobileMenuBtn.textContent = '☰';
+            mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
+            lucide.createIcons();
         });
     });
 

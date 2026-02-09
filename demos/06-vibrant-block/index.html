@@ -35,7 +35,7 @@
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero-content">
-      <div class="hero-tag">🚀 Welcome to the Future</div>
+      <div class="hero-tag"><i data-lucide="rocket" class="inline-icon"></i> Welcome to the Future</div>
       <h1 class="hero-title">
         <span class="block block-cyan">Bold Ideas.</span>
         <span class="block block-pink">Big Impact.</span>
@@ -92,38 +92,38 @@
       </div>
       <div class="services-grid">
         <article class="service-card">
-          <div class="service-icon">🎨</div>
+          <div class="service-icon"><i data-lucide="palette"></i></div>
           <h3>Brand Identity</h3>
           <p>Logos, color systems, and visual languages that make your brand unforgettable.</p>
           <a href="#" class="service-link">Learn More →</a>
         </article>
         <article class="service-card featured">
           <div class="service-badge">Popular</div>
-          <div class="service-icon">💻</div>
+          <div class="service-icon"><i data-lucide="monitor"></i></div>
           <h3>Web Design</h3>
           <p>Stunning websites that convert visitors into customers with bold, energetic designs.</p>
           <a href="#" class="service-link">Learn More →</a>
         </article>
         <article class="service-card">
-          <div class="service-icon">📱</div>
+          <div class="service-icon"><i data-lucide="smartphone"></i></div>
           <h3>Mobile Apps</h3>
           <p>iOS and Android experiences that users can't put down. Vibrant and engaging.</p>
           <a href="#" class="service-link">Learn More →</a>
         </article>
         <article class="service-card">
-          <div class="service-icon">🎬</div>
+          <div class="service-icon"><i data-lucide="clapperboard"></i></div>
           <h3>Motion Design</h3>
           <p>Animations and videos that bring your brand to life with energy and style.</p>
           <a href="#" class="service-link">Learn More →</a>
         </article>
         <article class="service-card">
-          <div class="service-icon">📊</div>
+          <div class="service-icon"><i data-lucide="bar-chart-2"></i></div>
           <h3>UI/UX Design</h3>
           <p>User interfaces that look amazing and feel intuitive. Form meets function.</p>
           <a href="#" class="service-link">Learn More →</a>
         </article>
         <article class="service-card">
-          <div class="service-icon">🚀</div>
+          <div class="service-icon"><i data-lucide="rocket"></i></div>
           <h3>Growth Strategy</h3>
           <p>Marketing and growth tactics that amplify your brand's reach exponentially.</p>
           <a href="#" class="service-link">Learn More →</a>
@@ -141,7 +141,7 @@
       </div>
       <div class="testimonials-grid">
         <blockquote class="testimonial-card">
-          <div class="testimonial-rating">★★★★★</div>
+          <div class="testimonial-rating"><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i></div>
           <p class="testimonial-text">"They transformed our brand from boring to bold. Our engagement increased 300% after the redesign. Absolutely incredible work!"</p>
           <div class="testimonial-author">
             <div class="author-avatar" style="background: var(--neon-green);">SK</div>
@@ -152,7 +152,7 @@
           </div>
         </blockquote>
         <blockquote class="testimonial-card">
-          <div class="testimonial-rating">★★★★★</div>
+          <div class="testimonial-rating"><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i></div>
           <p class="testimonial-text">"The energy they brought to our project was infectious. Every meeting was exciting, and the final product exceeded expectations."</p>
           <div class="testimonial-author">
             <div class="author-avatar" style="background: var(--electric-purple);">MR</div>
@@ -163,7 +163,7 @@
           </div>
         </blockquote>
         <blockquote class="testimonial-card">
-          <div class="testimonial-rating">★★★★★</div>
+          <div class="testimonial-rating"><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i></div>
           <p class="testimonial-text">"Our users LOVE the new design. It's bold, it's fun, and it's unmistakably us. Best investment we've made."</p>
           <div class="testimonial-author">
             <div class="author-avatar" style="background: var(--vivid-pink);">JT</div>
@@ -186,15 +186,15 @@
           <p class="contact-subtitle">Ready to stand out? Let's talk about your next project.</p>
           <div class="contact-details">
             <div class="contact-item">
-              <span class="contact-icon">📧</span>
+              <span class="contact-icon"><i data-lucide="mail"></i></span>
               <span>hello@vibrant.design</span>
             </div>
             <div class="contact-item">
-              <span class="contact-icon">📍</span>
+              <span class="contact-icon"><i data-lucide="map-pin"></i></span>
               <span>New York • London • Tokyo</span>
             </div>
             <div class="contact-item">
-              <span class="contact-icon">⏰</span>
+              <span class="contact-icon"><i data-lucide="clock"></i></span>
               <span>Response within 24 hours</span>
             </div>
           </div>
@@ -222,7 +222,7 @@
             <label for="message">Tell Us More</label>
             <textarea id="message" name="message" rows="4" placeholder="Describe your project..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Message 🚀</button>
+          <button type="submit" class="btn btn-primary btn-full">Send Message <i data-lucide="rocket" class="inline-icon"></i></button>
         </form>
       </div>
     </div>
@@ -276,6 +276,8 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script src="app.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
