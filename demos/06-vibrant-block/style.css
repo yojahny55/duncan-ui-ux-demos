@@ -196,16 +196,40 @@ body {
 }
 
 /* ========================================
-   Hero Section
+   Hero Section - Full Viewport Neon Impact
    ======================================== */
 .hero {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: calc(var(--section-padding) + 80px) 2rem var(--section-padding);
   position: relative;
   overflow: hidden;
   scroll-snap-align: start;
+  /* Dynamic gradient background */
+  background: 
+    radial-gradient(ellipse at 0% 0%, rgba(57, 255, 20, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(191, 0, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 20, 147, 0.1) 0%, transparent 60%),
+    var(--dark);
+}
+
+/* Animated neon grid lines */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(57, 255, 20, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 20, 0.1) 1px, transparent 1px);
+  background-size: 100px 100px;
+  animation: gridPulse 4s ease-in-out infinite;
+}
+
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
 }
 
 .hero-content {
@@ -216,31 +240,35 @@ body {
 }
 
 .hero-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background: rgba(57, 255, 20, 0.15);
-  border: 2px solid var(--neon-green);
-  padding: 0.5rem 1.5rem;
+  border: 3px solid var(--neon-green);
+  padding: 0.75rem 2rem;
   font-size: var(--text-sm);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 2.5rem;
   animation: fadeInUp 0.8s ease;
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.3);
 }
 
 .hero-title {
-  font-size: var(--text-xl);
+  font-size: clamp(3rem, 10vw, 7rem);
   font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 2rem;
+  line-height: 1.05;
+  margin-bottom: 2.5rem;
 }
 
 .hero-title .block {
   display: block;
-  padding: 0.25rem 1rem;
-  margin-bottom: 0.5rem;
+  padding: 0.3rem 1.5rem;
+  margin-bottom: 0.75rem;
   width: fit-content;
   animation: slideIn 0.8s ease backwards;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .hero-title .block:nth-child(1) { animation-delay: 0.2s; }
@@ -264,10 +292,11 @@ body {
 
 .hero-subtitle {
   font-size: var(--text-md);
-  color: var(--grey);
-  max-width: 600px;
+  color: var(--light);
+  max-width: 650px;
   margin-bottom: 3rem;
   animation: fadeInUp 0.8s ease 0.8s backwards;
+  line-height: 1.7;
 }
 
 .hero-ctas {
@@ -320,7 +349,7 @@ body {
   width: 100%;
 }
 
-/* Hero Shapes */
+/* Hero Shapes - Bold Neon Blocks */
 .hero-shapes {
   position: absolute;
   top: 0;
@@ -333,47 +362,52 @@ body {
 .shape {
   position: absolute;
   animation: float 6s ease-in-out infinite;
+  box-shadow: 0 0 60px currentColor;
 }
 
 .shape-1 {
-  top: 20%;
-  right: 10%;
-  width: 200px;
-  height: 200px;
+  top: 15%;
+  right: 8%;
+  width: 250px;
+  height: 250px;
   background: var(--vivid-pink);
+  color: var(--vivid-pink);
   animation-delay: 0s;
 }
 
 .shape-2 {
-  top: 50%;
-  right: 30%;
-  width: 150px;
-  height: 150px;
+  top: 45%;
+  right: 25%;
+  width: 180px;
+  height: 180px;
   background: var(--electric-purple);
+  color: var(--electric-purple);
   animation-delay: 1s;
 }
 
 .shape-3 {
-  top: 70%;
-  right: 15%;
-  width: 100px;
-  height: 100px;
+  top: 65%;
+  right: 10%;
+  width: 140px;
+  height: 140px;
   background: var(--bright-cyan);
+  color: var(--bright-cyan);
   animation-delay: 2s;
 }
 
 .shape-4 {
-  top: 35%;
-  right: 5%;
-  width: 80px;
-  height: 80px;
+  top: 30%;
+  right: 3%;
+  width: 100px;
+  height: 100px;
   background: var(--sunburst);
+  color: var(--sunburst);
   animation-delay: 3s;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-30px) rotate(10deg); }
+  50% { transform: translateY(-40px) rotate(15deg); }
 }
 
 @keyframes slideIn {

@@ -247,36 +247,77 @@ body {
     transition: var(--transition-fast);
 }
 
-/* === Hero Section === */
+/* === Hero Section - Full Viewport Glassmorphism === */
 .hero {
     min-height: 100vh;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: calc(80px + var(--spacing-xl)) var(--spacing-lg) var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+    /* Vibrant gradient background - full viewport */
+    background: linear-gradient(135deg, 
+        #1a0a2e 0%, 
+        #16213e 25%, 
+        #0f3460 50%, 
+        #1a1a3e 75%, 
+        #1a0a2e 100%);
+}
+
+/* Hero background layer to ensure orbs render behind */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 30%, rgba(0, 128, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 60%, rgba(139, 0, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(255, 20, 147, 0.1) 0%, transparent 40%);
+    pointer-events: none;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     text-align: center;
-    padding: var(--spacing-2xl);
+    position: relative;
+    z-index: 10;
+    padding: var(--spacing-xl);
 }
 
 .hero-tag {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
     padding: var(--spacing-xs) var(--spacing-md);
     background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-full);
     font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    animation: fadeInDown 0.8s ease;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(3rem, 8vw, 5rem);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: var(--spacing-md);
+    animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .gradient-text {
@@ -284,13 +325,15 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 80px rgba(0, 128, 255, 0.5);
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto var(--spacing-lg);
+    animation: fadeInUp 0.8s ease 0.4s backwards;
 }
 
 .hero-buttons {
@@ -299,6 +342,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: var(--spacing-xl);
+    animation: fadeInUp 0.8s ease 0.6s backwards;
 }
 
 /* Buttons */
@@ -351,12 +395,14 @@ body {
     transform: translateX(5px);
 }
 
-/* Hero Stats */
+/* Hero Stats - Glass Card */
 .hero-stats {
     display: flex;
     justify-content: center;
     gap: var(--spacing-xl);
     flex-wrap: wrap;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    animation: fadeInUp 0.8s ease 0.8s backwards;
 }
 
 .stat {
@@ -365,7 +411,7 @@ body {
 
 .stat-number {
     display: block;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     background: var(--accent-gradient);
     -webkit-background-clip: text;
@@ -375,7 +421,53 @@ body {
 
 .stat-label {
     font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Scroll Indicator */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
     color: var(--text-muted);
+    font-size: 0.8rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.scroll-arrow {
+    width: 24px;
+    height: 40px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    position: relative;
+}
+
+.scroll-arrow::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background: var(--bg-gradient-1);
+    border-radius: 2px;
+    animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+    0%, 100% { top: 8px; opacity: 1; }
+    50% { top: 20px; opacity: 0.5; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
 }
 
 /* === Container === */

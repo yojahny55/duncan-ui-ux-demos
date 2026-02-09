@@ -204,13 +204,56 @@ p {
 }
 
 /* ==========================================
-   HERO SECTION
+   HERO SECTION - Full Viewport Soft Landing
    ========================================== */
 .hero {
     min-height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
-    padding: 120px 0 80px;
+    justify-content: center;
+    padding: 120px 24px 80px;
+    position: relative;
+    overflow: hidden;
+    /* Soft radial gradient background for depth */
+    background: radial-gradient(ellipse at 30% 20%, var(--accent-blue) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, var(--accent-pink) 0%, transparent 50%),
+                var(--bg-primary);
+}
+
+/* Subtle floating circles for visual interest */
+.hero::before,
+.hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: floatSoft 8s ease-in-out infinite;
+}
+
+.hero::before {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+    background: var(--bg-primary);
+    box-shadow: var(--neu-raised);
+    animation-delay: 0s;
+}
+
+.hero::after {
+    width: 300px;
+    height: 300px;
+    bottom: -80px;
+    left: -80px;
+    background: var(--bg-primary);
+    box-shadow: var(--neu-raised);
+    animation-delay: -4s;
+}
+
+@keyframes floatSoft {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.02); }
 }
 
 .hero-content {
@@ -218,11 +261,15 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    max-width: 1200px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text h1 {
     margin-bottom: 24px;
     line-height: 1.2;
+    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .hero-text p {

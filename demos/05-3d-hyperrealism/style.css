@@ -247,16 +247,23 @@ h1, h2, h3, h4 {
 }
 
 /* ======================================
-   HERO SECTION
+   HERO SECTION - Immersive Full-Viewport
    ====================================== */
 .hero {
     min-height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
     background: var(--gradient-depth);
+    /* Extra depth with multiple gradient layers */
+    background: 
+        radial-gradient(ellipse at 20% 20%, rgba(255, 215, 0, 0.08) 0%, transparent 40%),
+        radial-gradient(ellipse at 80% 80%, rgba(34, 139, 34, 0.06) 0%, transparent 40%),
+        radial-gradient(ellipse at 50% 50%, rgba(128, 0, 32, 0.05) 0%, transparent 50%),
+        var(--gradient-depth);
 }
 
 /* Parallax Layers */
