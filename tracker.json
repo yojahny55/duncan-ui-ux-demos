@@ -1,5 +1,5 @@
 {
-  "nextIndex": 6,
+  "nextIndex": 7,
   "totalStyles": 54,
   "styles": [
     {"id": 1, "name": "Minimalism & Swiss Style", "slug": "01-minimalism-swiss", "status": "done", "date": "2026-02-06"},
@@ -7,7 +7,7 @@
     {"id": 3, "name": "Glassmorphism", "slug": "03-glassmorphism", "status": "done", "date": "2026-02-07"},
     {"id": 4, "name": "Brutalism", "slug": "04-brutalism", "status": "done", "date": "2026-02-08"},
     {"id": 5, "name": "3D & Hyperrealism", "slug": "05-3d-hyperrealism", "status": "done", "date": "2026-02-08"},
-    {"id": 6, "name": "Vibrant & Block-based", "slug": "06-vibrant-block", "status": "pending"},
+    {"id": 6, "name": "Vibrant & Block-based", "slug": "06-vibrant-block", "status": "done", "date": "2026-02-09"},
     {"id": 7, "name": "Dark Mode (OLED)", "slug": "07-dark-mode-oled", "status": "pending"},
     {"id": 8, "name": "Accessible & Ethical", "slug": "08-accessible-ethical", "status": "pending"},
     {"id": 9, "name": "Claymorphism", "slug": "09-claymorphism", "status": "pending"},
