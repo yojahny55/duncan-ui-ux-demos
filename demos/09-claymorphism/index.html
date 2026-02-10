@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claymorphism - Duncan UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="puzzle"></i>
+                </div>
+                <span>Clayworks</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cta clay-btn clay-btn-primary">
+                <i data-lucide="rocket"></i>
+                Get Started
+            </button>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge clay-badge">
+                    <i data-lucide="sparkles"></i>
+                    <span>New & Playful</span>
+                </div>
+                <h1>Design That <span class="highlight">Feels</span> as Good as It Looks</h1>
+                <p>Create delightful digital experiences with soft, touchable interfaces that users love to interact with.</p>
+                <div class="hero-buttons">
+                    <button class="clay-btn clay-btn-primary clay-btn-lg">
+                        <i data-lucide="play"></i>
+                        Watch Demo
+                    </button>
+                    <button class="clay-btn clay-btn-secondary clay-btn-lg">
+                        <i data-lucide="book-open"></i>
+                        Learn More
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon clay-icon-box">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Happy Users</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon clay-icon-box">
+                            <i data-lucide="star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">User Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="clay-card hero-card main-card">
+                    <div class="card-header">
+                        <div class="avatar-group">
+                            <div class="avatar clay-avatar" style="background: #FDBCB4;">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="avatar clay-avatar" style="background: #ADD8E6;">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="avatar clay-avatar" style="background: #98FF98;">
+                                <i data-lucide="user"></i>
+                            </div>
+                        </div>
+                        <span class="card-tag">Team</span>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-label">Project Progress</div>
+                        <div class="clay-progress">
+                            <div class="clay-progress-bar" style="width: 75%;"></div>
+                        </div>
+                        <span class="progress-text">75% Complete</span>
+                    </div>
+                </div>
+                <div class="clay-card hero-card floating-card-1">
+                    <i data-lucide="check-circle"></i>
+                    <span>Task Done!</span>
+                </div>
+                <div class="clay-card hero-card floating-card-2">
+                    <i data-lucide="bell"></i>
+                    <span>3 Updates</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="clay-badge">
+                    <i data-lucide="info"></i>
+                    <span>About Us</span>
+                </div>
+                <h2>We Make Digital <span class="highlight">Feel Human</span></h2>
+                <p>Our approach combines playful aesthetics with intuitive functionality.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="clay-card about-card">
+                        <div class="about-icon clay-icon-box clay-icon-lg" style="background: #FDBCB4;">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <h3>Crafted with Care</h3>
+                        <p>Every pixel is placed with purpose, every interaction designed to delight. We obsess over the details so you don't have to.</p>
+                    </div>
+                    <div class="clay-card about-card">
+                        <div class="about-icon clay-icon-box clay-icon-lg" style="background: #ADD8E6;">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>Lightning Fast</h3>
+                        <p>Beautiful doesn't mean slow. Our designs are optimized for performance without sacrificing that soft, tactile feel.</p>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="clay-card about-feature-card">
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="clay-checkbox checked">
+                                    <i data-lucide="check"></i>
+                                </div>
+                                <span>Soft, touchable interfaces</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="clay-checkbox checked">
+                                    <i data-lucide="check"></i>
+                                </div>
+                                <span>Playful micro-interactions</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="clay-checkbox checked">
+                                    <i data-lucide="check"></i>
+                                </div>
+                                <span>Accessible by design</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="clay-checkbox">
+                                    <i data-lucide="check"></i>
+                                </div>
+                                <span>Mobile-first approach</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="clay-badge">
+                    <i data-lucide="briefcase"></i>
+                    <span>Services</span>
+                </div>
+                <h2>What We <span class="highlight">Create</span></h2>
+                <p>From concept to launch, we bring your ideas to life with style.</p>
+            </div>
+            <div class="services-grid">
+                <div class="clay-card service-card">
+                    <div class="service-icon clay-icon-box clay-icon-xl" style="background: #FDBCB4;">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful, intuitive interfaces that users actually enjoy using. We make complex simple.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="clay-card service-card">
+                    <div class="service-icon clay-icon-box clay-icon-xl" style="background: #ADD8E6;">
+                        <i data-lucide="code"></i>
+                    </div>
+                    <h3>Development</h3>
+                    <p>Clean, scalable code that brings designs to life. Fast performance guaranteed.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="clay-card service-card">
+                    <div class="service-icon clay-icon-box clay-icon-xl" style="background: #98FF98;">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native-feeling apps for iOS and Android that your users will love.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="clay-card service-card">
+                    <div class="service-icon clay-icon-box clay-icon-xl" style="background: #E6E6FA;">
+                        <i data-lucide="megaphone"></i>
+                    </div>
+                    <h3>Brand Identity</h3>
+                    <p>Memorable branding that tells your story and connects with your audience.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="clay-badge">
+                    <i data-lucide="message-circle"></i>
+                    <span>Testimonials</span>
+                </div>
+                <h2>What People <span class="highlight">Say</span></h2>
+                <p>Don't just take our word for it — hear from our happy clients.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="clay-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="clay-avatar testimonial-avatar" style="background: #FDBCB4;">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Chen</h4>
+                            <span>CEO, TechStart</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p>"The team transformed our app into something our users genuinely love. The soft, playful design makes complex tasks feel easy."</p>
+                </div>
+                <div class="clay-card testimonial-card featured">
+                    <div class="testimonial-header">
+                        <div class="clay-avatar testimonial-avatar" style="background: #ADD8E6;">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Marcus Johnson</h4>
+                            <span>Founder, EduPlay</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p>"Working with Clayworks was a game-changer. They understood our vision for a kid-friendly learning platform and delivered beyond expectations."</p>
+                </div>
+                <div class="clay-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="clay-avatar testimonial-avatar" style="background: #98FF98;">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Emily Torres</h4>
+                            <span>Product Lead, Wellness+</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p>"The claymorphism style perfectly captures the calming, approachable vibe we wanted. Our engagement metrics went through the roof!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-content">
+                    <div class="clay-badge">
+                        <i data-lucide="mail"></i>
+                        <span>Contact</span>
+                    </div>
+                    <h2>Let's Create Something <span class="highlight">Fun</span></h2>
+                    <p>Ready to bring your ideas to life with a touch of playfulness? We'd love to hear from you.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="clay-icon-box" style="background: #FDBCB4;">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">hello@clayworks.io</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="clay-icon-box" style="background: #ADD8E6;">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+1 (555) 123-4567</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="clay-icon-box" style="background: #98FF98;">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">San Francisco, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="clay-card contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <div class="clay-input-wrapper">
+                                <i data-lucide="user"></i>
+                                <input type="text" id="name" class="clay-input" placeholder="John Doe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="clay-input-wrapper">
+                                <i data-lucide="mail"></i>
+                                <input type="email" id="email" class="clay-input" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <div class="clay-input-wrapper textarea-wrapper">
+                                <i data-lucide="message-square"></i>
+                                <textarea id="message" class="clay-input clay-textarea" placeholder="Tell us about your project..."></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="clay-btn clay-btn-primary clay-btn-full">
+                            <i data-lucide="send"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i data-lucide="puzzle"></i>
+                        </div>
+                        <span>Clayworks</span>
+                    </a>
+                    <p>Making digital experiences feel delightfully human.</p>
+                    <div class="social-links">
+                        <a href="#" class="clay-icon-box social-icon">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="clay-icon-box social-icon">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="clay-icon-box social-icon">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="#" class="clay-icon-box social-icon">
+                            <i data-lucide="dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">Branding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Clayworks. All rights reserved.</p>
+                <p class="demo-credit">A <strong>Claymorphism</strong> Demo by Duncan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
