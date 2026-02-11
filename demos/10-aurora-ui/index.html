@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora UI Demo | Duncan's UI/UX Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Animated Aurora Background -->
+    <div class="aurora-background">
+        <div class="aurora-layer aurora-1"></div>
+        <div class="aurora-layer aurora-2"></div>
+        <div class="aurora-layer aurora-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i data-lucide="sparkles"></i>
+                <span>Aurora</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i data-lucide="zap"></i>
+                <span>Experience the Light</span>
+            </div>
+            <h1 class="hero-title">Where <span class="gradient-text">Colors</span> Dance Like Northern Lights</h1>
+            <p class="hero-subtitle">Immerse yourself in a visual symphony of flowing gradients, luminous effects, and atmospheric design that transforms digital experiences into breathtaking journeys.</p>
+            <div class="hero-actions">
+                <a href="#services" class="btn btn-primary">
+                    <i data-lucide="play"></i>
+                    <span>Explore Now</span>
+                </a>
+                <a href="#about" class="btn btn-glass">
+                    <i data-lucide="info"></i>
+                    <span>Learn More</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">∞</span>
+                    <span class="stat-label">Color Blends</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">8s</span>
+                    <span class="stat-label">Animation Loop</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Mesmerizing</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="aurora-orb">
+                <div class="orb-ring orb-ring-1"></div>
+                <div class="orb-ring orb-ring-2"></div>
+                <div class="orb-ring orb-ring-3"></div>
+                <div class="orb-core">
+                    <i data-lucide="sun"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <div class="about-content">
+                <span class="section-tag">
+                    <i data-lucide="palette"></i>
+                    About Aurora UI
+                </span>
+                <h2 class="section-title">Design Inspired by <span class="gradient-text">Nature's Light Show</span></h2>
+                <p class="section-description">Aurora UI captures the ethereal beauty of the Northern Lights, translating cosmic phenomena into digital interfaces. Our design philosophy centers on fluid motion, luminous gradients, and atmospheric depth that makes users feel immersed in a living canvas.</p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i data-lucide="blend"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Mesh Gradients</h4>
+                            <p>Multi-point color blending creates organic, flowing transitions</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i data-lucide="waves"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Fluid Animation</h4>
+                            <p>Smooth 8-12s loops that breathe life into static interfaces</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i data-lucide="layers"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Depth Layering</h4>
+                            <p>Stacked translucent layers create immersive dimensional depth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="visual-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="visual-preview">
+                            <div class="preview-orbs">
+                                <div class="mini-orb orb-blue"></div>
+                                <div class="mini-orb orb-purple"></div>
+                                <div class="mini-orb orb-pink"></div>
+                                <div class="mini-orb orb-cyan"></div>
+                            </div>
+                        </div>
+                        <div class="card-stats">
+                            <div class="card-stat">
+                                <i data-lucide="eye"></i>
+                                <span>Visually Stunning</span>
+                            </div>
+                            <div class="card-stat">
+                                <i data-lucide="heart"></i>
+                                <span>User-Loved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="star"></i>
+                    Our Services
+                </span>
+                <h2 class="section-title">Luminous <span class="gradient-text">Solutions</span></h2>
+                <p class="section-subtitle">Transform your digital presence with our aurora-inspired design services</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3>UI Design</h3>
+                    <p>Stunning interfaces with flowing gradients and atmospheric effects that captivate users from first glance.</p>
+                    <a href="#contact" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-glow"></div>
+                    <div class="featured-badge">
+                        <i data-lucide="crown"></i>
+                        <span>Popular</span>
+                    </div>
+                    <div class="service-icon">
+                        <i data-lucide="wand-2"></i>
+                    </div>
+                    <h3>Brand Identity</h3>
+                    <p>Complete visual systems with luminous color palettes, gradient assets, and cohesive design language.</p>
+                    <a href="#contact" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3>App Design</h3>
+                    <p>Mobile experiences that shimmer with life, using optimized animations for smooth performance.</p>
+                    <a href="#contact" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>High-performance websites with GPU-accelerated animations and silky-smooth gradient transitions.</p>
+                    <a href="#contact" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">
+                        <i data-lucide="video"></i>
+                    </div>
+                    <h3>Motion Design</h3>
+                    <p>Animated graphics and video intros featuring mesmerizing aurora effects and color flows.</p>
+                    <a href="#contact" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3>Design Systems</h3>
+                    <p>Scalable component libraries with aurora tokens, gradient utilities, and animation presets.</p>
+                    <a href="#contact" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="message-circle"></i>
+                    Testimonials
+                </span>
+                <h2 class="section-title">Glowing <span class="gradient-text">Reviews</span></h2>
+                <p class="section-subtitle">See what our clients say about their aurora transformation</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-glow"></div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Elena Cosmos</h4>
+                            <span>CEO, Stellar Labs</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"The aurora design completely transformed our brand. Users spend 40% more time on our platform, mesmerized by the flowing visuals. It's like having the Northern Lights in your app!"</p>
+                    <div class="testimonial-footer">
+                        <i data-lucide="quote"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-glow"></div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Marcus Lumina</h4>
+                            <span>Creative Director, Prism Studio</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"We've worked with many agencies, but Aurora UI's approach is genuinely unique. The gradient mesh animations they created became our signature look. Pure visual poetry."</p>
+                    <div class="testimonial-footer">
+                        <i data-lucide="quote"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-glow"></div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Spectrum</h4>
+                            <span>Product Lead, Nebula Music</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                            <i data-lucide="star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Our music streaming app needed something special. The iridescent UI they designed perfectly complements our audio experience. Users say it feels like synesthesia!"</p>
+                    <div class="testimonial-footer">
+                        <i data-lucide="quote"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">
+                        <i data-lucide="mail"></i>
+                        Get In Touch
+                    </span>
+                    <h2 class="section-title">Start Your <span class="gradient-text">Aurora Journey</span></h2>
+                    <p class="section-description">Ready to illuminate your digital presence? Let's create something mesmerizing together. Reach out and watch your vision come to light.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Northern Lights District, Aurora City</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+1 (555) AURORA-01</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>hello@aurora-ui.design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Dribbble">
+                            <i data-lucide="dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <div class="form-glow"></div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="user"></i>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="mail"></i>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="pen-tool"></i>
+                                <input type="text" id="subject" name="subject" placeholder="Project inquiry" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <div class="input-wrapper textarea-wrapper">
+                                <i data-lucide="message-square"></i>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your vision..." required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i data-lucide="send"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <i data-lucide="sparkles"></i>
+                        <span>Aurora</span>
+                    </a>
+                    <p>Illuminating digital experiences with the beauty of flowing gradients and atmospheric design.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">UI Design</a></li>
+                            <li><a href="#">Brand Identity</a></li>
+                            <li><a href="#">App Design</a></li>
+                            <li><a href="#">Motion Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Dribbble</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aurora UI. All rights reserved.</p>
+                <p class="footer-credit">Part of <a href="https://github.com/yojahny55/duncan-ui-ux-demos" target="_blank">Duncan's UI/UX Demo Collection</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
