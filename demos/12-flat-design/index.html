@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlatStack - Modern Flat Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="layers"></i>
+                <span>FlatStack</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cta">Get Started</button>
+            <button class="mobile-menu" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i data-lucide="zap"></i>
+                    New in 2026
+                </span>
+                <h1>Build Better Products with <span class="highlight">Flat Design</span></h1>
+                <p>Clean, bold, and focused. No distractions, no unnecessary complexity. Just pure, effective design that works across every device.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">
+                        <i data-lucide="play"></i>
+                        Start Free Trial
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i data-lucide="book-open"></i>
+                        Learn More
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">50K+</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">4.9</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="flat-card card-1">
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </div>
+                <div class="flat-card card-2">
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </div>
+                <div class="flat-card card-3">
+                    <i data-lucide="settings"></i>
+                    <span>Settings</span>
+                </div>
+                <div class="flat-card card-4">
+                    <i data-lucide="shield-check"></i>
+                    <span>Security</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2>Design Without the Fluff</h2>
+                <p>We believe in simplicity. Every element serves a purpose.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon blue">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <h3>Focused</h3>
+                    <p>Every pixel is intentional. We remove the unnecessary to amplify what matters.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon orange">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3>Fast</h3>
+                    <p>Flat design loads instantly. No heavy gradients or shadows slowing you down.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon green">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <h3>Accessible</h3>
+                    <p>High contrast, clear typography. Works for everyone, everywhere.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon purple">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Bold</h3>
+                    <p>Vibrant colors that stand out. Make a statement with every design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Services</span>
+                <h2>What We Offer</h2>
+                <p>Complete solutions for modern digital products.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header blue-bg">
+                        <i data-lucide="layout"></i>
+                        <span class="service-number">01</span>
+                    </div>
+                    <div class="service-body">
+                        <h3>UI Design</h3>
+                        <p>Clean interfaces that users love. Bold colors, sharp typography, zero clutter.</p>
+                        <ul class="service-list">
+                            <li><i data-lucide="check"></i> Component Libraries</li>
+                            <li><i data-lucide="check"></i> Design Systems</li>
+                            <li><i data-lucide="check"></i> Responsive Layouts</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header orange-bg">
+                        <i data-lucide="code-2"></i>
+                        <span class="service-number">02</span>
+                    </div>
+                    <div class="service-body">
+                        <h3>Development</h3>
+                        <p>From design to production. Fast, scalable, maintainable code.</p>
+                        <ul class="service-list">
+                            <li><i data-lucide="check"></i> React & Vue</li>
+                            <li><i data-lucide="check"></i> Performance First</li>
+                            <li><i data-lucide="check"></i> Clean Architecture</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header green-bg">
+                        <i data-lucide="line-chart"></i>
+                        <span class="service-number">03</span>
+                    </div>
+                    <div class="service-body">
+                        <h3>Analytics</h3>
+                        <p>Data-driven decisions. Clear dashboards that tell the story.</p>
+                        <ul class="service-list">
+                            <li><i data-lucide="check"></i> Real-time Metrics</li>
+                            <li><i data-lucide="check"></i> Custom Reports</li>
+                            <li><i data-lucide="check"></i> User Insights</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Clients Say</h2>
+                <p>Real feedback from real people.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar blue-bg">JC</div>
+                        <div class="testimonial-info">
+                            <h4>James Chen</h4>
+                            <span>CEO, TechFlow</span>
+                        </div>
+                    </div>
+                    <p>"FlatStack transformed our product. Clean, fast, and our users love it. Best design decision we made."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card featured">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar orange-bg">SR</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Rodriguez</h4>
+                            <span>Head of Design, Startup Inc</span>
+                        </div>
+                    </div>
+                    <p>"Finally, a design approach that doesn't fight itself. Everything is purposeful. Our conversion rate jumped 40% after the redesign."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar green-bg">MK</div>
+                        <div class="testimonial-info">
+                            <h4>Mike Kim</h4>
+                            <span>Product Lead, DataCorp</span>
+                        </div>
+                    </div>
+                    <p>"The attention to detail is incredible. Every button, every color choice — it all makes sense."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2>Let's Work Together</h2>
+                    <p>Ready to embrace simplicity? Get in touch and let's create something bold.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon blue-bg">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <span>hello@flatstack.design</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon orange-bg">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon green-bg">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i data-lucide="send"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i data-lucide="layers"></i>
+                        <span>FlatStack</span>
+                    </a>
+                    <p>Bold design. Zero fluff. Pure impact.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="Dribbble"><i data-lucide="dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FlatStack. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
