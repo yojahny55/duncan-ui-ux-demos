@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion-Driven UI Demo | Duncan UI/UX Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="zap" class="logo-icon"></i>
+                <span>MotionFlow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-cta">
+                Get Started
+                <i data-lucide="arrow-right" class="btn-icon"></i>
+            </button>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="parallax-bg">
+            <div class="parallax-layer layer-1"></div>
+            <div class="parallax-layer layer-2"></div>
+            <div class="parallax-layer layer-3"></div>
+            <div class="parallax-layer layer-4"></div>
+            <div class="parallax-layer layer-5"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-in">
+                <i data-lucide="sparkles"></i>
+                <span>Motion-Driven Design</span>
+            </div>
+            <h1 class="hero-title animate-in delay-1">
+                Where Every <span class="gradient-text">Pixel</span> Comes Alive
+            </h1>
+            <p class="hero-subtitle animate-in delay-2">
+                Experience interfaces that breathe, flow, and respond. We craft digital experiences 
+                with scroll-triggered animations, silky transitions, and parallax depth.
+            </p>
+            <div class="hero-cta animate-in delay-3">
+                <button class="btn-primary magnetic">
+                    <span>Explore Motion</span>
+                    <i data-lucide="play"></i>
+                </button>
+                <button class="btn-secondary magnetic">
+                    <span>Watch Demo</span>
+                    <i data-lucide="tv"></i>
+                </button>
+            </div>
+            <div class="scroll-indicator animate-in delay-4">
+                <i data-lucide="mouse"></i>
+                <span>Scroll to discover</span>
+                <i data-lucide="chevron-down" class="bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">
+                    <i data-lucide="info"></i>
+                    About Us
+                </span>
+                <h2 class="section-title">We Believe Motion<br><span class="gradient-text">Tells Stories</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <p class="about-text">
+                        Motion isn't decoration—it's communication. Every animation guides attention, 
+                        every transition creates continuity, and every microinteraction builds trust.
+                    </p>
+                    <p class="about-text">
+                        We're a team of designers and developers obsessed with the space between 
+                        static and dynamic. Our work bridges the gap between what users see and 
+                        what they feel.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item count-up" data-target="300">
+                            <span class="stat-number">0</span>
+                            <span class="stat-suffix">ms</span>
+                            <span class="stat-label">Perfect Timing</span>
+                        </div>
+                        <div class="stat-item count-up" data-target="60">
+                            <span class="stat-number">0</span>
+                            <span class="stat-suffix">fps</span>
+                            <span class="stat-label">Smooth Motion</span>
+                        </div>
+                        <div class="stat-item count-up" data-target="100">
+                            <span class="stat-number">0</span>
+                            <span class="stat-suffix">%</span>
+                            <span class="stat-label">GPU Accelerated</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual reveal-right">
+                    <div class="motion-showcase">
+                        <div class="showcase-card card-1">
+                            <i data-lucide="layers"></i>
+                            <span>Parallax</span>
+                        </div>
+                        <div class="showcase-card card-2">
+                            <i data-lucide="move"></i>
+                            <span>Transitions</span>
+                        </div>
+                        <div class="showcase-card card-3">
+                            <i data-lucide="sparkle"></i>
+                            <span>Micro</span>
+                        </div>
+                        <div class="showcase-card card-4">
+                            <i data-lucide="navigation"></i>
+                            <span>Scroll</span>
+                        </div>
+                        <div class="showcase-orbit"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">
+                    <i data-lucide="briefcase"></i>
+                    Services
+                </span>
+                <h2 class="section-title">Motion Design<br><span class="gradient-text">Services</span></h2>
+            </div>
+            <div class="services-grid">
+                <article class="service-card reveal-up stagger-1">
+                    <div class="service-icon">
+                        <i data-lucide="scroll"></i>
+                    </div>
+                    <h3 class="service-title">Scroll Animations</h3>
+                    <p class="service-desc">
+                        Intersection Observer-powered reveals that bring content to life as users 
+                        journey through your pages.
+                    </p>
+                    <div class="service-features">
+                        <span><i data-lucide="check"></i> Entrance effects</span>
+                        <span><i data-lucide="check"></i> Parallax layers</span>
+                        <span><i data-lucide="check"></i> Progress tracking</span>
+                    </div>
+                    <a href="#" class="service-link">
+                        Learn more
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+                <article class="service-card reveal-up stagger-2">
+                    <div class="service-icon">
+                        <i data-lucide="mouse-pointer-click"></i>
+                    </div>
+                    <h3 class="service-title">Microinteractions</h3>
+                    <p class="service-desc">
+                        Delightful feedback for every click, hover, and gesture. Small details 
+                        that create memorable experiences.
+                    </p>
+                    <div class="service-features">
+                        <span><i data-lucide="check"></i> Hover states</span>
+                        <span><i data-lucide="check"></i> Button feedback</span>
+                        <span><i data-lucide="check"></i> Loading indicators</span>
+                    </div>
+                    <a href="#" class="service-link">
+                        Learn more
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+                <article class="service-card reveal-up stagger-3">
+                    <div class="service-icon">
+                        <i data-lucide="layout-template"></i>
+                    </div>
+                    <h3 class="service-title">Page Transitions</h3>
+                    <p class="service-desc">
+                        Seamless navigation between pages that maintains context and creates 
+                        a fluid, app-like experience.
+                    </p>
+                    <div class="service-features">
+                        <span><i data-lucide="check"></i> Fade & slide</span>
+                        <span><i data-lucide="check"></i> Shared elements</span>
+                        <span><i data-lucide="check"></i> Morphing layouts</span>
+                    </div>
+                    <a href="#" class="service-link">
+                        Learn more
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+                <article class="service-card reveal-up stagger-4">
+                    <div class="service-icon">
+                        <i data-lucide="gauge"></i>
+                    </div>
+                    <h3 class="service-title">Performance Optimization</h3>
+                    <p class="service-desc">
+                        GPU-accelerated animations that run at 60fps. Beautiful motion without 
+                        sacrificing speed.
+                    </p>
+                    <div class="service-features">
+                        <span><i data-lucide="check"></i> Transform-based</span>
+                        <span><i data-lucide="check"></i> Will-change hints</span>
+                        <span><i data-lucide="check"></i> Reduced motion</span>
+                    </div>
+                    <a href="#" class="service-link">
+                        Learn more
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">
+                    <i data-lucide="message-circle"></i>
+                    Testimonials
+                </span>
+                <h2 class="section-title">What Clients Say<br><span class="gradient-text">About Motion</span></h2>
+            </div>
+            <div class="testimonials-track">
+                <div class="testimonial-card reveal-scale stagger-1">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "The scroll animations they created completely transformed our website. 
+                        Users now spend 3x more time exploring our content."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Sarah Chen</strong>
+                            <span>Product Lead, TechFlow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-scale stagger-2">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "Every microinteraction feels intentional. The attention to timing and 
+                        easing curves shows they truly understand motion design."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Marcus Rodriguez</strong>
+                            <span>Creative Director, Artisan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-scale stagger-3">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "Performance-first approach. Our animations run buttery smooth even on 
+                        mobile devices. No jank, just joy."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Emily Nakamura</strong>
+                            <span>Engineering Manager, SwiftLabs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-left">
+                    <span class="section-tag">
+                        <i data-lucide="mail"></i>
+                        Get in Touch
+                    </span>
+                    <h2 class="section-title">Ready to Add<br><span class="gradient-text">Motion Magic?</span></h2>
+                    <p class="contact-desc">
+                        Let's discuss how motion design can elevate your digital product. 
+                        We're excited to bring your interfaces to life.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>hello@motionflow.design</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link magnetic">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link magnetic">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link magnetic">
+                            <i data-lucide="dribbble"></i>
+                        </a>
+                        <a href="#" class="social-link magnetic">
+                            <i data-lucide="github"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal-right">
+                    <div class="form-group">
+                        <label for="name">
+                            <i data-lucide="user"></i>
+                            Name
+                        </label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <span class="focus-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            <i data-lucide="at-sign"></i>
+                            Email
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <span class="focus-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="project">
+                            <i data-lucide="folder"></i>
+                            Project Type
+                        </label>
+                        <select id="project" name="project" required>
+                            <option value="">Select a project type</option>
+                            <option value="scroll">Scroll Animations</option>
+                            <option value="micro">Microinteractions</option>
+                            <option value="page">Page Transitions</option>
+                            <option value="full">Full Motion Design</option>
+                        </select>
+                        <span class="focus-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">
+                            <i data-lucide="message-square"></i>
+                            Message
+                        </label>
+                        <textarea id="message" name="message" placeholder="Tell us about your project..." rows="4" required></textarea>
+                        <span class="focus-line"></span>
+                    </div>
+                    <button type="submit" class="btn-submit magnetic">
+                        <span>Send Message</span>
+                        <i data-lucide="send"></i>
+                        <div class="btn-loader">
+                            <i data-lucide="loader-2"></i>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i data-lucide="zap" class="logo-icon"></i>
+                        <span>MotionFlow</span>
+                    </a>
+                    <p>Crafting motion-driven experiences that captivate and convert.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Scroll Animations</a></li>
+                        <li><a href="#">Microinteractions</a></li>
+                        <li><a href="#">Page Transitions</a></li>
+                        <li><a href="#">Motion Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Work</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Motion Blog</a></li>
+                        <li><a href="#">Animation Guide</a></li>
+                        <li><a href="#">Easing Library</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MotionFlow. All rights reserved.</p>
+                <p class="demo-credit">
+                    Motion-Driven UI Demo by 
+                    <a href="https://github.com/yojahny55" target="_blank">Duncan</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

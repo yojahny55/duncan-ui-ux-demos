@@ -1,60 +1,345 @@
 {
-  "nextIndex": 15,
+  "nextIndex": 16,
   "totalStyles": 54,
   "styles": [
-    {"id": 1, "name": "Minimalism & Swiss Style", "slug": "01-minimalism-swiss", "status": "done", "date": "2026-02-06"},
-    {"id": 2, "name": "Neumorphism", "slug": "02-neumorphism", "status": "done", "date": "2026-02-07"},
-    {"id": 3, "name": "Glassmorphism", "slug": "03-glassmorphism", "status": "done", "date": "2026-02-07"},
-    {"id": 4, "name": "Brutalism", "slug": "04-brutalism", "status": "done", "date": "2026-02-08"},
-    {"id": 5, "name": "3D & Hyperrealism", "slug": "05-3d-hyperrealism", "status": "done", "date": "2026-02-08"},
-    {"id": 6, "name": "Vibrant & Block-based", "slug": "06-vibrant-block", "status": "done", "date": "2026-02-09"},
-    {"id": 7, "name": "Dark Mode (OLED)", "slug": "07-dark-mode-oled", "status": "done", "date": "2026-02-09"},
-    {"id": 8, "name": "Accessible & Ethical", "slug": "08-accessible-ethical", "status": "done", "date": "2026-02-10"},
-    {"id": 9, "name": "Claymorphism", "slug": "09-claymorphism", "status": "done", "date": "2026-02-10"},
-    {"id": 10, "name": "Aurora UI", "slug": "10-aurora-ui", "status": "done", "date": "2026-02-11"},
-    {"id": 11, "name": "Retro-Futurism", "slug": "11-retro-futurism", "status": "done", "date": "2026-02-11"},
-    {"id": 12, "name": "Flat Design", "slug": "12-flat-design", "status": "done", "date": "2026-02-12"},
-    {"id": 13, "name": "Skeuomorphism", "slug": "13-skeuomorphism", "status": "done", "date": "2026-02-12"},
-    {"id": 14, "name": "Liquid Glass", "slug": "14-liquid-glass", "status": "done", "date": "2026-02-13"},
-    {"id": 15, "name": "Motion-Driven", "slug": "15-motion-driven", "status": "pending"},
-    {"id": 16, "name": "Micro-interactions", "slug": "16-micro-interactions", "status": "pending"},
-    {"id": 17, "name": "Inclusive Design", "slug": "17-inclusive-design", "status": "pending"},
-    {"id": 18, "name": "Zero Interface", "slug": "18-zero-interface", "status": "pending"},
-    {"id": 19, "name": "Soft UI Evolution", "slug": "19-soft-ui-evolution", "status": "pending"},
-    {"id": 20, "name": "Hero-Centric Design", "slug": "20-hero-centric", "status": "pending"},
-    {"id": 21, "name": "Conversion-Optimized", "slug": "21-conversion-optimized", "status": "pending"},
-    {"id": 22, "name": "Feature-Rich Showcase", "slug": "22-feature-showcase", "status": "pending"},
-    {"id": 23, "name": "Minimal & Direct", "slug": "23-minimal-direct", "status": "pending"},
-    {"id": 24, "name": "Social Proof-Focused", "slug": "24-social-proof", "status": "pending"},
-    {"id": 25, "name": "Interactive Product Demo", "slug": "25-interactive-demo", "status": "pending"},
-    {"id": 26, "name": "Trust & Authority", "slug": "26-trust-authority", "status": "pending"},
-    {"id": 27, "name": "Storytelling-Driven", "slug": "27-storytelling", "status": "pending"},
-    {"id": 28, "name": "Neubrutalism", "slug": "28-neubrutalism", "status": "pending"},
-    {"id": 29, "name": "Bento Box Grid", "slug": "29-bento-box", "status": "pending"},
-    {"id": 30, "name": "Y2K Aesthetic", "slug": "30-y2k-aesthetic", "status": "pending"},
-    {"id": 31, "name": "Cyberpunk UI", "slug": "31-cyberpunk", "status": "pending"},
-    {"id": 32, "name": "Organic Biophilic", "slug": "32-organic-biophilic", "status": "pending"},
-    {"id": 33, "name": "AI-Native UI", "slug": "33-ai-native", "status": "pending"},
-    {"id": 34, "name": "Memphis Design", "slug": "34-memphis-design", "status": "pending"},
-    {"id": 35, "name": "Vaporwave", "slug": "35-vaporwave", "status": "pending"},
-    {"id": 36, "name": "Dimensional Layering", "slug": "36-dimensional-layering", "status": "pending"},
-    {"id": 37, "name": "Exaggerated Minimalism", "slug": "37-exaggerated-minimalism", "status": "pending"},
-    {"id": 38, "name": "Kinetic Typography", "slug": "38-kinetic-typography", "status": "pending"},
-    {"id": 39, "name": "Parallax Storytelling", "slug": "39-parallax-storytelling", "status": "pending"},
-    {"id": 40, "name": "Swiss Modernism 2.0", "slug": "40-swiss-modernism", "status": "pending"},
-    {"id": 41, "name": "HUD / Sci-Fi FUI", "slug": "41-hud-scifi", "status": "pending"},
-    {"id": 42, "name": "Pixel Art", "slug": "42-pixel-art", "status": "pending"},
-    {"id": 43, "name": "Spatial UI (VisionOS)", "slug": "43-spatial-visionos", "status": "pending"},
-    {"id": 44, "name": "E-Ink / Paper", "slug": "44-eink-paper", "status": "pending"},
-    {"id": 45, "name": "Gen Z Chaos / Maximalism", "slug": "45-genz-chaos", "status": "pending"},
-    {"id": 46, "name": "Biomimetic / Organic 2.0", "slug": "46-biomimetic", "status": "pending"},
-    {"id": 47, "name": "Anti-Polish / Raw Aesthetic", "slug": "47-anti-polish-raw", "status": "pending"},
-    {"id": 48, "name": "Tactile Digital / Deformable UI", "slug": "48-tactile-deformable", "status": "pending"},
-    {"id": 49, "name": "Nature Distilled", "slug": "49-nature-distilled", "status": "pending"},
-    {"id": 50, "name": "Interactive Cursor Design", "slug": "50-interactive-cursor", "status": "pending"},
-    {"id": 51, "name": "Gradient Mesh / Aurora Evolved", "slug": "51-gradient-mesh", "status": "pending"},
-    {"id": 52, "name": "Editorial Grid / Magazine", "slug": "52-editorial-magazine", "status": "pending"},
-    {"id": 53, "name": "Chromatic Aberration / RGB Split", "slug": "53-chromatic-aberration", "status": "pending"},
-    {"id": 54, "name": "Vintage Analog / Retro Film", "slug": "54-vintage-analog", "status": "pending"}
+    {
+      "id": 1,
+      "name": "Minimalism & Swiss Style",
+      "slug": "01-minimalism-swiss",
+      "status": "done",
+      "date": "2026-02-06"
+    },
+    {
+      "id": 2,
+      "name": "Neumorphism",
+      "slug": "02-neumorphism",
+      "status": "done",
+      "date": "2026-02-07"
+    },
+    {
+      "id": 3,
+      "name": "Glassmorphism",
+      "slug": "03-glassmorphism",
+      "status": "done",
+      "date": "2026-02-07"
+    },
+    {
+      "id": 4,
+      "name": "Brutalism",
+      "slug": "04-brutalism",
+      "status": "done",
+      "date": "2026-02-08"
+    },
+    {
+      "id": 5,
+      "name": "3D & Hyperrealism",
+      "slug": "05-3d-hyperrealism",
+      "status": "done",
+      "date": "2026-02-08"
+    },
+    {
+      "id": 6,
+      "name": "Vibrant & Block-based",
+      "slug": "06-vibrant-block",
+      "status": "done",
+      "date": "2026-02-09"
+    },
+    {
+      "id": 7,
+      "name": "Dark Mode (OLED)",
+      "slug": "07-dark-mode-oled",
+      "status": "done",
+      "date": "2026-02-09"
+    },
+    {
+      "id": 8,
+      "name": "Accessible & Ethical",
+      "slug": "08-accessible-ethical",
+      "status": "done",
+      "date": "2026-02-10"
+    },
+    {
+      "id": 9,
+      "name": "Claymorphism",
+      "slug": "09-claymorphism",
+      "status": "done",
+      "date": "2026-02-10"
+    },
+    {
+      "id": 10,
+      "name": "Aurora UI",
+      "slug": "10-aurora-ui",
+      "status": "done",
+      "date": "2026-02-11"
+    },
+    {
+      "id": 11,
+      "name": "Retro-Futurism",
+      "slug": "11-retro-futurism",
+      "status": "done",
+      "date": "2026-02-11"
+    },
+    {
+      "id": 12,
+      "name": "Flat Design",
+      "slug": "12-flat-design",
+      "status": "done",
+      "date": "2026-02-12"
+    },
+    {
+      "id": 13,
+      "name": "Skeuomorphism",
+      "slug": "13-skeuomorphism",
+      "status": "done",
+      "date": "2026-02-12"
+    },
+    {
+      "id": 14,
+      "name": "Liquid Glass",
+      "slug": "14-liquid-glass",
+      "status": "done",
+      "date": "2026-02-13"
+    },
+    {
+      "id": 15,
+      "name": "Motion-Driven",
+      "slug": "15-motion-driven",
+      "status": "done",
+      "date": "2026-02-13"
+    },
+    {
+      "id": 16,
+      "name": "Micro-interactions",
+      "slug": "16-micro-interactions",
+      "status": "pending"
+    },
+    {
+      "id": 17,
+      "name": "Inclusive Design",
+      "slug": "17-inclusive-design",
+      "status": "pending"
+    },
+    {
+      "id": 18,
+      "name": "Zero Interface",
+      "slug": "18-zero-interface",
+      "status": "pending"
+    },
+    {
+      "id": 19,
+      "name": "Soft UI Evolution",
+      "slug": "19-soft-ui-evolution",
+      "status": "pending"
+    },
+    {
+      "id": 20,
+      "name": "Hero-Centric Design",
+      "slug": "20-hero-centric",
+      "status": "pending"
+    },
+    {
+      "id": 21,
+      "name": "Conversion-Optimized",
+      "slug": "21-conversion-optimized",
+      "status": "pending"
+    },
+    {
+      "id": 22,
+      "name": "Feature-Rich Showcase",
+      "slug": "22-feature-showcase",
+      "status": "pending"
+    },
+    {
+      "id": 23,
+      "name": "Minimal & Direct",
+      "slug": "23-minimal-direct",
+      "status": "pending"
+    },
+    {
+      "id": 24,
+      "name": "Social Proof-Focused",
+      "slug": "24-social-proof",
+      "status": "pending"
+    },
+    {
+      "id": 25,
+      "name": "Interactive Product Demo",
+      "slug": "25-interactive-demo",
+      "status": "pending"
+    },
+    {
+      "id": 26,
+      "name": "Trust & Authority",
+      "slug": "26-trust-authority",
+      "status": "pending"
+    },
+    {
+      "id": 27,
+      "name": "Storytelling-Driven",
+      "slug": "27-storytelling",
+      "status": "pending"
+    },
+    {
+      "id": 28,
+      "name": "Neubrutalism",
+      "slug": "28-neubrutalism",
+      "status": "pending"
+    },
+    {
+      "id": 29,
+      "name": "Bento Box Grid",
+      "slug": "29-bento-box",
+      "status": "pending"
+    },
+    {
+      "id": 30,
+      "name": "Y2K Aesthetic",
+      "slug": "30-y2k-aesthetic",
+      "status": "pending"
+    },
+    {
+      "id": 31,
+      "name": "Cyberpunk UI",
+      "slug": "31-cyberpunk",
+      "status": "pending"
+    },
+    {
+      "id": 32,
+      "name": "Organic Biophilic",
+      "slug": "32-organic-biophilic",
+      "status": "pending"
+    },
+    {
+      "id": 33,
+      "name": "AI-Native UI",
+      "slug": "33-ai-native",
+      "status": "pending"
+    },
+    {
+      "id": 34,
+      "name": "Memphis Design",
+      "slug": "34-memphis-design",
+      "status": "pending"
+    },
+    {
+      "id": 35,
+      "name": "Vaporwave",
+      "slug": "35-vaporwave",
+      "status": "pending"
+    },
+    {
+      "id": 36,
+      "name": "Dimensional Layering",
+      "slug": "36-dimensional-layering",
+      "status": "pending"
+    },
+    {
+      "id": 37,
+      "name": "Exaggerated Minimalism",
+      "slug": "37-exaggerated-minimalism",
+      "status": "pending"
+    },
+    {
+      "id": 38,
+      "name": "Kinetic Typography",
+      "slug": "38-kinetic-typography",
+      "status": "pending"
+    },
+    {
+      "id": 39,
+      "name": "Parallax Storytelling",
+      "slug": "39-parallax-storytelling",
+      "status": "pending"
+    },
+    {
+      "id": 40,
+      "name": "Swiss Modernism 2.0",
+      "slug": "40-swiss-modernism",
+      "status": "pending"
+    },
+    {
+      "id": 41,
+      "name": "HUD / Sci-Fi FUI",
+      "slug": "41-hud-scifi",
+      "status": "pending"
+    },
+    {
+      "id": 42,
+      "name": "Pixel Art",
+      "slug": "42-pixel-art",
+      "status": "pending"
+    },
+    {
+      "id": 43,
+      "name": "Spatial UI (VisionOS)",
+      "slug": "43-spatial-visionos",
+      "status": "pending"
+    },
+    {
+      "id": 44,
+      "name": "E-Ink / Paper",
+      "slug": "44-eink-paper",
+      "status": "pending"
+    },
+    {
+      "id": 45,
+      "name": "Gen Z Chaos / Maximalism",
+      "slug": "45-genz-chaos",
+      "status": "pending"
+    },
+    {
+      "id": 46,
+      "name": "Biomimetic / Organic 2.0",
+      "slug": "46-biomimetic",
+      "status": "pending"
+    },
+    {
+      "id": 47,
+      "name": "Anti-Polish / Raw Aesthetic",
+      "slug": "47-anti-polish-raw",
+      "status": "pending"
+    },
+    {
+      "id": 48,
+      "name": "Tactile Digital / Deformable UI",
+      "slug": "48-tactile-deformable",
+      "status": "pending"
+    },
+    {
+      "id": 49,
+      "name": "Nature Distilled",
+      "slug": "49-nature-distilled",
+      "status": "pending"
+    },
+    {
+      "id": 50,
+      "name": "Interactive Cursor Design",
+      "slug": "50-interactive-cursor",
+      "status": "pending"
+    },
+    {
+      "id": 51,
+      "name": "Gradient Mesh / Aurora Evolved",
+      "slug": "51-gradient-mesh",
+      "status": "pending"
+    },
+    {
+      "id": 52,
+      "name": "Editorial Grid / Magazine",
+      "slug": "52-editorial-magazine",
+      "status": "pending"
+    },
+    {
+      "id": 53,
+      "name": "Chromatic Aberration / RGB Split",
+      "slug": "53-chromatic-aberration",
+      "status": "pending"
+    },
+    {
+      "id": 54,
+      "name": "Vintage Analog / Retro Film",
+      "slug": "54-vintage-analog",
+      "status": "pending"
+    }
   ]
 }
