@@ -1,5 +1,5 @@
 {
-  "nextIndex": 14,
+  "nextIndex": 15,
   "totalStyles": 54,
   "styles": [
     {"id": 1, "name": "Minimalism & Swiss Style", "slug": "01-minimalism-swiss", "status": "done", "date": "2026-02-06"},
@@ -15,7 +15,7 @@
     {"id": 11, "name": "Retro-Futurism", "slug": "11-retro-futurism", "status": "done", "date": "2026-02-11"},
     {"id": 12, "name": "Flat Design", "slug": "12-flat-design", "status": "done", "date": "2026-02-12"},
     {"id": 13, "name": "Skeuomorphism", "slug": "13-skeuomorphism", "status": "done", "date": "2026-02-12"},
-    {"id": 14, "name": "Liquid Glass", "slug": "14-liquid-glass", "status": "pending"},
+    {"id": 14, "name": "Liquid Glass", "slug": "14-liquid-glass", "status": "done", "date": "2026-02-13"},
     {"id": 15, "name": "Motion-Driven", "slug": "15-motion-driven", "status": "pending"},
     {"id": 16, "name": "Micro-interactions", "slug": "16-micro-interactions", "status": "pending"},
     {"id": 17, "name": "Inclusive Design", "slug": "17-inclusive-design", "status": "pending"},

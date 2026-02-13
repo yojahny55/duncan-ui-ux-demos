@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Glass - UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Morphing Background -->
+    <div class="liquid-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="droplets"></i>
+                <span>LiquidFlow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cta glass-button">
+                <i data-lucide="sparkles"></i>
+                Get Started
+            </button>
+            <button class="mobile-menu" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge glass-card">
+                <i data-lucide="zap"></i>
+                <span>Next-Gen Design System</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="chromatic">Fluid Design</span>
+                <br>
+                That Flows Like Water
+            </h1>
+            <p class="hero-subtitle">
+                Experience the future of UI with liquid glass effects, morphing shapes, 
+                and iridescent gradients that captivate and convert.
+            </p>
+            <div class="hero-actions">
+                <button class="glass-button primary">
+                    <i data-lucide="play"></i>
+                    Watch Demo
+                </button>
+                <button class="glass-button secondary">
+                    <i data-lucide="download"></i>
+                    Download Free
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat glass-card">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat glass-card">
+                    <span class="stat-number">99%</span>
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+                <div class="stat glass-card">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="morphing-shape">
+                <svg viewBox="0 0 200 200" class="morph-svg">
+                    <defs>
+                        <linearGradient id="morphGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff6b9d"/>
+                            <stop offset="25%" style="stop-color:#c44cff"/>
+                            <stop offset="50%" style="stop-color:#6b9dff"/>
+                            <stop offset="75%" style="stop-color:#4cffc4"/>
+                            <stop offset="100%" style="stop-color:#ffc44c"/>
+                        </linearGradient>
+                    </defs>
+                    <path class="morph-path" fill="url(#morphGradient)"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag glass-card">
+                    <i data-lucide="info"></i>
+                    About Us
+                </span>
+                <h2 class="section-title">Crafting <span class="chromatic">Liquid</span> Experiences</h2>
+                <p class="section-subtitle">
+                    We blend art and technology to create interfaces that feel alive.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card">
+                    <div class="card-icon iridescent">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Iridescent Design</h3>
+                    <p>Rainbow spectrum gradients that shift and shimmer with every interaction, creating depth and dimension.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="card-icon iridescent">
+                        <i data-lucide="waves"></i>
+                    </div>
+                    <h3>Fluid Motion</h3>
+                    <p>Smooth 400-600ms transitions with organic easing curves that mimic real liquid behavior.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="card-icon iridescent">
+                        <i data-lucide="blend"></i>
+                    </div>
+                    <h3>Glass Morphism</h3>
+                    <p>Translucent layers with dynamic blur effects that create depth without heavy shadows.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="card-icon iridescent">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3>Chromatic Effects</h3>
+                    <p>Subtle color aberration that adds a premium, holographic feel to key elements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag glass-card">
+                    <i data-lucide="briefcase"></i>
+                    Services
+                </span>
+                <h2 class="section-title">What We <span class="chromatic">Offer</span></h2>
+                <p class="section-subtitle">
+                    Premium design solutions that transform your digital presence.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-card featured">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="layout"></i>
+                        </div>
+                        <span class="service-badge">Popular</span>
+                    </div>
+                    <h3>UI Design System</h3>
+                    <p>Complete design systems with liquid glass components, tokens, and guidelines.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> 50+ Components</li>
+                        <li><i data-lucide="check"></i> Figma Library</li>
+                        <li><i data-lucide="check"></i> CSS Variables</li>
+                        <li><i data-lucide="check"></i> Documentation</li>
+                    </ul>
+                    <button class="glass-button">
+                        <i data-lucide="arrow-right"></i>
+                        Learn More
+                    </button>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                    </div>
+                    <h3>Development</h3>
+                    <p>Pixel-perfect implementation with React, Vue, or vanilla CSS.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Clean Code</li>
+                        <li><i data-lucide="check"></i> Performance</li>
+                        <li><i data-lucide="check"></i> Accessibility</li>
+                    </ul>
+                    <button class="glass-button secondary">
+                        <i data-lucide="arrow-right"></i>
+                        Learn More
+                    </button>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="rocket"></i>
+                        </div>
+                    </div>
+                    <h3>Launch Support</h3>
+                    <p>End-to-end support from concept to deployment and beyond.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Strategy</li>
+                        <li><i data-lucide="check"></i> Testing</li>
+                        <li><i data-lucide="check"></i> Analytics</li>
+                    </ul>
+                    <button class="glass-button secondary">
+                        <i data-lucide="arrow-right"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag glass-card">
+                    <i data-lucide="message-circle"></i>
+                    Testimonials
+                </span>
+                <h2 class="section-title">What Clients <span class="chromatic">Say</span></h2>
+                <p class="section-subtitle">
+                    Hear from teams who transformed their products with liquid design.
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"The liquid glass effects elevated our SaaS platform to a whole new level. User engagement increased by 40% after the redesign."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar iridescent">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Sarah Chen</strong>
+                            <span>CEO, TechFlow</span>
+                        </div>
+                        <div class="rating">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"Absolutely stunning work. The morphing animations and iridescent gradients make our brand unforgettable."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar iridescent">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Marcus Johnson</strong>
+                            <span>Design Director, Prism</span>
+                        </div>
+                        <div class="rating">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"Premium feel without the performance hit. The team optimized everything perfectly for our e-commerce platform."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar iridescent">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Emma Rodriguez</strong>
+                            <span>CTO, LuxeMarket</span>
+                        </div>
+                        <div class="rating">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper glass-card">
+                <div class="contact-info">
+                    <span class="section-tag">
+                        <i data-lucide="mail"></i>
+                        Get in Touch
+                    </span>
+                    <h2 class="section-title">Let's Create <span class="chromatic">Magic</span></h2>
+                    <p>Ready to transform your digital presence with liquid glass design? Let's talk.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>hello@liquidflow.design</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link glass-button">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link glass-button">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link glass-button">
+                            <i data-lucide="dribbble"></i>
+                        </a>
+                        <a href="#" class="social-link glass-button">
+                            <i data-lucide="github"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="glass-input" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="glass-input" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="glass-input" rows="4" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="glass-button primary full-width">
+                        <i data-lucide="send"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i data-lucide="droplets"></i>
+                        <span>LiquidFlow</span>
+                    </a>
+                    <p>Crafting premium liquid glass experiences for forward-thinking brands.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom glass-card">
+                <p>&copy; 2026 LiquidFlow. All rights reserved.</p>
+                <p class="demo-credit">
+                    <i data-lucide="palette"></i>
+                    UI/UX Demo by Duncan
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
