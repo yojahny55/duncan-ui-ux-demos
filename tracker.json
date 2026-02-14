@@ -1,5 +1,5 @@
 {
-  "nextIndex": 16,
+  "nextIndex": 17,
   "totalStyles": 54,
   "styles": [
     {
@@ -111,7 +111,8 @@
       "id": 16,
       "name": "Micro-interactions",
       "slug": "16-micro-interactions",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-14"
     },
     {
       "id": 17,

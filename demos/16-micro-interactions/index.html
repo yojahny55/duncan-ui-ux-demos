@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-interactions - UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon"><i data-lucide="zap"></i></span>
+                <span>Pulse</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-cta">
+                <span>Get Started</span>
+                <i data-lucide="arrow-right"></i>
+            </button>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i data-lucide="sparkles"></i>
+                <span>Feel every interaction</span>
+            </div>
+            <h1 class="hero-title">Design that <span class="highlight">responds</span> to you</h1>
+            <p class="hero-subtitle">Experience interfaces where every button press, hover, and scroll creates delightful feedback. Micro-interactions that make digital feel tactile.</p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" id="heroBtn">
+                    <span class="btn-text">Try Demo</span>
+                    <span class="btn-loader">
+                        <i data-lucide="loader-2" class="spin"></i>
+                    </span>
+                    <span class="btn-success">
+                        <i data-lucide="check"></i>
+                    </span>
+                </button>
+                <button class="btn btn-secondary">
+                    <i data-lucide="play-circle"></i>
+                    <span>Watch Video</span>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">ms response</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">animations</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-label">% satisfaction</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="interaction-demo">
+                <div class="demo-card" id="demoCard">
+                    <div class="demo-header">
+                        <span class="demo-dot red"></span>
+                        <span class="demo-dot yellow"></span>
+                        <span class="demo-dot green"></span>
+                    </div>
+                    <div class="demo-content">
+                        <div class="toggle-row">
+                            <span>Notifications</span>
+                            <button class="toggle-switch" id="toggle1">
+                                <span class="toggle-knob"></span>
+                            </button>
+                        </div>
+                        <div class="toggle-row">
+                            <span>Dark Mode</span>
+                            <button class="toggle-switch" id="toggle2">
+                                <span class="toggle-knob"></span>
+                            </button>
+                        </div>
+                        <div class="slider-row">
+                            <span>Volume</span>
+                            <input type="range" class="micro-slider" id="volumeSlider" min="0" max="100" value="70">
+                        </div>
+                        <div class="like-row">
+                            <button class="like-btn" id="likeBtn">
+                                <i data-lucide="heart"></i>
+                            </button>
+                            <span class="like-count">247</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="info"></i>
+                    About Us
+                </span>
+                <h2 class="section-title">Every pixel <span class="highlight">reacts</span></h2>
+                <p class="section-subtitle">We craft interfaces that feel alive, where every interaction provides instant, satisfying feedback.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card" data-delay="0">
+                    <div class="card-icon">
+                        <i data-lucide="mouse-pointer-click"></i>
+                    </div>
+                    <h3>Tactile Feedback</h3>
+                    <p>Every click, tap, and hover provides immediate visual response that feels natural and intuitive.</p>
+                    <div class="card-progress">
+                        <div class="progress-bar" data-progress="95"></div>
+                    </div>
+                </div>
+                <div class="about-card" data-delay="100">
+                    <div class="card-icon">
+                        <i data-lucide="timer"></i>
+                    </div>
+                    <h3>50ms Response</h3>
+                    <p>Lightning-fast animations under 100ms create the perception of instant response time.</p>
+                    <div class="card-progress">
+                        <div class="progress-bar" data-progress="88"></div>
+                    </div>
+                </div>
+                <div class="about-card" data-delay="200">
+                    <div class="card-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3>Delightful Details</h3>
+                    <p>Subtle animations that surprise and delight, making everyday tasks enjoyable.</p>
+                    <div class="card-progress">
+                        <div class="progress-bar" data-progress="92"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="layers"></i>
+                    Services
+                </span>
+                <h2 class="section-title">Interactive <span class="highlight">solutions</span></h2>
+                <p class="section-subtitle">From hover states to complex gesture-based interactions, we bring interfaces to life.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="hand-metal"></i>
+                    </div>
+                    <h3>Gesture Design</h3>
+                    <p>Swipe, pinch, and drag interactions that feel natural on touch devices.</p>
+                    <button class="service-btn">
+                        <span>Learn More</span>
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="loader-2"></i>
+                    </div>
+                    <h3>Loading States</h3>
+                    <p>Beautiful spinners, skeletons, and progress indicators that reduce perceived wait time.</p>
+                    <button class="service-btn">
+                        <span>Learn More</span>
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <h3>Success States</h3>
+                    <p>Satisfying confirmations that celebrate user actions and build confidence.</p>
+                    <button class="service-btn">
+                        <span>Learn More</span>
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="bell-ring"></i>
+                    </div>
+                    <h3>Notifications</h3>
+                    <p>Attention-grabbing alerts with smooth entrances and non-intrusive exits.</p>
+                    <button class="service-btn">
+                        <span>Learn More</span>
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="move"></i>
+                    </div>
+                    <h3>Hover Effects</h3>
+                    <p>Subtle yet satisfying hover states that guide users and provide context.</p>
+                    <button class="service-btn">
+                        <span>Learn More</span>
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="vibrate"></i>
+                    </div>
+                    <h3>Haptic Design</h3>
+                    <p>Coordinated visual and haptic feedback for mobile-first experiences.</p>
+                    <button class="service-btn">
+                        <span>Learn More</span>
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="message-circle"></i>
+                    Testimonials
+                </span>
+                <h2 class="section-title">Loved by <span class="highlight">users</span></h2>
+                <p class="section-subtitle">See what designers and developers say about our micro-interaction systems.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <span>SJ</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>Product Designer</span>
+                        </div>
+                        <button class="testimonial-like" aria-label="Like">
+                            <i data-lucide="heart"></i>
+                        </button>
+                    </div>
+                    <p class="testimonial-text">"The attention to timing is incredible. Every animation feels perfectly weighted and responsive."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <span>MC</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Mike Chen</h4>
+                            <span>Frontend Engineer</span>
+                        </div>
+                        <button class="testimonial-like" aria-label="Like">
+                            <i data-lucide="heart"></i>
+                        </button>
+                    </div>
+                    <p class="testimonial-text">"Finally, a design system that prioritizes how things feel, not just how they look. Game changer."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <span>ER</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Emma Rodriguez</h4>
+                            <span>UX Lead</span>
+                        </div>
+                        <button class="testimonial-like" aria-label="Like">
+                            <i data-lucide="heart"></i>
+                        </button>
+                    </div>
+                    <p class="testimonial-text">"User testing showed 40% higher satisfaction scores. The subtle feedback makes everything feel premium."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">
+                        <i data-lucide="mail"></i>
+                        Contact
+                    </span>
+                    <h2 class="section-title">Let's create <span class="highlight">together</span></h2>
+                    <p>Ready to add delightful micro-interactions to your product? Let's talk about bringing your interface to life.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="method-info">
+                                <span>Email</span>
+                                <a href="mailto:hello@pulse.design">hello@pulse.design</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <span>Phone</span>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="method-info">
+                                <span>Location</span>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="user"></i>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                            <span class="input-focus"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="mail"></i>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            <span class="input-focus"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <div class="input-wrapper textarea-wrapper">
+                            <i data-lucide="message-square"></i>
+                            <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" required></textarea>
+                            <span class="input-focus"></span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span class="btn-text">
+                            <span>Send Message</span>
+                            <i data-lucide="send"></i>
+                        </span>
+                        <span class="btn-loader">
+                            <i data-lucide="loader-2" class="spin"></i>
+                        </span>
+                        <span class="btn-success">
+                            <i data-lucide="check"></i>
+                            <span>Sent!</span>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-icon"><i data-lucide="zap"></i></span>
+                        <span>Pulse</span>
+                    </a>
+                    <p>Making digital experiences feel alive through thoughtful micro-interactions.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Dribbble">
+                            <i data-lucide="dribbble"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li><a href="#">Documentation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">Examples</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pulse. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
