@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AccessFirst - Digital solutions designed for everyone. WCAG AAA compliant accessibility-first design.">
+    <title>AccessFirst | Inclusive Design Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Skip Link for Keyboard Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header / Navigation -->
+    <header role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <a href="#" class="logo" aria-label="AccessFirst Home">
+                    <i data-lucide="accessibility" aria-hidden="true"></i>
+                    <span>AccessFirst</span>
+                </a>
+                
+                <button class="mobile-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                    <i data-lucide="menu" aria-hidden="true"></i>
+                    <span class="visually-hidden">Menu</span>
+                </button>
+                
+                <ul id="nav-menu" class="nav-menu" role="menubar">
+                    <li role="none"><a href="#hero" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#about" role="menuitem">About</a></li>
+                    <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                    <li role="none"><a href="#testimonials" role="menuitem">Testimonials</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                </ul>
+                
+                <div class="a11y-controls" role="group" aria-label="Accessibility controls">
+                    <button id="font-size-toggle" aria-label="Increase text size" title="Increase text size">
+                        <i data-lucide="a-large-small" aria-hidden="true"></i>
+                    </button>
+                    <button id="contrast-toggle" aria-label="Toggle high contrast mode" title="Toggle high contrast">
+                        <i data-lucide="contrast" aria-hidden="true"></i>
+                    </button>
+                    <button id="motion-toggle" aria-label="Reduce motion" title="Reduce motion">
+                        <i data-lucide="pause-circle" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-heading">Digital Experiences <em>For Everyone</em></h1>
+                    <p class="hero-subtitle">We build accessible, inclusive digital products that work for all users—regardless of ability, device, or context.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <i data-lucide="message-circle" aria-hidden="true"></i>
+                            Get Started
+                        </a>
+                        <a href="#services" class="btn btn-secondary">
+                            <i data-lucide="eye" aria-hidden="true"></i>
+                            Our Services
+                        </a>
+                    </div>
+                    <div class="hero-badges" role="list" aria-label="Compliance certifications">
+                        <div class="badge" role="listitem">
+                            <i data-lucide="shield-check" aria-hidden="true"></i>
+                            <span>WCAG AAA</span>
+                        </div>
+                        <div class="badge" role="listitem">
+                            <i data-lucide="check-circle" aria-hidden="true"></i>
+                            <span>Section 508</span>
+                        </div>
+                        <div class="badge" role="listitem">
+                            <i data-lucide="globe" aria-hidden="true"></i>
+                            <span>ADA Compliant</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="accessibility-illustration">
+                        <div class="circle circle-1"></div>
+                        <div class="circle circle-2"></div>
+                        <div class="icon-group">
+                            <i data-lucide="ear" class="float-icon"></i>
+                            <i data-lucide="eye" class="float-icon"></i>
+                            <i data-lucide="hand" class="float-icon"></i>
+                            <i data-lucide="brain" class="float-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about" aria-labelledby="about-heading">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="about-heading">Why Inclusive Design Matters</h2>
+                    <p>Over 1 billion people worldwide live with disabilities. Inclusive design isn't just ethical—it's essential.</p>
+                </header>
+                
+                <div class="about-grid">
+                    <article class="about-card" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Universal Access</h3>
+                        <p>15% of the global population experiences some form of disability. Our designs ensure no one is excluded.</p>
+                        <div class="stat-indicator" role="img" aria-label="Statistic: 1.3 billion users">
+                            <span class="stat-number">1.3B</span>
+                            <span class="stat-label">Users Worldwide</span>
+                        </div>
+                    </article>
+                    
+                    <article class="about-card" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i data-lucide="scale"></i>
+                        </div>
+                        <h3>Legal Compliance</h3>
+                        <p>Avoid lawsuits and meet regulatory requirements including ADA, Section 508, and EU accessibility directives.</p>
+                        <div class="stat-indicator" role="img" aria-label="Statistic: 100% compliance rate">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Compliance Rate</span>
+                        </div>
+                    </article>
+                    
+                    <article class="about-card" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <h3>Better for Everyone</h3>
+                        <p>Accessible design improves usability for all users—captions help in noisy environments, contrast aids in sunlight.</p>
+                        <div class="stat-indicator" role="img" aria-label="Statistic: 35% increase in engagement">
+                            <span class="stat-number">+35%</span>
+                            <span class="stat-label">User Engagement</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services" aria-labelledby="services-heading">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="services-heading">Our Accessibility Services</h2>
+                    <p>Comprehensive solutions to make your digital presence truly inclusive.</p>
+                </header>
+                
+                <div class="services-grid">
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon" aria-hidden="true">
+                            <i data-lucide="file-search"></i>
+                        </div>
+                        <h3>Accessibility Audits</h3>
+                        <p>Comprehensive WCAG 2.1 AAA audits identifying barriers and providing actionable remediation plans.</p>
+                        <ul class="service-features" aria-label="Audit features">
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Automated + Manual Testing</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Screen Reader Compatibility</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Keyboard Navigation Review</span>
+                            </li>
+                        </ul>
+                    </article>
+                    
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon" aria-hidden="true">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <h3>Accessible Development</h3>
+                        <p>Build accessible from the start with semantic HTML, ARIA best practices, and inclusive components.</p>
+                        <ul class="service-features" aria-label="Development features">
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Semantic HTML Structure</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>ARIA Implementation</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Focus Management</span>
+                            </li>
+                        </ul>
+                    </article>
+                    
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon" aria-hidden="true">
+                            <i data-lucide="palette"></i>
+                        </div>
+                        <h3>Inclusive Design</h3>
+                        <p>Design systems and interfaces that work beautifully for users of all abilities and contexts.</p>
+                        <ul class="service-features" aria-label="Design features">
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>High Contrast Palettes</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Readable Typography</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Symbol-Based Indicators</span>
+                            </li>
+                        </ul>
+                    </article>
+                    
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon" aria-hidden="true">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <h3>Training & Workshops</h3>
+                        <p>Empower your team with accessibility knowledge through hands-on training sessions.</p>
+                        <ul class="service-features" aria-label="Training features">
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Developer Training</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Designer Workshops</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>QA Testing Guidance</span>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="testimonials-heading">What Our Clients Say</h2>
+                    <p>Real feedback from organizations committed to digital inclusion.</p>
+                </header>
+                
+                <div class="testimonials-grid">
+                    <blockquote class="testimonial-card" tabindex="0">
+                        <div class="testimonial-rating" role="img" aria-label="5 out of 5 stars">
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                        </div>
+                        <p class="testimonial-text">"AccessFirst transformed our government portal. We went from 47 accessibility violations to zero—and our citizen satisfaction scores increased by 40%."</p>
+                        <footer class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="author-info">
+                                <cite class="author-name">Maria Rodriguez</cite>
+                                <span class="author-role">Director of Digital Services, City of Tampa</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                    
+                    <blockquote class="testimonial-card" tabindex="0">
+                        <div class="testimonial-rating" role="img" aria-label="5 out of 5 stars">
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                        </div>
+                        <p class="testimonial-text">"The training workshop opened our eyes. Accessibility isn't a checkbox—it's a fundamental part of good UX. Our entire team now thinks differently about design."</p>
+                        <footer class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="author-info">
+                                <cite class="author-name">James Chen</cite>
+                                <span class="author-role">Head of Product, HealthTech Solutions</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                    
+                    <blockquote class="testimonial-card" tabindex="0">
+                        <div class="testimonial-rating" role="img" aria-label="5 out of 5 stars">
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                            <i data-lucide="star" aria-hidden="true"></i>
+                        </div>
+                        <p class="testimonial-text">"We avoided a potential lawsuit and, more importantly, we now serve ALL our customers. The ROI was immediate and the impact was profound."</p>
+                        <footer class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="author-info">
+                                <cite class="author-name">Sarah Williams</cite>
+                                <span class="author-role">CEO, E-Commerce Plus</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="contact-heading">Start Your Accessibility Journey</h2>
+                    <p>Ready to make your digital presence inclusive? Let's talk.</p>
+                </header>
+                
+                <div class="contact-grid">
+                    <form class="contact-form" aria-labelledby="contact-heading" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">
+                                Full Name
+                                <span class="required" aria-hidden="true">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input" 
+                                required
+                                aria-required="true"
+                                aria-describedby="name-hint"
+                                autocomplete="name"
+                            >
+                            <span id="name-hint" class="form-hint">Enter your full name as you'd like to be addressed.</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Email Address
+                                <span class="required" aria-hidden="true">*</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                required
+                                aria-required="true"
+                                aria-describedby="email-hint"
+                                autocomplete="email"
+                            >
+                            <span id="email-hint" class="form-hint">We'll use this to respond to your inquiry.</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization" class="form-label">Organization</label>
+                            <input 
+                                type="text" 
+                                id="organization" 
+                                name="organization" 
+                                class="form-input"
+                                autocomplete="organization"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" class="form-label">
+                                Service Interest
+                                <span class="required" aria-hidden="true">*</span>
+                            </label>
+                            <select 
+                                id="service" 
+                                name="service" 
+                                class="form-select"
+                                required
+                                aria-required="true"
+                            >
+                                <option value="">Select a service...</option>
+                                <option value="audit">Accessibility Audit</option>
+                                <option value="development">Accessible Development</option>
+                                <option value="design">Inclusive Design</option>
+                                <option value="training">Training & Workshops</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">
+                                Message
+                                <span class="required" aria-hidden="true">*</span>
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-textarea" 
+                                rows="5"
+                                required
+                                aria-required="true"
+                                aria-describedby="message-hint"
+                            ></textarea>
+                            <span id="message-hint" class="form-hint">Tell us about your project and accessibility goals.</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i data-lucide="send" aria-hidden="true"></i>
+                            Send Message
+                        </button>
+                        
+                        <p class="form-note">
+                            <i data-lucide="info" aria-hidden="true"></i>
+                            Fields marked with <span class="required">*</span> are required.
+                        </p>
+                    </form>
+                    
+                    <aside class="contact-info" aria-labelledby="contact-info-heading">
+                        <h3 id="contact-info-heading" class="visually-hidden">Contact Information</h3>
+                        
+                        <div class="info-card">
+                            <div class="info-icon" aria-hidden="true">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email Us</h4>
+                                <a href="mailto:hello@accessfirst.io">hello@accessfirst.io</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon" aria-hidden="true">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Call Us</h4>
+                                <a href="tel:+18135551234">+1 (813) 555-1234</a>
+                                <span class="info-detail">Mon-Fri 9AM-5PM EST</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon" aria-hidden="true">
+                                <i data-lucide="video"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Video Call</h4>
+                                <p>ASL interpretation available upon request</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card highlight">
+                            <div class="info-icon" aria-hidden="true">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Response Time</h4>
+                                <p>We respond within <strong>24 hours</strong></p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" aria-label="AccessFirst Home">
+                        <i data-lucide="accessibility" aria-hidden="true"></i>
+                        <span>AccessFirst</span>
+                    </a>
+                    <p>Making the digital world accessible to everyone, one project at a time.</p>
+                    <div class="compliance-badges" role="list" aria-label="Compliance certifications">
+                        <span class="compliance-badge" role="listitem">WCAG 2.1 AAA</span>
+                        <span class="compliance-badge" role="listitem">Section 508</span>
+                        <span class="compliance-badge" role="listitem">ADA</span>
+                    </div>
+                </div>
+                
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer-nav" aria-label="Legal links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links" role="list">
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn" role="listitem">
+                            <i data-lucide="linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter" role="listitem">
+                            <i data-lucide="twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on GitHub" role="listitem">
+                            <i data-lucide="github" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Subscribe to our YouTube channel" role="listitem">
+                            <i data-lucide="youtube" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 AccessFirst. All rights reserved.</p>
+                <p>This site was built with accessibility as a core principle, not an afterthought.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
