@@ -1,5 +1,5 @@
 {
-  "nextIndex": 18,
+  "nextIndex": 19,
   "totalStyles": 54,
   "styles": [
     {
@@ -125,7 +125,8 @@
       "id": 18,
       "name": "Zero Interface",
       "slug": "18-zero-interface",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-15"
     },
     {
       "id": 19,

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Interface - UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg"></div>
+
+    <!-- Navbar - Appears on hover/scroll -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="layers" class="logo-icon"></i>
+                <span>Zero</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Stories</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="voice-trigger" id="voiceBtn" aria-label="Voice command">
+                    <i data-lucide="mic" class="mic-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Voice Interface Overlay -->
+    <div class="voice-overlay" id="voiceOverlay">
+        <div class="voice-content">
+            <div class="voice-waves">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p class="voice-status">Listening...</p>
+            <p class="voice-hint">Try saying "Show services" or "Contact"</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p class="hero-whisper">The best interface is no interface</p>
+            <h1 class="hero-title">
+                <span class="reveal-text">Experience</span>
+                <span class="reveal-text delay-1">Without</span>
+                <span class="reveal-text delay-2">Barriers</span>
+            </h1>
+            <p class="hero-description">
+                Technology that anticipates your needs, responds to your presence, 
+                and disappears when you don't need it.
+            </p>
+            <div class="hero-cta">
+                <button class="cta-primary">
+                    <span>Begin Journey</span>
+                    <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="section-label">Philosophy</p>
+                    <h2 class="section-title">Design That Dissolves</h2>
+                    <p class="section-description">
+                        We believe the most powerful technology is invisible. Our approach 
+                        focuses on ambient computing, predictive interfaces, and seamless 
+                        experiences that adapt to context.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat" data-value="99">
+                            <span class="stat-value">0</span>
+                            <span class="stat-suffix">%</span>
+                            <span class="stat-label">Intuitive</span>
+                        </div>
+                        <div class="stat" data-value="0">
+                            <span class="stat-value">0</span>
+                            <span class="stat-suffix"></span>
+                            <span class="stat-label">Learning Curve</span>
+                        </div>
+                        <div class="stat" data-value="100">
+                            <span class="stat-value">0</span>
+                            <span class="stat-suffix">%</span>
+                            <span class="stat-label">Natural</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="floating-elements">
+                        <div class="float-item item-1">
+                            <i data-lucide="brain"></i>
+                        </div>
+                        <div class="float-item item-2">
+                            <i data-lucide="eye"></i>
+                        </div>
+                        <div class="float-item item-3">
+                            <i data-lucide="hand"></i>
+                        </div>
+                        <div class="float-item item-4">
+                            <i data-lucide="mic"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <p class="section-label center">Capabilities</p>
+            <h2 class="section-title center">Invisible Intelligence</h2>
+            
+            <div class="services-grid">
+                <article class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <i data-lucide="mic"></i>
+                    </div>
+                    <h3>Voice-First Design</h3>
+                    <p>Natural language interfaces that understand context, intent, and nuance without explicit commands.</p>
+                    <div class="service-expand">
+                        <i data-lucide="plus"></i>
+                    </div>
+                </article>
+
+                <article class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <i data-lucide="hand"></i>
+                    </div>
+                    <h3>Gesture Recognition</h3>
+                    <p>Intuitive motion controls that translate natural movements into digital actions seamlessly.</p>
+                    <div class="service-expand">
+                        <i data-lucide="plus"></i>
+                    </div>
+                </article>
+
+                <article class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3>Predictive AI</h3>
+                    <p>Machine learning that anticipates needs before they're expressed, surfacing the right tools at the right moment.</p>
+                    <div class="service-expand">
+                        <i data-lucide="plus"></i>
+                    </div>
+                </article>
+
+                <article class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <i data-lucide="eye"></i>
+                    </div>
+                    <h3>Context Awareness</h3>
+                    <p>Environments that sense presence, adapt to user state, and respond to subtle cues automatically.</p>
+                    <div class="service-expand">
+                        <i data-lucide="plus"></i>
+                    </div>
+                </article>
+
+                <article class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3>Progressive Disclosure</h3>
+                    <p>Complexity revealed only when needed, keeping interfaces clean until depth is required.</p>
+                    <div class="service-expand">
+                        <i data-lucide="plus"></i>
+                    </div>
+                </article>
+
+                <article class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <i data-lucide="infinity"></i>
+                    </div>
+                    <h3>Ambient Computing</h3>
+                    <p>Technology woven into the environment, omnipresent yet invisible, always ready but never intrusive.</p>
+                    <div class="service-expand">
+                        <i data-lucide="plus"></i>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-container">
+            <p class="section-label center">Experiences</p>
+            <h2 class="section-title center">What They Felt</h2>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i data-lucide="quote" class="quote-icon"></i>
+                            <p>"I forgot I was using an interface at all. It just... understood what I needed before I asked."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Sarah Chen</span>
+                                <span class="author-role">Product Director, Ambient Labs</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i data-lucide="quote" class="quote-icon"></i>
+                            <p>"The absence of clutter let me focus on what actually matters. Pure, distraction-free creation."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Marcus Webb</span>
+                                <span class="author-role">Creative Lead, Invisible Studio</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i data-lucide="quote" class="quote-icon"></i>
+                            <p>"My grandmother uses it without knowing she's using technology. That's the real magic."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Aiko Tanaka</span>
+                                <span class="author-role">UX Researcher, NaturalTech</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="testimonial-nav">
+                    <button class="nav-dot active" data-index="0"></button>
+                    <button class="nav-dot" data-index="1"></button>
+                    <button class="nav-dot" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="section-label">Connect</p>
+                    <h2 class="section-title">Start a Conversation</h2>
+                    <p class="section-description">
+                        Reach out naturally. We respond to how you prefer to communicate.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="#" class="contact-method">
+                            <i data-lucide="mail"></i>
+                            <span>hello@zero.interface</span>
+                        </a>
+                        <a href="#" class="contact-method">
+                            <i data-lucide="phone"></i>
+                            <span>+1 (555) 000-ZERO</span>
+                        </a>
+                        <a href="#" class="contact-method">
+                            <i data-lucide="map-pin"></i>
+                            <span>Everywhere, Ambient</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Your name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" required placeholder=" " rows="4"></textarea>
+                            <label for="message">What's on your mind?</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i data-lucide="layers" class="logo-icon"></i>
+                    <span>Zero</span>
+                </a>
+                <p>The best interface is no interface.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Navigate</h4>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#testimonials">Stories</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <a href="#">
+                        <i data-lucide="twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#">
+                        <i data-lucide="linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#">
+                        <i data-lucide="github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2025 Zero Interface. Designed to disappear.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gesture Hint -->
+    <div class="gesture-hint" id="gestureHint">
+        <i data-lucide="hand"></i>
+        <span>Swipe to explore</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
