@@ -1,5 +1,5 @@
 {
-  "nextIndex": 19,
+  "nextIndex": 20,
   "totalStyles": 54,
   "styles": [
     {
@@ -132,7 +132,8 @@
       "id": 19,
       "name": "Soft UI Evolution",
       "slug": "19-soft-ui-evolution",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-15"
     },
     {
       "id": 20,
