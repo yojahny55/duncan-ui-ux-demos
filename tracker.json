@@ -1,5 +1,5 @@
 {
-  "nextIndex": 21,
+  "nextIndex": 22,
   "totalStyles": 54,
   "styles": [
     {
@@ -146,7 +146,8 @@
       "id": 21,
       "name": "Conversion-Optimized",
       "slug": "21-conversion-optimized",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-16"
     },
     {
       "id": 22,

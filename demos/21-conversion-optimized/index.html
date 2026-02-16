@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion-Optimized Landing Page | UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        <div class="urgency-content">
+            <i data-lucide="clock" class="urgency-icon"></i>
+            <span class="urgency-text">Limited Time: <strong>50% OFF</strong> ends in</span>
+            <div class="countdown">
+                <span class="time-block"><span id="hours">23</span>h</span>
+                <span class="time-block"><span id="minutes">59</span>m</span>
+                <span class="time-block"><span id="seconds">59</span>s</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i data-lucide="rocket" class="logo-icon"></i>
+                <span>LaunchPro</span>
+            </a>
+            <div class="nav-trust">
+                <span class="trust-item">
+                    <i data-lucide="shield-check"></i>
+                    30-Day Guarantee
+                </span>
+                <span class="trust-item">
+                    <i data-lucide="lock"></i>
+                    Secure Checkout
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">
+                        <i data-lucide="sparkles"></i>
+                        #1 Rated Platform
+                    </span>
+                    <h1>Launch Your Business in <span class="highlight">24 Hours</span></h1>
+                    <p class="hero-subtitle">Join 50,000+ entrepreneurs who've scaled their businesses with our proven system. No technical skills required.</p>
+                    
+                    <div class="value-props">
+                        <div class="value-item">
+                            <i data-lucide="check-circle" class="value-icon"></i>
+                            <span>Everything you need to start</span>
+                        </div>
+                        <div class="value-item">
+                            <i data-lucide="check-circle" class="value-icon"></i>
+                            <span>Expert support 24/7</span>
+                        </div>
+                        <div class="value-item">
+                            <i data-lucide="check-circle" class="value-icon"></i>
+                            <span>Results in your first week</span>
+                        </div>
+                    </div>
+
+                    <div class="social-proof-mini">
+                        <div class="avatars">
+                            <img src="https://i.pravatar.cc/40?img=1" alt="User" class="avatar">
+                            <img src="https://i.pravatar.cc/40?img=2" alt="User" class="avatar">
+                            <img src="https://i.pravatar.cc/40?img=3" alt="User" class="avatar">
+                            <img src="https://i.pravatar.cc/40?img=4" alt="User" class="avatar">
+                            <span class="avatar-count">+2.5K</span>
+                        </div>
+                        <div class="rating">
+                            <div class="stars">
+                                <i data-lucide="star" class="star filled"></i>
+                                <i data-lucide="star" class="star filled"></i>
+                                <i data-lucide="star" class="star filled"></i>
+                                <i data-lucide="star" class="star filled"></i>
+                                <i data-lucide="star" class="star filled"></i>
+                            </div>
+                            <span class="rating-text">4.9/5 from 2,500+ reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-form-wrapper">
+                    <div class="form-card">
+                        <div class="form-header">
+                            <h3>Start Your Free Trial</h3>
+                            <p class="form-subtext">No credit card required</p>
+                        </div>
+                        
+                        <form class="signup-form" id="signupForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="user" class="input-icon"></i>
+                                    <input type="text" id="name" name="name" placeholder="John Smith" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="mail" class="input-icon"></i>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="building-2" class="input-icon"></i>
+                                    <input type="text" id="company" name="company" placeholder="Acme Inc.">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="cta-button">
+                                <span class="btn-text">Get Instant Access</span>
+                                <i data-lucide="arrow-right" class="btn-icon"></i>
+                                <span class="btn-loading">
+                                    <i data-lucide="loader-2" class="spinner"></i>
+                                </span>
+                            </button>
+
+                            <div class="form-trust">
+                                <i data-lucide="shield"></i>
+                                <span>Your information is 100% secure</span>
+                            </div>
+                        </form>
+
+                        <div class="spots-left">
+                            <i data-lucide="users"></i>
+                            <span><strong>Only 7 spots</strong> left at this price</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container">
+            <p class="trust-label">Trusted by industry leaders</p>
+            <div class="badge-grid">
+                <div class="badge-item">
+                    <i data-lucide="building"></i>
+                    <span>Forbes</span>
+                </div>
+                <div class="badge-item">
+                    <i data-lucide="tv"></i>
+                    <span>TechCrunch</span>
+                </div>
+                <div class="badge-item">
+                    <i data-lucide="newspaper"></i>
+                    <span>Business Insider</span>
+                </div>
+                <div class="badge-item">
+                    <i data-lucide="radio"></i>
+                    <span>Wired</span>
+                </div>
+                <div class="badge-item">
+                    <i data-lucide="megaphone"></i>
+                    <span>Entrepreneur</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-label">Why Choose Us</span>
+                    <h2>The Fastest Way to <span class="highlight">Scale Your Business</span></h2>
+                    <p>We've helped over 50,000 entrepreneurs launch and grow their businesses. Our proven system combines cutting-edge tools with expert guidance.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$2.5B</span>
+                            <span class="stat-label">Revenue Generated</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-card">
+                        <i data-lucide="bar-chart-3" class="feature-visual"></i>
+                        <div class="growth-indicator">
+                            <i data-lucide="trending-up"></i>
+                            <span>+247% Growth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What's Included</span>
+                <h2>Everything You Need to Succeed</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="layout-dashboard"></i>
+                    </div>
+                    <h3>All-in-One Dashboard</h3>
+                    <p>Manage your entire business from a single, intuitive dashboard.</p>
+                    <span class="service-value">$499/mo value</span>
+                </div>
+                
+                <div class="service-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3>Automation Suite</h3>
+                    <p>Save 20+ hours/week with our smart automation tools.</p>
+                    <span class="service-value">$799/mo value</span>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="headphones"></i>
+                    </div>
+                    <h3>24/7 Expert Support</h3>
+                    <p>Get help anytime from our team of business experts.</p>
+                    <span class="service-value">$299/mo value</span>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <h3>Training Academy</h3>
+                    <p>Access 100+ hours of expert training and resources.</p>
+                    <span class="service-value">$999 value</span>
+                </div>
+            </div>
+
+            <div class="total-value">
+                <span class="value-text">Total Value: <span class="original">$2,596</span></span>
+                <span class="your-price">Your Price: <strong>$49/mo</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Success Stories</span>
+                <h2>See What Our Customers Say</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                    </div>
+                    <p class="testimonial-text">"I went from zero to $50K/month in just 90 days. This platform changed everything for my business."</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/48?img=11" alt="Sarah M." class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">Sarah Mitchell</span>
+                            <span class="author-role">E-commerce Founder</span>
+                        </div>
+                        <div class="verified-badge">
+                            <i data-lucide="badge-check"></i>
+                            Verified
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                    </div>
+                    <p class="testimonial-text">"The automation tools alone saved me 30 hours per week. I can finally focus on growing my business."</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/48?img=12" alt="Michael R." class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">Michael Rodriguez</span>
+                            <span class="author-role">Agency Owner</span>
+                        </div>
+                        <div class="verified-badge">
+                            <i data-lucide="badge-check"></i>
+                            Verified
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                        <i data-lucide="star" class="star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best investment I've ever made. The support team helped me every step of the way."</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/48?img=5" alt="Emily C." class="author-avatar">
+                        <div class="author-info">
+                            <span class="author-name">Emily Chen</span>
+                            <span class="author-role">SaaS Founder</span>
+                        </div>
+                        <div class="verified-badge">
+                            <i data-lucide="badge-check"></i>
+                            Verified
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-text">
+                    <span class="section-label">Limited Time Offer</span>
+                    <h2>Ready to Transform Your Business?</h2>
+                    <p>Join thousands of successful entrepreneurs. Start your free trial today.</p>
+                    
+                    <div class="guarantee-box">
+                        <i data-lucide="shield-check" class="guarantee-icon"></i>
+                        <div class="guarantee-text">
+                            <strong>30-Day Money-Back Guarantee</strong>
+                            <span>Try it risk-free. If you're not satisfied, get a full refund.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <div class="cta-card">
+                        <div class="price-display">
+                            <span class="price-old">$99/mo</span>
+                            <span class="price-new">$49<span class="price-period">/mo</span></span>
+                        </div>
+                        <button class="cta-button large" onclick="scrollToForm()">
+                            <span>Claim Your 50% Discount</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        <p class="cta-note">
+                            <i data-lucide="clock"></i>
+                            Offer expires when the timer runs out
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i data-lucide="rocket" class="logo-icon"></i>
+                        <span>LaunchPro</span>
+                    </a>
+                    <p>Empowering entrepreneurs to build successful businesses.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="security-badges">
+                    <div class="security-badge">
+                        <i data-lucide="lock"></i>
+                        <span>SSL Secured</span>
+                    </div>
+                    <div class="security-badge">
+                        <i data-lucide="credit-card"></i>
+                        <span>PCI Compliant</span>
+                    </div>
+                    <div class="security-badge">
+                        <i data-lucide="shield"></i>
+                        <span>GDPR Ready</span>
+                    </div>
+                </div>
+                <p class="copyright">&copy; 2026 LaunchPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <i data-lucide="check-circle"></i>
+            </div>
+            <h3>Welcome to LaunchPro!</h3>
+            <p>Check your email for login details. Your journey starts now!</p>
+            <button class="cta-button" onclick="closeModal()">Got it!</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
