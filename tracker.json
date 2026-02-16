@@ -1,5 +1,5 @@
 {
-  "nextIndex": 20,
+  "nextIndex": 21,
   "totalStyles": 54,
   "styles": [
     {
@@ -139,7 +139,8 @@
       "id": 20,
       "name": "Hero-Centric Design",
       "slug": "20-hero-centric",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-16"
     },
     {
       "id": 21,
