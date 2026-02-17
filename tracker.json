@@ -1,5 +1,5 @@
 {
-  "nextIndex": 23,
+  "nextIndex": 24,
   "totalStyles": 54,
   "styles": [
     {
@@ -160,7 +160,8 @@
       "id": 23,
       "name": "Minimal & Direct",
       "slug": "23-minimal-direct",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-17"
     },
     {
       "id": 24,

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal & Direct | UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">clarity.</a>
+            <button class="nav-toggle" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Focus on what matters.</h1>
+            <p>We help businesses strip away the noise and build products that actually work.</p>
+            <a href="#contact" class="cta-button">
+                Start a conversation
+                <i data-lucide="arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <span class="section-label">About</span>
+            <h2>Simplicity is the ultimate sophistication.</h2>
+            <p>We're a small studio that believes great products don't need to be complicated. Every feature should earn its place. Every interaction should feel natural.</p>
+            <p>Since 2018, we've helped startups and enterprises alike cut through complexity and deliver experiences their users actually love.</p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <span class="section-label">Services</span>
+            <h2>What we do</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <i data-lucide="compass"></i>
+                    <div class="service-content">
+                        <h3>Strategy</h3>
+                        <p>Define what to build and why. We help you find the core value proposition that sets you apart.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="pen-tool"></i>
+                    <div class="service-content">
+                        <h3>Design</h3>
+                        <p>Clean, intentional interfaces. Every pixel serves a purpose. No decoration without function.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="code-2"></i>
+                    <div class="service-content">
+                        <h3>Development</h3>
+                        <p>Fast, accessible, maintainable. We write code that's as clean as our designs.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="rocket"></i>
+                    <div class="service-content">
+                        <h3>Launch</h3>
+                        <p>Get to market quickly. We help you ship confidently and iterate based on real feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <span class="section-label">Testimonials</span>
+            <h2>What clients say</h2>
+            <div class="testimonials-list">
+                <blockquote class="testimonial">
+                    <p>"They helped us cut our product roadmap in half while doubling user satisfaction. Less really is more."</p>
+                    <footer>
+                        <cite>Sarah Chen</cite>
+                        <span>CEO, Streamline</span>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>"No fluff, no endless meetings. Just clear thinking and excellent execution. Our favorite kind of partner."</p>
+                    <footer>
+                        <cite>Marcus Rivera</cite>
+                        <span>Product Lead, Basecamp</span>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>"They asked the hard questions no one else would. Our product is better for it."</p>
+                    <footer>
+                        <cite>Emma Larsson</cite>
+                        <span>Founder, Nordic Design Co</span>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <span class="section-label">Contact</span>
+            <h2>Let's talk.</h2>
+            <p>Tell us about your project. We'll get back to you within 24 hours.</p>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="you@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="What's on your mind?"></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    Send message
+                    <i data-lucide="send"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">clarity.</a>
+                    <p>Simple products. Real impact.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Clarity Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
