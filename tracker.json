@@ -1,5 +1,5 @@
 {
-  "nextIndex": 24,
+  "nextIndex": 25,
   "totalStyles": 54,
   "styles": [
     {
@@ -167,7 +167,8 @@
       "id": 24,
       "name": "Social Proof-Focused",
       "slug": "24-social-proof",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-18"
     },
     {
       "id": 25,
