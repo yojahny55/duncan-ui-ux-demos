@@ -1,0 +1,2703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Product Demo | FlowCraft</title>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --primary-light: #a5b4fc;
+      --secondary: #0ea5e9;
+      --accent: #10b981;
+      --bg-dark: #0f172a;
+      --bg-card: #1e293b;
+      --bg-elevated: #334155;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --border: #475569;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --error: #ef4444;
+      --gradient-primary: linear-gradient(135deg, #6366f1 0%, #0ea5e9 100%);
+      --gradient-accent: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
+      --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(71, 85, 105, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .logo i {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-light);
+    }
+
+    .nav-cta {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(ellipse at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+      animation: drift 20s ease-in-out infinite;
+    }
+
+    @keyframes drift {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(-5%, 5%) rotate(5deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text h1 span {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-text p {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
+      text-decoration: none;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: white;
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border: 2px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    /* Hero Demo Preview */
+    .hero-demo {
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .demo-window {
+      background: var(--bg-card);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      transform: rotateY(-5deg) rotateX(5deg);
+      transition: transform 0.5s;
+    }
+
+    .demo-window:hover {
+      transform: rotateY(0) rotateX(0);
+    }
+
+    .demo-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-elevated);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .demo-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .demo-dot.red { background: var(--error); }
+    .demo-dot.yellow { background: var(--warning); }
+    .demo-dot.green { background: var(--success); }
+
+    .demo-title {
+      flex: 1;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .demo-body {
+      padding: 1.5rem;
+      min-height: 300px;
+    }
+
+    /* Floating Elements */
+    .floating-badge {
+      position: absolute;
+      padding: 0.75rem 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      box-shadow: var(--shadow-lg);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .floating-badge.badge-1 {
+      top: -1rem;
+      right: 2rem;
+      animation-delay: 0s;
+    }
+
+    .floating-badge.badge-2 {
+      bottom: 2rem;
+      left: -2rem;
+      animation-delay: 1s;
+    }
+
+    .floating-badge.badge-3 {
+      top: 50%;
+      right: -3rem;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .badge-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .badge-icon.purple { background: rgba(99, 102, 241, 0.2); color: var(--primary-light); }
+    .badge-icon.green { background: rgba(16, 185, 129, 0.2); color: var(--accent); }
+    .badge-icon.blue { background: rgba(14, 165, 233, 0.2); color: var(--secondary); }
+
+    /* Progress Demo Section */
+    .progress-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(30, 41, 59, 0.5) 100%);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 4rem;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 2rem;
+      color: var(--primary-light);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--text-secondary);
+      font-size: 1.125rem;
+    }
+
+    /* Walkthrough Demo */
+    .walkthrough-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .walkthrough-progress {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .walkthrough-progress::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 60px;
+      right: 60px;
+      height: 4px;
+      background: var(--bg-elevated);
+      border-radius: 2px;
+    }
+
+    .progress-line {
+      position: absolute;
+      top: 24px;
+      left: 60px;
+      height: 4px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+      transition: width 0.5s ease;
+    }
+
+    .progress-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .step-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 3px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      color: var(--text-muted);
+    }
+
+    .progress-step.active .step-circle,
+    .progress-step.completed .step-circle {
+      background: var(--gradient-primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    .step-label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      text-align: center;
+      max-width: 100px;
+      transition: color 0.3s;
+    }
+
+    .progress-step.active .step-label {
+      color: var(--text-primary);
+    }
+
+    /* Walkthrough Content */
+    .walkthrough-content {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .walkthrough-info {
+      background: var(--bg-card);
+      border-radius: 1rem;
+      padding: 2rem;
+      border: 1px solid var(--border);
+    }
+
+    .walkthrough-step-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .walkthrough-step-title i {
+      color: var(--primary-light);
+    }
+
+    .walkthrough-step-desc {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .feature-list i {
+      color: var(--accent);
+    }
+
+    .walkthrough-nav {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .walkthrough-nav .btn {
+      flex: 1;
+      justify-content: center;
+    }
+
+    /* Interactive App Demo */
+    .app-demo {
+      background: var(--bg-card);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .app-demo-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      background: var(--bg-elevated);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .app-user {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .app-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-user-info h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .app-user-info span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .app-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .app-action-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 0.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      color: var(--text-secondary);
+    }
+
+    .app-action-btn:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    .app-demo-body {
+      padding: 1.5rem;
+      min-height: 350px;
+    }
+
+    /* Step-specific Content */
+    .step-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .step-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Dashboard Cards */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-card {
+      background: var(--bg-elevated);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .stat-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .stat-card.highlight {
+      border-color: var(--primary);
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+      animation: pulse-border 2s infinite;
+    }
+
+    @keyframes pulse-border {
+      0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
+      50% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.4); }
+    }
+
+    .stat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-header span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .stat-header i {
+      color: var(--primary-light);
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .stat-change {
+      font-size: 0.75rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    /* Chart placeholder */
+    .chart-area {
+      background: var(--bg-elevated);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .chart-header h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .chart-bars {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      gap: 0.5rem;
+    }
+
+    .chart-bar {
+      flex: 1;
+      background: var(--gradient-primary);
+      border-radius: 0.25rem 0.25rem 0 0;
+      transition: height 0.5s ease;
+    }
+
+    /* Workflow Builder */
+    .workflow-canvas {
+      background: var(--bg-elevated);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      min-height: 300px;
+    }
+
+    .workflow-nodes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .workflow-node {
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .workflow-node:hover {
+      border-color: var(--primary);
+      transform: scale(1.02);
+    }
+
+    .workflow-node.active {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    .workflow-node.dragging {
+      opacity: 0.5;
+      transform: scale(0.95);
+    }
+
+    .node-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .node-icon.trigger { background: rgba(239, 68, 68, 0.2); color: var(--error); }
+    .node-icon.action { background: rgba(99, 102, 241, 0.2); color: var(--primary-light); }
+    .node-icon.condition { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+    .node-icon.output { background: rgba(16, 185, 129, 0.2); color: var(--accent); }
+
+    .node-info h5 {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .node-info span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .workflow-connector {
+      width: 40px;
+      height: 2px;
+      background: var(--border);
+      position: relative;
+    }
+
+    .workflow-connector::after {
+      content: '';
+      position: absolute;
+      right: -4px;
+      top: -4px;
+      width: 0;
+      height: 0;
+      border-left: 8px solid var(--border);
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+    }
+
+    /* Node Palette */
+    .node-palette {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .palette-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .palette-items {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .palette-item {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      cursor: grab;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    .palette-item:hover {
+      border-style: solid;
+      border-color: var(--primary);
+      color: var(--text-primary);
+    }
+
+    /* Settings Panel */
+    .settings-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .setting-group {
+      background: var(--bg-elevated);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      border: 1px solid var(--border);
+    }
+
+    .setting-group h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .setting-group h4 i {
+      color: var(--primary-light);
+    }
+
+    .setting-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .setting-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .setting-label {
+      font-size: 0.875rem;
+    }
+
+    .setting-label span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Toggle Switch */
+    .toggle {
+      width: 48px;
+      height: 26px;
+      background: var(--bg-card);
+      border-radius: 13px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.3s;
+      border: 2px solid var(--border);
+    }
+
+    .toggle.active {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .toggle::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: white;
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.3s;
+    }
+
+    .toggle.active::after {
+      transform: translateX(22px);
+    }
+
+    /* Publish Success */
+    .publish-success {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: var(--accent);
+      animation: scaleIn 0.5s ease;
+    }
+
+    @keyframes scaleIn {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .publish-success h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .publish-success p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .publish-url {
+      background: var(--bg-elevated);
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border: 1px solid var(--border);
+    }
+
+    .publish-url code {
+      font-family: monospace;
+      color: var(--primary-light);
+      font-size: 0.875rem;
+    }
+
+    .publish-url button {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .publish-url button:hover {
+      color: var(--primary-light);
+    }
+
+    /* Before/After Section */
+    .compare-section {
+      padding: 6rem 2rem;
+      background: var(--bg-dark);
+    }
+
+    .compare-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Before/After Slider */
+    .before-after {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 16/10;
+    }
+
+    .ba-image {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .ba-before {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      z-index: 1;
+    }
+
+    .ba-after {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      clip-path: inset(0 50% 0 0);
+      z-index: 2;
+    }
+
+    .ba-content {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    /* Old UI Style */
+    .old-ui {
+      background: #2a2a3e;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+    }
+
+    .old-ui-header {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .old-ui-btn {
+      background: #4a4a5e;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: #8a8a9e;
+      font-size: 0.75rem;
+      border-radius: 0.25rem;
+    }
+
+    .old-ui-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .old-ui-table th,
+    .old-ui-table td {
+      padding: 0.5rem;
+      text-align: left;
+      border-bottom: 1px solid #3a3a4e;
+      font-size: 0.75rem;
+      color: #6a6a7e;
+    }
+
+    .old-ui-table th {
+      color: #8a8a9e;
+    }
+
+    /* New UI Style */
+    .new-ui {
+      background: var(--bg-card);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .new-ui-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .new-ui-title {
+      font-weight: 600;
+    }
+
+    .new-ui-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .new-ui-btn {
+      background: var(--gradient-primary);
+      border: none;
+      padding: 0.5rem 1rem;
+      color: white;
+      font-size: 0.75rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .new-ui-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    .new-ui-card {
+      background: var(--bg-elevated);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      border: 1px solid var(--border);
+    }
+
+    .new-ui-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .new-ui-card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 0.5rem;
+      background: rgba(99, 102, 241, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-light);
+    }
+
+    .new-ui-card h5 {
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .new-ui-card-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    /* Slider Handle */
+    .ba-slider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: white;
+      z-index: 10;
+      cursor: ew-resize;
+      transform: translateX(-50%);
+    }
+
+    .ba-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      color: var(--bg-dark);
+    }
+
+    .ba-labels {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      display: flex;
+      justify-content: space-between;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .ba-label {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Try It Section */
+    .try-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, var(--bg-dark) 100%);
+    }
+
+    .try-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .try-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .try-card {
+      background: var(--bg-card);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .try-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .try-card-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .try-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .try-icon.purple { background: rgba(99, 102, 241, 0.2); color: var(--primary-light); }
+    .try-icon.green { background: rgba(16, 185, 129, 0.2); color: var(--accent); }
+    .try-icon.blue { background: rgba(14, 165, 233, 0.2); color: var(--secondary); }
+
+    .try-card-header h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .try-card-header p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .try-card-body {
+      padding: 1.5rem;
+    }
+
+    /* Form Builder Demo */
+    .form-builder {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-field {
+      position: relative;
+    }
+
+    .form-field input {
+      width: 100%;
+      padding: 1rem;
+      padding-left: 3rem;
+      background: var(--bg-elevated);
+      border: 2px solid var(--border);
+      border-radius: 0.75rem;
+      color: var(--text-primary);
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .form-field input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .form-field input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-field i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .form-field input:focus + i {
+      color: var(--primary-light);
+    }
+
+    .form-submit {
+      background: var(--gradient-primary);
+      border: none;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    .form-submit:hover {
+      transform: translateY(-2px);
+    }
+
+    .form-submit.success {
+      background: var(--accent);
+    }
+
+    /* Color Picker Demo */
+    .color-picker {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .color-preview {
+      height: 100px;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .color-preview span {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-family: monospace;
+    }
+
+    .color-sliders {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .color-slider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .color-slider label {
+      width: 16px;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+
+    .color-slider input[type="range"] {
+      flex: 1;
+      -webkit-appearance: none;
+      height: 8px;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .color-slider input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .color-slider.red input { background: linear-gradient(to right, #000, #f00); }
+    .color-slider.green input { background: linear-gradient(to right, #000, #0f0); }
+    .color-slider.blue input { background: linear-gradient(to right, #000, #00f); }
+
+    .color-slider span {
+      width: 40px;
+      text-align: right;
+      font-family: monospace;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    /* Drag & Drop Demo */
+    .drag-drop {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .drag-zones {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .drag-zone {
+      background: var(--bg-elevated);
+      border: 2px dashed var(--border);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      min-height: 150px;
+      transition: all 0.3s;
+    }
+
+    .drag-zone.dragover {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    .drag-zone-title {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .drag-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .drag-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      cursor: grab;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      transition: all 0.3s;
+    }
+
+    .drag-item:hover {
+      border-color: var(--primary);
+    }
+
+    .drag-item.dragging {
+      opacity: 0.5;
+      transform: scale(0.95);
+    }
+
+    .drag-item i {
+      color: var(--text-muted);
+    }
+
+    /* Tooltips */
+    .tooltip-demo {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      white-space: nowrap;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 100;
+    }
+
+    .tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 8px solid transparent;
+      border-top-color: var(--bg-card);
+    }
+
+    .tooltip-demo:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Feature Spotlights */
+    .spotlight-section {
+      padding: 6rem 2rem;
+      background: var(--bg-dark);
+      overflow: hidden;
+    }
+
+    .spotlight-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .spotlight-card {
+      background: var(--bg-card);
+      border-radius: 1rem;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s;
+    }
+
+    .spotlight-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s;
+    }
+
+    .spotlight-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .spotlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .spotlight-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: transform 0.5s;
+    }
+
+    .spotlight-card:hover .spotlight-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .spotlight-icon.purple { background: rgba(99, 102, 241, 0.2); color: var(--primary-light); }
+    .spotlight-icon.green { background: rgba(16, 185, 129, 0.2); color: var(--accent); }
+    .spotlight-icon.blue { background: rgba(14, 165, 233, 0.2); color: var(--secondary); }
+    .spotlight-icon.orange { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+
+    .spotlight-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .spotlight-card p {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .spotlight-link {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.3s;
+    }
+
+    .spotlight-link:hover {
+      gap: 0.75rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
+      text-align: center;
+    }
+
+    .cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-content h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .cta-content p {
+      color: var(--text-secondary);
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      padding: 4rem 2rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr repeat(3, 1fr);
+      gap: 3rem;
+    }
+
+    .footer-brand p {
+      color: var(--text-secondary);
+      margin: 1rem 0;
+      max-width: 300px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 0.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: all 0.3s;
+    }
+
+    .footer-social a:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    .footer-links h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-light);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 1024px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .floating-badge.badge-2,
+      .floating-badge.badge-3 {
+        display: none;
+      }
+
+      .walkthrough-content {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .walkthrough-progress {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .walkthrough-progress::before,
+      .progress-line {
+        display: none;
+      }
+
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .new-ui-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .drag-zones {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-brand p {
+        max-width: none;
+      }
+
+      .footer-social {
+        justify-content: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 5rem 1rem 3rem;
+      }
+
+      .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.875rem;
+      }
+
+      .ba-label {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+      }
+
+      .try-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="logo">
+      <i data-lucide="workflow"></i>
+      FlowCraft
+    </a>
+    <ul class="nav-links">
+      <li><a href="#walkthrough"><i data-lucide="play-circle"></i> Demo</a></li>
+      <li><a href="#compare"><i data-lucide="git-compare"></i> Compare</a></li>
+      <li><a href="#features"><i data-lucide="sparkles"></i> Features</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta">
+      <i data-lucide="rocket"></i>
+      Start Free Trial
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Experience the product <span>before you buy</span></h1>
+        <p>Interactive demos let your prospects explore your product hands-on. No signup required, no sales calls - just pure product discovery.</p>
+        <div class="hero-cta">
+          <a href="#walkthrough" class="btn btn-primary">
+            <i data-lucide="play"></i>
+            Try Live Demo
+          </a>
+          <a href="#compare" class="btn btn-secondary">
+            <i data-lucide="eye"></i>
+            See Before/After
+          </a>
+        </div>
+      </div>
+      <div class="hero-demo">
+        <div class="floating-badge badge-1">
+          <div class="badge-icon purple"><i data-lucide="zap"></i></div>
+          <span>5x faster conversion</span>
+        </div>
+        <div class="floating-badge badge-2">
+          <div class="badge-icon green"><i data-lucide="check-circle"></i></div>
+          <span>No code required</span>
+        </div>
+        <div class="floating-badge badge-3">
+          <div class="badge-icon blue"><i data-lucide="users"></i></div>
+          <span>10k+ users</span>
+        </div>
+        <div class="demo-window">
+          <div class="demo-header">
+            <span class="demo-dot red"></span>
+            <span class="demo-dot yellow"></span>
+            <span class="demo-dot green"></span>
+            <span class="demo-title">FlowCraft Dashboard</span>
+          </div>
+          <div class="demo-body">
+            <div class="dashboard-grid">
+              <div class="stat-card">
+                <div class="stat-header">
+                  <span>Revenue</span>
+                  <i data-lucide="trending-up"></i>
+                </div>
+                <div class="stat-value">$48.2k</div>
+                <div class="stat-change"><i data-lucide="arrow-up"></i> +12.5%</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-header">
+                  <span>Users</span>
+                  <i data-lucide="users"></i>
+                </div>
+                <div class="stat-value">2,847</div>
+                <div class="stat-change"><i data-lucide="arrow-up"></i> +8.3%</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-header">
+                  <span>Tasks</span>
+                  <i data-lucide="check-square"></i>
+                </div>
+                <div class="stat-value">156</div>
+                <div class="stat-change"><i data-lucide="arrow-up"></i> +24.1%</div>
+              </div>
+            </div>
+            <div class="chart-area">
+              <div class="chart-header">
+                <h4>Weekly Overview</h4>
+                <i data-lucide="bar-chart-2"></i>
+              </div>
+              <div class="chart-bars">
+                <div class="chart-bar" style="height: 60%"></div>
+                <div class="chart-bar" style="height: 80%"></div>
+                <div class="chart-bar" style="height: 45%"></div>
+                <div class="chart-bar" style="height: 90%"></div>
+                <div class="chart-bar" style="height: 70%"></div>
+                <div class="chart-bar" style="height: 85%"></div>
+                <div class="chart-bar" style="height: 95%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Walkthrough Section -->
+  <section id="walkthrough" class="progress-section">
+    <div class="section-header">
+      <span class="section-label"><i data-lucide="compass"></i> Guided Walkthrough</span>
+      <h2 class="section-title">Step through the experience</h2>
+      <p class="section-desc">Follow along with our interactive walkthrough to see how FlowCraft transforms your workflow.</p>
+    </div>
+    <div class="walkthrough-container">
+      <!-- Progress Steps -->
+      <div class="walkthrough-progress">
+        <div class="progress-line" id="progressLine"></div>
+        <div class="progress-step active" data-step="1">
+          <div class="step-circle"><i data-lucide="layout-dashboard"></i></div>
+          <span class="step-label">Dashboard</span>
+        </div>
+        <div class="progress-step" data-step="2">
+          <div class="step-circle"><i data-lucide="git-branch"></i></div>
+          <span class="step-label">Build Workflow</span>
+        </div>
+        <div class="progress-step" data-step="3">
+          <div class="step-circle"><i data-lucide="settings"></i></div>
+          <span class="step-label">Configure</span>
+        </div>
+        <div class="progress-step" data-step="4">
+          <div class="step-circle"><i data-lucide="rocket"></i></div>
+          <span class="step-label">Publish</span>
+        </div>
+      </div>
+
+      <!-- Walkthrough Content -->
+      <div class="walkthrough-content">
+        <div class="walkthrough-info">
+          <div id="stepInfo">
+            <!-- Step 1 Info -->
+            <div class="step-content active" data-step="1">
+              <h3 class="walkthrough-step-title">
+                <i data-lucide="layout-dashboard"></i>
+                Your Command Center
+              </h3>
+              <p class="walkthrough-step-desc">
+                The dashboard gives you a bird's eye view of everything happening in your workspace. Track metrics, monitor workflows, and jump into any project instantly.
+              </p>
+              <ul class="feature-list">
+                <li><i data-lucide="check"></i> Real-time analytics at a glance</li>
+                <li><i data-lucide="check"></i> Quick access to recent projects</li>
+                <li><i data-lucide="check"></i> Team activity feed</li>
+                <li><i data-lucide="check"></i> Custom widget layout</li>
+              </ul>
+            </div>
+            <!-- Step 2 Info -->
+            <div class="step-content" data-step="2">
+              <h3 class="walkthrough-step-title">
+                <i data-lucide="git-branch"></i>
+                Visual Workflow Builder
+              </h3>
+              <p class="walkthrough-step-desc">
+                Drag and drop nodes to create powerful automations. Connect triggers, actions, and conditions with our intuitive visual editor - no coding required.
+              </p>
+              <ul class="feature-list">
+                <li><i data-lucide="check"></i> 50+ pre-built integrations</li>
+                <li><i data-lucide="check"></i> Drag-and-drop simplicity</li>
+                <li><i data-lucide="check"></i> Conditional branching</li>
+                <li><i data-lucide="check"></i> Test before you deploy</li>
+              </ul>
+            </div>
+            <!-- Step 3 Info -->
+            <div class="step-content" data-step="3">
+              <h3 class="walkthrough-step-title">
+                <i data-lucide="settings"></i>
+                Fine-Tune Settings
+              </h3>
+              <p class="walkthrough-step-desc">
+                Customize every aspect of your workflow. Set schedules, add notifications, configure error handling, and more with our comprehensive settings panel.
+              </p>
+              <ul class="feature-list">
+                <li><i data-lucide="check"></i> Flexible scheduling options</li>
+                <li><i data-lucide="check"></i> Email & Slack notifications</li>
+                <li><i data-lucide="check"></i> Retry logic & error handling</li>
+                <li><i data-lucide="check"></i> Version control built-in</li>
+              </ul>
+            </div>
+            <!-- Step 4 Info -->
+            <div class="step-content" data-step="4">
+              <h3 class="walkthrough-step-title">
+                <i data-lucide="rocket"></i>
+                Go Live Instantly
+              </h3>
+              <p class="walkthrough-step-desc">
+                Publish your workflow with one click. It's immediately live and running. Share with your team or keep it private - you're in control.
+              </p>
+              <ul class="feature-list">
+                <li><i data-lucide="check"></i> One-click deployment</li>
+                <li><i data-lucide="check"></i> Shareable links</li>
+                <li><i data-lucide="check"></i> Rollback anytime</li>
+                <li><i data-lucide="check"></i> Usage analytics</li>
+              </ul>
+            </div>
+          </div>
+          <div class="walkthrough-nav">
+            <button class="btn btn-secondary" id="prevStep" disabled>
+              <i data-lucide="arrow-left"></i>
+              Previous
+            </button>
+            <button class="btn btn-primary" id="nextStep">
+              Next
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive App Demo -->
+        <div class="app-demo">
+          <div class="app-demo-header">
+            <div class="app-user">
+              <div class="app-avatar"><i data-lucide="user"></i></div>
+              <div class="app-user-info">
+                <h4>Sarah Johnson</h4>
+                <span>Pro Plan</span>
+              </div>
+            </div>
+            <div class="app-actions">
+              <div class="tooltip-demo">
+                <button class="app-action-btn"><i data-lucide="bell"></i></button>
+                <div class="tooltip">3 new notifications</div>
+              </div>
+              <div class="tooltip-demo">
+                <button class="app-action-btn"><i data-lucide="help-circle"></i></button>
+                <div class="tooltip">Get help</div>
+              </div>
+            </div>
+          </div>
+          <div class="app-demo-body">
+            <!-- Step 1: Dashboard -->
+            <div class="step-content active" data-step="1">
+              <div class="dashboard-grid">
+                <div class="stat-card highlight">
+                  <div class="stat-header">
+                    <span>Active Flows</span>
+                    <i data-lucide="activity"></i>
+                  </div>
+                  <div class="stat-value">24</div>
+                  <div class="stat-change"><i data-lucide="arrow-up"></i> +3 this week</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-header">
+                    <span>Executions</span>
+                    <i data-lucide="play"></i>
+                  </div>
+                  <div class="stat-value">12.4k</div>
+                  <div class="stat-change"><i data-lucide="arrow-up"></i> +18.2%</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-header">
+                    <span>Success Rate</span>
+                    <i data-lucide="check-circle"></i>
+                  </div>
+                  <div class="stat-value">99.7%</div>
+                  <div class="stat-change"><i data-lucide="arrow-up"></i> +0.2%</div>
+                </div>
+              </div>
+              <div class="chart-area">
+                <div class="chart-header">
+                  <h4>Execution History</h4>
+                  <i data-lucide="line-chart"></i>
+                </div>
+                <div class="chart-bars" id="animatedChart">
+                  <div class="chart-bar" style="height: 40%"></div>
+                  <div class="chart-bar" style="height: 65%"></div>
+                  <div class="chart-bar" style="height: 55%"></div>
+                  <div class="chart-bar" style="height: 80%"></div>
+                  <div class="chart-bar" style="height: 70%"></div>
+                  <div class="chart-bar" style="height: 90%"></div>
+                  <div class="chart-bar" style="height: 85%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Workflow Builder -->
+            <div class="step-content" data-step="2">
+              <div class="workflow-canvas">
+                <div class="workflow-nodes">
+                  <div class="workflow-node active" draggable="true">
+                    <div class="node-icon trigger"><i data-lucide="webhook"></i></div>
+                    <div class="node-info">
+                      <h5>Webhook Trigger</h5>
+                      <span>Starts on HTTP request</span>
+                    </div>
+                  </div>
+                  <div class="workflow-connector"></div>
+                  <div class="workflow-node" draggable="true">
+                    <div class="node-icon action"><i data-lucide="database"></i></div>
+                    <div class="node-info">
+                      <h5>Fetch Data</h5>
+                      <span>Query database</span>
+                    </div>
+                  </div>
+                  <div class="workflow-connector"></div>
+                  <div class="workflow-node" draggable="true">
+                    <div class="node-icon condition"><i data-lucide="git-fork"></i></div>
+                    <div class="node-info">
+                      <h5>Condition</h5>
+                      <span>If amount > 100</span>
+                    </div>
+                  </div>
+                  <div class="workflow-connector"></div>
+                  <div class="workflow-node" draggable="true">
+                    <div class="node-icon output"><i data-lucide="send"></i></div>
+                    <div class="node-info">
+                      <h5>Send Email</h5>
+                      <span>Notify team</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="node-palette">
+                  <span class="palette-label"><i data-lucide="grip"></i> Drag to add</span>
+                  <div class="palette-items">
+                    <div class="palette-item" draggable="true"><i data-lucide="clock"></i> Delay</div>
+                    <div class="palette-item" draggable="true"><i data-lucide="code"></i> Transform</div>
+                    <div class="palette-item" draggable="true"><i data-lucide="slack"></i> Slack</div>
+                    <div class="palette-item" draggable="true"><i data-lucide="filter"></i> Filter</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Settings -->
+            <div class="step-content" data-step="3">
+              <div class="settings-panel">
+                <div class="setting-group">
+                  <h4><i data-lucide="clock"></i> Schedule</h4>
+                  <div class="setting-row">
+                    <div class="setting-label">
+                      Enable scheduling
+                      <span>Run workflow on a schedule</span>
+                    </div>
+                    <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+                  </div>
+                  <div class="setting-row">
+                    <div class="setting-label">
+                      Run every hour
+                      <span>Execute hourly at :00</span>
+                    </div>
+                    <div class="toggle" onclick="this.classList.toggle('active')"></div>
+                  </div>
+                </div>
+                <div class="setting-group">
+                  <h4><i data-lucide="bell"></i> Notifications</h4>
+                  <div class="setting-row">
+                    <div class="setting-label">
+                      Email on failure
+                      <span>Get notified when workflow fails</span>
+                    </div>
+                    <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+                  </div>
+                  <div class="setting-row">
+                    <div class="setting-label">
+                      Slack notifications
+                      <span>Post updates to Slack</span>
+                    </div>
+                    <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4: Publish -->
+            <div class="step-content" data-step="4">
+              <div class="publish-success">
+                <div class="success-icon"><i data-lucide="check"></i></div>
+                <h3>Workflow Published!</h3>
+                <p>Your workflow is now live and ready to receive events.</p>
+                <div class="publish-url">
+                  <code>https://flow.craft/w/8x2kf9</code>
+                  <button onclick="navigator.clipboard.writeText('https://flow.craft/w/8x2kf9')">
+                    <i data-lucide="copy"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Compare Section -->
+  <section id="compare" class="compare-section">
+    <div class="section-header">
+      <span class="section-label"><i data-lucide="git-compare"></i> Before & After</span>
+      <h2 class="section-title">See the transformation</h2>
+      <p class="section-desc">Drag the slider to compare the old way vs. the FlowCraft way.</p>
+    </div>
+    <div class="compare-container">
+      <div class="before-after" id="beforeAfter">
+        <div class="ba-image ba-before">
+          <div class="ba-content">
+            <div class="old-ui">
+              <div class="old-ui-header">
+                <button class="old-ui-btn">File</button>
+                <button class="old-ui-btn">Edit</button>
+                <button class="old-ui-btn">View</button>
+                <button class="old-ui-btn">Tools</button>
+              </div>
+              <table class="old-ui-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>001</td><td>Task A</td><td>Pending</td><td>01/15</td></tr>
+                  <tr><td>002</td><td>Task B</td><td>Active</td><td>01/16</td></tr>
+                  <tr><td>003</td><td>Task C</td><td>Done</td><td>01/17</td></tr>
+                  <tr><td>004</td><td>Task D</td><td>Pending</td><td>01/18</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="ba-image ba-after">
+          <div class="ba-content">
+            <div class="new-ui">
+              <div class="new-ui-header">
+                <span class="new-ui-title">Project Overview</span>
+                <div class="new-ui-actions">
+                  <button class="new-ui-btn"><i data-lucide="plus"></i> New</button>
+                </div>
+              </div>
+              <div class="new-ui-cards">
+                <div class="new-ui-card">
+                  <div class="new-ui-card-header">
+                    <div class="new-ui-card-icon"><i data-lucide="circle-dot"></i></div>
+                    <h5>In Progress</h5>
+                  </div>
+                  <div class="new-ui-card-value">12</div>
+                </div>
+                <div class="new-ui-card">
+                  <div class="new-ui-card-header">
+                    <div class="new-ui-card-icon"><i data-lucide="check-circle"></i></div>
+                    <h5>Completed</h5>
+                  </div>
+                  <div class="new-ui-card-value">48</div>
+                </div>
+                <div class="new-ui-card">
+                  <div class="new-ui-card-header">
+                    <div class="new-ui-card-icon"><i data-lucide="clock"></i></div>
+                    <h5>Pending</h5>
+                  </div>
+                  <div class="new-ui-card-value">7</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-slider" id="baSlider">
+          <div class="ba-handle">
+            <i data-lucide="move-horizontal"></i>
+          </div>
+        </div>
+        <div class="ba-labels">
+          <span class="ba-label"><i data-lucide="x"></i> Before</span>
+          <span class="ba-label"><i data-lucide="check"></i> After</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Try It Yourself Section -->
+  <section class="try-section">
+    <div class="section-header">
+      <span class="section-label"><i data-lucide="mouse-pointer-click"></i> Try It Yourself</span>
+      <h2 class="section-title">Interactive components</h2>
+      <p class="section-desc">Explore these interactive elements to get a feel for the experience.</p>
+    </div>
+    <div class="try-container">
+      <div class="try-grid">
+        <!-- Form Builder Demo -->
+        <div class="try-card">
+          <div class="try-card-header">
+            <div class="try-icon purple"><i data-lucide="text-cursor-input"></i></div>
+            <div>
+              <h3>Form Builder</h3>
+              <p>Try filling out the form</p>
+            </div>
+          </div>
+          <div class="try-card-body">
+            <div class="form-builder">
+              <div class="form-field">
+                <input type="text" placeholder="Your name" id="demoName">
+                <i data-lucide="user"></i>
+              </div>
+              <div class="form-field">
+                <input type="email" placeholder="Email address" id="demoEmail">
+                <i data-lucide="mail"></i>
+              </div>
+              <button class="form-submit" id="formSubmit">
+                <i data-lucide="send"></i>
+                Submit Form
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Color Picker Demo -->
+        <div class="try-card">
+          <div class="try-card-header">
+            <div class="try-icon green"><i data-lucide="palette"></i></div>
+            <div>
+              <h3>Color Picker</h3>
+              <p>Adjust the sliders</p>
+            </div>
+          </div>
+          <div class="try-card-body">
+            <div class="color-picker">
+              <div class="color-preview" id="colorPreview" style="background: rgb(99, 102, 241)">
+                <span id="colorCode">#6366F1</span>
+              </div>
+              <div class="color-sliders">
+                <div class="color-slider red">
+                  <label>R</label>
+                  <input type="range" min="0" max="255" value="99" id="redSlider">
+                  <span id="redValue">99</span>
+                </div>
+                <div class="color-slider green">
+                  <label>G</label>
+                  <input type="range" min="0" max="255" value="102" id="greenSlider">
+                  <span id="greenValue">102</span>
+                </div>
+                <div class="color-slider blue">
+                  <label>B</label>
+                  <input type="range" min="0" max="255" value="241" id="blueSlider">
+                  <span id="blueValue">241</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drag & Drop Demo -->
+        <div class="try-card">
+          <div class="try-card-header">
+            <div class="try-icon blue"><i data-lucide="move"></i></div>
+            <div>
+              <h3>Drag & Drop</h3>
+              <p>Reorder the items</p>
+            </div>
+          </div>
+          <div class="try-card-body">
+            <div class="drag-drop">
+              <div class="drag-zones">
+                <div class="drag-zone" id="todoZone">
+                  <span class="drag-zone-title"><i data-lucide="list-todo"></i> To Do</span>
+                  <div class="drag-items">
+                    <div class="drag-item" draggable="true"><i data-lucide="grip-vertical"></i> Design mockups</div>
+                    <div class="drag-item" draggable="true"><i data-lucide="grip-vertical"></i> Write docs</div>
+                    <div class="drag-item" draggable="true"><i data-lucide="grip-vertical"></i> Code review</div>
+                  </div>
+                </div>
+                <div class="drag-zone" id="doneZone">
+                  <span class="drag-zone-title"><i data-lucide="check-square"></i> Done</span>
+                  <div class="drag-items">
+                    <div class="drag-item" draggable="true"><i data-lucide="grip-vertical"></i> Setup project</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Spotlights -->
+  <section id="features" class="spotlight-section">
+    <div class="section-header">
+      <span class="section-label"><i data-lucide="sparkles"></i> Feature Spotlights</span>
+      <h2 class="section-title">Why teams love FlowCraft</h2>
+      <p class="section-desc">Powerful features that make automation accessible to everyone.</p>
+    </div>
+    <div class="spotlight-grid">
+      <div class="spotlight-card">
+        <div class="spotlight-icon purple"><i data-lucide="puzzle"></i></div>
+        <h3>No-Code Builder</h3>
+        <p>Create complex workflows without writing a single line of code. Our visual editor makes automation accessible to everyone.</p>
+        <a href="#" class="spotlight-link">Learn more <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-icon green"><i data-lucide="zap"></i></div>
+        <h3>Instant Deploy</h3>
+        <p>Go from idea to production in minutes. One-click deployment with automatic scaling and zero downtime.</p>
+        <a href="#" class="spotlight-link">Learn more <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-icon blue"><i data-lucide="shield-check"></i></div>
+        <h3>Enterprise Security</h3>
+        <p>SOC 2 compliant with end-to-end encryption. Your data is protected with bank-grade security measures.</p>
+        <a href="#" class="spotlight-link">Learn more <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-icon orange"><i data-lucide="gauge"></i></div>
+        <h3>Real-Time Analytics</h3>
+        <p>Monitor every workflow execution with detailed logs, metrics, and insights. Debug issues in seconds, not hours.</p>
+        <a href="#" class="spotlight-link">Learn more <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to transform your workflow?</h2>
+      <p>Join thousands of teams who have already automated their processes with FlowCraft.</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-primary">
+          <i data-lucide="rocket"></i>
+          Start Free Trial
+        </a>
+        <a href="#" class="btn btn-secondary">
+          <i data-lucide="calendar"></i>
+          Book a Demo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <i data-lucide="workflow"></i>
+          FlowCraft
+        </a>
+        <p>Making workflow automation accessible to everyone. No code required.</p>
+        <div class="footer-social">
+          <a href="#"><i data-lucide="twitter"></i></a>
+          <a href="#"><i data-lucide="github"></i></a>
+          <a href="#"><i data-lucide="linkedin"></i></a>
+          <a href="#"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Status</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>2026 FlowCraft. All rights reserved.</span>
+      <span>Privacy Policy | Terms of Service</span>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Walkthrough Progress
+    let currentStep = 1;
+    const totalSteps = 4;
+    const progressSteps = document.querySelectorAll('.progress-step');
+    const progressLine = document.getElementById('progressLine');
+    const stepInfoContents = document.querySelectorAll('#stepInfo .step-content');
+    const appDemoContents = document.querySelectorAll('.app-demo-body .step-content');
+    const prevBtn = document.getElementById('prevStep');
+    const nextBtn = document.getElementById('nextStep');
+
+    function updateProgress() {
+      // Update progress line
+      const percentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
+      progressLine.style.width = `calc(${percentage}% - ${percentage > 0 ? 0 : 60}px)`;
+
+      // Update step indicators
+      progressSteps.forEach((step, index) => {
+        const stepNum = index + 1;
+        step.classList.remove('active', 'completed');
+        if (stepNum === currentStep) {
+          step.classList.add('active');
+        } else if (stepNum < currentStep) {
+          step.classList.add('completed');
+        }
+      });
+
+      // Update content
+      stepInfoContents.forEach(content => {
+        content.classList.remove('active');
+        if (parseInt(content.dataset.step) === currentStep) {
+          content.classList.add('active');
+        }
+      });
+
+      appDemoContents.forEach(content => {
+        content.classList.remove('active');
+        if (parseInt(content.dataset.step) === currentStep) {
+          content.classList.add('active');
+        }
+      });
+
+      // Update buttons
+      prevBtn.disabled = currentStep === 1;
+      nextBtn.innerHTML = currentStep === totalSteps 
+        ? 'Restart <i data-lucide="refresh-cw"></i>'
+        : 'Next <i data-lucide="arrow-right"></i>';
+      lucide.createIcons();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentStep > 1) {
+        currentStep--;
+        updateProgress();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentStep < totalSteps) {
+        currentStep++;
+      } else {
+        currentStep = 1;
+      }
+      updateProgress();
+    });
+
+    progressSteps.forEach((step, index) => {
+      step.addEventListener('click', () => {
+        currentStep = index + 1;
+        updateProgress();
+      });
+    });
+
+    // Before/After Slider
+    const beforeAfter = document.getElementById('beforeAfter');
+    const baSlider = document.getElementById('baSlider');
+    const baAfter = beforeAfter.querySelector('.ba-after');
+    let isDragging = false;
+
+    function updateSlider(x) {
+      const rect = beforeAfter.getBoundingClientRect();
+      let percentage = ((x - rect.left) / rect.width) * 100;
+      percentage = Math.max(0, Math.min(100, percentage));
+      baSlider.style.left = percentage + '%';
+      baAfter.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+    }
+
+    baSlider.addEventListener('mousedown', () => isDragging = true);
+    document.addEventListener('mouseup', () => isDragging = false);
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        updateSlider(e.clientX);
+      }
+    });
+
+    beforeAfter.addEventListener('touchmove', (e) => {
+      updateSlider(e.touches[0].clientX);
+    });
+
+    // Color Picker
+    const redSlider = document.getElementById('redSlider');
+    const greenSlider = document.getElementById('greenSlider');
+    const blueSlider = document.getElementById('blueSlider');
+    const colorPreview = document.getElementById('colorPreview');
+    const colorCode = document.getElementById('colorCode');
+    const redValue = document.getElementById('redValue');
+    const greenValue = document.getElementById('greenValue');
+    const blueValue = document.getElementById('blueValue');
+
+    function updateColor() {
+      const r = redSlider.value;
+      const g = greenSlider.value;
+      const b = blueSlider.value;
+      const hex = '#' + [r, g, b].map(x => {
+        const hex = parseInt(x).toString(16);
+        return hex.length === 1 ? '0' + hex : hex;
+      }).join('').toUpperCase();
+      
+      colorPreview.style.background = `rgb(${r}, ${g}, ${b})`;
+      colorCode.textContent = hex;
+      redValue.textContent = r;
+      greenValue.textContent = g;
+      blueValue.textContent = b;
+    }
+
+    redSlider.addEventListener('input', updateColor);
+    greenSlider.addEventListener('input', updateColor);
+    blueSlider.addEventListener('input', updateColor);
+
+    // Form Demo
+    const formSubmit = document.getElementById('formSubmit');
+    const demoName = document.getElementById('demoName');
+    const demoEmail = document.getElementById('demoEmail');
+
+    formSubmit.addEventListener('click', () => {
+      if (demoName.value && demoEmail.value) {
+        formSubmit.classList.add('success');
+        formSubmit.innerHTML = '<i data-lucide="check"></i> Submitted!';
+        lucide.createIcons();
+        setTimeout(() => {
+          formSubmit.classList.remove('success');
+          formSubmit.innerHTML = '<i data-lucide="send"></i> Submit Form';
+          demoName.value = '';
+          demoEmail.value = '';
+          lucide.createIcons();
+        }, 2000);
+      }
+    });
+
+    // Drag and Drop
+    const dragItems = document.querySelectorAll('.drag-item');
+    const dragZones = document.querySelectorAll('.drag-zone');
+
+    dragItems.forEach(item => {
+      item.addEventListener('dragstart', (e) => {
+        item.classList.add('dragging');
+        e.dataTransfer.setData('text/plain', '');
+      });
+
+      item.addEventListener('dragend', () => {
+        item.classList.remove('dragging');
+      });
+    });
+
+    dragZones.forEach(zone => {
+      zone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        zone.classList.add('dragover');
+      });
+
+      zone.addEventListener('dragleave', () => {
+        zone.classList.remove('dragover');
+      });
+
+      zone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        zone.classList.remove('dragover');
+        const draggingItem = document.querySelector('.dragging');
+        if (draggingItem) {
+          zone.querySelector('.drag-items').appendChild(draggingItem);
+        }
+      });
+    });
+
+    // Animate chart on scroll
+    const observerOptions = {
+      threshold: 0.5
+    };
+
+    const chartObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bars = entry.target.querySelectorAll('.chart-bar');
+          bars.forEach((bar, index) => {
+            const heights = [40, 65, 55, 80, 70, 90, 85];
+            setTimeout(() => {
+              bar.style.height = heights[index] + '%';
+            }, index * 100);
+          });
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.chart-area').forEach(chart => {
+      chartObserver.observe(chart);
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
