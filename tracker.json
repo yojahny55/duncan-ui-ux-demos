@@ -1,5 +1,5 @@
 {
-  "nextIndex": 26,
+  "nextIndex": 27,
   "totalStyles": 54,
   "styles": [
     {
@@ -181,7 +181,8 @@
       "id": 26,
       "name": "Trust & Authority",
       "slug": "26-trust-authority",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-19"
     },
     {
       "id": 27,
