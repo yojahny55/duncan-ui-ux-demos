@@ -1,5 +1,5 @@
 {
-  "nextIndex": 27,
+  "nextIndex": 28,
   "totalStyles": 54,
   "styles": [
     {
@@ -188,7 +188,8 @@
       "id": 27,
       "name": "Storytelling-Driven",
       "slug": "27-storytelling",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-19"
     },
     {
       "id": 28,
