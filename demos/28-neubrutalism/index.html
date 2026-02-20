@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neubrutalism Design | UI/UX Demo #28</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-box"><i data-lucide="zap"></i></span>
+                <span class="logo-text">BRUTAL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Proof</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cta">Get Started</button>
+            <button class="mobile-menu" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Proof</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button class="nav-cta mobile-cta">Get Started</button></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i data-lucide="sparkles"></i>
+                    <span>NEW ERA OF DESIGN</span>
+                </div>
+                <h1 class="hero-title">
+                    Design That<br>
+                    <span class="highlight-yellow">Hits Different.</span>
+                </h1>
+                <p class="hero-desc">
+                    Bold. Raw. Unapologetic. We craft digital experiences that refuse to blend in. No gradients. No pretense. Just pure impact.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">
+                        <i data-lucide="rocket"></i>
+                        Start Building
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i data-lucide="play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99%</span>
+                        <span class="stat-label">Satisfied</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card card-blue">
+                    <i data-lucide="palette"></i>
+                    <span>Bold Colors</span>
+                </div>
+                <div class="hero-card card-yellow">
+                    <i data-lucide="box"></i>
+                    <span>Hard Edges</span>
+                </div>
+                <div class="hero-card card-red">
+                    <i data-lucide="type"></i>
+                    <span>Heavy Type</span>
+                </div>
+                <div class="hero-card card-green">
+                    <i data-lucide="move"></i>
+                    <span>Offset Shadow</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-header">
+                <span class="section-tag">
+                    <i data-lucide="info"></i>
+                    ABOUT US
+                </span>
+                <h2 class="section-title">We Don't Do<br><span class="highlight-red">Boring.</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon icon-yellow">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <h3>Purpose-Driven</h3>
+                    <p>Every pixel serves a purpose. No fluff, no filler—just intentional design that converts.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon icon-blue">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Human-Centered</h3>
+                    <p>Design for real people, not personas. We build interfaces that feel natural and intuitive.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon icon-red">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3>Fast & Efficient</h3>
+                    <p>Speed matters. Our designs are optimized for performance without sacrificing style.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon icon-green">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>Battle-Tested</h3>
+                    <p>Proven across 500+ projects. Our approach works because it's been refined through real results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-container">
+            <div class="services-header">
+                <span class="section-tag tag-dark">
+                    <i data-lucide="briefcase"></i>
+                    SERVICES
+                </span>
+                <h2 class="section-title-dark">What We<br><span class="highlight-yellow">Actually Do.</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3>UI Design</h3>
+                    <p>Bold interfaces that demand attention. Clean layouts with maximum impact and zero compromise.</p>
+                    <a href="#" class="service-link">
+                        Learn More <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <div class="service-icon">
+                        <i data-lucide="compass"></i>
+                    </div>
+                    <h3>UX Strategy</h3>
+                    <p>User journeys that make sense. We map every interaction to ensure seamless experiences.</p>
+                    <a href="#" class="service-link">
+                        Learn More <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3>Development</h3>
+                    <p>Pixel-perfect implementation. Your designs come to life exactly as envisioned, every time.</p>
+                    <a href="#" class="service-link">
+                        Learn More <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">04</div>
+                    <div class="service-icon">
+                        <i data-lucide="megaphone"></i>
+                    </div>
+                    <h3>Brand Identity</h3>
+                    <p>Stand out or stand aside. We create visual identities that are impossible to ignore.</p>
+                    <a href="#" class="service-link">
+                        Learn More <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <span class="section-tag">
+                    <i data-lucide="message-square"></i>
+                    TESTIMONIALS
+                </span>
+                <h2 class="section-title">Real Talk From<br><span class="highlight-blue">Real Clients.</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card card-accent-yellow">
+                    <div class="testimonial-quote">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <p>"They completely transformed our brand. The neubrutalist approach was exactly what we needed to stand out in a sea of sameness."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-1">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Sarah Chen</strong>
+                            <span>CEO, TechStart</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card card-accent-blue">
+                    <div class="testimonial-quote">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <p>"Fast, bold, effective. Our conversion rate jumped 40% after the redesign. The team really gets what modern users want."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-2">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Marcus Johnson</strong>
+                            <span>Founder, PixelPush</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card card-accent-red">
+                    <div class="testimonial-quote">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <p>"No-nonsense design that actually performs. They delivered ahead of schedule and exceeded every expectation we had."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-3">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Elena Rodriguez</strong>
+                            <span>CMO, Brandify</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <span class="section-tag tag-dark">
+                    <i data-lucide="mail"></i>
+                    CONTACT
+                </span>
+                <h2 class="section-title-dark">Let's Make<br><span class="highlight-yellow">Something Bold.</span></h2>
+                <p class="contact-desc">Ready to ditch the boring and embrace the brutal? We're here to make your vision a reality.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <span>hello@brutal.design</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <span>Brooklyn, NY 11201</span>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="project">Project Type</label>
+                    <select id="project">
+                        <option value="">Select a service</option>
+                        <option value="ui">UI Design</option>
+                        <option value="ux">UX Strategy</option>
+                        <option value="dev">Development</option>
+                        <option value="brand">Brand Identity</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">
+                    <i data-lucide="send"></i>
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-box"><i data-lucide="zap"></i></span>
+                        <span class="logo-text">BRUTAL</span>
+                    </a>
+                    <p>Bold design for brands that refuse to blend in.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">UI Design</a></li>
+                            <li><a href="#">UX Strategy</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Branding</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Showcase</a></li>
+                            <li><a href="#">Templates</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BRUTAL. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

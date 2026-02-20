@@ -1,5 +1,5 @@
 {
-  "nextIndex": 28,
+  "nextIndex": 29,
   "totalStyles": 54,
   "styles": [
     {
@@ -195,7 +195,8 @@
       "id": 28,
       "name": "Neubrutalism",
       "slug": "28-neubrutalism",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-20"
     },
     {
       "id": 29,
