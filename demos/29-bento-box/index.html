@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Box Grid | UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i data-lucide="grid-3x3"></i>
+                <span>BentoUI</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cta">Get Started</button>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Bento Grid Layout -->
+    <section id="hero" class="hero">
+        <div class="bento-grid hero-grid">
+            <div class="bento-card bento-large hero-main">
+                <div class="hero-badge">
+                    <i data-lucide="sparkles"></i>
+                    <span>New in 2026</span>
+                </div>
+                <h1>Design that <span class="gradient-text">flows</span> like nature</h1>
+                <p>Experience the beauty of asymmetric layouts that guide your users naturally through content.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">
+                        <span>Explore Now</span>
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i data-lucide="play"></i>
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+            </div>
+            <div class="bento-card bento-medium stats-card">
+                <div class="stat-icon">
+                    <i data-lucide="trending-up"></i>
+                </div>
+                <div class="stat-value">98%</div>
+                <div class="stat-label">User Satisfaction</div>
+                <div class="stat-chart">
+                    <div class="chart-bar" style="--height: 40%"></div>
+                    <div class="chart-bar" style="--height: 60%"></div>
+                    <div class="chart-bar" style="--height: 45%"></div>
+                    <div class="chart-bar" style="--height: 80%"></div>
+                    <div class="chart-bar" style="--height: 98%"></div>
+                </div>
+            </div>
+            <div class="bento-card bento-small feature-mini">
+                <i data-lucide="zap"></i>
+                <span>Lightning Fast</span>
+            </div>
+            <div class="bento-card bento-small feature-mini accent">
+                <i data-lucide="shield-check"></i>
+                <span>Secure</span>
+            </div>
+            <div class="bento-card bento-medium image-card">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <span class="section-tag">
+                <i data-lucide="info"></i>
+                About Us
+            </span>
+            <h2>Crafted with <span class="gradient-text">precision</span></h2>
+        </div>
+        <div class="bento-grid about-grid">
+            <div class="bento-card bento-wide about-story">
+                <div class="about-content">
+                    <h3>Our Story</h3>
+                    <p>We believe in the power of thoughtful design. Every element is placed with intention, creating interfaces that feel both intuitive and delightful. Our bento-inspired layouts break free from rigid grids while maintaining harmony.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="number">150+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="number">50+</span>
+                            <span class="label">Clients</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="number">5</span>
+                            <span class="label">Years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-small value-card">
+                <i data-lucide="lightbulb"></i>
+                <h4>Innovation</h4>
+                <p>Pushing boundaries</p>
+            </div>
+            <div class="bento-card bento-small value-card">
+                <i data-lucide="heart"></i>
+                <h4>Passion</h4>
+                <p>Love what we do</p>
+            </div>
+            <div class="bento-card bento-medium team-card">
+                <div class="team-avatars">
+                    <div class="avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div class="avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div class="avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div class="avatar more">+12</div>
+                </div>
+                <h4>Our Team</h4>
+                <p>15 creative minds working together</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <span class="section-tag">
+                <i data-lucide="briefcase"></i>
+                Services
+            </span>
+            <h2>What we <span class="gradient-text">offer</span></h2>
+        </div>
+        <div class="bento-grid services-grid">
+            <div class="bento-card bento-medium service-card featured">
+                <div class="service-icon">
+                    <i data-lucide="palette"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Beautiful, functional interfaces that users love. We create experiences that convert.</p>
+                <a href="#" class="service-link">
+                    <span>Learn more</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+            <div class="bento-card bento-small service-card">
+                <div class="service-icon small">
+                    <i data-lucide="code-2"></i>
+                </div>
+                <h4>Development</h4>
+            </div>
+            <div class="bento-card bento-small service-card">
+                <div class="service-icon small">
+                    <i data-lucide="smartphone"></i>
+                </div>
+                <h4>Mobile Apps</h4>
+            </div>
+            <div class="bento-card bento-wide service-card horizontal">
+                <div class="service-icon">
+                    <i data-lucide="megaphone"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Brand Strategy</h3>
+                    <p>Complete brand identity packages that tell your unique story and resonate with your audience.</p>
+                </div>
+                <a href="#" class="service-link">
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+            <div class="bento-card bento-small service-card">
+                <div class="service-icon small">
+                    <i data-lucide="bar-chart-3"></i>
+                </div>
+                <h4>Analytics</h4>
+            </div>
+            <div class="bento-card bento-medium service-card">
+                <div class="service-icon">
+                    <i data-lucide="globe"></i>
+                </div>
+                <h3>Web Solutions</h3>
+                <p>End-to-end web development with modern technologies.</p>
+                <a href="#" class="service-link">
+                    <span>Learn more</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-header">
+            <span class="section-tag">
+                <i data-lucide="message-square"></i>
+                Testimonials
+            </span>
+            <h2>Loved by <span class="gradient-text">teams</span></h2>
+        </div>
+        <div class="bento-grid testimonials-grid">
+            <div class="bento-card bento-medium testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Sarah Chen</h4>
+                        <span>CEO, TechFlow</span>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <p>"The bento grid approach transformed how we present our product. Users spend 40% more time exploring our features."</p>
+            </div>
+            <div class="bento-card bento-small quote-card">
+                <i data-lucide="quote"></i>
+                <span>10k+ Reviews</span>
+            </div>
+            <div class="bento-card bento-small rating-card">
+                <div class="big-rating">4.9</div>
+                <div class="stars">
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                </div>
+            </div>
+            <div class="bento-card bento-wide testimonial-card horizontal">
+                <div class="testimonial-avatar large">
+                    <i data-lucide="user"></i>
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-info">
+                        <h4>Marcus Johnson</h4>
+                        <span>Design Lead, Shopify</span>
+                    </div>
+                    <p>"Finally, a design system that embraces asymmetry while maintaining visual balance. Our team adopted it overnight."</p>
+                </div>
+                <div class="testimonial-rating vertical">
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                </div>
+            </div>
+            <div class="bento-card bento-medium testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div class="testimonial-info">
+                        <h4>Emma Davis</h4>
+                        <span>Founder, Pixelcraft</span>
+                    </div>
+                </div>
+                <p>"Beautiful, modular, and incredibly flexible. We've redesigned our entire dashboard using bento principles."</p>
+                <div class="testimonial-rating">
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <span class="section-tag">
+                <i data-lucide="mail"></i>
+                Contact
+            </span>
+            <h2>Let's <span class="gradient-text">connect</span></h2>
+        </div>
+        <div class="bento-grid contact-grid">
+            <div class="bento-card bento-large contact-form-card">
+                <h3>Send us a message</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="you@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="How can we help?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="bento-card bento-small contact-method">
+                <i data-lucide="mail"></i>
+                <h4>Email</h4>
+                <p>hello@bentoui.design</p>
+            </div>
+            <div class="bento-card bento-small contact-method accent">
+                <i data-lucide="phone"></i>
+                <h4>Phone</h4>
+                <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="bento-card bento-medium contact-map">
+                <div class="map-placeholder">
+                    <i data-lucide="map-pin"></i>
+                    <span>San Francisco, CA</span>
+                </div>
+                <div class="map-details">
+                    <p>123 Design Street</p>
+                    <p>Suite 456, CA 94102</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="bento-grid footer-grid">
+                <div class="bento-card bento-medium footer-brand">
+                    <a href="#" class="footer-logo">
+                        <i data-lucide="grid-3x3"></i>
+                        <span>BentoUI</span>
+                    </a>
+                    <p>Crafting beautiful, asymmetric layouts that tell your story in a unique way.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="Dribbble"><i data-lucide="dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="bento-card bento-small footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Templates</a></li>
+                    </ul>
+                </div>
+                <div class="bento-card bento-small footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="bento-card bento-small footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="bento-card bento-small footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="your@email.com">
+                        <button type="submit"><i data-lucide="arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BentoUI. All rights reserved.</p>
+                <p>Crafted with <i data-lucide="heart"></i> for better UX</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
