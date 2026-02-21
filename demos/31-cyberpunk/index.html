@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoGrid Systems | Cyberpunk UI Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Scanlines Overlay -->
+    <div class="scanlines"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="cpu"></i>
+                <span class="logo-text">NEOGRID<span class="logo-accent">.SYS</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">HOME</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#services" class="nav-link">SERVICES</a></li>
+                <li><a href="#testimonials" class="nav-link">NETWORK</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+            <button class="cta-btn">
+                <i data-lucide="terminal"></i>
+                JACK IN
+            </button>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="status-bar">
+                <span class="status-indicator"></span>
+                <span class="status-text">SYSTEM ONLINE</span>
+                <span class="status-time" id="system-time">00:00:00</span>
+            </div>
+            <h1 class="hero-title glitch" data-text="ENTER THE GRID">ENTER THE GRID</h1>
+            <p class="hero-subtitle terminal-text">
+                <span class="prompt">&gt;</span> Decentralized infrastructure for the digital underground. 
+                <span class="cursor">_</span>
+            </p>
+            <div class="hero-actions">
+                <button class="btn-primary">
+                    <i data-lucide="zap"></i>
+                    INITIALIZE
+                </button>
+                <button class="btn-secondary">
+                    <i data-lucide="file-code-2"></i>
+                    VIEW DOCS
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <i data-lucide="users"></i>
+                    <span class="stat-value" data-target="50000">0</span>
+                    <span class="stat-label">OPERATORS</span>
+                </div>
+                <div class="stat-card">
+                    <i data-lucide="server"></i>
+                    <span class="stat-value" data-target="1200">0</span>
+                    <span class="stat-label">NODES</span>
+                </div>
+                <div class="stat-card">
+                    <i data-lucide="shield-check"></i>
+                    <span class="stat-value" data-target="99">0</span>
+                    <span class="stat-label">% UPTIME</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">[SYSTEM_INFO]</span>
+                <h2 class="section-title glitch" data-text="ABOUT NEOGRID">ABOUT NEOGRID</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="terminal-title">neogrid_init.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="prompt">$</span> cat ./mission.txt</p>
+                            <p class="output">
+                                We are the architects of the next digital frontier. NeoGrid Systems 
+                                provides cutting-edge infrastructure for those who refuse to be tracked, 
+                                traced, or controlled.
+                            </p>
+                            <p><span class="prompt">$</span> ./status --check</p>
+                            <p class="output success">[OK] All systems operational</p>
+                            <p class="output success">[OK] Encryption: AES-256-GCM</p>
+                            <p class="output success">[OK] Network: Decentralized mesh</p>
+                            <p><span class="prompt">$</span> <span class="cursor">_</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="lock"></i>
+                        </div>
+                        <h3>Zero-Knowledge</h3>
+                        <p>Your data remains encrypted. We can't see it. No one can.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="network"></i>
+                        </div>
+                        <h3>Mesh Network</h3>
+                        <p>Distributed architecture with no single point of failure.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <h3>Real-Time Sync</h3>
+                        <p>Millisecond latency across global node infrastructure.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <h3>Open Protocol</h3>
+                        <p>Built on open standards. Audit everything. Trust nothing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">[MODULES]</span>
+                <h2 class="section-title glitch" data-text="SERVICES">SERVICES</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="cloud"></i>
+                        </div>
+                        <span class="service-id">SVC-001</span>
+                    </div>
+                    <h3>GHOST CLOUD</h3>
+                    <p>Anonymous cloud infrastructure with zero-logging policy. Deploy anywhere, traced nowhere.</p>
+                    <div class="service-specs">
+                        <span><i data-lucide="hard-drive"></i> 10TB Storage</span>
+                        <span><i data-lucide="cpu"></i> 32 vCPUs</span>
+                    </div>
+                    <button class="service-btn">DEPLOY</button>
+                </div>
+                <div class="service-card featured">
+                    <div class="featured-badge">POPULAR</div>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <span class="service-id">SVC-002</span>
+                    </div>
+                    <h3>CIPHER SHIELD</h3>
+                    <p>Military-grade encryption layer for all your communications. End-to-end. Always.</p>
+                    <div class="service-specs">
+                        <span><i data-lucide="key"></i> AES-256</span>
+                        <span><i data-lucide="refresh-cw"></i> Auto-rotate</span>
+                    </div>
+                    <button class="service-btn">ACTIVATE</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="git-branch"></i>
+                        </div>
+                        <span class="service-id">SVC-003</span>
+                    </div>
+                    <h3>SHADOW RELAY</h3>
+                    <p>Multi-hop routing through our global mesh. Your traffic, scattered across continents.</p>
+                    <div class="service-specs">
+                        <span><i data-lucide="globe"></i> 45 Regions</span>
+                        <span><i data-lucide="activity"></i> &lt;50ms</span>
+                    </div>
+                    <button class="service-btn">CONNECT</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <span class="service-id">SVC-004</span>
+                    </div>
+                    <h3>VOID STORAGE</h3>
+                    <p>Distributed file system with client-side encryption. Data shards across the void.</p>
+                    <div class="service-specs">
+                        <span><i data-lucide="folder-lock"></i> Encrypted</span>
+                        <span><i data-lucide="infinity"></i> Unlimited</span>
+                    </div>
+                    <button class="service-btn">UPLOAD</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="webhook"></i>
+                        </div>
+                        <span class="service-id">SVC-005</span>
+                    </div>
+                    <h3>NEURAL API</h3>
+                    <p>REST & WebSocket APIs for seamless integration. Build the future on our backbone.</p>
+                    <div class="service-specs">
+                        <span><i data-lucide="code"></i> RESTful</span>
+                        <span><i data-lucide="radio"></i> Real-time</span>
+                    </div>
+                    <button class="service-btn">DOCS</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="eye-off"></i>
+                        </div>
+                        <span class="service-id">SVC-006</span>
+                    </div>
+                    <h3>PHANTOM VPN</h3>
+                    <p>WireGuard-based VPN with obfuscation. Invisible to deep packet inspection.</p>
+                    <div class="service-specs">
+                        <span><i data-lucide="server"></i> 100+ Nodes</span>
+                        <span><i data-lucide="gauge"></i> 10Gbps</span>
+                    </div>
+                    <button class="service-btn">TUNNEL</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">[NETWORK_LOGS]</span>
+                <h2 class="section-title glitch" data-text="OPERATOR TRANSMISSIONS">OPERATOR TRANSMISSIONS</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="user-info">
+                            <span class="username">@ph4nt0m_runner</span>
+                            <span class="user-role">OPERATOR // TIER-3</span>
+                        </div>
+                        <span class="timestamp">2026.02.21 // 14:32:07</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "NeoGrid's infrastructure survived three separate DDoS attempts last month. 
+                        Not a single packet dropped. This is the real deal."
+                    </p>
+                    <div class="testimonial-meta">
+                        <span><i data-lucide="check-circle"></i> Verified Operator</span>
+                        <span><i data-lucide="calendar"></i> 847 days active</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="user-info">
+                            <span class="username">@cipher_witch</span>
+                            <span class="user-role">OPERATOR // TIER-5</span>
+                        </div>
+                        <span class="timestamp">2026.02.19 // 09:15:42</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "Migrated my entire stack to Ghost Cloud. The latency improvements alone 
+                        were worth it. Plus, actual privacy. Revolutionary."
+                    </p>
+                    <div class="testimonial-meta">
+                        <span><i data-lucide="check-circle"></i> Verified Operator</span>
+                        <span><i data-lucide="calendar"></i> 1,203 days active</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="user-info">
+                            <span class="username">@null_byte</span>
+                            <span class="user-role">OPERATOR // TIER-4</span>
+                        </div>
+                        <span class="timestamp">2026.02.17 // 22:08:55</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "The API documentation is chef's kiss. Integrated Shadow Relay into 
+                        our app in under an hour. Clean protocol, cleaner code."
+                    </p>
+                    <div class="testimonial-meta">
+                        <span><i data-lucide="check-circle"></i> Verified Operator</span>
+                        <span><i data-lucide="calendar"></i> 562 days active</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">[ESTABLISH_CONNECTION]</span>
+                <h2 class="section-title glitch" data-text="CONTACT">CONTACT</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>TRANSMISSION CHANNEL</h3>
+                    <p>Initialize secure connection to NeoGrid command. All communications are encrypted end-to-end.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i data-lucide="mail"></i>
+                            <div>
+                                <span class="method-label">ENCRYPTED MAIL</span>
+                                <span class="method-value">contact@neogrid.sys</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i data-lucide="message-square"></i>
+                            <div>
+                                <span class="method-label">MATRIX</span>
+                                <span class="method-value">@neogrid:matrix.org</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i data-lucide="fingerprint"></i>
+                            <div>
+                                <span class="method-label">PGP KEY</span>
+                                <span class="method-value">0xA1B2C3D4E5F6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="handle">HANDLE</label>
+                        <input type="text" id="handle" name="handle" placeholder="@your_alias" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">SECURE CHANNEL</label>
+                        <input type="email" id="email" name="email" placeholder="your@encrypted.mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">SUBJECT</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="enterprise">Enterprise Solutions</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">TRANSMISSION</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Enter your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i data-lucide="send"></i>
+                        TRANSMIT
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i data-lucide="cpu"></i>
+                        <span class="logo-text">NEOGRID<span class="logo-accent">.SYS</span></span>
+                    </a>
+                    <p>Decentralized infrastructure for the digital underground. Privacy is not a feature—it's a right.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="Discord"><i data-lucide="message-circle"></i></a>
+                        <a href="#" aria-label="Mastodon"><i data-lucide="at-sign"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>PROTOCOLS</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">SDK Downloads</a></li>
+                        <li><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>NETWORK</h4>
+                    <ul>
+                        <li><a href="#">Node Status</a></li>
+                        <li><a href="#">Uptime Report</a></li>
+                        <li><a href="#">Security Audit</a></li>
+                        <li><a href="#">Bug Bounty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Warrant Canary</a></li>
+                        <li><a href="#">DMCA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NeoGrid Systems. All rights reserved in the void.</p>
+                <div class="system-status">
+                    <span class="status-dot"></span>
+                    <span>ALL SYSTEMS OPERATIONAL</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
