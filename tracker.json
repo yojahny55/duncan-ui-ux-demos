@@ -1,5 +1,5 @@
 {
-  "nextIndex": 30,
+  "nextIndex": 31,
   "totalStyles": 54,
   "styles": [
     {
@@ -209,7 +209,8 @@
       "id": 30,
       "name": "Y2K Aesthetic",
       "slug": "30-y2k-aesthetic",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-21"
     },
     {
       "id": 31,
