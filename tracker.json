@@ -1,5 +1,5 @@
 {
-  "nextIndex": 32,
+  "nextIndex": 33,
   "totalStyles": 54,
   "styles": [
     {
@@ -223,7 +223,8 @@
       "id": 32,
       "name": "Organic Biophilic",
       "slug": "32-organic-biophilic",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-22"
     },
     {
       "id": 33,
