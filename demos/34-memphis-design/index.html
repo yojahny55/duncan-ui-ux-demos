@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memphis Design - UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Archivo+Black&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Decorative Memphis Shapes Background -->
+    <div class="memphis-shapes" aria-hidden="true">
+        <div class="shape triangle shape-1"></div>
+        <div class="shape circle shape-2"></div>
+        <div class="shape squiggle shape-3"></div>
+        <div class="shape triangle shape-4"></div>
+        <div class="shape dots shape-5"></div>
+        <div class="shape circle shape-6"></div>
+        <div class="shape squiggle shape-7"></div>
+        <div class="shape triangle shape-8"></div>
+        <div class="shape zigzag shape-9"></div>
+        <div class="shape circle shape-10"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i data-lucide="shapes"></i></span>
+                <span class="logo-text">MEMPHIS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cta">
+                <i data-lucide="sparkles"></i>
+                <span>Get Started</span>
+            </button>
+            <button class="mobile-menu" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i data-lucide="zap"></i>
+                    <span>Bold • Playful • Radical</span>
+                </div>
+                <h1 class="hero-title">
+                    Design That
+                    <span class="highlight">Breaks</span>
+                    The Rules
+                </h1>
+                <p class="hero-subtitle">
+                    Embrace the bold, geometric chaos of Memphis Design. 
+                    Where patterns clash, colors pop, and creativity knows no bounds.
+                </p>
+                <div class="hero-ctas">
+                    <button class="btn btn-primary">
+                        <i data-lucide="rocket"></i>
+                        <span>Explore Now</span>
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i data-lucide="play-circle"></i>
+                        <span>Watch Video</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">1981</span>
+                        <span class="stat-label">Founded in Milan</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Creative Possibilities</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Anti-Boring</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-shape hero-shape-1"></div>
+                <div class="hero-shape hero-shape-2"></div>
+                <div class="hero-shape hero-shape-3"></div>
+                <div class="hero-card">
+                    <i data-lucide="palette"></i>
+                    <span>Create Something Wild</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="info"></i>
+                    About Us
+                </span>
+                <h2 class="section-title">The Memphis Manifesto</h2>
+                <p class="section-subtitle">
+                    Born in 1981 Milan, Memphis Design rejected minimalism and embraced 
+                    bold colors, asymmetric shapes, and playful patterns.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i data-lucide="triangle"></i>
+                    </div>
+                    <h3>Geometric Rebellion</h3>
+                    <p>Triangles, circles, squiggles and zigzags combine in unexpected ways, creating visual tension and delight.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i data-lucide="paintbrush"></i>
+                    </div>
+                    <h3>Color Explosion</h3>
+                    <p>Hot pink meets teal, yellow clashes with purple. Memphis colors don't match—they CLASH beautifully.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i data-lucide="grid-3x3"></i>
+                    </div>
+                    <h3>Pattern Play</h3>
+                    <p>Dots, stripes, and abstract patterns layer endlessly, creating depth and visual energy everywhere.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i data-lucide="smile"></i>
+                    </div>
+                    <h3>Joyful Chaos</h3>
+                    <p>Design doesn't have to be serious. Memphis proves that fun and function can coexist perfectly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="briefcase"></i>
+                    Services
+                </span>
+                <h2 class="section-title">What We Create</h2>
+                <p class="section-subtitle">
+                    Bold design solutions that stand out from the ordinary
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card service-card-large">
+                    <div class="service-decoration"></div>
+                    <div class="service-icon">
+                        <i data-lucide="pen-tool"></i>
+                    </div>
+                    <h3>Brand Identity</h3>
+                    <p>Unforgettable visual identities that capture the Memphis spirit—bold, playful, and impossible to ignore.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Websites that break conventions with geometric layouts and vibrant interactions.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="package"></i>
+                    </div>
+                    <h3>Packaging</h3>
+                    <p>Product packaging that pops off shelves with bold patterns and colors.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="megaphone"></i>
+                    </div>
+                    <h3>Marketing</h3>
+                    <p>Campaigns that demand attention with radical visual statements.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card service-card-wide">
+                    <div class="service-decoration service-decoration-alt"></div>
+                    <div class="service-icon">
+                        <i data-lucide="video"></i>
+                    </div>
+                    <h3>Motion Graphics</h3>
+                    <p>Animated content where geometric shapes dance, colors pulse, and patterns come alive in mesmerizing motion.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="message-circle"></i>
+                    Testimonials
+                </span>
+                <h2 class="section-title">Wild Reviews</h2>
+                <p class="section-subtitle">
+                    What our boldest clients have to say
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <p class="testimonial-text">"They transformed our boring corporate image into something that actually makes people smile. Our brand now screams creativity!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Sofia Rodriguez</span>
+                            <span class="author-role">Creative Director, Neon Labs</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card testimonial-featured">
+                    <div class="testimonial-quote">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <p class="testimonial-text">"Finally, a design team that understands that 'professional' doesn't have to mean 'boring'. The Memphis approach gave our startup the edge we needed."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Marcus Chen</span>
+                            <span class="author-role">Founder, Zigzag Studios</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <p class="testimonial-text">"Our event posters went viral! People couldn't stop sharing the bold geometric designs. This is what standing out looks like."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Aisha Patel</span>
+                            <span class="author-role">Event Manager, Pop Culture Fest</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">
+                        <i data-lucide="mail"></i>
+                        Contact
+                    </span>
+                    <h2 class="section-title">Let's Create Something Bold</h2>
+                    <p class="contact-description">
+                        Ready to break the rules? Let's collaborate and bring some 
+                        Memphis magic to your next project.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Milan, Italy (& Worldwide)</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+39 02 MEMPHIS</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>hello@memphis.design</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Dribbble">
+                            <i data-lucide="dribbble"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Ettore Sottsass Jr.">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="radical@design.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Project Type</label>
+                        <select id="project">
+                            <option value="">Select a project type</option>
+                            <option value="branding">Brand Identity</option>
+                            <option value="web">Web Design</option>
+                            <option value="packaging">Packaging</option>
+                            <option value="motion">Motion Graphics</option>
+                            <option value="other">Something Wild</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Vision</label>
+                        <textarea id="message" rows="4" placeholder="Describe your boldest ideas..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i data-lucide="send"></i>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon"><i data-lucide="shapes"></i></span>
+                        <span class="logo-text">MEMPHIS</span>
+                    </a>
+                    <p>Breaking design rules since 1981. Bold, playful, unforgettable.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Brand Identity</a></li>
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Packaging</a></li>
+                            <li><a href="#">Motion</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">Press Kit</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Memphis Design Studio. All rules broken.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-decoration">
+            <div class="shape triangle"></div>
+            <div class="shape circle"></div>
+            <div class="shape squiggle"></div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
