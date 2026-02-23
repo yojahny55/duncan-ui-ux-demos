@@ -1,5 +1,5 @@
 {
-  "nextIndex": 35,
+  "nextIndex": 36,
   "totalStyles": 54,
   "styles": [
     {
@@ -244,7 +244,8 @@
       "id": 35,
       "name": "Vaporwave",
       "slug": "35-vaporwave",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-23"
     },
     {
       "id": 36,
