@@ -1,5 +1,5 @@
 {
-  "nextIndex": 37,
+  "nextIndex": 38,
   "totalStyles": 54,
   "styles": [
     {
@@ -258,7 +258,8 @@
       "id": 37,
       "name": "Exaggerated Minimalism",
       "slug": "37-exaggerated-minimalism",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-24"
     },
     {
       "id": 38,

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exaggerated Minimalism - UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">BOLD.</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <i data-lucide="menu"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">Less<br>is<br>More.</h1>
+        <p class="hero-subtitle">We craft digital experiences that speak volumes through silence.</p>
+        <a href="#contact" class="hero-cta">
+            <span>Start Project</span>
+            <i data-lucide="arrow-right"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <span class="section-label">01 / About</span>
+            <h2 class="section-title">Design<br>without<br>noise.</h2>
+            <p class="about-text">We believe in the power of restraint. Every element earns its place. Every pixel has purpose. In a world of excess, we choose intention.</p>
+        </div>
+        <div class="about-stats">
+            <div class="stat">
+                <span class="stat-number">147</span>
+                <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">12</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Client Retention</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <span class="section-label">02 / Services</span>
+        <h2 class="section-title">What we do.</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-icon">
+                    <i data-lucide="compass"></i>
+                </div>
+                <h3>Strategy</h3>
+                <p>Defining clear paths through complexity.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <i data-lucide="palette"></i>
+                </div>
+                <h3>Design</h3>
+                <p>Creating visual systems that endure.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <i data-lucide="code-2"></i>
+                </div>
+                <h3>Development</h3>
+                <p>Building experiences that perform.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <i data-lucide="trending-up"></i>
+                </div>
+                <h3>Growth</h3>
+                <p>Scaling what works, cutting what doesn't.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <span class="section-label">03 / Testimonials</span>
+        <div class="testimonial-main">
+            <i data-lucide="quote" class="quote-icon"></i>
+            <blockquote class="testimonial-quote">
+                "They stripped away everything unnecessary and what remained was perfect."
+            </blockquote>
+            <div class="testimonial-author">
+                <span class="author-name">Sarah Chen</span>
+                <span class="author-role">CEO, Minimal Studio</span>
+            </div>
+        </div>
+        <div class="testimonial-nav">
+            <button class="nav-btn active" data-index="0">
+                <i data-lucide="circle"></i>
+            </button>
+            <button class="nav-btn" data-index="1">
+                <i data-lucide="circle"></i>
+            </button>
+            <button class="nav-btn" data-index="2">
+                <i data-lucide="circle"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <span class="section-label">04 / Contact</span>
+        <h2 class="contact-title">Let's<br>talk.</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" placeholder="Tell us about your project" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+                <span>Send Message</span>
+                <i data-lucide="send"></i>
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">BOLD.</span>
+                <p>Design without compromise.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <i data-lucide="twitter"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i data-lucide="instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 BOLD. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
