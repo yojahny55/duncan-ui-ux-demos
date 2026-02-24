@@ -1,5 +1,5 @@
 {
-  "nextIndex": 36,
+  "nextIndex": 37,
   "totalStyles": 54,
   "styles": [
     {
@@ -251,7 +251,8 @@
       "id": 36,
       "name": "Dimensional Layering",
       "slug": "36-dimensional-layering",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-24"
     },
     {
       "id": 37,

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensional Layering - UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-layers">
+                    <span class="logo-layer layer-1"></span>
+                    <span class="logo-layer layer-2"></span>
+                    <span class="logo-layer layer-3"></span>
+                </div>
+                <span class="logo-text">Elevate</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-cta">
+                <span>Get Started</span>
+                <i data-lucide="arrow-right"></i>
+            </button>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-layers">
+            <div class="bg-layer bg-layer-1"></div>
+            <div class="bg-layer bg-layer-2"></div>
+            <div class="bg-layer bg-layer-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge floating-element elevation-1">
+                    <i data-lucide="sparkles"></i>
+                    <span>New Dimension in Design</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-layer">Design with</span>
+                    <span class="title-highlight">Depth & Dimension</span>
+                </h1>
+                <p class="hero-subtitle">Experience interfaces that come alive through layered visual hierarchy, floating elements, and sophisticated shadow systems that guide users through your content.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary elevation-3">
+                        <span>Explore Layers</span>
+                        <i data-lucide="layers"></i>
+                    </button>
+                    <button class="btn btn-secondary elevation-2">
+                        <i data-lucide="play-circle"></i>
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-stack">
+                    <div class="stack-card card-back elevation-1">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <div class="stack-card card-mid elevation-2">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="stack-card card-front elevation-4">
+                        <i data-lucide="zap"></i>
+                        <span>Active Layer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="depth-showcase">
+                        <div class="depth-plane plane-1 elevation-1">
+                            <i data-lucide="grid-3x3"></i>
+                        </div>
+                        <div class="depth-plane plane-2 elevation-2">
+                            <i data-lucide="layout"></i>
+                        </div>
+                        <div class="depth-plane plane-3 elevation-3">
+                            <i data-lucide="box"></i>
+                        </div>
+                        <div class="depth-plane plane-4 elevation-4">
+                            <i data-lucide="move-3d"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label">About Dimensional Design</span>
+                    <h2 class="section-title">Creating Depth Through Strategic Layering</h2>
+                    <p class="about-text">Dimensional layering transforms flat interfaces into immersive experiences. By carefully orchestrating z-index values, shadow depths, and overlapping elements, we create visual hierarchies that naturally guide user attention.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-card elevation-2">
+                            <div class="feature-icon elevation-3">
+                                <i data-lucide="layers"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Z-Index Mastery</h4>
+                                <p>Strategic stacking creates clear visual priority</p>
+                            </div>
+                        </div>
+                        <div class="feature-card elevation-2">
+                            <div class="feature-icon elevation-3">
+                                <i data-lucide="sun"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Light & Shadow</h4>
+                                <p>Elevation shadows that feel natural and intuitive</p>
+                            </div>
+                        </div>
+                        <div class="feature-card elevation-2">
+                            <div class="feature-icon elevation-3">
+                                <i data-lucide="move"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Floating Elements</h4>
+                                <p>Components that hover with purpose and meaning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Our Services</span>
+                <h2 class="section-title">Layered Solutions for Modern Interfaces</h2>
+                <p class="section-subtitle">Each service builds upon the next, creating a comprehensive dimensional design system.</p>
+            </div>
+            
+            <div class="services-stack">
+                <div class="service-card elevation-1" data-layer="1">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Foundation Design</h3>
+                    <p>Establishing the base layer with solid typography, color systems, and spacing that supports everything above.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card elevation-2" data-layer="2">
+                    <div class="service-number">02</div>
+                    <div class="service-icon">
+                        <i data-lucide="component"></i>
+                    </div>
+                    <h3>Component Systems</h3>
+                    <p>Building modular elements with consistent elevation patterns that create predictable depth perception.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card elevation-3" data-layer="3">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">
+                        <i data-lucide="workflow"></i>
+                    </div>
+                    <h3>Interactive Layers</h3>
+                    <p>Adding hover states, focus indicators, and transitions that respond to user interaction with dimensional feedback.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card elevation-4" data-layer="4">
+                    <div class="service-number">04</div>
+                    <div class="service-icon">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3>Elevation Dynamics</h3>
+                    <p>The top layer brings motion and depth, with parallax effects and floating elements that captivate users.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Client Stories</span>
+                <h2 class="section-title">Depth That Delivers Results</h2>
+            </div>
+            
+            <div class="testimonials-layers">
+                <div class="testimonial-card back-card elevation-1">
+                    <div class="testimonial-quote">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <p class="testimonial-text">"The layered approach completely transformed how users navigate our platform. Engagement increased by 40%."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Sarah Chen</strong>
+                            <span>Product Lead, TechFlow</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card mid-card elevation-2">
+                    <div class="testimonial-quote">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <p class="testimonial-text">"The dimensional design system they created gives our brand a premium, sophisticated feel that sets us apart."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Marcus Rivera</strong>
+                            <span>CEO, Altitude Inc</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card front-card elevation-4">
+                    <div class="testimonial-quote">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <p class="testimonial-text">"Users immediately understood the hierarchy. The depth cues made our complex dashboard intuitive and beautiful."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Emily Watson</strong>
+                            <span>Design Director, Stratos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-stats">
+                <div class="stat-item elevation-2">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Elevation Levels</div>
+                </div>
+                <div class="stat-item elevation-2">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Depth Possibilities</div>
+                </div>
+                <div class="stat-item elevation-2">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-wrapper elevation-3">
+                <div class="contact-info">
+                    <span class="section-label">Get in Touch</span>
+                    <h2 class="contact-title">Ready to Add Dimension?</h2>
+                    <p class="contact-text">Let's create interfaces that rise above the ordinary. Reach out and we'll elevate your design together.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item elevation-2">
+                            <i data-lucide="mail"></i>
+                            <span>hello@elevate.design</span>
+                        </div>
+                        <div class="contact-item elevation-2">
+                            <i data-lucide="phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item elevation-2">
+                            <i data-lucide="map-pin"></i>
+                            <span>123 Layer Street, Design City</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form elevation-4">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" class="elevation-1">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" class="elevation-1">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="4" placeholder="Tell us about your project" class="elevation-1"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary elevation-3">
+                        <span>Send Message</span>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="logo-layers">
+                        <span class="logo-layer layer-1"></span>
+                        <span class="logo-layer layer-2"></span>
+                        <span class="logo-layer layer-3"></span>
+                    </div>
+                    <span class="logo-text">Elevate</span>
+                </div>
+                <p class="footer-tagline">Design with depth. Build with purpose.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link elevation-2"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link elevation-2"><i data-lucide="linkedin"></i></a>
+                    <a href="#" class="social-link elevation-2"><i data-lucide="github"></i></a>
+                    <a href="#" class="social-link elevation-2"><i data-lucide="dribbble"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">UI Design</a></li>
+                        <li><a href="#">UX Strategy</a></li>
+                        <li><a href="#">Prototyping</a></li>
+                        <li><a href="#">Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Elevate Design. Crafted with layers of love.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
