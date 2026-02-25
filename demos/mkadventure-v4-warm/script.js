@@ -156,50 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ========================================
-    // Trust Stats Counter
+    // Trust Stats Counter (Disabled)
     // ========================================
-    const trustSection = document.querySelector('.hero-trust');
-    let statsAnimated = false;
-    
-    if (trustSection && !prefersReducedMotion) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !statsAnimated) {
-                    statsAnimated = true;
-                    animateTrustStats();
-                }
-            });
-        }, { threshold: 0.5 });
-
-        observer.observe(trustSection);
-    }
-
-    function animateTrustStats() {
-        const statNums = document.querySelectorAll('.trust-item strong');
-        
-        statNums.forEach(stat => {
-            const text = stat.textContent;
-            const num = parseInt(text);
-            const suffix = text.replace(/[0-9]/g, '');
-            
-            if (!isNaN(num)) {
-                let current = 0;
-                const increment = num / 40;
-                const duration = 1500;
-                const stepTime = duration / 40;
-                
-                const counter = setInterval(() => {
-                    current += increment;
-                    if (current >= num) {
-                        stat.textContent = text;
-                        clearInterval(counter);
-                    } else {
-                        stat.textContent = Math.floor(current) + suffix;
-                    }
-                }, stepTime);
-            }
-        });
-    }
+    // Note: Counter animation disabled to ensure correct values display
+    // in screenshots and static contexts. The warm aesthetic makes
+    // the numbers impactful without needing animation.
 
     // ========================================
     // Keyboard Navigation

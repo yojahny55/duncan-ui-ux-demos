@@ -742,16 +742,16 @@ button {
 
 .cuba-block {
     padding: var(--space-6);
-    border: 3px solid var(--gray-800);
+    border: 4px solid var(--gold);
     background: var(--gray-900);
     transition: all var(--duration-fast);
     cursor: pointer;
 }
 
 .cuba-block:hover {
-    border-color: var(--gold);
+    border-color: var(--white);
     transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0 var(--gold);
+    box-shadow: 8px 8px 0 var(--accent);
 }
 
 .cuba-main {

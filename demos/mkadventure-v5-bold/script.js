@@ -110,49 +110,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ========================================
-    // Stats Counter
+    // Stats Counter (Disabled)
     // ========================================
-    const statsSection = document.querySelector('.hero-stats');
-    let statsAnimated = false;
-    
-    if (statsSection && !prefersReducedMotion) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !statsAnimated) {
-                    statsAnimated = true;
-                    animateStats();
-                }
-            });
-        }, { threshold: 0.5 });
-
-        observer.observe(statsSection);
-    }
-
-    function animateStats() {
-        const statNums = document.querySelectorAll('.stat-number');
-        
-        statNums.forEach(stat => {
-            const text = stat.textContent;
-            const num = parseInt(text);
-            const suffix = text.replace(/[0-9]/g, '');
-            
-            if (!isNaN(num)) {
-                let current = 0;
-                const increment = num / 30;
-                const stepTime = 50;
-                
-                const counter = setInterval(() => {
-                    current += increment;
-                    if (current >= num) {
-                        stat.textContent = text;
-                        clearInterval(counter);
-                    } else {
-                        stat.textContent = Math.floor(current) + suffix;
-                    }
-                }, stepTime);
-            }
-        });
-    }
+    // Note: Counter animation disabled to ensure correct values display
+    // in screenshots and static contexts. The bold typography makes
+    // the numbers impactful without needing animation.
 
     // ========================================
     // Intersection Observer for Reveals (Disabled)
