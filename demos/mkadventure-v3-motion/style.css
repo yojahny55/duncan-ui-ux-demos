@@ -177,41 +177,43 @@ button {
 }
 
 /* ========================================
-   Reveal Animations
+   Reveal Animations (Subtle Enhancement)
+   Content always visible; animations are optional polish
    ======================================== */
 
 .reveal-up,
 .reveal-left,
 .reveal-right,
 .reveal-scale {
-    opacity: 0;
+    opacity: 1;
+    transform: none;
+}
+
+/* Animation classes for interactive/scroll reveals */
+.reveal-animate {
     transition: 
         opacity var(--duration-slower) var(--ease-out),
         transform var(--duration-slower) var(--ease-out);
 }
 
-.reveal-up {
-    transform: translateY(60px);
+.reveal-animate.reveal-up:not(.revealed) {
+    opacity: 0;
+    transform: translateY(40px);
 }
 
-.reveal-left {
-    transform: translateX(-60px);
+.reveal-animate.reveal-left:not(.revealed) {
+    opacity: 0;
+    transform: translateX(-40px);
 }
 
-.reveal-right {
-    transform: translateX(60px);
+.reveal-animate.reveal-right:not(.revealed) {
+    opacity: 0;
+    transform: translateX(40px);
 }
 
-.reveal-scale {
-    transform: scale(0.9);
-}
-
-.reveal-up.revealed,
-.reveal-left.revealed,
-.reveal-right.revealed,
-.reveal-scale.revealed {
-    opacity: 1;
-    transform: translate(0) scale(1);
+.reveal-animate.reveal-scale:not(.revealed) {
+    opacity: 0;
+    transform: scale(0.95);
 }
 
 /* Staggered delays */

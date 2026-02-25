@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
+    // Add js-ready class for progressive enhancement (enables reveal animations)
+    if (!prefersReducedMotion) {
+        document.body.classList.add('js-ready');
+    }
+
     // ========================================
     // Scroll Progress Bar
     // ========================================
@@ -100,6 +105,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================
     const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
     
+    // Function to check if element is in viewport
+    function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    }
+    
+    // Immediately reveal elements already in viewport
+    revealElements.forEach(el => {
+        if (prefersReducedMotion || isInViewport(el)) {
+            el.classList.add('revealed');
+        }
+    });
+    
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -113,11 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.1
     });
 
+    // Only observe elements not yet revealed
     revealElements.forEach(el => {
-        if (!prefersReducedMotion) {
+        if (!el.classList.contains('revealed')) {
             revealObserver.observe(el);
-        } else {
-            el.classList.add('revealed');
         }
     });
 
