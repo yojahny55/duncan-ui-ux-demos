@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Adventure | Tu Centro de Servicios Integrales en Tampa</title>
+    <meta name="description" content="Viajes, Envíos a Cuba, Impuestos, Notaría y Formación de Empresas. Un solo lugar para todas tus necesidades. Tampa, FL - Servimos toda Florida y USA.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logo.webp" alt="M&K Adventure" class="logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services" class="translatable" data-es="Servicios" data-en="Services">Servicios</a></li>
+                <li><a href="#about" class="translatable" data-es="Nosotros" data-en="About Us">Nosotros</a></li>
+                <li><a href="#testimonials" class="translatable" data-es="Testimonios" data-en="Testimonials">Testimonios</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact" class="translatable" data-es="Contacto" data-en="Contact">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-selector">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="tel:+18133751532" class="nav-phone">
+                    <i data-lucide="phone"></i>
+                    <span>(813) 375-1532</span>
+                </a>
+                <button class="btn btn-primary nav-cta" data-es="Consulta Gratis" data-en="Free Consultation">Consulta Gratis</button>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-es="Tampa, FL — Servimos toda Florida y USA" data-en="Tampa, FL — Serving all of Florida and USA">
+                    <i data-lucide="map-pin"></i>
+                    <span class="translatable">Tampa, FL — Servimos toda Florida y USA</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="translatable" data-es="Un Solo Lugar para" data-en="One Place for">Un Solo Lugar para</span> <span class="highlight translatable" data-es="Todas Tus Necesidades" data-en="All Your Needs">Todas Tus Necesidades</span>
+                </h1>
+                <p class="hero-subtitle translatable" data-es="Viajes • Envíos a Cuba • Impuestos • Notaría • Formación de Empresas" data-en="Travel • Shipping to Cuba • Taxes • Notary • Business Formation">
+                    Viajes • Envíos a Cuba • Impuestos • Notaría • Formación de Empresas
+                </p>
+                <p class="hero-description translatable" data-es="Simplificamos tu vida con servicios integrales, personalizados y confiables. Más de 10 años ayudando a nuestra comunidad." data-en="We simplify your life with comprehensive, personalized, and reliable services. Over 10 years helping our community.">
+                    Simplificamos tu vida con servicios integrales, personalizados y confiables. 
+                    Más de 10 años ayudando a nuestra comunidad.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#services" class="btn btn-primary btn-lg">
+                        <i data-lucide="compass"></i>
+                        <span class="translatable" data-es="Explorar Servicios" data-en="Explore Services">Explorar Servicios</span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-lg">
+                        <i data-lucide="message-circle"></i>
+                        <span class="translatable" data-es="Hablar con un Asesor" data-en="Talk to an Advisor">Hablar con un Asesor</span>
+                    </a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <i data-lucide="shield-check"></i>
+                        <span class="translatable" data-es="Licenciados y Certificados" data-en="Licensed & Certified">Licenciados y Certificados</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="users"></i>
+                        <span class="translatable" data-es="+2,000 Clientes Satisfechos" data-en="+2,000 Happy Clients">+2,000 Clientes Satisfechos</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="star"></i>
+                        <span class="translatable" data-es="4.9 Estrellas en Google" data-en="4.9 Stars on Google">4.9 Estrellas en Google</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card hero-card-1">
+                    <i data-lucide="plane"></i>
+                    <span>Viajes</span>
+                </div>
+                <div class="hero-card hero-card-2">
+                    <i data-lucide="package"></i>
+                    <span>Envíos</span>
+                </div>
+                <div class="hero-card hero-card-3">
+                    <i data-lucide="calculator"></i>
+                    <span>Taxes</span>
+                </div>
+                <div class="hero-card hero-card-4">
+                    <i data-lucide="stamp"></i>
+                    <span>Notaría</span>
+                </div>
+                <div class="hero-card hero-card-5">
+                    <i data-lucide="building-2"></i>
+                    <span>LLC</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag translatable" data-es="Nuestros Servicios" data-en="Our Services">Nuestros Servicios</span>
+                <h2 class="section-title translatable" data-es="Todo Lo Que Necesitas, En Un Solo Lugar" data-en="Everything You Need, In One Place">Todo Lo Que Necesitas, En Un Solo Lugar</h2>
+                <p class="section-description translatable" data-es="No pierdas tiempo buscando múltiples proveedores. En MK Adventure resolvemos todas tus necesidades con atención personalizada y precios justos." data-en="Don't waste time looking for multiple providers. At MK Adventure we solve all your needs with personalized attention and fair prices.">
+                    No pierdas tiempo buscando múltiples proveedores. En MK Adventure 
+                    resolvemos todas tus necesidades con atención personalizada y precios justos.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1: Travel -->
+                <div class="service-card service-travel">
+                    <div class="service-icon">
+                        <i data-lucide="plane-takeoff"></i>
+                    </div>
+                    <h3>Agencia de Viajes</h3>
+                    <p>Vuelos, cruceros, hoteles y paquetes turísticos. Planificamos tu aventura de principio a fin.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Vuelos nacionales e internacionales</li>
+                        <li><i data-lucide="check"></i> Cruceros y resorts all-inclusive</li>
+                        <li><i data-lucide="check"></i> Paquetes familiares personalizados</li>
+                        <li><i data-lucide="check"></i> Asesoría de visas y documentos</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Planificar Mi Viaje
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2: Shipping -->
+                <div class="service-card service-shipping">
+                    <div class="service-icon">
+                        <i data-lucide="package"></i>
+                    </div>
+                    <h3>Envíos a Cuba</h3>
+                    <p>Paquetería segura y confiable para tus seres queridos. Seguimiento en tiempo real.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Envío de paquetes y carga</li>
+                        <li><i data-lucide="check"></i> Medicinas y artículos esenciales</li>
+                        <li><i data-lucide="check"></i> Seguimiento puerta a puerta</li>
+                        <li><i data-lucide="check"></i> Precios competitivos por libra</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Enviar Paquete
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3: Taxes -->
+                <div class="service-card service-taxes">
+                    <div class="service-icon">
+                        <i data-lucide="calculator"></i>
+                    </div>
+                    <h3>Preparación de Impuestos</h3>
+                    <p>Maximiza tu reembolso con preparadores certificados. Personal y negocios.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Declaraciones personales y de negocios</li>
+                        <li><i data-lucide="check"></i> ITIN para indocumentados</li>
+                        <li><i data-lucide="check"></i> Auditoría y representación IRS</li>
+                        <li><i data-lucide="check"></i> Planificación fiscal anual</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Preparar Mis Taxes
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4: Notary -->
+                <div class="service-card service-notary">
+                    <div class="service-icon">
+                        <i data-lucide="stamp"></i>
+                    </div>
+                    <h3>Servicios Notariales</h3>
+                    <p>Certificación de documentos, poderes notariales y trámites legales.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Notarización de documentos</li>
+                        <li><i data-lucide="check"></i> Poderes legales y permisos</li>
+                        <li><i data-lucide="check"></i> Traducciones certificadas</li>
+                        <li><i data-lucide="check"></i> Apostillas y legalizaciones</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Agendar Cita
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5: Business Formation -->
+                <div class="service-card service-business">
+                    <div class="service-icon">
+                        <i data-lucide="building-2"></i>
+                    </div>
+                    <h3>Formación de Empresas</h3>
+                    <p>Crea tu LLC o corporación. Te guiamos en cada paso del proceso.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Registro de LLC y Corp</li>
+                        <li><i data-lucide="check"></i> Número EIN del IRS</li>
+                        <li><i data-lucide="check"></i> Licencias comerciales</li>
+                        <li><i data-lucide="check"></i> Asesoría de estructura legal</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Crear Mi Empresa
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="about">
+        <div class="container">
+            <div class="why-us-grid">
+                <div class="why-us-content">
+                    <span class="section-tag translatable" data-es="¿Por Qué Elegirnos?" data-en="Why Choose Us?">¿Por Qué Elegirnos?</span>
+                    <h2 class="section-title translatable" data-es="Más Que Servicios, Soluciones Integrales" data-en="More Than Services, Complete Solutions">Más Que Servicios, Soluciones Integrales</h2>
+                    <p class="why-us-description translatable" data-es="En MK Adventure entendemos las necesidades de nuestra comunidad. No somos solo una agencia de viajes ni solo una oficina de impuestos — somos tu socio de confianza para simplificar tu vida en Estados Unidos." data-en="At MK Adventure we understand our community's needs. We're not just a travel agency or just a tax office — we're your trusted partner to simplify your life in the United States.">
+                        En MK Adventure entendemos las necesidades de nuestra comunidad. 
+                        No somos solo una agencia de viajes ni solo una oficina de impuestos — 
+                        somos tu socio de confianza para simplificar tu vida en Estados Unidos.
+                    </p>
+                    
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Ahorra Tiempo</h4>
+                                <p>Un solo lugar para viajes, envíos, taxes, notaría y más. No más correr entre oficinas.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="languages"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Te Entendemos</h4>
+                                <p>Hablamos tu idioma, conocemos tu cultura. Atención en español e inglés.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Confianza Garantizada</h4>
+                                <p>Licenciados, asegurados y con más de 10 años sirviendo a la comunidad de Tampa.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Local + Nacional</h4>
+                                <p>Oficina en Tampa, pero servimos clientes en toda Florida y Estados Unidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-visual">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Años de Experiencia</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">2,000+</span>
+                            <span class="stat-label">Clientes Satisfechos</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Servicios Integrales</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">50</span>
+                            <span class="stat-label">Estados Servidos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag translatable" data-es="Testimonios" data-en="Testimonials">Testimonios</span>
+                <h2 class="section-title translatable" data-es="Lo Que Dicen Nuestros Clientes" data-en="What Our Clients Say">Lo Que Dicen Nuestros Clientes</h2>
+                <p class="section-description translatable" data-es="Miles de familias confían en MK Adventure para sus necesidades más importantes." data-en="Thousands of families trust MK Adventure for their most important needs.">
+                    Miles de familias confían en MK Adventure para sus necesidades más importantes.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Encontré todo lo que necesitaba en un solo lugar. Me hicieron los taxes, 
+                        formaron mi LLC y hasta me ayudaron a enviar un paquete a mi familia en Cuba. 
+                        ¡Increíble servicio!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <span class="author-name">María C.</span>
+                            <span class="author-location">Tampa, FL</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-service">
+                        <i data-lucide="tag"></i> Taxes + LLC + Envíos
+                    </div>
+                </div>
+
+                <div class="testimonial-card featured">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Llevaba años buscando alguien de confianza para mis taxes y documentos notariales. 
+                        En MK Adventure me trataron como familia. Los recomiendo 100%."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JR</div>
+                        <div class="author-info">
+                            <span class="author-name">José R.</span>
+                            <span class="author-location">Orlando, FL</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-service">
+                        <i data-lucide="tag"></i> Taxes + Notaría
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Reservé un crucero para toda la familia y fue perfecto. El precio fue mejor 
+                        que en línea y el soporte durante el viaje fue excepcional."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AL</div>
+                        <div class="author-info">
+                            <span class="author-name">Ana L.</span>
+                            <span class="author-location">Miami, FL</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-service">
+                        <i data-lucide="tag"></i> Viajes
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section class="blog-preview" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Blog</span>
+                <h2 class="section-title translatable" data-es="Recursos y Consejos Para Ti" data-en="Resources and Tips for You">Recursos y Consejos Para Ti</h2>
+                <p class="section-description translatable" data-es="Mantente informado con las últimas noticias sobre viajes, impuestos y negocios." data-en="Stay informed with the latest news about travel, taxes, and business.">
+                    Mantente informado con las últimas noticias sobre viajes, impuestos y negocios.
+                </p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i data-lucide="calculator"></i>
+                        </div>
+                        <span class="blog-category">Impuestos</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Fechas Importantes para la Temporada de Taxes 2026</h3>
+                        <p>Todo lo que necesitas saber sobre las fechas límite del IRS este año...</p>
+                        <a href="#" class="blog-link">
+                            Leer más <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i data-lucide="building-2"></i>
+                        </div>
+                        <span class="blog-category">Negocios</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>LLC vs Corporación: ¿Cuál Es Mejor Para Tu Negocio?</h3>
+                        <p>Guía completa para elegir la estructura legal correcta para tu empresa...</p>
+                        <a href="#" class="blog-link">
+                            Leer más <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i data-lucide="package"></i>
+                        </div>
+                        <span class="blog-category">Envíos</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Guía Actualizada: Qué Puedes Enviar a Cuba en 2026</h3>
+                        <p>Lista completa de artículos permitidos y restricciones actuales...</p>
+                        <a href="#" class="blog-link">
+                            Leer más <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-cta">
+                <a href="#" class="btn btn-outline">
+                    Ver Todos los Artículos
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="translatable" data-es="¿Listo Para Simplificar Tu Vida?" data-en="Ready to Simplify Your Life?">¿Listo Para Simplificar Tu Vida?</h2>
+                <p class="translatable" data-es="Agenda una consulta gratuita y descubre cómo podemos ayudarte con viajes, envíos, impuestos, notaría o la formación de tu empresa." data-en="Schedule a free consultation and discover how we can help you with travel, shipping, taxes, notary, or starting your business.">
+                    Agenda una consulta gratuita y descubre cómo podemos ayudarte con 
+                    viajes, envíos, impuestos, notaría o la formación de tu empresa.
+                </p>
+                <div class="cta-buttons">
+                    <a href="tel:+18133751532" class="btn btn-white btn-lg">
+                        <i data-lucide="phone"></i>
+                        <span class="translatable" data-es="Llamar Ahora: (813) 375-1532" data-en="Call Now: (813) 375-1532">Llamar Ahora: (813) 375-1532</span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline-white btn-lg">
+                        <i data-lucide="calendar"></i>
+                        <span class="translatable" data-es="Agendar Cita" data-en="Book Appointment">Agendar Cita</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag translatable" data-es="Contacto" data-en="Contact">Contacto</span>
+                    <h2 class="section-title translatable" data-es="Estamos Aquí Para Ayudarte" data-en="We're Here to Help You">Estamos Aquí Para Ayudarte</h2>
+                    <p class="contact-description translatable" data-es="Visítanos en nuestra oficina en Tampa o contáctanos por teléfono, email o WhatsApp. Servimos clientes en toda Florida y Estados Unidos." data-en="Visit us at our Tampa office or contact us by phone, email, or WhatsApp. We serve clients throughout Florida and the United States.">
+                        Visítanos en nuestra oficina en Tampa o contáctanos por teléfono, 
+                        email o WhatsApp. Servimos clientes en toda Florida y Estados Unidos.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Dirección</strong>
+                                <p>Tampa, Florida<br>Estados Unidos</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Teléfono</strong>
+                                <p><a href="tel:+18133751532">(813) 375-1532</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Email</strong>
+                                <p><a href="mailto:info@mkadventure.com">info@mkadventure.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon whatsapp">
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>WhatsApp</strong>
+                                <p><a href="https://wa.me/19562172274">+1 (956) 217-2274</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-hours">
+                        <strong>Horario de Atención</strong>
+                        <p>Lunes - Viernes: 9:00 AM - 6:00 PM<br>
+                        Sábado: 10:00 AM - 2:00 PM<br>
+                        Domingo: Cerrado</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Envíanos un Mensaje</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nombre Completo</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Servicio de Interés</label>
+                            <select id="service" name="service" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="viajes">Agencia de Viajes</option>
+                                <option value="envios">Envíos a Cuba</option>
+                                <option value="taxes">Preparación de Impuestos</option>
+                                <option value="notaria">Servicios Notariales</option>
+                                <option value="llc">Formación de Empresas (LLC)</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <i data-lucide="send"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="logo.webp" alt="M&K Adventure" class="logo-img logo-footer">
+                    </a>
+                    <p>Tu centro de servicios integrales en Tampa. Viajes, envíos, impuestos, notaría y formación de empresas.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/people/MK-Adventure-Travel-Agency/61561337021713/" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mk_adventurellc/" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@mk.adventurellc" aria-label="TikTok">
+                            <i data-lucide="music-2"></i>
+                        </a>
+                        <a href="https://wa.me/19562172274" aria-label="WhatsApp">
+                            <i data-lucide="message-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Agencia de Viajes</a></li>
+                        <li><a href="#">Envíos a Cuba</a></li>
+                        <li><a href="#">Preparación de Impuestos</a></li>
+                        <li><a href="#">Servicios Notariales</a></li>
+                        <li><a href="#">Formación de Empresas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Guías y Tutoriales</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos de Servicio</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 M&K Adventure LLC. Todos los derechos reservados.</p>
+                <p class="footer-location">
+                    <i data-lucide="map-pin"></i>
+                    Tampa, Florida — Servimos toda Florida y Estados Unidos
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/19562172274" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <script src="app.js"></script>
+</body>
+</html>
