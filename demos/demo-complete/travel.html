@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency & Booking | M&K Adventure</title>
+  <meta name="description" content="Book flights, cruises, and vacation packages at the best prices. M&K Adventure Travel Agency in Tampa, FL offers deals to Cuba, Mexico, Dominican Republic and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages/travel.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header has-noise">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.webp" alt="M&K Adventure" width="48" height="48">
+        <div class="header__logo-text">
+          M&K Adventure
+          <small>Tampa, FL</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" class="nav__link">
+          <span data-en="Home" data-es="Inicio">Home</span>
+        </a>
+
+        <div class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-trigger">
+            <span data-en="Services" data-es="Servicios">Services</span>
+            <i data-lucide="chevron-down"></i>
+          </a>
+          <div class="nav__mega-menu">
+            <div class="mega-menu__grid">
+              <a href="travel.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="plane"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</div>
+                  <div class="mega-menu__desc" data-en="Flights, cruises & packages" data-es="Vuelos, cruceros y paquetes">Flights, cruises & packages</div>
+                </div>
+              </a>
+              <a href="shipping.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="package"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</div>
+                  <div class="mega-menu__desc" data-en="Reliable package delivery" data-es="Envío confiable de paquetes">Reliable package delivery</div>
+                </div>
+              </a>
+              <a href="taxes.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="calculator"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</div>
+                  <div class="mega-menu__desc" data-en="Personal & business filing" data-es="Declaración personal y empresarial">Personal & business filing</div>
+                </div>
+              </a>
+              <a href="notary.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="file-check"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Notary Services" data-es="Servicios Notariales">Notary Services</div>
+                  <div class="mega-menu__desc" data-en="In-office & mobile notary" data-es="Notaría en oficina y móvil">In-office & mobile notary</div>
+                </div>
+              </a>
+              <a href="business-formation.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="building-2"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Business Formation" data-es="Formación de Empresas">Business Formation</div>
+                  <div class="mega-menu__desc" data-en="LLC & Corporation setup" data-es="Creación de LLC y Corporaciones">LLC & Corporation setup</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="travel.html" class="nav__link nav__link--active">
+          <span data-en="Travel & Booking" data-es="Viajes y Reservas">Travel & Booking</span>
+        </a>
+        <a href="about.html" class="nav__link">
+          <span data-en="About" data-es="Nosotros">About</span>
+        </a>
+        <a href="blog.html" class="nav__link">
+          <span data-en="Blog" data-es="Blog">Blog</span>
+        </a>
+        <a href="contact.html" class="nav__link">
+          <span data-en="Contact" data-es="Contacto">Contact</span>
+        </a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang-toggle">
+          <span class="lang-toggle__option is-active" data-lang="en">EN</span>
+          <span class="lang-toggle__option" data-lang="es">ES</span>
+        </div>
+        <a href="https://wa.me/18133751532" class="header__whatsapp" target="_blank" rel="noopener">
+          <i data-lucide="message-circle"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+      <div class="hamburger" aria-label="Menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-menu__link" data-en="Home" data-es="Inicio">Home</a>
+    <div class="mobile-menu__accordion">
+      <button class="mobile-menu__accordion-trigger">
+        <span data-en="Services" data-es="Servicios">Services</span>
+        <i data-lucide="chevron-down"></i>
+      </button>
+      <div class="mobile-menu__sub">
+        <a href="travel.html" class="mobile-menu__sub-link"><i data-lucide="plane"></i> <span data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</span></a>
+        <a href="shipping.html" class="mobile-menu__sub-link"><i data-lucide="package"></i> <span data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</span></a>
+        <a href="taxes.html" class="mobile-menu__sub-link"><i data-lucide="calculator"></i> <span data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</span></a>
+        <a href="notary.html" class="mobile-menu__sub-link"><i data-lucide="file-check"></i> <span data-en="Notary Services" data-es="Servicios Notariales">Notary Services</span></a>
+        <a href="business-formation.html" class="mobile-menu__sub-link"><i data-lucide="building-2"></i> <span data-en="Business Formation" data-es="Formación de Empresas">Business Formation</span></a>
+      </div>
+    </div>
+    <a href="travel.html" class="mobile-menu__link" data-en="Travel & Booking" data-es="Viajes y Reservas">Travel & Booking</a>
+    <a href="about.html" class="mobile-menu__link" data-en="About" data-es="Nosotros">About</a>
+    <a href="blog.html" class="mobile-menu__link" data-en="Blog" data-es="Blog">Blog</a>
+    <a href="contact.html" class="mobile-menu__link" data-en="Contact" data-es="Contacto">Contact</a>
+    <div class="mobile-menu__footer">
+      <div class="lang-toggle">
+        <span class="lang-toggle__option is-active" data-lang="en">EN</span>
+        <span class="lang-toggle__option" data-lang="es">ES</span>
+      </div>
+      <a href="https://wa.me/18133751532" class="btn btn--whatsapp" target="_blank" rel="noopener">
+        <i data-lucide="message-circle"></i>
+        <span data-en="Chat on WhatsApp" data-es="Chat por WhatsApp">Chat on WhatsApp</span>
+      </a>
+      <a href="tel:+18133751532" class="btn btn--outline-light">
+        <i data-lucide="phone"></i>
+        <span>+1 813-375-1532</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========== TRAVEL HERO (Section 1) ========== -->
+  <section class="travel-hero has-noise">
+    <div class="container">
+      <div class="travel-hero__content reveal">
+        <div class="hero__label">
+          <i data-lucide="plane" style="width:14px;height:14px"></i>
+          <span data-en="M&K Adventure Travel Agency" data-es="Agencia de Viajes M&K Adventure">M&K Adventure Travel Agency</span>
+        </div>
+        <h1 class="travel-hero__title">
+          <span data-en="Your Next Adventure Starts Here" data-es="Tu Pr&oacute;xima Aventura Comienza Aqu&iacute;">Your Next Adventure Starts Here</span>
+        </h1>
+        <p class="travel-hero__subtitle" data-en="Find the best deals on flights, cruises, and vacation packages. Let our experienced travel agents plan your perfect getaway." data-es="Encuentra las mejores ofertas en vuelos, cruceros y paquetes vacacionales. Deja que nuestros agentes de viaje planifiquen tu escapada perfecta.">Find the best deals on flights, cruises, and vacation packages. Let our experienced travel agents plan your perfect getaway.</p>
+      </div>
+
+      <div class="search-widget reveal">
+        <div class="search-widget__card">
+          <div class="search-widget__tabs">
+            <button class="search-widget__tab is-active" data-search-tab="flights">
+              <i data-lucide="plane" style="width:16px;height:16px"></i>
+              <span data-en="Flights" data-es="Vuelos">Flights</span>
+            </button>
+            <button class="search-widget__tab" data-search-tab="cruises">
+              <i data-lucide="ship" style="width:16px;height:16px"></i>
+              <span data-en="Cruises" data-es="Cruceros">Cruises</span>
+            </button>
+            <button class="search-widget__tab" data-search-tab="packages">
+              <i data-lucide="briefcase" style="width:16px;height:16px"></i>
+              <span data-en="Packages" data-es="Paquetes">Packages</span>
+            </button>
+          </div>
+          <form class="search-widget__form" onsubmit="event.preventDefault()">
+            <div class="search-widget__field">
+              <label data-en="From" data-es="Desde">From</label>
+              <input type="text" placeholder="Tampa, FL (TPA)" />
+            </div>
+            <div class="search-widget__field">
+              <label data-en="To" data-es="Hasta">To</label>
+              <input type="text" placeholder="Havana, Cuba (HAV)" />
+            </div>
+            <div class="search-widget__field">
+              <label data-en="Departure" data-es="Salida">Departure</label>
+              <input type="date" />
+            </div>
+            <div class="search-widget__field">
+              <label data-en="Return" data-es="Regreso">Return</label>
+              <input type="date" />
+            </div>
+            <button type="submit" class="btn btn--gold search-widget__btn">
+              <i data-lucide="search" style="width:18px;height:18px"></i>
+              <span data-en="Search" data-es="Buscar">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAIN TABS SECTION (Section 2) ========== -->
+  <section class="section travel-tabs">
+    <div class="container">
+      <div class="tabs__nav reveal">
+        <button class="tabs__btn is-active" data-tab="tab-flights">
+          <i data-lucide="plane" style="width:18px;height:18px"></i>
+          <span data-en="Flights" data-es="Vuelos">Flights</span>
+        </button>
+        <button class="tabs__btn" data-tab="tab-cruises">
+          <i data-lucide="ship" style="width:18px;height:18px"></i>
+          <span data-en="Cruises" data-es="Cruceros">Cruises</span>
+        </button>
+        <button class="tabs__btn" data-tab="tab-packages">
+          <i data-lucide="briefcase" style="width:18px;height:18px"></i>
+          <span data-en="Packages" data-es="Paquetes">Packages</span>
+        </button>
+      </div>
+
+      <!-- ========== FLIGHTS TAB (Section 3) ========== -->
+      <div id="tab-flights" class="travel-tab-content is-active">
+
+        <div class="flight-features stagger-children">
+          <div class="flight-feature reveal">
+            <div class="flight-feature__icon"><i data-lucide="badge-dollar-sign"></i></div>
+            <h4 class="flight-feature__title" data-en="Best Prices" data-es="Mejores Precios">Best Prices</h4>
+            <p class="flight-feature__text" data-en="We negotiate directly with airlines to bring you the most competitive fares available." data-es="Negociamos directamente con aerol&iacute;neas para traerte las tarifas m&aacute;s competitivas.">We negotiate directly with airlines to bring you the most competitive fares available.</p>
+          </div>
+          <div class="flight-feature reveal">
+            <div class="flight-feature__icon"><i data-lucide="calendar-range"></i></div>
+            <h4 class="flight-feature__title" data-en="Flexible Dates" data-es="Fechas Flexibles">Flexible Dates</h4>
+            <p class="flight-feature__text" data-en="Change or cancel your flights with flexible booking options and no hidden fees." data-es="Cambia o cancela tus vuelos con opciones de reserva flexibles y sin cargos ocultos.">Change or cancel your flights with flexible booking options and no hidden fees.</p>
+          </div>
+          <div class="flight-feature reveal">
+            <div class="flight-feature__icon"><i data-lucide="headphones"></i></div>
+            <h4 class="flight-feature__title" data-en="24/7 Support" data-es="Soporte 24/7">24/7 Support</h4>
+            <p class="flight-feature__text" data-en="Our bilingual support team is available around the clock to assist you with any travel needs." data-es="Nuestro equipo de soporte biling&uuml;e est&aacute; disponible las 24 horas para asistirte.">Our bilingual support team is available around the clock to assist you with any travel needs.</p>
+          </div>
+        </div>
+
+        <div class="section-header reveal">
+          <h3 class="section-header__title" data-en="Popular Flight Routes" data-es="Rutas de Vuelo Populares">Popular Flight Routes</h3>
+          <div class="gold-bar gold-bar--center"></div>
+        </div>
+
+        <div class="filter-bar reveal">
+          <button class="filter-bar__btn is-active" data-filter="all">
+            <span data-en="All" data-es="Todos">All</span>
+          </button>
+          <button class="filter-bar__btn" data-filter="caribbean">
+            <span data-en="Caribbean" data-es="Caribe">Caribbean</span>
+          </button>
+          <button class="filter-bar__btn" data-filter="central-america">
+            <span data-en="Central America" data-es="Centroam&eacute;rica">Central America</span>
+          </button>
+          <button class="filter-bar__btn" data-filter="south-america">
+            <span data-en="South America" data-es="Sudam&eacute;rica">South America</span>
+          </button>
+        </div>
+
+        <div class="destination-grid stagger-children">
+          <!-- Havana, Cuba -->
+          <div class="dest-card reveal" data-category="caribbean">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #1a6b54, #2d9b74)">
+              <span class="dest-card__emoji">&#127464;&#127482;</span>
+              <span class="dest-card__badge" data-en="Popular" data-es="Popular">Popular</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name">Havana</h4>
+              <p class="dest-card__location">Cuba</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $299</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cancun, Mexico -->
+          <div class="dest-card reveal" data-category="caribbean">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #c4421a, #e8731f)">
+              <span class="dest-card__emoji">&#127474;&#127485;</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name">Canc&uacute;n</h4>
+              <p class="dest-card__location">Mexico</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $349</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Santo Domingo, DR -->
+          <div class="dest-card reveal" data-category="caribbean">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #6b3a1a, #9b6a2d)">
+              <span class="dest-card__emoji">&#127465;&#127476;</span>
+              <span class="dest-card__badge" data-en="Hot Deal" data-es="Oferta">Hot Deal</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name">Santo Domingo</h4>
+              <p class="dest-card__location" data-en="Dominican Republic" data-es="Rep&uacute;blica Dominicana">Dominican Republic</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $389</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bogota, Colombia -->
+          <div class="dest-card reveal" data-category="south-america">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #2d1a6b, #6b2d9b)">
+              <span class="dest-card__emoji">&#127464;&#127476;</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name">Bogot&aacute;</h4>
+              <p class="dest-card__location">Colombia</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $399</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- San Jose, Costa Rica -->
+          <div class="dest-card reveal" data-category="central-america">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #1a3a6b, #2d5a9b)">
+              <span class="dest-card__emoji">&#127464;&#127479;</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name">San Jos&eacute;</h4>
+              <p class="dest-card__location">Costa Rica</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $429</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lima, Peru -->
+          <div class="dest-card reveal" data-category="south-america">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #8b1a1a, #c43a3a)">
+              <span class="dest-card__emoji">&#127477;&#127466;</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name">Lima</h4>
+              <p class="dest-card__location">Peru</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $499</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== CRUISES TAB (Section 4) ========== -->
+      <div id="tab-cruises" class="travel-tab-content">
+        <div class="section-header reveal">
+          <p class="section-header__subtitle" data-en="Set sail on unforgettable cruise adventures departing from Tampa and nearby ports. From weekend getaways to extended voyages, we have the perfect cruise for you." data-es="Zarpa en aventuras de crucero inolvidables desde Tampa y puertos cercanos. Desde escapadas de fin de semana hasta viajes extendidos, tenemos el crucero perfecto para ti.">Set sail on unforgettable cruise adventures departing from Tampa and nearby ports. From weekend getaways to extended voyages, we have the perfect cruise for you.</p>
+        </div>
+
+        <div class="destination-grid stagger-children">
+          <!-- Caribbean 7-Night -->
+          <div class="dest-card reveal">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #0a3d6b, #1a6baa)">
+              <span class="dest-card__emoji">&#128674;</span>
+              <span class="dest-card__badge" data-en="Best Seller" data-es="M&aacute;s Vendido">Best Seller</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name" data-en="Caribbean 7-Night" data-es="Caribe 7 Noches">Caribbean 7-Night</h4>
+              <p class="dest-card__location" data-en="Multiple Ports" data-es="M&uacute;ltiples Puertos">Multiple Ports</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $799</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bahamas Weekend -->
+          <div class="dest-card reveal">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #0a5f6b, #1a9baa)">
+              <span class="dest-card__emoji">&#128674;</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name" data-en="Bahamas Weekend" data-es="Fin de Semana Bahamas">Bahamas Weekend</h4>
+              <p class="dest-card__location" data-en="Nassau & CocoCay" data-es="Nassau y CocoCay">Nassau & CocoCay</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $399</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Western Caribbean -->
+          <div class="dest-card reveal">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #1a1a6b, #3a3a9b)">
+              <span class="dest-card__emoji">&#128674;</span>
+              <span class="dest-card__badge" data-en="Popular" data-es="Popular">Popular</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name" data-en="Western Caribbean" data-es="Caribe Occidental">Western Caribbean</h4>
+              <p class="dest-card__location" data-en="Cozumel, Grand Cayman, Jamaica" data-es="Cozumel, Gran Caim&aacute;n, Jamaica">Cozumel, Grand Cayman, Jamaica</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $899</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mediterranean 10-Day -->
+          <div class="dest-card reveal">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #2d0a6b, #6b1aaa)">
+              <span class="dest-card__emoji">&#128674;</span>
+              <span class="dest-card__badge" data-en="Premium" data-es="Premium">Premium</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name" data-en="Mediterranean 10-Day" data-es="Mediterr&aacute;neo 10 D&iacute;as">Mediterranean 10-Day</h4>
+              <p class="dest-card__location" data-en="Italy, Greece, Spain" data-es="Italia, Grecia, Espa&ntilde;a">Italy, Greece, Spain</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $1,299</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== PACKAGES TAB (Section 5) ========== -->
+      <div id="tab-packages" class="travel-tab-content">
+        <div class="section-header reveal">
+          <p class="section-header__subtitle" data-en="All-inclusive vacation packages with flights, hotels, and activities bundled together for the best value. Just pack your bags and leave the rest to us." data-es="Paquetes vacacionales todo incluido con vuelos, hoteles y actividades combinados para el mejor valor. Solo empaca tus maletas y d&eacute;janos el resto.">All-inclusive vacation packages with flights, hotels, and activities bundled together for the best value. Just pack your bags and leave the rest to us.</p>
+        </div>
+
+        <div class="destination-grid stagger-children">
+          <!-- Havana All-Inclusive 5D -->
+          <div class="dest-card reveal">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #1a6b54, #2d9b74)">
+              <span class="dest-card__emoji">&#127464;&#127482;</span>
+              <span class="dest-card__badge" data-en="All-Inclusive" data-es="Todo Incluido">All-Inclusive</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name" data-en="Havana All-Inclusive 5D" data-es="Habana Todo Incluido 5D">Havana All-Inclusive 5D</h4>
+              <p class="dest-card__location" data-en="Cuba - 5 Days / 4 Nights" data-es="Cuba - 5 D&iacute;as / 4 Noches">Cuba - 5 Days / 4 Nights</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $899</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cancun Resort 7D -->
+          <div class="dest-card reveal">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #c4421a, #e8731f)">
+              <span class="dest-card__emoji">&#127474;&#127485;</span>
+              <span class="dest-card__badge" data-en="Best Value" data-es="Mejor Valor">Best Value</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name" data-en="Canc&uacute;n Resort 7D" data-es="Canc&uacute;n Resort 7D">Canc&uacute;n Resort 7D</h4>
+              <p class="dest-card__location" data-en="Mexico - 7 Days / 6 Nights" data-es="M&eacute;xico - 7 D&iacute;as / 6 Noches">Mexico - 7 Days / 6 Nights</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $1,199</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Punta Cana 5D -->
+          <div class="dest-card reveal">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #6b3a1a, #9b6a2d)">
+              <span class="dest-card__emoji">&#127465;&#127476;</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name" data-en="Punta Cana 5D" data-es="Punta Cana 5D">Punta Cana 5D</h4>
+              <p class="dest-card__location" data-en="Dominican Republic - 5 Days / 4 Nights" data-es="Rep&uacute;blica Dominicana - 5 D&iacute;as / 4 Noches">Dominican Republic - 5 Days / 4 Nights</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $999</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Costa Rica Adventure 7D -->
+          <div class="dest-card reveal">
+            <div class="dest-card__image" style="background: linear-gradient(135deg, #1a3a6b, #2d5a9b)">
+              <span class="dest-card__emoji">&#127464;&#127479;</span>
+              <span class="dest-card__badge" data-en="Adventure" data-es="Aventura">Adventure</span>
+            </div>
+            <div class="dest-card__body">
+              <h4 class="dest-card__name" data-en="Costa Rica Adventure 7D" data-es="Costa Rica Aventura 7D">Costa Rica Adventure 7D</h4>
+              <p class="dest-card__location" data-en="Costa Rica - 7 Days / 6 Nights" data-es="Costa Rica - 7 D&iacute;as / 6 Noches">Costa Rica - 7 Days / 6 Nights</p>
+              <div class="dest-card__footer">
+                <span class="dest-card__price"><small data-en="from" data-es="desde">from</small> $1,399</span>
+                <a href="https://wa.me/18133751532" class="btn btn--sm btn--gold" target="_blank" rel="noopener" data-en="Book Now" data-es="Reservar">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== INQUIRY FORM SECTION (Section 6) ========== -->
+  <section class="section section--dark has-noise">
+    <div class="container">
+      <div class="travel-inquiry">
+        <div class="travel-inquiry__info reveal">
+          <span class="section-header__label" data-en="Custom Travel Planning" data-es="Planificaci&oacute;n de Viaje Personalizada">Custom Travel Planning</span>
+          <h2 class="travel-inquiry__title" data-en="Can't Find What You're Looking For?" data-es="&iquest;No Encuentras lo que Buscas?">Can't Find What You're Looking For?</h2>
+          <div class="gold-bar"></div>
+          <p class="travel-inquiry__desc" data-en="Our experienced travel agents specialize in creating custom itineraries tailored to your preferences and budget. Whether it's a family vacation, honeymoon, group trip, or business travel, we'll handle every detail so you can focus on enjoying your journey." data-es="Nuestros experimentados agentes de viaje se especializan en crear itinerarios personalizados adaptados a tus preferencias y presupuesto. Ya sea unas vacaciones familiares, luna de miel, viaje en grupo o viaje de negocios, nos encargamos de cada detalle para que puedas disfrutar tu viaje.">Our experienced travel agents specialize in creating custom itineraries tailored to your preferences and budget. Whether it's a family vacation, honeymoon, group trip, or business travel, we'll handle every detail so you can focus on enjoying your journey.</p>
+
+          <div class="travel-inquiry__contact">
+            <div class="travel-inquiry__contact-item">
+              <i data-lucide="phone"></i>
+              <div>
+                <strong data-en="Call Us" data-es="Ll&aacute;manos">Call Us</strong>
+                <a href="tel:+18133751532">+1 813-375-1532</a>
+              </div>
+            </div>
+            <div class="travel-inquiry__contact-item">
+              <i data-lucide="message-circle"></i>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/18133751532" target="_blank" rel="noopener" data-en="Chat with us now" data-es="Chatea con nosotros ahora">Chat with us now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="travel-inquiry__form reveal">
+          <div class="card">
+            <h3 class="card__title" data-en="Request a Custom Quote" data-es="Solicita una Cotizaci&oacute;n Personalizada">Request a Custom Quote</h3>
+            <form class="travel-form service-form" onsubmit="event.preventDefault()">
+              <div class="form-group form-group--dark">
+                <label data-en="Full Name" data-es="Nombre Completo">Full Name</label>
+                <input type="text" placeholder="John Doe" required />
+              </div>
+              <div class="form-group form-group--dark">
+                <label data-en="Email Address" data-es="Correo Electr&oacute;nico">Email Address</label>
+                <input type="email" placeholder="john@example.com" required />
+              </div>
+              <div class="form-group form-group--dark">
+                <label data-en="Destination" data-es="Destino">Destination</label>
+                <input type="text" placeholder="e.g. Havana, Cuba" />
+              </div>
+              <div class="form-group form-group--dark">
+                <label data-en="Travel Dates" data-es="Fechas de Viaje">Travel Dates</label>
+                <input type="text" placeholder="e.g. March 15 - March 22, 2026" />
+              </div>
+              <div class="form-group form-group--dark">
+                <label data-en="Number of Travelers" data-es="N&uacute;mero de Viajeros">Number of Travelers</label>
+                <select>
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8+</option>
+                </select>
+              </div>
+              <div class="form-group form-group--dark">
+                <label data-en="Message" data-es="Mensaje">Message</label>
+                <textarea rows="4" placeholder="Tell us about your ideal trip..." data-en-placeholder="Tell us about your ideal trip..." data-es-placeholder="Cu&eacute;ntanos sobre tu viaje ideal..."></textarea>
+              </div>
+              <button type="submit" class="btn btn--gold btn--full">
+                <i data-lucide="send" style="width:18px;height:18px"></i>
+                <span data-en="Submit Inquiry" data-es="Enviar Consulta">Submit Inquiry</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer has-noise">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo">
+            <img src="assets/images/logo.webp" alt="M&K Adventure" width="48" height="48">
+            <div class="header__logo-text">
+              M&K Adventure
+              <small>Tampa, FL</small>
+            </div>
+          </a>
+          <p data-en="M&K Adventure LLC is Tampa's premier multiservice business hub offering travel agency services, shipping to Cuba, tax preparation, notary services, and business formation." data-es="M&K Adventure LLC es el principal centro multiservicio de Tampa que ofrece servicios de agencia de viajes, envíos a Cuba, preparación de impuestos, servicios notariales y formación de empresas.">M&K Adventure LLC is Tampa's premier multiservice business hub offering travel agency services, shipping to Cuba, tax preparation, notary services, and business formation.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-en="Services" data-es="Servicios">Services</h4>
+          <div class="footer__links">
+            <a href="travel.html" data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</a>
+            <a href="shipping.html" data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</a>
+            <a href="taxes.html" data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</a>
+            <a href="notary.html" data-en="Notary Services" data-es="Servicios Notariales">Notary Services</a>
+            <a href="business-formation.html" data-en="Business Formation" data-es="Formación de Empresas">Business Formation</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h4>
+          <div class="footer__links">
+            <a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
+            <a href="blog.html" data-en="Blog" data-es="Blog">Blog</a>
+            <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-en="Contact" data-es="Contacto">Contact</h4>
+          <div class="footer__contact-item">
+            <i data-lucide="phone"></i>
+            <span>+1 813-375-1532</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="mail"></i>
+            <span>info@mkadventure.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="map-pin"></i>
+            <span>Tampa, FL</span>
+          </div>
+          <div class="footer__newsletter">
+            <h5 class="footer__heading" data-en="Newsletter" data-es="Boletín">Newsletter</h5>
+            <form class="footer__newsletter-form" onsubmit="event.preventDefault()">
+              <input type="email" class="footer__newsletter-input" placeholder="Email">
+              <button type="submit" class="footer__newsletter-btn" aria-label="Subscribe">
+                <i data-lucide="send" style="width:16px;height:16px"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 M&K Adventure LLC. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></span>
+        <div class="footer__legal">
+          <a href="#" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+          <a href="#" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/18133751532" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg class="whatsapp-float__icon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-float__label" data-en="Chat with us" data-es="Chatea con nosotros">Chat with us</span>
+  </a>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages/travel.js"></script>
+</body>
+</html>

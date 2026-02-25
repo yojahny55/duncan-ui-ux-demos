@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notary Services | M&K Adventure</title>
+  <meta name="description" content="Professional notary services in Tampa, FL. In-office and mobile notary for affidavits, powers of attorney, real estate documents, loan signings and more. Bilingual (EN/ES).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages/service.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header has-noise">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.webp" alt="M&K Adventure" width="48" height="48">
+        <div class="header__logo-text">
+          M&K Adventure
+          <small>Tampa, FL</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" class="nav__link">
+          <span data-en="Home" data-es="Inicio">Home</span>
+        </a>
+
+        <div class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-trigger">
+            <span data-en="Services" data-es="Servicios">Services</span>
+            <i data-lucide="chevron-down"></i>
+          </a>
+          <div class="nav__mega-menu">
+            <div class="mega-menu__grid">
+              <a href="travel.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="plane"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</div>
+                  <div class="mega-menu__desc" data-en="Flights, cruises & packages" data-es="Vuelos, cruceros y paquetes">Flights, cruises & packages</div>
+                </div>
+              </a>
+              <a href="shipping.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="package"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</div>
+                  <div class="mega-menu__desc" data-en="Reliable package delivery" data-es="Envío confiable de paquetes">Reliable package delivery</div>
+                </div>
+              </a>
+              <a href="taxes.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="calculator"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</div>
+                  <div class="mega-menu__desc" data-en="Personal & business filing" data-es="Declaración personal y empresarial">Personal & business filing</div>
+                </div>
+              </a>
+              <a href="notary.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="file-check"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Notary Services" data-es="Servicios Notariales">Notary Services</div>
+                  <div class="mega-menu__desc" data-en="In-office & mobile notary" data-es="Notaría en oficina y móvil">In-office & mobile notary</div>
+                </div>
+              </a>
+              <a href="business-formation.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="building-2"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Business Formation" data-es="Formación de Empresas">Business Formation</div>
+                  <div class="mega-menu__desc" data-en="LLC & Corporation setup" data-es="Creación de LLC y Corporaciones">LLC & Corporation setup</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="travel.html" class="nav__link">
+          <span data-en="Travel & Booking" data-es="Viajes y Reservas">Travel & Booking</span>
+        </a>
+        <a href="about.html" class="nav__link">
+          <span data-en="About" data-es="Nosotros">About</span>
+        </a>
+        <a href="blog.html" class="nav__link">
+          <span data-en="Blog" data-es="Blog">Blog</span>
+        </a>
+        <a href="contact.html" class="nav__link">
+          <span data-en="Contact" data-es="Contacto">Contact</span>
+        </a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang-toggle">
+          <span class="lang-toggle__option is-active" data-lang="en">EN</span>
+          <span class="lang-toggle__option" data-lang="es">ES</span>
+        </div>
+        <a href="https://wa.me/18133751532" class="header__whatsapp" target="_blank" rel="noopener">
+          <i data-lucide="message-circle"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+      <div class="hamburger" aria-label="Menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-menu__link" data-en="Home" data-es="Inicio">Home</a>
+    <div class="mobile-menu__accordion">
+      <button class="mobile-menu__accordion-trigger">
+        <span data-en="Services" data-es="Servicios">Services</span>
+        <i data-lucide="chevron-down"></i>
+      </button>
+      <div class="mobile-menu__sub">
+        <a href="travel.html" class="mobile-menu__sub-link"><i data-lucide="plane"></i> <span data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</span></a>
+        <a href="shipping.html" class="mobile-menu__sub-link"><i data-lucide="package"></i> <span data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</span></a>
+        <a href="taxes.html" class="mobile-menu__sub-link"><i data-lucide="calculator"></i> <span data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</span></a>
+        <a href="notary.html" class="mobile-menu__sub-link"><i data-lucide="file-check"></i> <span data-en="Notary Services" data-es="Servicios Notariales">Notary Services</span></a>
+        <a href="business-formation.html" class="mobile-menu__sub-link"><i data-lucide="building-2"></i> <span data-en="Business Formation" data-es="Formación de Empresas">Business Formation</span></a>
+      </div>
+    </div>
+    <a href="travel.html" class="mobile-menu__link" data-en="Travel & Booking" data-es="Viajes y Reservas">Travel & Booking</a>
+    <a href="about.html" class="mobile-menu__link" data-en="About" data-es="Nosotros">About</a>
+    <a href="blog.html" class="mobile-menu__link" data-en="Blog" data-es="Blog">Blog</a>
+    <a href="contact.html" class="mobile-menu__link" data-en="Contact" data-es="Contacto">Contact</a>
+    <div class="mobile-menu__footer">
+      <div class="lang-toggle">
+        <span class="lang-toggle__option is-active" data-lang="en">EN</span>
+        <span class="lang-toggle__option" data-lang="es">ES</span>
+      </div>
+      <a href="https://wa.me/18133751532" class="btn btn--whatsapp" target="_blank" rel="noopener">
+        <i data-lucide="message-circle"></i>
+        <span data-en="Chat on WhatsApp" data-es="Chat por WhatsApp">Chat on WhatsApp</span>
+      </a>
+      <a href="tel:+18133751532" class="btn btn--outline-light">
+        <i data-lucide="phone"></i>
+        <span>+1 813-375-1532</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========== 1. SERVICE HERO ========== -->
+  <section class="service-hero has-noise">
+    <div class="container">
+      <div class="service-hero__icon reveal">
+        <i data-lucide="file-check"></i>
+      </div>
+      <h1 class="service-hero__title reveal" data-en="Notary Services" data-es="Servicios Notariales">Notary Services</h1>
+      <p class="service-hero__subtitle reveal" data-en="Professional document notarization you can trust. In-office appointments and mobile notary services available throughout the Tampa Bay area." data-es="Notarización profesional de documentos en la que puede confiar. Citas en oficina y servicios de notario móvil disponibles en toda el área de Tampa Bay.">Professional document notarization you can trust. In-office appointments and mobile notary services available throughout the Tampa Bay area.</p>
+      <div class="service-hero__ctas reveal">
+        <a href="#appointment" class="btn btn--gold btn--lg">
+          <i data-lucide="calendar"></i>
+          <span data-en="Schedule Appointment" data-es="Agendar Cita">Schedule Appointment</span>
+        </a>
+        <a href="https://wa.me/18133751532" class="btn btn--outline-light btn--lg" target="_blank" rel="noopener">
+          <i data-lucide="message-circle"></i>
+          <span data-en="WhatsApp Us" data-es="Escríbenos por WhatsApp">WhatsApp Us</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 2. SERVICE DETAILS ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="service-details">
+        <div class="service-details__content reveal">
+          <h3 data-en="Comprehensive Notary Services" data-es="Servicios Notariales Completos">Comprehensive Notary Services</h3>
+          <p data-en="At M&K Adventure, our certified notary public provides reliable and professional notarization services for all types of legal documents. Whether you need a quick signature notarization or a complex real estate closing, we are here to help ensure your documents are properly executed and legally valid." data-es="En M&K Adventure, nuestro notario público certificado brinda servicios de notarización confiables y profesionales para todo tipo de documentos legales. Ya sea que necesite una notarización rápida de firma o un cierre inmobiliario complejo, estamos aquí para garantizar que sus documentos se ejecuten correctamente y sean legalmente válidos.">At M&K Adventure, our certified notary public provides reliable and professional notarization services for all types of legal documents. Whether you need a quick signature notarization or a complex real estate closing, we are here to help ensure your documents are properly executed and legally valid.</p>
+
+          <h4 data-en="Documents We Notarize" data-es="Documentos que Notarizamos">Documents We Notarize</h4>
+          <ul class="service-details__list">
+            <li>
+              <i data-lucide="check-circle"></i>
+              <span data-en="Affidavits and sworn statements" data-es="Declaraciones juradas y testimonios">Affidavits and sworn statements</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle"></i>
+              <span data-en="Powers of Attorney (POA)" data-es="Poderes notariales (POA)">Powers of Attorney (POA)</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle"></i>
+              <span data-en="Real estate documents and deeds" data-es="Documentos inmobiliarios y escrituras">Real estate documents and deeds</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle"></i>
+              <span data-en="Loan documents and mortgage closings" data-es="Documentos de préstamos y cierres hipotecarios">Loan documents and mortgage closings</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle"></i>
+              <span data-en="Wills, trusts, and estate planning documents" data-es="Testamentos, fideicomisos y documentos de planificación patrimonial">Wills, trusts, and estate planning documents</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle"></i>
+              <span data-en="Business contracts and agreements" data-es="Contratos y acuerdos comerciales">Business contracts and agreements</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle"></i>
+              <span data-en="Immigration and travel consent forms" data-es="Formularios de consentimiento de inmigración y viaje">Immigration and travel consent forms</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle"></i>
+              <span data-en="Vehicle title transfers" data-es="Transferencias de títulos de vehículos">Vehicle title transfers</span>
+            </li>
+          </ul>
+
+          <p data-en="All notarizations are performed in compliance with Florida state law. Our bilingual team (English & Spanish) ensures clear communication throughout the process." data-es="Todas las notarizaciones se realizan en cumplimiento con la ley del estado de Florida. Nuestro equipo bilingüe (inglés y español) garantiza una comunicación clara durante todo el proceso.">All notarizations are performed in compliance with Florida state law. Our bilingual team (English & Spanish) ensures clear communication throughout the process.</p>
+        </div>
+
+        <div class="service-details__sidebar reveal">
+          <div class="card">
+            <h4 class="card__title" data-en="Quick Info" data-es="Información Rápida">Quick Info</h4>
+            <div class="gold-bar gold-bar--left"></div>
+            <ul class="service-details__list">
+              <li>
+                <i data-lucide="clock"></i>
+                <span data-en="Walk-ins welcome, appointments preferred" data-es="Se aceptan sin cita, se prefieren citas">Walk-ins welcome, appointments preferred</span>
+              </li>
+              <li>
+                <i data-lucide="map-pin"></i>
+                <span data-en="In-office & mobile notary available" data-es="Notario en oficina y móvil disponible">In-office & mobile notary available</span>
+              </li>
+              <li>
+                <i data-lucide="languages"></i>
+                <span data-en="Bilingual service (English & Spanish)" data-es="Servicio bilingüe (inglés y español)">Bilingual service (English & Spanish)</span>
+              </li>
+              <li>
+                <i data-lucide="shield-check"></i>
+                <span data-en="Florida commissioned notary public" data-es="Notario público comisionado de Florida">Florida commissioned notary public</span>
+              </li>
+              <li>
+                <i data-lucide="credit-card"></i>
+                <span data-en="Cash, card & digital payments accepted" data-es="Se aceptan pagos en efectivo, tarjeta y digitales">Cash, card & digital payments accepted</span>
+              </li>
+              <li>
+                <i data-lucide="id-card"></i>
+                <span data-en="Valid government-issued photo ID required" data-es="Se requiere identificación con foto emitida por el gobierno">Valid government-issued photo ID required</span>
+              </li>
+            </ul>
+            <a href="https://wa.me/18133751532" class="btn btn--gold" style="width:100%; margin-top:var(--space-md);" target="_blank" rel="noopener">
+              <i data-lucide="message-circle"></i>
+              <span data-en="Ask a Question" data-es="Haz una Pregunta">Ask a Question</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3. PRICING TABLE ========== -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-en="Transparent Pricing" data-es="Precios Transparentes">Transparent Pricing</span>
+        <h2 class="section-header__title" data-en="Notary Service Rates" data-es="Tarifas de Servicios Notariales">Notary Service Rates</h2>
+        <div class="gold-bar gold-bar--center"></div>
+        <p class="section-header__subtitle" data-en="Simple, upfront pricing with no hidden fees. Florida law sets maximum notary fees to protect consumers." data-es="Precios simples y directos sin tarifas ocultas. La ley de Florida establece tarifas máximas de notario para proteger a los consumidores.">Simple, upfront pricing with no hidden fees. Florida law sets maximum notary fees to protect consumers.</p>
+      </div>
+
+      <div class="rates-grid stagger-children">
+        <!-- Standard Notarization -->
+        <div class="card pricing-card reveal">
+          <div class="pricing-card__name" data-en="Standard Notarization" data-es="Notarización Estándar">Standard Notarization</div>
+          <div class="pricing-card__price">$15 <small data-en="/signature" data-es="/firma">/signature</small></div>
+          <div class="pricing-card__features">
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Per signature notarized" data-es="Por firma notarizada">Per signature notarized</span>
+            </div>
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="In-office service" data-es="Servicio en oficina">In-office service</span>
+            </div>
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Walk-ins welcome" data-es="Se aceptan sin cita">Walk-ins welcome</span>
+            </div>
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Quick turnaround" data-es="Entrega rápida">Quick turnaround</span>
+            </div>
+          </div>
+          <a href="#appointment" class="btn btn--outline" style="width:100%;">
+            <span data-en="Book Now" data-es="Reservar Ahora">Book Now</span>
+          </a>
+        </div>
+
+        <!-- Additional Signatures -->
+        <div class="card pricing-card reveal">
+          <div class="pricing-card__name" data-en="Additional Signatures" data-es="Firmas Adicionales">Additional Signatures</div>
+          <div class="pricing-card__price">$10 <small data-en="/each" data-es="/cada una">/each</small></div>
+          <div class="pricing-card__features">
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Per additional signature" data-es="Por firma adicional">Per additional signature</span>
+            </div>
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Same document or session" data-es="Mismo documento o sesión">Same document or session</span>
+            </div>
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Multi-signer discounts" data-es="Descuentos para múltiples firmantes">Multi-signer discounts</span>
+            </div>
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Ideal for couples & families" data-es="Ideal para parejas y familias">Ideal for couples & families</span>
+            </div>
+          </div>
+          <a href="#appointment" class="btn btn--outline" style="width:100%;">
+            <span data-en="Book Now" data-es="Reservar Ahora">Book Now</span>
+          </a>
+        </div>
+
+        <!-- Mobile Notary (Featured) -->
+        <div class="card card--featured pricing-card reveal">
+          <div class="pricing-card__badge" data-en="Most Popular" data-es="Más Popular">Most Popular</div>
+          <div class="pricing-card__name" data-en="Mobile Notary" data-es="Notario Móvil">Mobile Notary</div>
+          <div class="pricing-card__price"><small data-en="from" data-es="desde">from</small> $75</div>
+          <div class="pricing-card__features">
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="We come to your location" data-es="Vamos a su ubicación">We come to your location</span>
+            </div>
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Tampa Bay area coverage" data-es="Cobertura del área de Tampa Bay">Tampa Bay area coverage</span>
+            </div>
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Flexible scheduling" data-es="Horarios flexibles">Flexible scheduling</span>
+            </div>
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Includes first signature" data-es="Incluye primera firma">Includes first signature</span>
+            </div>
+            <div class="pricing-card__feature">
+              <i data-lucide="check"></i>
+              <span data-en="Evenings & weekends available" data-es="Disponible noches y fines de semana">Evenings & weekends available</span>
+            </div>
+          </div>
+          <a href="#appointment" class="btn btn--gold" style="width:100%;">
+            <span data-en="Schedule Mobile Notary" data-es="Agendar Notario Móvil">Schedule Mobile Notary</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4. MOBILE NOTARY CALLOUT ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="callout-card reveal">
+        <div class="callout-card__icon">
+          <i data-lucide="car"></i>
+        </div>
+        <div class="callout-card__content">
+          <h4 data-en="Mobile Notary Service" data-es="Servicio de Notario Móvil">Mobile Notary Service</h4>
+          <p data-en="Can't make it to our office? No problem. Our mobile notary service brings professional notarization directly to your home, office, hospital, or any convenient location throughout the Tampa Bay area. We offer flexible scheduling including evenings and weekends to accommodate your busy lifestyle. Perfect for real estate closings, loan signings, elderly or homebound clients, and business professionals." data-es="No puede venir a nuestra oficina? No hay problema. Nuestro servicio de notario móvil lleva la notarización profesional directamente a su hogar, oficina, hospital o cualquier ubicación conveniente en toda el área de Tampa Bay. Ofrecemos horarios flexibles, incluyendo noches y fines de semana para adaptarnos a su estilo de vida. Perfecto para cierres inmobiliarios, firmas de préstamos, clientes ancianos o confinados en casa, y profesionales de negocios.">Can't make it to our office? No problem. Our mobile notary service brings professional notarization directly to your home, office, hospital, or any convenient location throughout the Tampa Bay area. We offer flexible scheduling including evenings and weekends to accommodate your busy lifestyle. Perfect for real estate closings, loan signings, elderly or homebound clients, and business professionals.</p>
+          <a href="https://wa.me/18133751532" class="btn btn--gold" target="_blank" rel="noopener">
+            <i data-lucide="message-circle"></i>
+            <span data-en="Request Mobile Notary" data-es="Solicitar Notario Móvil">Request Mobile Notary</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 5. PROCESS STEPS ========== -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-en="How It Works" data-es="Cómo Funciona">How It Works</span>
+        <h2 class="section-header__title" data-en="Three Simple Steps" data-es="Tres Pasos Simples">Three Simple Steps</h2>
+        <div class="gold-bar gold-bar--center"></div>
+      </div>
+
+      <div class="process-steps stagger-children">
+        <div class="process-step reveal">
+          <div class="process-step__number">1</div>
+          <h4 class="process-step__title" data-en="Schedule Appointment" data-es="Agenda tu Cita">Schedule Appointment</h4>
+          <p class="process-step__text" data-en="Call, WhatsApp, or use our online form to book a time that works for you. Walk-ins are also welcome during business hours." data-es="Llama, envía un WhatsApp o usa nuestro formulario en línea para reservar un horario que te convenga. También se aceptan visitas sin cita durante el horario comercial.">Call, WhatsApp, or use our online form to book a time that works for you. Walk-ins are also welcome during business hours.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-step__number">2</div>
+          <h4 class="process-step__title" data-en="Bring Valid ID & Documents" data-es="Trae tu Identificación y Documentos">Bring Valid ID & Documents</h4>
+          <p class="process-step__text" data-en="Bring a valid, unexpired government-issued photo ID (driver's license, passport, or state ID) along with the documents you need notarized. Do not sign beforehand." data-es="Trae una identificación con foto vigente emitida por el gobierno (licencia de conducir, pasaporte o identificación estatal) junto con los documentos que necesitas notarizar. No firmes de antemano.">Bring a valid, unexpired government-issued photo ID (driver's license, passport, or state ID) along with the documents you need notarized. Do not sign beforehand.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-step__number">3</div>
+          <h4 class="process-step__title" data-en="Get Your Documents Notarized" data-es="Obtén tus Documentos Notarizados">Get Your Documents Notarized</h4>
+          <p class="process-step__text" data-en="Our notary will verify your identity, witness your signature, and apply the official notary seal. Your documents are now legally notarized and ready to use." data-es="Nuestro notario verificará su identidad, será testigo de su firma y aplicará el sello notarial oficial. Sus documentos ahora están legalmente notarizados y listos para usar.">Our notary will verify your identity, witness your signature, and apply the official notary seal. Your documents are now legally notarized and ready to use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6. FAQ ACCORDION ========== -->
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-en="FAQ" data-es="Preguntas Frecuentes">FAQ</span>
+        <h2 class="section-header__title" data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">Frequently Asked Questions</h2>
+        <div class="gold-bar gold-bar--center"></div>
+      </div>
+
+      <div class="accordion reveal">
+        <div class="accordion__item">
+          <button class="accordion__trigger">
+            <span data-en="What do I need to bring for a notarization?" data-es="Qué necesito traer para una notarización?">What do I need to bring for a notarization?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__inner" data-en="You must bring a valid, unexpired government-issued photo identification such as a driver's license, state ID card, or passport. You also need to bring the unsigned documents that require notarization. It is important that you do not sign the documents before arriving, as the notary must witness your signature." data-es="Debe traer una identificación con foto vigente emitida por el gobierno, como una licencia de conducir, tarjeta de identificación estatal o pasaporte. También necesita traer los documentos sin firmar que requieren notarización. Es importante que no firme los documentos antes de llegar, ya que el notario debe presenciar su firma.">You must bring a valid, unexpired government-issued photo identification such as a driver's license, state ID card, or passport. You also need to bring the unsigned documents that require notarization. It is important that you do not sign the documents before arriving, as the notary must witness your signature.</div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__trigger">
+            <span data-en="Can a notary provide legal advice about my documents?" data-es="Puede un notario brindar asesoría legal sobre mis documentos?">Can a notary provide legal advice about my documents?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__inner" data-en="No. A notary public is not authorized to provide legal advice, draft legal documents, or explain the contents of a document. Our role is to verify your identity, witness your signature, and apply the official notary seal. If you need legal guidance, we recommend consulting with a licensed attorney." data-es="No. Un notario público no está autorizado para brindar asesoría legal, redactar documentos legales ni explicar el contenido de un documento. Nuestro papel es verificar su identidad, presenciar su firma y aplicar el sello notarial oficial. Si necesita orientación legal, le recomendamos consultar con un abogado licenciado.">No. A notary public is not authorized to provide legal advice, draft legal documents, or explain the contents of a document. Our role is to verify your identity, witness your signature, and apply the official notary seal. If you need legal guidance, we recommend consulting with a licensed attorney.</div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__trigger">
+            <span data-en="How far does the mobile notary service travel?" data-es="Hasta dónde viaja el servicio de notario móvil?">How far does the mobile notary service travel?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__inner" data-en="Our mobile notary service covers the entire Tampa Bay area including Tampa, Brandon, Riverview, Valrico, Plant City, Temple Terrace, and surrounding communities. For locations beyond our standard coverage area, additional travel fees may apply. Contact us for a quote for your specific location." data-es="Nuestro servicio de notario móvil cubre toda el área de Tampa Bay, incluyendo Tampa, Brandon, Riverview, Valrico, Plant City, Temple Terrace y comunidades circundantes. Para ubicaciones fuera de nuestra área de cobertura estándar, pueden aplicarse tarifas de viaje adicionales. Contáctenos para una cotización para su ubicación específica.">Our mobile notary service covers the entire Tampa Bay area including Tampa, Brandon, Riverview, Valrico, Plant City, Temple Terrace, and surrounding communities. For locations beyond our standard coverage area, additional travel fees may apply. Contact us for a quote for your specific location.</div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__trigger">
+            <span data-en="Do all signers need to be present at the same time?" data-es="Todos los firmantes deben estar presentes al mismo tiempo?">Do all signers need to be present at the same time?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__inner" data-en="Yes, all signers must be physically present before the notary at the time of signing. The notary must personally witness each individual sign the document and verify each person's identity with a valid photo ID. Signers cannot sign ahead of time or have someone else sign on their behalf (unless a valid Power of Attorney is in place)." data-es="Sí, todos los firmantes deben estar físicamente presentes ante el notario en el momento de la firma. El notario debe presenciar personalmente a cada individuo firmar el documento y verificar la identidad de cada persona con una identificación con foto válida. Los firmantes no pueden firmar de antemano ni hacer que otra persona firme en su nombre (a menos que exista un Poder Notarial válido).">Yes, all signers must be physically present before the notary at the time of signing. The notary must personally witness each individual sign the document and verify each person's identity with a valid photo ID. Signers cannot sign ahead of time or have someone else sign on their behalf (unless a valid Power of Attorney is in place).</div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__trigger">
+            <span data-en="Can you notarize documents in Spanish?" data-es="Pueden notarizar documentos en español?">Can you notarize documents in Spanish?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="accordion__content">
+            <div class="accordion__inner" data-en="Yes. Our bilingual team can assist you in both English and Spanish throughout the notarization process. While the notary can notarize documents written in any language, we are able to communicate the process and instructions in Spanish to ensure you fully understand the procedure and what you are signing." data-es="Sí. Nuestro equipo bilingüe puede asistirle tanto en inglés como en español durante todo el proceso de notarización. Aunque el notario puede notarizar documentos escritos en cualquier idioma, podemos comunicar el proceso y las instrucciones en español para asegurar que usted comprenda completamente el procedimiento y lo que está firmando.">Yes. Our bilingual team can assist you in both English and Spanish throughout the notarization process. While the notary can notarize documents written in any language, we are able to communicate the process and instructions in Spanish to ensure you fully understand the procedure and what you are signing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 7. CTA FORM ========== -->
+  <section id="appointment" class="section service-form-section">
+    <div class="container">
+      <div class="service-form__inner">
+        <div class="service-form__info reveal">
+          <h2 data-en="Schedule Your Notary Appointment" data-es="Agenda tu Cita de Notarización">Schedule Your Notary Appointment</h2>
+          <p data-en="Ready to get your documents notarized? Fill out the form and we'll confirm your appointment within one business hour. You can also reach us directly through any of the channels below." data-es="Listo para notarizar sus documentos? Complete el formulario y confirmaremos su cita dentro de una hora hábil. También puede comunicarse con nosotros directamente a través de cualquiera de los canales a continuación.">Ready to get your documents notarized? Fill out the form and we'll confirm your appointment within one business hour. You can also reach us directly through any of the channels below.</p>
+          <div class="service-form__contact-methods">
+            <div class="service-form__contact-item">
+              <i data-lucide="phone"></i>
+              <span>+1 813-375-1532</span>
+            </div>
+            <div class="service-form__contact-item">
+              <i data-lucide="message-circle"></i>
+              <a href="https://wa.me/18133751532" target="_blank" rel="noopener" style="color:var(--whatsapp);" data-en="Chat on WhatsApp" data-es="Chat por WhatsApp">Chat on WhatsApp</a>
+            </div>
+            <div class="service-form__contact-item">
+              <i data-lucide="mail"></i>
+              <span>info@mkadventure.com</span>
+            </div>
+            <div class="service-form__contact-item">
+              <i data-lucide="map-pin"></i>
+              <span>Tampa, FL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-form__card reveal">
+          <h3 data-en="Request Appointment" data-es="Solicitar Cita">Request Appointment</h3>
+          <form class="service-form">
+            <div class="form-group form-group--dark">
+              <input type="text" class="form-group__input" placeholder=" " required>
+              <label class="form-group__label" data-en="Full Name" data-es="Nombre Completo">Full Name</label>
+              <span class="form-group__error" data-en="Please enter your name" data-es="Por favor ingrese su nombre">Please enter your name</span>
+            </div>
+            <div class="form-group form-group--dark">
+              <input type="tel" class="form-group__input" placeholder=" " required>
+              <label class="form-group__label" data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
+              <span class="form-group__error" data-en="Please enter your phone number" data-es="Por favor ingrese su teléfono">Please enter your phone number</span>
+            </div>
+            <div class="form-group form-group--dark">
+              <input type="email" class="form-group__input" placeholder=" " required>
+              <label class="form-group__label" data-en="Email Address" data-es="Correo Electrónico">Email Address</label>
+              <span class="form-group__error" data-en="Please enter a valid email" data-es="Por favor ingrese un correo válido">Please enter a valid email</span>
+            </div>
+            <div class="form-group form-group--dark">
+              <select class="form-group__input" required>
+                <option value="" disabled selected data-en="Select Service Type" data-es="Seleccione Tipo de Servicio">Select Service Type</option>
+                <option value="standard" data-en="Standard Notarization (In-Office)" data-es="Notarización Estándar (En Oficina)">Standard Notarization (In-Office)</option>
+                <option value="mobile" data-en="Mobile Notary" data-es="Notario Móvil">Mobile Notary</option>
+                <option value="real-estate" data-en="Real Estate / Loan Closing" data-es="Inmobiliario / Cierre de Préstamo">Real Estate / Loan Closing</option>
+                <option value="poa" data-en="Power of Attorney" data-es="Poder Notarial">Power of Attorney</option>
+                <option value="other" data-en="Other" data-es="Otro">Other</option>
+              </select>
+              <span class="form-group__error" data-en="Please select a service type" data-es="Por favor seleccione un tipo de servicio">Please select a service type</span>
+            </div>
+            <div class="form-group form-group--dark">
+              <textarea class="form-group__input" placeholder=" " rows="3"></textarea>
+              <label class="form-group__label" data-en="Additional Details (optional)" data-es="Detalles Adicionales (opcional)">Additional Details (optional)</label>
+            </div>
+            <button type="submit" class="btn btn--gold" style="width:100%;">
+              <i data-lucide="send"></i>
+              <span data-en="Submit Request" data-es="Enviar Solicitud">Submit Request</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 8. RELATED SERVICES ========== -->
+  <section class="section section--cream related-services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-en="Explore More" data-es="Explorar Más">Explore More</span>
+        <h2 class="section-header__title" data-en="Related Services" data-es="Servicios Relacionados">Related Services</h2>
+        <div class="gold-bar gold-bar--center"></div>
+      </div>
+
+      <div class="grid stagger-children">
+        <a href="travel.html" class="card service-card reveal">
+          <div class="card__icon"><i data-lucide="plane"></i></div>
+          <h3 class="card__title" data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</h3>
+          <p class="card__text" data-en="Flights, cruises, tours & vacation packages at the best prices." data-es="Vuelos, cruceros, tours y paquetes vacacionales a los mejores precios.">Flights, cruises, tours & vacation packages at the best prices.</p>
+          <span class="card__link"><span data-en="Learn More" data-es="Más Info">Learn More</span> <i data-lucide="arrow-right"></i></span>
+        </a>
+
+        <a href="shipping.html" class="card service-card reveal">
+          <div class="card__icon"><i data-lucide="package"></i></div>
+          <h3 class="card__title" data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</h3>
+          <p class="card__text" data-en="Reliable package delivery and shipping services to Cuba." data-es="Servicio confiable de envío de paquetes a Cuba.">Reliable package delivery and shipping services to Cuba.</p>
+          <span class="card__link"><span data-en="Learn More" data-es="Más Info">Learn More</span> <i data-lucide="arrow-right"></i></span>
+        </a>
+
+        <a href="taxes.html" class="card service-card reveal">
+          <div class="card__icon"><i data-lucide="calculator"></i></div>
+          <h3 class="card__title" data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</h3>
+          <p class="card__text" data-en="Professional personal and business tax filing services." data-es="Servicios profesionales de declaración de impuestos personales y empresariales.">Professional personal and business tax filing services.</p>
+          <span class="card__link"><span data-en="Learn More" data-es="Más Info">Learn More</span> <i data-lucide="arrow-right"></i></span>
+        </a>
+
+        <a href="business-formation.html" class="card service-card reveal">
+          <div class="card__icon"><i data-lucide="building-2"></i></div>
+          <h3 class="card__title" data-en="Business Formation" data-es="Formación de Empresas">Business Formation</h3>
+          <p class="card__text" data-en="LLC and Corporation formation with full setup assistance." data-es="Creación de LLC y Corporaciones con asistencia completa.">LLC and Corporation formation with full setup assistance.</p>
+          <span class="card__link"><span data-en="Learn More" data-es="Más Info">Learn More</span> <i data-lucide="arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer has-noise">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo">
+            <img src="assets/images/logo.webp" alt="M&K Adventure" width="48" height="48">
+            <div class="header__logo-text">
+              M&K Adventure
+              <small>Tampa, FL</small>
+            </div>
+          </a>
+          <p data-en="M&K Adventure LLC is Tampa's premier multiservice business hub offering travel agency services, shipping to Cuba, tax preparation, notary services, and business formation." data-es="M&K Adventure LLC es el principal centro multiservicio de Tampa que ofrece servicios de agencia de viajes, envíos a Cuba, preparación de impuestos, servicios notariales y formación de empresas.">M&K Adventure LLC is Tampa's premier multiservice business hub offering travel agency services, shipping to Cuba, tax preparation, notary services, and business formation.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-en="Services" data-es="Servicios">Services</h4>
+          <div class="footer__links">
+            <a href="travel.html" data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</a>
+            <a href="shipping.html" data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</a>
+            <a href="taxes.html" data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</a>
+            <a href="notary.html" data-en="Notary Services" data-es="Servicios Notariales">Notary Services</a>
+            <a href="business-formation.html" data-en="Business Formation" data-es="Formación de Empresas">Business Formation</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h4>
+          <div class="footer__links">
+            <a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
+            <a href="blog.html" data-en="Blog" data-es="Blog">Blog</a>
+            <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-en="Contact" data-es="Contacto">Contact</h4>
+          <div class="footer__contact-item">
+            <i data-lucide="phone"></i>
+            <span>+1 813-375-1532</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="mail"></i>
+            <span>info@mkadventure.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="map-pin"></i>
+            <span>Tampa, FL</span>
+          </div>
+          <div class="footer__newsletter">
+            <h5 class="footer__heading" data-en="Newsletter" data-es="Boletín">Newsletter</h5>
+            <form class="footer__newsletter-form" onsubmit="event.preventDefault()">
+              <input type="email" class="footer__newsletter-input" placeholder="Email">
+              <button type="submit" class="footer__newsletter-btn" aria-label="Subscribe">
+                <i data-lucide="send" style="width:16px;height:16px"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 M&K Adventure LLC. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></span>
+        <div class="footer__legal">
+          <a href="#" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+          <a href="#" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/18133751532" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg class="whatsapp-float__icon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-float__label" data-en="Chat with us" data-es="Chatea con nosotros">Chat with us</span>
+  </a>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages/service.js"></script>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Preparation | M&K Adventure</title>
+  <meta name="description" content="Professional personal and business tax preparation services in Tampa, FL. M&K Adventure offers expert tax filing, maximum refunds, and bilingual support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages/service.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header has-noise">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.webp" alt="M&K Adventure" width="48" height="48">
+        <div class="header__logo-text">
+          M&K Adventure
+          <small>Tampa, FL</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" class="nav__link">
+          <span data-en="Home" data-es="Inicio">Home</span>
+        </a>
+
+        <div class="nav__dropdown">
+          <a href="#" class="nav__link nav__dropdown-trigger">
+            <span data-en="Services" data-es="Servicios">Services</span>
+            <i data-lucide="chevron-down"></i>
+          </a>
+          <div class="nav__mega-menu">
+            <div class="mega-menu__grid">
+              <a href="travel.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="plane"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</div>
+                  <div class="mega-menu__desc" data-en="Flights, cruises & packages" data-es="Vuelos, cruceros y paquetes">Flights, cruises & packages</div>
+                </div>
+              </a>
+              <a href="shipping.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="package"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</div>
+                  <div class="mega-menu__desc" data-en="Reliable package delivery" data-es="Envío confiable de paquetes">Reliable package delivery</div>
+                </div>
+              </a>
+              <a href="taxes.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="calculator"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</div>
+                  <div class="mega-menu__desc" data-en="Personal & business filing" data-es="Declaración personal y empresarial">Personal & business filing</div>
+                </div>
+              </a>
+              <a href="notary.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="file-check"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Notary Services" data-es="Servicios Notariales">Notary Services</div>
+                  <div class="mega-menu__desc" data-en="In-office & mobile notary" data-es="Notaría en oficina y móvil">In-office & mobile notary</div>
+                </div>
+              </a>
+              <a href="business-formation.html" class="mega-menu__item">
+                <div class="mega-menu__icon"><i data-lucide="building-2"></i></div>
+                <div>
+                  <div class="mega-menu__label" data-en="Business Formation" data-es="Formación de Empresas">Business Formation</div>
+                  <div class="mega-menu__desc" data-en="LLC & Corporation setup" data-es="Creación de LLC y Corporaciones">LLC & Corporation setup</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="travel.html" class="nav__link">
+          <span data-en="Travel & Booking" data-es="Viajes y Reservas">Travel & Booking</span>
+        </a>
+        <a href="about.html" class="nav__link">
+          <span data-en="About" data-es="Nosotros">About</span>
+        </a>
+        <a href="blog.html" class="nav__link">
+          <span data-en="Blog" data-es="Blog">Blog</span>
+        </a>
+        <a href="contact.html" class="nav__link">
+          <span data-en="Contact" data-es="Contacto">Contact</span>
+        </a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang-toggle">
+          <span class="lang-toggle__option is-active" data-lang="en">EN</span>
+          <span class="lang-toggle__option" data-lang="es">ES</span>
+        </div>
+        <a href="https://wa.me/18133751532" class="header__whatsapp" target="_blank" rel="noopener">
+          <i data-lucide="message-circle"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+      <div class="hamburger" aria-label="Menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-menu__link" data-en="Home" data-es="Inicio">Home</a>
+    <div class="mobile-menu__accordion">
+      <button class="mobile-menu__accordion-trigger">
+        <span data-en="Services" data-es="Servicios">Services</span>
+        <i data-lucide="chevron-down"></i>
+      </button>
+      <div class="mobile-menu__sub">
+        <a href="travel.html" class="mobile-menu__sub-link"><i data-lucide="plane"></i> <span data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</span></a>
+        <a href="shipping.html" class="mobile-menu__sub-link"><i data-lucide="package"></i> <span data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</span></a>
+        <a href="taxes.html" class="mobile-menu__sub-link"><i data-lucide="calculator"></i> <span data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</span></a>
+        <a href="notary.html" class="mobile-menu__sub-link"><i data-lucide="file-check"></i> <span data-en="Notary Services" data-es="Servicios Notariales">Notary Services</span></a>
+        <a href="business-formation.html" class="mobile-menu__sub-link"><i data-lucide="building-2"></i> <span data-en="Business Formation" data-es="Formación de Empresas">Business Formation</span></a>
+      </div>
+    </div>
+    <a href="travel.html" class="mobile-menu__link" data-en="Travel & Booking" data-es="Viajes y Reservas">Travel & Booking</a>
+    <a href="about.html" class="mobile-menu__link" data-en="About" data-es="Nosotros">About</a>
+    <a href="blog.html" class="mobile-menu__link" data-en="Blog" data-es="Blog">Blog</a>
+    <a href="contact.html" class="mobile-menu__link" data-en="Contact" data-es="Contacto">Contact</a>
+    <div class="mobile-menu__footer">
+      <div class="lang-toggle">
+        <span class="lang-toggle__option is-active" data-lang="en">EN</span>
+        <span class="lang-toggle__option" data-lang="es">ES</span>
+      </div>
+      <a href="https://wa.me/18133751532" class="btn btn--whatsapp" target="_blank" rel="noopener">
+        <i data-lucide="message-circle"></i>
+        <span data-en="Chat on WhatsApp" data-es="Chat por WhatsApp">Chat on WhatsApp</span>
+      </a>
+      <a href="tel:+18133751532" class="btn btn--outline-light">
+        <i data-lucide="phone"></i>
+        <span>+1 813-375-1532</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========== SERVICE HERO (Block 1) ========== -->
+  <section class="service-hero has-noise">
+    <div class="container">
+      <div class="service-hero__icon reveal">
+        <i data-lucide="calculator"></i>
+      </div>
+      <h1 class="service-hero__title reveal" data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</h1>
+      <p class="service-hero__subtitle reveal" data-en="Professional tax filing services for individuals and businesses. Maximize your refund with our expert bilingual tax team in Tampa, FL." data-es="Servicios profesionales de declaración de impuestos para individuos y empresas. Maximiza tu reembolso con nuestro equipo bilingüe de expertos fiscales en Tampa, FL.">Professional tax filing services for individuals and businesses. Maximize your refund with our expert bilingual tax team in Tampa, FL.</p>
+      <div class="service-hero__ctas reveal">
+        <a href="#book-appointment" class="btn btn--gold btn--lg">
+          <i data-lucide="calendar"></i>
+          <span data-en="Book Appointment" data-es="Reservar Cita">Book Appointment</span>
+        </a>
+        <a href="https://wa.me/18133751532" class="btn btn--outline-light btn--lg" target="_blank" rel="noopener">
+          <i data-lucide="message-circle"></i>
+          <span data-en="Ask via WhatsApp" data-es="Preguntar por WhatsApp">Ask via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICE DETAILS (Block 2) ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="service-details">
+        <div class="service-details__content reveal">
+          <h3 data-en="Expert Tax Filing Services" data-es="Servicios Expertos de Declaración de Impuestos">Expert Tax Filing Services</h3>
+          <p data-en="At M&K Adventure, we provide comprehensive tax preparation services for both personal and business clients. Our IRS-authorized team ensures accuracy, compliance, and maximum deductions so you get the best possible refund." data-es="En M&K Adventure, brindamos servicios integrales de preparación de impuestos tanto para clientes personales como empresariales. Nuestro equipo autorizado por el IRS garantiza precisión, cumplimiento y deducciones máximas para que obtengas el mejor reembolso posible.">At M&K Adventure, we provide comprehensive tax preparation services for both personal and business clients. Our IRS-authorized team ensures accuracy, compliance, and maximum deductions so you get the best possible refund.</p>
+
+          <!-- Toggle Group -->
+          <div class="toggle-group">
+            <button class="toggle-group__btn is-active" data-target="panel-personal" data-en="Personal" data-es="Personal">Personal</button>
+            <button class="toggle-group__btn" data-target="panel-business" data-en="Business" data-es="Empresarial">Business</button>
+          </div>
+
+          <!-- Personal Panel -->
+          <div class="toggle-panel" id="panel-personal">
+            <h4 data-en="Personal Tax Preparation" data-es="Preparación de Impuestos Personales">Personal Tax Preparation</h4>
+            <p data-en="Whether you're a single filer, married filing jointly, or head of household, our team handles all personal tax situations including W-2 income, freelance and 1099 income, rental property income, investment gains, and more. We'll identify every deduction and credit you're entitled to." data-es="Ya sea que declares como soltero, casado declarando en conjunto, o jefe de familia, nuestro equipo maneja todas las situaciones fiscales personales incluyendo ingresos W-2, ingresos de trabajo independiente y 1099, ingresos por alquiler de propiedades, ganancias de inversiones y más. Identificaremos cada deducción y crédito al que tienes derecho.">Whether you're a single filer, married filing jointly, or head of household, our team handles all personal tax situations including W-2 income, freelance and 1099 income, rental property income, investment gains, and more. We'll identify every deduction and credit you're entitled to.</p>
+            <ul class="service-details__list">
+              <li><i data-lucide="check"></i> <span data-en="Federal & State Returns (1040)" data-es="Declaraciones Federales y Estatales (1040)">Federal & State Returns (1040)</span></li>
+              <li><i data-lucide="check"></i> <span data-en="W-2 & 1099 Income Filing" data-es="Declaración de Ingresos W-2 y 1099">W-2 & 1099 Income Filing</span></li>
+              <li><i data-lucide="check"></i> <span data-en="Earned Income Tax Credit (EITC)" data-es="Crédito por Ingreso del Trabajo (EITC)">Earned Income Tax Credit (EITC)</span></li>
+              <li><i data-lucide="check"></i> <span data-en="Child Tax Credit & Dependent Claims" data-es="Crédito Tributario por Hijos y Reclamación de Dependientes">Child Tax Credit & Dependent Claims</span></li>
+              <li><i data-lucide="check"></i> <span data-en="Itemized & Standard Deductions" data-es="Deducciones Detalladas y Estándar">Itemized & Standard Deductions</span></li>
+              <li><i data-lucide="check"></i> <span data-en="ITIN Applications & Renewals" data-es="Solicitudes y Renovaciones de ITIN">ITIN Applications & Renewals</span></li>
+            </ul>
+          </div>
+
+          <!-- Business Panel -->
+          <div class="toggle-panel" id="panel-business" style="display:none;">
+            <h4 data-en="Business Tax Preparation" data-es="Preparación de Impuestos Empresariales">Business Tax Preparation</h4>
+            <p data-en="From sole proprietors to LLCs and corporations, we handle the full spectrum of business tax filings. Our team understands the complexities of business deductions, quarterly estimates, payroll taxes, and multi-state filing requirements to keep your business compliant and your tax burden minimized." data-es="Desde propietarios únicos hasta LLC y corporaciones, manejamos el espectro completo de declaraciones de impuestos empresariales. Nuestro equipo entiende las complejidades de las deducciones empresariales, estimaciones trimestrales, impuestos de nómina y requisitos de declaración multi-estatal para mantener su negocio en cumplimiento y minimizar su carga fiscal.">From sole proprietors to LLCs and corporations, we handle the full spectrum of business tax filings. Our team understands the complexities of business deductions, quarterly estimates, payroll taxes, and multi-state filing requirements to keep your business compliant and your tax burden minimized.</p>
+            <ul class="service-details__list">
+              <li><i data-lucide="check"></i> <span data-en="LLC & Corporation Returns (1120, 1120-S, 1065)" data-es="Declaraciones de LLC y Corporaciones (1120, 1120-S, 1065)">LLC & Corporation Returns (1120, 1120-S, 1065)</span></li>
+              <li><i data-lucide="check"></i> <span data-en="Schedule C for Sole Proprietors" data-es="Schedule C para Propietarios Únicos">Schedule C for Sole Proprietors</span></li>
+              <li><i data-lucide="check"></i> <span data-en="Quarterly Estimated Tax Planning" data-es="Planificación de Impuestos Estimados Trimestrales">Quarterly Estimated Tax Planning</span></li>
+              <li><i data-lucide="check"></i> <span data-en="Payroll Tax Filings (940, 941)" data-es="Declaraciones de Impuestos de Nómina (940, 941)">Payroll Tax Filings (940, 941)</span></li>
+              <li><i data-lucide="check"></i> <span data-en="Business Expense Deductions" data-es="Deducciones de Gastos Empresariales">Business Expense Deductions</span></li>
+              <li><i data-lucide="check"></i> <span data-en="Sales Tax & Annual Report Filings" data-es="Declaraciones de Impuestos de Venta e Informe Anual">Sales Tax & Annual Report Filings</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="service-details__sidebar">
+          <div class="card">
+            <h4 data-en="Why Choose M&K for Taxes?" data-es="¿Por Qué Elegir M&K para Impuestos?">Why Choose M&K for Taxes?</h4>
+            <ul class="service-details__list">
+              <li><i data-lucide="shield-check"></i> <span data-en="IRS Authorized E-File Provider" data-es="Proveedor Autorizado de E-File del IRS">IRS Authorized E-File Provider</span></li>
+              <li><i data-lucide="languages"></i> <span data-en="Bilingual Service (English & Spanish)" data-es="Servicio Bilingüe (Inglés y Español)">Bilingual Service (English & Spanish)</span></li>
+              <li><i data-lucide="clock"></i> <span data-en="Fast Turnaround — Same Week Filing" data-es="Entrega Rápida — Declaración en la Misma Semana">Fast Turnaround — Same Week Filing</span></li>
+              <li><i data-lucide="dollar-sign"></i> <span data-en="Competitive & Transparent Pricing" data-es="Precios Competitivos y Transparentes">Competitive & Transparent Pricing</span></li>
+              <li><i data-lucide="headphones"></i> <span data-en="Year-Round Tax Support" data-es="Soporte Fiscal Todo el Año">Year-Round Tax Support</span></li>
+              <li><i data-lucide="file-text"></i> <span data-en="Audit Assistance & Support" data-es="Asistencia y Soporte en Auditorías">Audit Assistance & Support</span></li>
+            </ul>
+            <a href="#book-appointment" class="btn btn--gold" style="width:100%;margin-top:var(--space-md)">
+              <i data-lucide="calendar"></i>
+              <span data-en="Book Appointment" data-es="Reservar Cita">Book Appointment</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PREPARATION CHECKLIST (Block 3) ========== -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-en="Be Prepared" data-es="Prepárate">Be Prepared</span>
+        <h2 class="section-header__title" data-en="Tax Preparation Checklist" data-es="Lista de Verificación para Impuestos">Tax Preparation Checklist</h2>
+        <div class="gold-bar gold-bar--center"></div>
+        <p class="section-header__subtitle" data-en="Gather these documents before your appointment to ensure a smooth and efficient tax filing experience." data-es="Reúne estos documentos antes de tu cita para asegurar una experiencia de declaración de impuestos fluida y eficiente.">Gather these documents before your appointment to ensure a smooth and efficient tax filing experience.</p>
+      </div>
+
+      <div class="checklist reveal">
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="W-2 Forms from all employers" data-es="Formularios W-2 de todos los empleadores">W-2 Forms from all employers</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="1099 Forms (freelance, interest, dividends)" data-es="Formularios 1099 (trabajo independiente, intereses, dividendos)">1099 Forms (freelance, interest, dividends)</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="Social Security cards for you and dependents" data-es="Tarjetas de Seguro Social para usted y dependientes">Social Security cards for you and dependents</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="Valid photo ID (driver's license or passport)" data-es="Identificación con foto válida (licencia de conducir o pasaporte)">Valid photo ID (driver's license or passport)</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="Bank account & routing numbers (for direct deposit)" data-es="Números de cuenta bancaria y ruta (para depósito directo)">Bank account & routing numbers (for direct deposit)</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="Previous year's tax return (if available)" data-es="Declaración de impuestos del año anterior (si está disponible)">Previous year's tax return (if available)</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="Mortgage interest statement (Form 1098)" data-es="Declaración de intereses hipotecarios (Formulario 1098)">Mortgage interest statement (Form 1098)</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="Childcare provider information & expenses" data-es="Información y gastos del proveedor de cuidado infantil">Childcare provider information & expenses</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="Health insurance statements (Form 1095)" data-es="Declaraciones de seguro médico (Formulario 1095)">Health insurance statements (Form 1095)</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="Records of charitable donations" data-es="Registros de donaciones caritativas">Records of charitable donations</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="Student loan interest statement (Form 1098-E)" data-es="Declaración de intereses de préstamos estudiantiles (Formulario 1098-E)">Student loan interest statement (Form 1098-E)</span>
+        </div>
+        <div class="checklist__item">
+          <i data-lucide="check-circle"></i>
+          <span data-en="Business income & expense records (if self-employed)" data-es="Registros de ingresos y gastos del negocio (si es autónomo)">Business income & expense records (if self-employed)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS STEPS (Block 4) ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-en="How It Works" data-es="Cómo Funciona">How It Works</span>
+        <h2 class="section-header__title" data-en="Our Simple 3-Step Process" data-es="Nuestro Proceso Simple de 3 Pasos">Our Simple 3-Step Process</h2>
+        <div class="gold-bar gold-bar--center"></div>
+      </div>
+
+      <div class="process-steps reveal">
+        <div class="process-step">
+          <div class="process-step__number">1</div>
+          <h4 class="process-step__title" data-en="Gather Documents" data-es="Reúne Documentos">Gather Documents</h4>
+          <p class="process-step__text" data-en="Collect your W-2s, 1099s, IDs, and other tax documents using our checklist above. This ensures your appointment goes smoothly." data-es="Recopila tus W-2, 1099, identificaciones y otros documentos fiscales usando nuestra lista de verificación. Esto asegura que tu cita sea fluida.">Collect your W-2s, 1099s, IDs, and other tax documents using our checklist above. This ensures your appointment goes smoothly.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step__number">2</div>
+          <h4 class="process-step__title" data-en="Meet with Our Tax Expert" data-es="Reúnete con Nuestro Experto Fiscal">Meet with Our Tax Expert</h4>
+          <p class="process-step__text" data-en="Visit our Tampa office or schedule a virtual consultation. Our bilingual tax professionals will review your documents and maximize your deductions." data-es="Visita nuestra oficina en Tampa o programa una consulta virtual. Nuestros profesionales fiscales bilingües revisarán tus documentos y maximizarán tus deducciones.">Visit our Tampa office or schedule a virtual consultation. Our bilingual tax professionals will review your documents and maximize your deductions.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step__number">3</div>
+          <h4 class="process-step__title" data-en="File & Receive Your Refund" data-es="Declara y Recibe tu Reembolso">File & Receive Your Refund</h4>
+          <p class="process-step__text" data-en="We e-file your return directly with the IRS and state. Track your refund status and receive it via direct deposit — typically within 21 days." data-es="Presentamos tu declaración electrónicamente ante el IRS y el estado. Rastrea el estado de tu reembolso y recíbelo por depósito directo — típicamente en 21 días.">We e-file your return directly with the IRS and state. Track your refund status and receive it via direct deposit — typically within 21 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ACCORDION (Block 5) ========== -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-en="FAQ" data-es="Preguntas Frecuentes">FAQ</span>
+        <h2 class="section-header__title" data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">Frequently Asked Questions</h2>
+        <div class="gold-bar gold-bar--center"></div>
+      </div>
+
+      <div class="container--narrow" style="margin:0 auto">
+        <div class="accordion reveal">
+          <div class="accordion__item">
+            <button class="accordion__trigger">
+              <span data-en="What is the deadline to file my taxes?" data-es="¿Cuál es la fecha límite para declarar mis impuestos?">What is the deadline to file my taxes?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__inner" data-en="The standard IRS deadline for filing personal tax returns is April 15th each year. If you need more time, we can help you file an extension (Form 4868) which gives you until October 15th. However, any taxes owed are still due by April 15th to avoid penalties and interest." data-es="La fecha límite estándar del IRS para presentar declaraciones de impuestos personales es el 15 de abril de cada año. Si necesitas más tiempo, podemos ayudarte a solicitar una extensión (Formulario 4868) que te da hasta el 15 de octubre. Sin embargo, cualquier impuesto adeudado debe pagarse antes del 15 de abril para evitar multas e intereses.">The standard IRS deadline for filing personal tax returns is April 15th each year. If you need more time, we can help you file an extension (Form 4868) which gives you until October 15th. However, any taxes owed are still due by April 15th to avoid penalties and interest.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger">
+              <span data-en="How much does tax preparation cost?" data-es="¿Cuánto cuesta la preparación de impuestos?">How much does tax preparation cost?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__inner" data-en="Our pricing depends on the complexity of your tax situation. Simple personal returns (W-2 only) start at competitive rates. Business returns, self-employment income, rental properties, and investment income may cost more. We provide a transparent quote before we begin, so there are no surprises. Contact us for a free estimate." data-es="Nuestros precios dependen de la complejidad de tu situación fiscal. Las declaraciones personales simples (solo W-2) comienzan a tarifas competitivas. Las declaraciones empresariales, ingresos de trabajo independiente, propiedades de alquiler e ingresos de inversión pueden costar más. Proporcionamos un presupuesto transparente antes de comenzar, sin sorpresas. Contáctanos para un estimado gratuito.">Our pricing depends on the complexity of your tax situation. Simple personal returns (W-2 only) start at competitive rates. Business returns, self-employment income, rental properties, and investment income may cost more. We provide a transparent quote before we begin, so there are no surprises. Contact us for a free estimate.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger">
+              <span data-en="Can I file taxes without a Social Security Number?" data-es="¿Puedo declarar impuestos sin un Número de Seguro Social?">Can I file taxes without a Social Security Number?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__inner" data-en="Yes! If you don't have a Social Security Number, you can use an Individual Taxpayer Identification Number (ITIN) to file your taxes. We can help you apply for an ITIN or renew an expired one as part of our tax preparation services. Filing with an ITIN allows you to stay compliant and may qualify you for certain tax credits." data-es="¡Sí! Si no tienes un Número de Seguro Social, puedes usar un Número de Identificación del Contribuyente Individual (ITIN) para declarar tus impuestos. Podemos ayudarte a solicitar un ITIN o renovar uno vencido como parte de nuestros servicios de preparación de impuestos. Declarar con un ITIN te permite cumplir con la ley y puede calificarte para ciertos créditos fiscales.">Yes! If you don't have a Social Security Number, you can use an Individual Taxpayer Identification Number (ITIN) to file your taxes. We can help you apply for an ITIN or renew an expired one as part of our tax preparation services. Filing with an ITIN allows you to stay compliant and may qualify you for certain tax credits.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger">
+              <span data-en="How long does it take to receive my refund?" data-es="¿Cuánto tiempo tarda en llegar mi reembolso?">How long does it take to receive my refund?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__inner" data-en="If you e-file and choose direct deposit, the IRS typically issues refunds within 21 days. Paper-filed returns can take 6-8 weeks. Returns claiming the Earned Income Tax Credit (EITC) or Additional Child Tax Credit (ACTC) may experience a brief delay as the IRS verifies these credits. We'll help you track your refund status after filing." data-es="Si presentas electrónicamente y eliges depósito directo, el IRS típicamente emite reembolsos dentro de 21 días. Las declaraciones en papel pueden tardar 6-8 semanas. Las declaraciones que reclaman el Crédito por Ingreso del Trabajo (EITC) o el Crédito Tributario Adicional por Hijos (ACTC) pueden experimentar un breve retraso mientras el IRS verifica estos créditos. Te ayudaremos a rastrear el estado de tu reembolso después de la declaración.">If you e-file and choose direct deposit, the IRS typically issues refunds within 21 days. Paper-filed returns can take 6-8 weeks. Returns claiming the Earned Income Tax Credit (EITC) or Additional Child Tax Credit (ACTC) may experience a brief delay as the IRS verifies these credits. We'll help you track your refund status after filing.</div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger">
+              <span data-en="What happens if I get audited?" data-es="¿Qué pasa si me auditan?">What happens if I get audited?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__inner" data-en="Don't worry — we've got your back. M&K Adventure provides audit assistance and support for all returns we prepare. If you receive an IRS notice or audit letter, bring it to us and we'll help you understand what's being requested, gather the necessary documentation, and respond on your behalf. Our goal is to resolve any issues quickly and stress-free." data-es="No te preocupes — te respaldamos. M&K Adventure proporciona asistencia y soporte en auditorías para todas las declaraciones que preparamos. Si recibes una notificación o carta de auditoría del IRS, tráela a nosotros y te ayudaremos a entender lo que se solicita, reunir la documentación necesaria y responder en tu nombre. Nuestro objetivo es resolver cualquier problema de manera rápida y sin estrés.">Don't worry — we've got your back. M&K Adventure provides audit assistance and support for all returns we prepare. If you receive an IRS notice or audit letter, bring it to us and we'll help you understand what's being requested, gather the necessary documentation, and respond on your behalf. Our goal is to resolve any issues quickly and stress-free.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA FORM (Block 6) ========== -->
+  <section id="book-appointment" class="section service-form-section">
+    <div class="container">
+      <div class="service-form__inner">
+        <div class="service-form__info reveal">
+          <h2 data-en="Book Your Tax Appointment" data-es="Reserva Tu Cita de Impuestos">Book Your Tax Appointment</h2>
+          <p data-en="Ready to file your taxes? Schedule an appointment with our expert team. Walk-ins are welcome, but appointments are recommended during peak tax season to minimize wait times." data-es="¿Listo para declarar tus impuestos? Programa una cita con nuestro equipo de expertos. Se aceptan visitas sin cita, pero se recomiendan citas durante la temporada alta de impuestos para minimizar tiempos de espera.">Ready to file your taxes? Schedule an appointment with our expert team. Walk-ins are welcome, but appointments are recommended during peak tax season to minimize wait times.</p>
+          <div class="service-form__contact-methods">
+            <div class="service-form__contact-item">
+              <i data-lucide="phone"></i>
+              <span>+1 813-375-1532</span>
+            </div>
+            <div class="service-form__contact-item">
+              <i data-lucide="mail"></i>
+              <span>info@mkadventure.com</span>
+            </div>
+            <div class="service-form__contact-item">
+              <i data-lucide="map-pin"></i>
+              <span>Tampa, FL</span>
+            </div>
+            <div class="service-form__contact-item">
+              <i data-lucide="clock"></i>
+              <span data-en="Mon - Sat: 9:00 AM - 6:00 PM" data-es="Lun - Sáb: 9:00 AM - 6:00 PM">Mon - Sat: 9:00 AM - 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-form__card reveal">
+          <h3 data-en="Request an Appointment" data-es="Solicitar una Cita">Request an Appointment</h3>
+          <form class="service-form" onsubmit="event.preventDefault()">
+            <div class="form-group form-group--dark">
+              <input type="text" class="form-group__input" placeholder=" " required>
+              <label class="form-group__label" data-en="Full Name" data-es="Nombre Completo">Full Name</label>
+              <span class="form-group__error" data-en="Please enter your name" data-es="Por favor ingresa tu nombre">Please enter your name</span>
+            </div>
+            <div class="form-group form-group--dark">
+              <input type="email" class="form-group__input" placeholder=" " required>
+              <label class="form-group__label" data-en="Email Address" data-es="Correo Electrónico">Email Address</label>
+              <span class="form-group__error" data-en="Please enter a valid email" data-es="Por favor ingresa un correo válido">Please enter a valid email</span>
+            </div>
+            <div class="form-group form-group--dark">
+              <input type="tel" class="form-group__input" placeholder=" " required>
+              <label class="form-group__label" data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
+              <span class="form-group__error" data-en="Please enter your phone number" data-es="Por favor ingresa tu número de teléfono">Please enter your phone number</span>
+            </div>
+            <div class="form-group form-group--dark">
+              <select class="form-group__input" required>
+                <option value="" disabled selected></option>
+                <option value="personal" data-en="Personal Tax Return" data-es="Declaración Personal">Personal Tax Return</option>
+                <option value="business" data-en="Business Tax Return" data-es="Declaración Empresarial">Business Tax Return</option>
+                <option value="both" data-en="Personal & Business" data-es="Personal y Empresarial">Personal & Business</option>
+                <option value="amendment" data-en="Tax Amendment" data-es="Enmienda de Impuestos">Tax Amendment</option>
+                <option value="itin" data-en="ITIN Application" data-es="Solicitud de ITIN">ITIN Application</option>
+                <option value="other" data-en="Other Tax Service" data-es="Otro Servicio Fiscal">Other Tax Service</option>
+              </select>
+              <label class="form-group__label" data-en="Service Type" data-es="Tipo de Servicio">Service Type</label>
+              <span class="form-group__error" data-en="Please select a service" data-es="Por favor selecciona un servicio">Please select a service</span>
+            </div>
+            <div class="form-group form-group--dark">
+              <textarea class="form-group__input" placeholder=" " rows="3"></textarea>
+              <label class="form-group__label" data-en="Additional Notes (optional)" data-es="Notas Adicionales (opcional)">Additional Notes (optional)</label>
+            </div>
+            <button type="submit" class="btn btn--gold" style="width:100%">
+              <i data-lucide="send"></i>
+              <span data-en="Submit Request" data-es="Enviar Solicitud">Submit Request</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RELATED SERVICES (Block 7) ========== -->
+  <section class="section related-services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-en="Explore More" data-es="Explora Más">Explore More</span>
+        <h2 class="section-header__title" data-en="Related Services" data-es="Servicios Relacionados">Related Services</h2>
+        <div class="gold-bar gold-bar--center"></div>
+      </div>
+
+      <div class="grid stagger-children">
+        <a href="travel.html" class="card service-card reveal">
+          <div class="card__icon"><i data-lucide="plane"></i></div>
+          <h3 class="card__title" data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</h3>
+          <p class="card__text" data-en="Flights, cruises, tours & vacation packages at the best prices." data-es="Vuelos, cruceros, tours y paquetes vacacionales a los mejores precios.">Flights, cruises, tours & vacation packages at the best prices.</p>
+          <span class="card__link"><span data-en="Learn More" data-es="Más Info">Learn More</span> <i data-lucide="arrow-right"></i></span>
+        </a>
+
+        <a href="shipping.html" class="card service-card reveal">
+          <div class="card__icon"><i data-lucide="package"></i></div>
+          <h3 class="card__title" data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</h3>
+          <p class="card__text" data-en="Reliable package delivery and shipping services to Cuba." data-es="Servicio confiable de envío de paquetes a Cuba.">Reliable package delivery and shipping services to Cuba.</p>
+          <span class="card__link"><span data-en="Learn More" data-es="Más Info">Learn More</span> <i data-lucide="arrow-right"></i></span>
+        </a>
+
+        <a href="notary.html" class="card service-card reveal">
+          <div class="card__icon"><i data-lucide="file-check"></i></div>
+          <h3 class="card__title" data-en="Notary Services" data-es="Servicios Notariales">Notary Services</h3>
+          <p class="card__text" data-en="Document notarization with in-office and mobile notary options." data-es="Notarización de documentos con opciones en oficina y notario móvil.">Document notarization with in-office and mobile notary options.</p>
+          <span class="card__link"><span data-en="Learn More" data-es="Más Info">Learn More</span> <i data-lucide="arrow-right"></i></span>
+        </a>
+
+        <a href="business-formation.html" class="card service-card reveal">
+          <div class="card__icon"><i data-lucide="building-2"></i></div>
+          <h3 class="card__title" data-en="Business Formation" data-es="Formación de Empresas">Business Formation</h3>
+          <p class="card__text" data-en="LLC and Corporation formation with full setup assistance." data-es="Creación de LLC y Corporaciones con asistencia completa.">LLC and Corporation formation with full setup assistance.</p>
+          <span class="card__link"><span data-en="Learn More" data-es="Más Info">Learn More</span> <i data-lucide="arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer has-noise">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo">
+            <img src="assets/images/logo.webp" alt="M&K Adventure" width="48" height="48">
+            <div class="header__logo-text">
+              M&K Adventure
+              <small>Tampa, FL</small>
+            </div>
+          </a>
+          <p data-en="M&K Adventure LLC is Tampa's premier multiservice business hub offering travel agency services, shipping to Cuba, tax preparation, notary services, and business formation." data-es="M&K Adventure LLC es el principal centro multiservicio de Tampa que ofrece servicios de agencia de viajes, envíos a Cuba, preparación de impuestos, servicios notariales y formación de empresas.">M&K Adventure LLC is Tampa's premier multiservice business hub offering travel agency services, shipping to Cuba, tax preparation, notary services, and business formation.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-en="Services" data-es="Servicios">Services</h4>
+          <div class="footer__links">
+            <a href="travel.html" data-en="Travel Agency" data-es="Agencia de Viajes">Travel Agency</a>
+            <a href="shipping.html" data-en="Shipping to Cuba" data-es="Envíos a Cuba">Shipping to Cuba</a>
+            <a href="taxes.html" data-en="Tax Preparation" data-es="Preparación de Impuestos">Tax Preparation</a>
+            <a href="notary.html" data-en="Notary Services" data-es="Servicios Notariales">Notary Services</a>
+            <a href="business-formation.html" data-en="Business Formation" data-es="Formación de Empresas">Business Formation</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h4>
+          <div class="footer__links">
+            <a href="about.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
+            <a href="blog.html" data-en="Blog" data-es="Blog">Blog</a>
+            <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-en="Contact" data-es="Contacto">Contact</h4>
+          <div class="footer__contact-item">
+            <i data-lucide="phone"></i>
+            <span>+1 813-375-1532</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="mail"></i>
+            <span>info@mkadventure.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="map-pin"></i>
+            <span>Tampa, FL</span>
+          </div>
+          <div class="footer__newsletter">
+            <h5 class="footer__heading" data-en="Newsletter" data-es="Boletín">Newsletter</h5>
+            <form class="footer__newsletter-form" onsubmit="event.preventDefault()">
+              <input type="email" class="footer__newsletter-input" placeholder="Email">
+              <button type="submit" class="footer__newsletter-btn" aria-label="Subscribe">
+                <i data-lucide="send" style="width:16px;height:16px"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 M&K Adventure LLC. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></span>
+        <div class="footer__legal">
+          <a href="#" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+          <a href="#" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/18133751532" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg class="whatsapp-float__icon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-float__label" data-en="Chat with us" data-es="Chatea con nosotros">Chat with us</span>
+  </a>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages/service.js"></script>
+</body>
+</html>
