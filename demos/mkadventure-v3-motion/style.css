@@ -20,16 +20,17 @@
     --cta-dark: #EA580C;
     --cta-light: #FB923C;
     
-    /* Backgrounds */
-    --bg-main: #0A0A0F;
-    --bg-section: #111118;
-    --bg-card: #1A1A24;
+    /* Backgrounds - Improved visibility */
+    --bg-main: #0F1419;
+    --bg-section: #161B22;
+    --bg-card: #21262D;
+    --bg-card-hover: #2D333B;
     --bg-light: #F8FAFC;
     
-    /* Text */
+    /* Text - Better contrast */
     --text-primary: #FFFFFF;
-    --text-secondary: #94A3B8;
-    --text-muted: #64748B;
+    --text-secondary: #B0BAC6;
+    --text-muted: #8B949E;
     --text-dark: #0C4A6E;
     
     /* WhatsApp */
@@ -631,6 +632,7 @@ button {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     letter-spacing: -0.02em;
+    text-shadow: 0 0 40px rgba(14, 165, 233, 0.3);
     margin-bottom: var(--space-4);
 }
 
@@ -663,15 +665,16 @@ button {
     padding: var(--space-5);
     background: var(--bg-card);
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .booking-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(14, 165, 233, 0.15);
 }
 
 .booking-icon {
@@ -774,7 +777,8 @@ button {
    ======================================== */
 
 .section-travel {
-    background: var(--bg-section);
+    background: linear-gradient(180deg, var(--bg-section) 0%, #1C2128 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .travel-showcase {
@@ -803,15 +807,16 @@ button {
     background: var(--bg-card);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .travel-card:hover {
     transform: translateY(-8px) scale(1.02);
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-lg), 0 0 30px rgba(14, 165, 233, 0.15);
 }
 
 .travel-image {
@@ -938,20 +943,22 @@ button {
 }
 
 .cuba-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: var(--radius-lg);
     padding: var(--space-6);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .cuba-card:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--gold);
     transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 165, 54, 0.15);
 }
 
 .cuba-card-featured {
@@ -1039,7 +1046,8 @@ button {
    ======================================== */
 
 .section-services {
-    background: var(--bg-main);
+    background: linear-gradient(180deg, var(--bg-main) 0%, #161B22 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .services-grid {
@@ -1053,15 +1061,16 @@ button {
     padding: var(--space-8);
     background: var(--bg-card);
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .service-card:hover {
     transform: translateY(-8px);
     border-color: var(--primary-light);
-    box-shadow: 0 0 40px rgba(14, 165, 233, 0.15);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(14, 165, 233, 0.2);
 }
 
 .service-icon {
@@ -1200,15 +1209,16 @@ button {
     background: var(--bg-card);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .blog-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(14, 165, 233, 0.15);
 }
 
 .blog-card-featured {
@@ -1312,18 +1322,20 @@ button {
     background: var(--bg-card);
     border-radius: var(--radius);
     margin-bottom: var(--space-3);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     overflow: hidden;
     transition: all var(--duration) var(--ease-out);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 .faq-item:hover {
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .faq-item[open] {
     border-color: var(--primary-light);
-    box-shadow: 0 0 20px rgba(14, 165, 233, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(14, 165, 233, 0.15);
 }
 
 .faq-item summary {
