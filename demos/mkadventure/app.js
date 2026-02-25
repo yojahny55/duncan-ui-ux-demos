@@ -1,6 +1,6 @@
 /**
  * MK Adventure — Premium Travel Agency
- * Storytelling with Soul
+ * Complete Interactive System
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,9 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize all modules
     initScrollAnimations();
     initNavScroll();
+    initMobileMenu();
     initLanguageSwitch();
     initSmoothScroll();
     initParallax();
+    initBookingTabs();
+    initVideoFallback();
 });
 
 /**
@@ -30,18 +33,15 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Unobserve after animation triggers (one-time)
                 observer.unobserve(entry.target);
             }
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -60px 0px'
     });
     
-    animatedElements.forEach(el => {
-        observer.observe(el);
-    });
+    animatedElements.forEach(el => observer.observe(el));
 }
 
 /**
@@ -55,7 +55,7 @@ function initNavScroll() {
     let ticking = false;
     
     const updateNav = () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 80) {
             nav.classList.add('scrolled');
         } else {
             nav.classList.remove('scrolled');
@@ -72,6 +72,31 @@ function initNavScroll() {
     
     // Check initial state
     updateNav();
+}
+
+/**
+ * Mobile menu toggle
+ */
+function initMobileMenu() {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const links = document.querySelector('.nav-links');
+    
+    if (!toggle || !links) return;
+    
+    toggle.addEventListener('click', () => {
+        const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !isOpen);
+        nav.classList.toggle('nav-open', !isOpen);
+    });
+    
+    // Close menu when clicking a link
+    links.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            toggle.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('nav-open');
+        });
+    });
 }
 
 /**
@@ -124,7 +149,7 @@ function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
             const href = anchor.getAttribute('href');
-            if (href === '#') return;
+            if (href === '#' || href === '#main') return;
             
             const target = document.querySelector(href);
             if (!target) return;
@@ -147,11 +172,11 @@ function initSmoothScroll() {
  * Subtle parallax effect on hero
  */
 function initParallax() {
-    const heroImg = document.querySelector('.hero-img');
-    if (!heroImg) return;
+    const heroMedia = document.querySelector('.hero-media');
+    if (!heroMedia) return;
     
     // Skip on mobile for performance
-    if (window.innerWidth < 768) return;
+    if (window.innerWidth < 768 || prefersReducedMotion()) return;
     
     let ticking = false;
     
@@ -162,8 +187,8 @@ function initParallax() {
                 const heroHeight = document.querySelector('.hero')?.offsetHeight || 0;
                 
                 if (scrolled < heroHeight) {
-                    const parallax = scrolled * 0.4;
-                    heroImg.style.transform = `translateY(${parallax}px) scale(1.1)`;
+                    const parallax = scrolled * 0.3;
+                    heroMedia.style.transform = `translateY(${parallax}px)`;
                 }
                 ticking = false;
             });
@@ -173,8 +198,56 @@ function initParallax() {
 }
 
 /**
+ * Booking tabs (visual only for demo)
+ */
+function initBookingTabs() {
+    const tabs = document.querySelectorAll('.booking-tab');
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+        });
+    });
+}
+
+/**
+ * Video fallback to poster image
+ */
+function initVideoFallback() {
+    const video = document.querySelector('.hero-video');
+    if (!video) return;
+    
+    // If video fails to load, hide it (poster image is fallback)
+    video.addEventListener('error', () => {
+        video.style.display = 'none';
+    });
+    
+    // For mobile, prefer image over video for performance
+    if (window.innerWidth < 768) {
+        video.pause();
+        video.removeAttribute('autoplay');
+    }
+}
+
+/**
  * Utility: Check if reduced motion is preferred
  */
 function prefersReducedMotion() {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+/**
+ * Debounce utility
+ */
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
 }
