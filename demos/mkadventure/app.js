@@ -23,11 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
 /**
  * Scroll-triggered fade-up animations
  * Uses Intersection Observer for performance
+ * Progressive Enhancement: animations only activate when JS runs
  */
 function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.anim-fade-up');
+    // Skip animations if user prefers reduced motion
+    if (prefersReducedMotion()) return;
     
+    const animatedElements = document.querySelectorAll('.anim-fade-up');
     if (!animatedElements.length) return;
+    
+    // Enable animations only when JS is active (progressive enhancement)
+    document.body.classList.add('js-animations-enabled');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

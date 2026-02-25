@@ -175,19 +175,11 @@ button {
     top: var(--space-4);
 }
 
-/* Animation Classes */
+/* Animation Classes - DISABLED for reliability */
+/* Content always visible - animations caused rendering issues */
 .anim-fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 
-        opacity var(--duration-slow) var(--ease-out),
-        transform var(--duration-slow) var(--ease-out);
-    transition-delay: var(--delay, 0s);
-}
-
-.anim-fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 /* ========================================
@@ -670,7 +662,7 @@ button {
    ======================================== */
 
 .booking-section {
-    margin-top: -var(--space-12);
+    margin-top: -3rem;
     padding: 0 0 var(--space-12);
     position: relative;
     z-index: 10;
