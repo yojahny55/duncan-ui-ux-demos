@@ -4,9 +4,21 @@
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide icons
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
+    // Initialize Lucide icons with retry for deferred loading
+    function initLucide() {
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+            return true;
+        }
+        return false;
+    }
+    
+    // Try immediately
+    if (!initLucide()) {
+        // If not loaded yet, try again after a short delay
+        setTimeout(initLucide, 100);
+        // And again on window load as final fallback
+        window.addEventListener('load', initLucide);
     }
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -143,34 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ========================================
-    // Intersection Observer for Reveals
+    // Intersection Observer for Reveals (Disabled)
+    // Content always visible - animations removed for static render reliability
     // ========================================
-    if (!prefersReducedMotion) {
-        const revealElements = document.querySelectorAll('.travel-block, .cuba-block, .service-block, .blog-block, .contact-item');
-        
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 80);
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            root: null,
-            rootMargin: '0px 0px -50px 0px',
-            threshold: 0.1
-        });
-
-        revealElements.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(40px)';
-            el.style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
-            revealObserver.observe(el);
-        });
-    }
+    // Note: Reveal animations disabled to ensure all content is visible
+    // in screenshots, SSR, and slow-loading contexts. The bold brutalist
+    // aesthetic relies on the strong typography and hard shadows instead.
 
     // ========================================
     // Keyboard Navigation
@@ -194,10 +184,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     
     lazyImages.forEach(img => {
+        // Only add transition for smooth load, don't hide images
         if (!img.complete) {
-            img.style.opacity = '0';
             img.style.transition = 'opacity 0.3s ease';
-            
             img.addEventListener('load', () => {
                 img.style.opacity = '1';
             });

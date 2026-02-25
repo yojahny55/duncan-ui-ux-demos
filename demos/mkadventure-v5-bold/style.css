@@ -770,10 +770,17 @@ button {
     margin-bottom: var(--space-5);
 }
 
-.cuba-icon i {
-    width: 28px;
-    height: 28px;
+.cuba-icon i,
+.cuba-icon svg {
+    width: 28px !important;
+    height: 28px !important;
     color: var(--black);
+    stroke: var(--black);
+    stroke-width: 2;
+}
+
+.cuba-icon svg * {
+    stroke: var(--black);
 }
 
 .cuba-block h3 {
@@ -881,10 +888,17 @@ button {
     transition: background var(--duration-fast);
 }
 
-.service-icon i {
-    width: 32px;
-    height: 32px;
+.service-icon i,
+.service-icon svg {
+    width: 32px !important;
+    height: 32px !important;
     color: var(--white);
+    stroke: var(--white);
+    stroke-width: 2;
+}
+
+.service-icon svg * {
+    stroke: var(--white);
 }
 
 .service-block:hover .service-icon {
