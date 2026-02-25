@@ -1,37 +1,27 @@
-/**
- * MK Adventure — V2 Bento Grid
- */
-
+// MK Adventure v2 Bento
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
-    initLang();
-    initScroll();
-});
-
-function initLang() {
+    
+    // Language toggle
     const btns = document.querySelectorAll('.lang-btn');
     let lang = localStorage.getItem('mk-lang') || 'es';
+    if (lang !== 'es') apply(lang);
     
-    if (lang !== 'es') applyLang(lang);
+    btns.forEach(b => b.addEventListener('click', () => {
+        lang = b.dataset.lang;
+        apply(lang);
+        btns.forEach(x => x.classList.toggle('active', x.dataset.lang === lang));
+        localStorage.setItem('mk-lang', lang);
+    }));
     
-    btns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            lang = btn.dataset.lang;
-            applyLang(lang);
-            btns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-            localStorage.setItem('mk-lang', lang);
-        });
-    });
-    
-    function applyLang(l) {
+    function apply(l) {
         document.querySelectorAll('.t').forEach(el => {
             if (el.dataset[l]) el.textContent = el.dataset[l];
         });
         document.documentElement.lang = l;
     }
-}
-
-function initScroll() {
+    
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
             const id = a.getAttribute('href');
@@ -43,4 +33,4 @@ function initScroll() {
             }
         });
     });
-}
+});
