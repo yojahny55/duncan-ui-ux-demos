@@ -122,9 +122,49 @@
         </div>
     </header>
 
-    <!-- Quick Contact Section -->
+    <!-- Booking Search Section -->
     <section class="section section-booking" id="booking">
         <div class="container">
+            <div class="booking-search-card">
+                <div class="booking-search-header">
+                    <h3 class="t" data-es="¿A Dónde Quieres Ir?" data-en="Where Do You Want to Go?">¿A Dónde Quieres Ir?</h3>
+                    <p class="t" data-es="Cuéntanos tu viaje soñado y te damos la mejor cotización" data-en="Tell us your dream trip and we'll give you the best quote">Cuéntanos tu viaje soñado y te damos la mejor cotización</p>
+                </div>
+                <form class="booking-search-form">
+                    <div class="booking-field">
+                        <label class="t" data-es="Tipo de Viaje" data-en="Trip Type">Tipo de Viaje</label>
+                        <select>
+                            <option value="cruise" class="t" data-es="🚢 Crucero" data-en="🚢 Cruise">🚢 Crucero</option>
+                            <option value="flight" class="t" data-es="✈️ Vuelo" data-en="✈️ Flight">✈️ Vuelo</option>
+                            <option value="hotel" class="t" data-es="🏨 Hotel" data-en="🏨 Hotel">🏨 Hotel</option>
+                            <option value="package" class="t" data-es="📦 Paquete" data-en="📦 Package">📦 Paquete</option>
+                        </select>
+                    </div>
+                    <div class="booking-field">
+                        <label class="t" data-es="Destino" data-en="Destination">Destino</label>
+                        <input type="text" placeholder="Caribe, Cuba, México..." class="t" data-es-placeholder="Caribe, Cuba, México..." data-en-placeholder="Caribbean, Cuba, Mexico...">
+                    </div>
+                    <div class="booking-field booking-field-date">
+                        <label class="t" data-es="Fecha" data-en="Date">Fecha</label>
+                        <input type="date">
+                    </div>
+                    <div class="booking-field booking-field-travelers">
+                        <label class="t" data-es="Viajeros" data-en="Travelers">Viajeros</label>
+                        <select>
+                            <option>1</option>
+                            <option selected>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="booking-submit">
+                        <i data-lucide="search"></i>
+                        <span class="t" data-es="Cotizar Ahora" data-en="Get Quote">Cotizar Ahora</span>
+                    </button>
+                </form>
+            </div>
+            
             <div class="booking-cards">
                 <a href="tel:+18133751532" class="booking-card">
                     <div class="booking-icon">
@@ -370,6 +410,86 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/MSC_Cruises_Logo.svg/320px-MSC_Cruises_Logo.svg.png" alt="MSC">
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label t" data-es="Testimonios" data-en="Testimonials">Testimonios</span>
+                <h2 class="section-title t" data-es="Lo Que Dicen Nuestras Familias" data-en="What Our Families Say">Lo Que Dicen Nuestras Familias</h2>
+                <p class="section-desc t" data-es="Miles de familias confían en nosotros para sus viajes y servicios" data-en="Thousands of families trust us for their travel and services">Miles de familias confían en nosotros para sus viajes y servicios</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <article class="testimonial-card testimonial-featured">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <blockquote class="t" data-es="Increíble servicio desde el primer momento. Maribel nos ayudó a planificar el crucero perfecto para nuestra familia. Los niños todavía hablan del viaje. ¡100% recomendados!" data-en="Incredible service from the first moment. Maribel helped us plan the perfect cruise for our family. The kids still talk about the trip. 100% recommended!">"Increíble servicio desde el primer momento. Maribel nos ayudó a planificar el crucero perfecto para nuestra familia. Los niños todavía hablan del viaje. ¡100% recomendados!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Maria G." loading="lazy">
+                        </div>
+                        <div class="testimonial-info">
+                            <strong>María González</strong>
+                            <span class="t" data-es="Crucero Royal Caribbean" data-en="Royal Caribbean Cruise">Crucero Royal Caribbean</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <blockquote class="t" data-es="Las remesas llegan rapidísimo. Mi mamá en Cuba siempre recibe el dinero al día siguiente. Muy confiables." data-en="Remittances arrive super fast. My mom in Cuba always receives the money the next day. Very reliable.">"Las remesas llegan rapidísimo. Mi mamá en Cuba siempre recibe el dinero al día siguiente. Muy confiables."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Carlos R." loading="lazy">
+                        </div>
+                        <div class="testimonial-info">
+                            <strong>Carlos Rodríguez</strong>
+                            <span class="t" data-es="Envíos a Cuba" data-en="Cuba Remittances">Envíos a Cuba</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <blockquote class="t" data-es="Me ayudaron con mis taxes y la formación de mi LLC. Todo súper profesional y en español. ¡Gracias MK Adventure!" data-en="They helped me with my taxes and LLC formation. Everything super professional and in Spanish. Thanks MK Adventure!">"Me ayudaron con mis taxes y la formación de mi LLC. Todo súper profesional y en español. ¡Gracias MK Adventure!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Ana M." loading="lazy">
+                        </div>
+                        <div class="testimonial-info">
+                            <strong>Ana Martínez</strong>
+                            <span class="t" data-es="Taxes & LLC" data-en="Taxes & LLC">Taxes & LLC</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="testimonials-cta">
+                <a href="https://wa.me/19562172274" class="btn btn-primary">
+                    <i data-lucide="message-circle"></i>
+                    <span class="t" data-es="Únete a Nuestras Familias Felices" data-en="Join Our Happy Families">Únete a Nuestras Familias Felices</span>
+                </a>
             </div>
         </div>
     </section>
