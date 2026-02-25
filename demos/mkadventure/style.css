@@ -674,6 +674,102 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ========================================
+   Credentials & Partners
+   ======================================== */
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.credential-card {
+    padding: var(--space-xl);
+    text-align: center;
+    transition: all var(--transition);
+}
+
+.credential-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.credential-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent), rgba(212, 165, 54, 0.3));
+    border-radius: 16px;
+}
+
+.credential-icon i {
+    width: 32px;
+    height: 32px;
+    color: var(--text-white);
+}
+
+.credential-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.credential-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.partners-section {
+    text-align: center;
+}
+
+.partners-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-lg);
+}
+
+.partners-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.partner-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: var(--space-md) var(--space-lg);
+    transition: all var(--transition);
+}
+
+.partner-logo:hover {
+    transform: translateY(-4px);
+    background: var(--glass-bg-strong);
+}
+
+.partner-logo i {
+    width: 24px;
+    height: 24px;
+    color: var(--text-muted);
+}
+
+.partner-logo span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+/* ========================================
    CTA Section
    ======================================== */
 
@@ -916,8 +1012,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         grid-template-columns: 1fr;
     }
     
-    .testimonials-grid {
-        grid-template-columns: 1fr;
+    .credentials-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
