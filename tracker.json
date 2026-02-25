@@ -1,5 +1,5 @@
 {
-  "nextIndex": 38,
+  "nextIndex": 39,
   "totalStyles": 54,
   "styles": [
     {
@@ -265,7 +265,8 @@
       "id": 38,
       "name": "Kinetic Typography",
       "slug": "38-kinetic-typography",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-25"
     },
     {
       "id": 39,

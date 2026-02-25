@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetic Typography | UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text" data-text="KINETIC">KINETIC</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="word" data-delay="0">Words</span>
+                <span class="word" data-delay="1">That</span>
+                <span class="word accent" data-delay="2">Move</span>
+            </h1>
+            <p class="hero-subtitle typing-text">
+                <span class="typing-content">Design experiences that captivate through motion</span>
+                <span class="typing-cursor">|</span>
+            </p>
+            <div class="hero-cta">
+                <a href="#about" class="btn btn-primary">
+                    <span class="btn-text">Explore</span>
+                    <i data-lucide="arrow-down"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="floating-letters">
+                <span class="float-letter" style="--delay: 0s; --x: 10%; --y: 20%;">A</span>
+                <span class="float-letter" style="--delay: 0.5s; --x: 85%; --y: 30%;">M</span>
+                <span class="float-letter" style="--delay: 1s; --x: 15%; --y: 70%;">X</span>
+                <span class="float-letter" style="--delay: 1.5s; --x: 75%; --y: 80%;">K</span>
+                <span class="float-letter" style="--delay: 2s; --x: 50%; --y: 15%;">Z</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title scroll-reveal">
+                    <span class="char">T</span><span class="char">y</span><span class="char">p</span><span class="char">o</span><span class="char">g</span><span class="char">r</span><span class="char">a</span><span class="char">p</span><span class="char">h</span><span class="char">y</span>
+                    <span class="space"></span>
+                    <span class="char accent">i</span><span class="char accent">n</span>
+                    <span class="space"></span>
+                    <span class="char">M</span><span class="char">o</span><span class="char">t</span><span class="char">i</span><span class="char">o</span><span class="char">n</span>
+                </h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card reveal-up">
+                    <div class="card-icon">
+                        <i data-lucide="type"></i>
+                    </div>
+                    <h3 class="card-title">Dynamic Text</h3>
+                    <p class="card-text">Every letter becomes an opportunity for expression through carefully crafted motion sequences.</p>
+                </div>
+                <div class="about-card reveal-up" style="--delay: 0.2s">
+                    <div class="card-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3 class="card-title">Visual Impact</h3>
+                    <p class="card-text">Transform static headlines into memorable experiences that capture attention instantly.</p>
+                </div>
+                <div class="about-card reveal-up" style="--delay: 0.4s">
+                    <div class="card-icon">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3 class="card-title">Engagement</h3>
+                    <p class="card-text">Motion typography increases user engagement by 40% compared to static text.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title morph-text" data-texts='["Services","Expertise","Solutions"]'>Services</h2>
+                <p class="section-subtitle">What we bring to life</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-number">
+                        <span class="count-up" data-target="01">01</span>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title wave-text">
+                            <span>H</span><span>e</span><span>r</span><span>o</span>
+                            <span class="space"></span>
+                            <span>A</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
+                        </h3>
+                        <p class="service-desc">Captivating entrance animations that make first impressions unforgettable</p>
+                        <div class="service-icon"><i data-lucide="play-circle"></i></div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-number">
+                        <span class="count-up" data-target="02">02</span>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title wave-text">
+                            <span>S</span><span>c</span><span>r</span><span>o</span><span>l</span><span>l</span>
+                            <span class="space"></span>
+                            <span>E</span><span>f</span><span>f</span><span>e</span><span>c</span><span>t</span><span>s</span>
+                        </h3>
+                        <p class="service-desc">Scroll-triggered typography that reveals content with purpose</p>
+                        <div class="service-icon"><i data-lucide="mouse-pointer-click"></i></div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-number">
+                        <span class="count-up" data-target="03">03</span>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title wave-text">
+                            <span>T</span><span>e</span><span>x</span><span>t</span>
+                            <span class="space"></span>
+                            <span>M</span><span>o</span><span>r</span><span>p</span><span>h</span><span>i</span><span>n</span><span>g</span>
+                        </h3>
+                        <p class="service-desc">Fluid text transitions that flow between words seamlessly</p>
+                        <div class="service-icon"><i data-lucide="git-merge"></i></div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-number">
+                        <span class="count-up" data-target="04">04</span>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title wave-text">
+                            <span>G</span><span>r</span><span>a</span><span>d</span><span>i</span><span>e</span><span>n</span><span>t</span>
+                            <span class="space"></span>
+                            <span>T</span><span>e</span><span>x</span><span>t</span>
+                        </h3>
+                        <p class="service-desc">Animated gradient fills that add depth and visual interest</p>
+                        <div class="service-icon"><i data-lucide="palette"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Client Stories</h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="quote-icon"><i data-lucide="quote"></i></div>
+                    <blockquote class="testimonial-text reveal-words">
+                        The kinetic typography transformed our brand presence. Every visitor remembers us.
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Chen</span>
+                            <span class="author-role">Creative Director, Pulse Agency</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i data-lucide="quote"></i></div>
+                    <blockquote class="testimonial-text reveal-words">
+                        Motion typography increased our engagement metrics by 65%. The impact was immediate.
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Marcus Rivera</span>
+                            <span class="author-role">Head of Design, TechFlow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i data-lucide="quote"></i></div>
+                    <blockquote class="testimonial-text reveal-words">
+                        Finally, a design that speaks as loud as our brand message. Pure creative excellence.
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Elena Volkov</span>
+                            <span class="author-role">CEO, Neon Studios</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn prev" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="slider-btn next" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="contact-title scramble-text" data-text="Let's Create Motion">Let's Create Motion</h2>
+                    <p class="contact-desc">Ready to bring your typography to life? Let's start a conversation.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>hello@kinetictype.design</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                        <span class="focus-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Email Address</label>
+                        <span class="focus-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" placeholder=" " required></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="focus-line"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">Send Message</span>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo marquee-text">KINETIC TYPOGRAPHY</span>
+                    <p class="footer-tagline">Where words come alive</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                    <a href="#" class="footer-link">Careers</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" class="social-link" aria-label="Dribbble"><i data-lucide="dribbble"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kinetic Typography. Crafted with motion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
