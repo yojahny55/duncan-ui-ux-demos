@@ -1,43 +1,51 @@
 /* ========================================
-   MK Adventure v4 — Warm/Biophilic Style
-   Nature-inspired, organic shapes, earthy tones
+   MK Adventure v4 — Warm Caribbean Style
+   Sun-kissed, golden hour vibes, tropical warmth
    ======================================== */
 
 :root {
-    /* Brand Gold */
+    /* Brand Gold - Central to identity */
     --gold: #D4A536;
     --gold-dark: #B8922F;
     --gold-light: #F5E6C8;
+    --gold-glow: rgba(212, 165, 54, 0.35);
     
-    /* Warm Earth Palette */
-    --sage: #87A878;
-    --sage-light: #A8C49A;
-    --sage-dark: #6B8A5E;
-    --terracotta: #C4A484;
-    --terracotta-dark: #A67B5B;
-    --sand: #E8DFD0;
-    --sand-light: #F5F1EB;
-    --forest: #2D4A3E;
-    --forest-light: #3D6352;
+    /* Caribbean Warm Palette */
+    --sunset: #E86A4F;
+    --sunset-light: #FF8A73;
+    --sunset-dark: #D4533A;
+    --coral: #F4845F;
+    --coral-light: #FFAB91;
+    --coral-glow: rgba(244, 132, 95, 0.4);
     
-    /* Accent - SATURATED for better CTA visibility */
-    --coral: #D95540;
-    --coral-dark: #C44835;
-    --coral-glow: rgba(217, 85, 64, 0.4);
+    /* Ocean & Sky */
+    --ocean: #0C7489;
+    --ocean-light: #199AAD;
+    --ocean-dark: #095B6D;
+    --turquoise: #40C4AA;
+    --turquoise-light: #6FD9C5;
+    
+    /* Sandy Warm Neutrals */
+    --sand: #F5EDE4;
+    --sand-light: #FBF8F4;
+    --sand-dark: #E8DDD0;
+    --driftwood: #8B7355;
+    --palm: #2D5A4A;
     
     /* WhatsApp */
     --whatsapp: #25D366;
     
     /* Backgrounds */
-    --bg-main: #FDFBF7;
-    --bg-warm: #F7F3ED;
+    --bg-main: #FFFCF8;
+    --bg-warm: #FFF8F0;
     --bg-cream: #FDF9F3;
     --bg-card: #FFFFFF;
+    --bg-sunset: linear-gradient(135deg, #FFF8F0 0%, #FFE8DB 100%);
     
     /* Text */
     --text-primary: #2D3B36;
-    --text-secondary: #5A6B64;
-    --text-muted: #8A9A92;
+    --text-secondary: #5D6D66;
+    --text-muted: #8A9590;
     --text-inverse: #FFFFFF;
     
     /* Typography */
@@ -62,20 +70,20 @@
     /* Layout */
     --container: 1200px;
     
-    /* Borders - Organic */
+    /* Borders - Organic/Soft */
     --radius-sm: 8px;
     --radius: 16px;
     --radius-lg: 24px;
     --radius-xl: 40px;
-    --radius-organic: 60% 40% 50% 50% / 50% 50% 40% 60%;
     --radius-blob: 70% 30% 60% 40% / 40% 60% 30% 70%;
     --radius-full: 9999px;
     
-    /* Shadows - Soft & Warm */
-    --shadow-soft: 0 4px 20px rgba(45, 75, 62, 0.06);
-    --shadow-md: 0 8px 30px rgba(45, 75, 62, 0.08);
-    --shadow-lg: 0 16px 50px rgba(45, 75, 62, 0.1);
-    --shadow-warm: 0 8px 32px rgba(196, 164, 132, 0.2);
+    /* Shadows - Warm & Golden */
+    --shadow-soft: 0 4px 20px rgba(212, 165, 54, 0.08);
+    --shadow-md: 0 8px 32px rgba(212, 165, 54, 0.12);
+    --shadow-lg: 0 16px 50px rgba(212, 165, 54, 0.15);
+    --shadow-warm: 0 8px 32px rgba(232, 106, 79, 0.15);
+    --shadow-ocean: 0 8px 32px rgba(12, 116, 137, 0.15);
     
     /* Transitions */
     --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
@@ -143,32 +151,32 @@ button {
 .shape {
     position: absolute;
     border-radius: var(--radius-blob);
-    opacity: 0.25;
-    filter: blur(100px);
+    opacity: 0.35;
+    filter: blur(120px);
 }
 
 .shape-1 {
-    width: 600px;
-    height: 600px;
-    background: var(--sage-light);
-    top: -200px;
-    right: -100px;
+    width: 700px;
+    height: 700px;
+    background: var(--coral-light);
+    top: -250px;
+    right: -150px;
 }
 
 .shape-2 {
-    width: 400px;
-    height: 400px;
-    background: var(--terracotta);
-    bottom: 20%;
-    left: -150px;
+    width: 500px;
+    height: 500px;
+    background: var(--turquoise-light);
+    bottom: 15%;
+    left: -200px;
 }
 
 .shape-3 {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     background: var(--gold-light);
-    bottom: -100px;
-    right: 20%;
+    bottom: -150px;
+    right: 15%;
 }
 
 /* ========================================
@@ -189,7 +197,7 @@ button {
     top: -100%;
     left: var(--space-4);
     padding: var(--space-3) var(--space-4);
-    background: var(--forest);
+    background: var(--ocean);
     color: var(--text-inverse);
     font-weight: 600;
     border-radius: var(--radius);
@@ -218,7 +226,7 @@ button {
 
 .nav.scrolled {
     padding: var(--space-3) 0;
-    background: rgba(253, 251, 247, 0.95);
+    background: rgba(255, 252, 248, 0.95);
     backdrop-filter: blur(20px);
     box-shadow: var(--shadow-soft);
 }
@@ -256,7 +264,7 @@ button {
 }
 
 .nav-links a:hover {
-    color: var(--forest);
+    color: var(--ocean);
 }
 
 .nav-actions {
@@ -283,7 +291,7 @@ button {
 }
 
 .lang-btn.active {
-    background: var(--forest);
+    background: var(--ocean);
     color: var(--text-inverse);
 }
 
@@ -292,13 +300,14 @@ button {
     align-items: center;
     gap: var(--space-2);
     padding: var(--space-3) var(--space-5);
-    background: var(--forest);
+    background: linear-gradient(135deg, var(--sunset) 0%, var(--coral) 100%);
     color: var(--text-inverse);
     font-weight: 600;
     font-size: 0.875rem;
     border-radius: var(--radius-full);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
+    box-shadow: 0 4px 16px var(--coral-glow);
 }
 
 .nav-cta i {
@@ -307,9 +316,8 @@ button {
 }
 
 .nav-cta:hover {
-    background: var(--forest-light);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 24px var(--coral-glow);
 }
 
 .nav-toggle {
@@ -346,6 +354,7 @@ button {
     padding: calc(80px + var(--space-12)) var(--space-6) var(--space-16);
     position: relative;
     overflow: hidden;
+    background: var(--bg-sunset);
 }
 
 .hero-inner {
@@ -368,18 +377,20 @@ button {
     align-items: center;
     gap: var(--space-2);
     padding: var(--space-2) var(--space-4);
-    background: var(--sand);
+    background: var(--bg-card);
+    border: 1px solid var(--gold-light);
     border-radius: var(--radius-full);
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--text-secondary);
     margin-bottom: var(--space-6);
+    box-shadow: var(--shadow-soft);
 }
 
 .hero-badge i {
     width: 16px;
     height: 16px;
-    color: var(--coral);
+    color: var(--sunset);
 }
 
 .hero-title {
@@ -396,7 +407,7 @@ button {
 }
 
 .hero-accent {
-    color: var(--forest);
+    color: var(--sunset);
     font-weight: 700;
 }
 
@@ -419,6 +430,11 @@ button {
     display: flex;
     align-items: center;
     gap: var(--space-6);
+    padding: var(--space-5) var(--space-6);
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--sand-dark);
 }
 
 .trust-item {
@@ -430,22 +446,23 @@ button {
     font-family: var(--font-display);
     font-size: 2rem;
     font-weight: 700;
-    color: var(--forest);
+    color: var(--ocean);
     letter-spacing: -0.02em;
 }
 
 .trust-item span {
     font-size: 0.875rem;
     color: var(--text-muted);
+    font-weight: 500;
 }
 
 .trust-divider {
     width: 1px;
     height: 40px;
-    background: var(--sand);
+    background: var(--sand-dark);
 }
 
-/* Hero Visual - Crisp, impactful composition */
+/* Hero Visual */
 .hero-visual {
     position: relative;
     height: 520px;
@@ -455,15 +472,14 @@ button {
     position: absolute;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(45, 75, 62, 0.2);
+    box-shadow: var(--shadow-lg);
 }
 
 .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensure crisp images - no fading */
-    filter: saturate(1.05) contrast(1.02);
+    filter: saturate(1.1) contrast(1.02);
 }
 
 .hero-image-main {
@@ -472,8 +488,7 @@ button {
     right: 0;
     top: 0;
     border-radius: var(--radius-xl);
-    /* Add subtle border for definition */
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 4px solid var(--bg-card);
 }
 
 .hero-image-accent {
@@ -482,8 +497,8 @@ button {
     left: -20px;
     bottom: -40px;
     border-radius: var(--radius-lg);
-    border: 8px solid var(--bg-main);
-    box-shadow: 0 16px 48px rgba(45, 75, 62, 0.25);
+    border: 6px solid var(--bg-card);
+    box-shadow: var(--shadow-lg);
 }
 
 .hero-leaf {
@@ -492,8 +507,8 @@ button {
     right: 15%;
     width: 90px;
     height: 90px;
-    color: var(--sage);
-    opacity: 0.5;
+    color: var(--gold);
+    opacity: 0.6;
     animation: float 6s ease-in-out infinite;
 }
 
@@ -547,27 +562,26 @@ button {
 }
 
 .btn-primary {
-    background: var(--coral);
+    background: linear-gradient(135deg, var(--sunset) 0%, var(--coral) 100%);
     color: var(--text-inverse);
     box-shadow: 0 4px 20px var(--coral-glow);
     font-weight: 700;
 }
 
 .btn-primary:hover {
-    background: var(--coral-dark);
     transform: translateY(-3px);
     box-shadow: 0 8px 30px var(--coral-glow);
 }
 
 .btn-outline {
-    background: transparent;
+    background: var(--bg-card);
     color: var(--text-primary);
-    border: 2px solid var(--sand);
+    border: 2px solid var(--sand-dark);
 }
 
 .btn-outline:hover {
-    background: var(--sand);
-    border-color: var(--sand);
+    background: var(--sand-light);
+    border-color: var(--gold);
     transform: translateY(-2px);
 }
 
@@ -598,8 +612,8 @@ button {
 .section-label {
     display: inline-block;
     padding: var(--space-2) var(--space-4);
-    background: var(--sage-light);
-    color: var(--forest);
+    background: linear-gradient(135deg, var(--coral-light) 0%, var(--gold-light) 100%);
+    color: var(--sunset-dark);
     font-size: 0.8125rem;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -647,52 +661,55 @@ button {
     padding: var(--space-5) var(--space-6);
     background: var(--bg-card);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--sand-dark);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
 }
 
 .booking-card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--gold);
 }
 
 .booking-icon {
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--sand-light);
+    background: linear-gradient(135deg, var(--sand) 0%, var(--gold-light) 100%);
     border-radius: var(--radius);
-    color: var(--forest);
+    color: var(--ocean);
     transition: all var(--duration);
 }
 
 .booking-icon i {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
 }
 
 .booking-card:hover .booking-icon {
-    background: var(--forest);
+    background: linear-gradient(135deg, var(--ocean) 0%, var(--ocean-light) 100%);
     color: var(--text-inverse);
 }
 
 .booking-text h3 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 1.0625rem;
     font-weight: 600;
     margin-bottom: var(--space-1);
+    color: var(--text-primary);
 }
 
 .booking-text p {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     color: var(--text-secondary);
 }
 
 .booking-whatsapp .booking-icon {
-    background: rgba(37, 211, 102, 0.1);
+    background: rgba(37, 211, 102, 0.15);
     color: var(--whatsapp);
 }
 
@@ -726,6 +743,7 @@ button {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
+    border: 1px solid var(--sand-dark);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
 }
@@ -733,6 +751,7 @@ button {
 .travel-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--gold);
 }
 
 .travel-card-featured {
@@ -767,16 +786,18 @@ button {
     top: var(--space-4);
     left: var(--space-4);
     padding: var(--space-2) var(--space-4);
-    background: var(--coral);
+    background: linear-gradient(135deg, var(--sunset) 0%, var(--coral) 100%);
     color: var(--text-inverse);
     font-size: 0.75rem;
     font-weight: 700;
     border-radius: var(--radius-full);
+    box-shadow: 0 4px 12px var(--coral-glow);
 }
 
 .travel-badge-gold {
-    background: var(--gold);
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
     color: var(--text-primary);
+    box-shadow: 0 4px 12px var(--gold-glow);
 }
 
 .travel-content {
@@ -795,6 +816,7 @@ button {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: var(--space-3);
+    color: var(--text-primary);
 }
 
 .travel-card-featured .travel-content h3 {
@@ -824,20 +846,20 @@ button {
     display: inline;
     font-family: var(--font-display);
     font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--sage-dark);
+    font-weight: 700;
+    color: var(--ocean);
     margin-left: var(--space-2);
 }
 
 .travel-link {
-    color: var(--coral);
+    color: var(--sunset);
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     transition: color var(--duration-fast);
 }
 
 .travel-card:hover .travel-link {
-    color: var(--coral-dark);
+    color: var(--sunset-dark);
 }
 
 @media (max-width: 900px) {
@@ -860,7 +882,7 @@ button {
    ======================================== */
 
 .section-cuba {
-    background: linear-gradient(180deg, var(--bg-main) 0%, var(--sand-light) 100%);
+    background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-warm) 100%);
 }
 
 .cuba-layout {
@@ -886,6 +908,7 @@ button {
     border-radius: var(--radius-lg);
     padding: var(--space-6);
     box-shadow: var(--shadow-soft);
+    border: 1px solid var(--sand-dark);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
 }
@@ -893,14 +916,16 @@ button {
 .cuba-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-warm);
+    border-color: var(--gold);
 }
 
 .cuba-card-main {
     grid-row: span 2;
-    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+    background: linear-gradient(145deg, var(--ocean) 0%, var(--ocean-dark) 100%);
     color: var(--text-inverse);
     padding: 0;
     overflow: hidden;
+    border: none;
 }
 
 .cuba-card-inner {
@@ -925,15 +950,15 @@ button {
 }
 
 .cuba-icon {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--gold-light);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--coral-light) 100%);
     border-radius: var(--radius);
     margin-bottom: var(--space-5);
-    color: var(--gold-dark);
+    color: var(--sunset-dark);
     transition: all var(--duration);
 }
 
@@ -943,8 +968,8 @@ button {
 }
 
 .cuba-card:not(.cuba-card-main):hover .cuba-icon {
-    background: var(--gold);
-    color: var(--text-primary);
+    background: linear-gradient(135deg, var(--gold) 0%, var(--sunset) 100%);
+    color: var(--text-inverse);
     transform: scale(1.1);
 }
 
@@ -953,6 +978,7 @@ button {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: var(--space-2);
+    color: var(--text-primary);
 }
 
 .cuba-card p {
@@ -978,7 +1004,7 @@ button {
 .cuba-features i {
     width: 18px;
     height: 18px;
-    color: var(--sage-light);
+    color: var(--turquoise-light);
 }
 
 @media (max-width: 900px) {
@@ -1022,6 +1048,7 @@ button {
     background: var(--bg-card);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
+    border: 1px solid var(--sand-dark);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
 }
@@ -1029,29 +1056,32 @@ button {
 .service-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-md);
+    border-color: var(--gold);
 }
 
 .service-icon {
-    width: 68px;
-    height: 68px;
+    width: 72px;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(145deg, var(--forest-light) 0%, var(--forest) 100%);
-    border-radius: var(--radius);
+    background: linear-gradient(145deg, var(--ocean) 0%, var(--ocean-dark) 100%);
+    border-radius: var(--radius-lg);
     margin: 0 auto var(--space-5);
     color: var(--text-inverse);
     transition: all var(--duration);
-    box-shadow: 0 6px 20px rgba(45, 75, 62, 0.35);
+    box-shadow: 0 8px 24px var(--shadow-ocean);
 }
 
 .service-icon i {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
 }
 
 .service-card:hover .service-icon {
     transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(145deg, var(--sunset) 0%, var(--coral) 100%);
+    box-shadow: 0 8px 24px var(--coral-glow);
 }
 
 .service-card h3 {
@@ -1059,13 +1089,13 @@ button {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: var(--space-3);
+    color: var(--text-primary);
 }
 
 .service-card p {
     font-size: 0.9375rem;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     line-height: 1.6;
-    opacity: 0.85;
 }
 
 @media (max-width: 900px) {
@@ -1098,16 +1128,25 @@ button {
 }
 
 .partner-logo {
-    padding: var(--space-4);
+    padding: var(--space-5);
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--sand-dark);
     transition: all var(--duration);
 }
 
 .partner-logo img {
-    height: 52px;
+    height: 48px;
     width: auto;
-    filter: grayscale(30%);
-    opacity: 0.85;
+    filter: grayscale(20%);
+    opacity: 0.9;
     transition: all var(--duration);
+}
+
+.partner-logo:hover {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-md);
 }
 
 .partner-logo:hover img {
@@ -1135,7 +1174,7 @@ button {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(45, 75, 62, 0.1);
+    border: 1px solid var(--sand-dark);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
 }
@@ -1143,6 +1182,7 @@ button {
 .blog-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-md);
+    border-color: var(--gold);
 }
 
 .blog-card-featured {
@@ -1184,10 +1224,10 @@ button {
 .blog-meta {
     display: inline-block;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--text-muted);
+    color: var(--sunset);
     margin-bottom: var(--space-3);
 }
 
@@ -1197,6 +1237,7 @@ button {
     font-weight: 600;
     margin-bottom: var(--space-3);
     line-height: 1.4;
+    color: var(--text-primary);
 }
 
 .blog-card-featured h3 {
@@ -1211,9 +1252,9 @@ button {
 }
 
 .blog-link {
-    color: var(--coral);
+    color: var(--sunset);
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
 }
 
 @media (max-width: 900px) {
@@ -1248,6 +1289,7 @@ button {
     border-radius: var(--radius);
     margin-bottom: var(--space-3);
     box-shadow: var(--shadow-soft);
+    border: 1px solid var(--sand-dark);
     overflow: hidden;
     transition: all var(--duration);
 }
@@ -1258,6 +1300,7 @@ button {
 
 .faq-item[open] {
     box-shadow: var(--shadow-warm);
+    border-color: var(--gold);
 }
 
 .faq-item summary {
@@ -1267,6 +1310,7 @@ button {
     padding: var(--space-5) var(--space-6);
     font-family: var(--font-display);
     font-weight: 600;
+    color: var(--text-primary);
     cursor: pointer;
     list-style: none;
 }
@@ -1285,7 +1329,7 @@ button {
 
 .faq-item[open] summary i {
     transform: rotate(180deg);
-    color: var(--coral);
+    color: var(--sunset);
 }
 
 .faq-content {
@@ -1302,9 +1346,24 @@ button {
    ======================================== */
 
 .section-contact {
-    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+    background: linear-gradient(145deg, var(--ocean) 0%, var(--ocean-dark) 100%);
     color: var(--text-inverse);
     padding: var(--space-24) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-contact::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: var(--turquoise);
+    border-radius: 50%;
+    opacity: 0.1;
+    filter: blur(100px);
 }
 
 .contact-layout {
@@ -1312,6 +1371,8 @@ button {
     grid-template-columns: 1.5fr 1fr;
     gap: var(--space-16);
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-content .section-label {
@@ -1337,9 +1398,14 @@ button {
     flex-wrap: wrap;
 }
 
+.contact-buttons .btn-primary {
+    background: linear-gradient(135deg, var(--sunset) 0%, var(--coral) 100%);
+}
+
 .contact-buttons .btn-outline {
     border-color: rgba(255, 255, 255, 0.3);
     color: var(--text-inverse);
+    background: transparent;
 }
 
 .contact-buttons .btn-outline:hover {
@@ -1357,15 +1423,21 @@ button {
     display: flex;
     align-items: center;
     gap: var(--space-4);
-    padding: var(--space-4) var(--space-5);
+    padding: var(--space-5) var(--space-5);
     background: rgba(255, 255, 255, 0.08);
     border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--duration);
+}
+
+.info-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .info-icon {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1374,19 +1446,19 @@ button {
 }
 
 .info-icon i {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     color: var(--gold);
 }
 
 .info-text h4 {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 600;
     margin-bottom: var(--space-1);
 }
 
 .info-text p {
-    font-size: 0.9375rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
     margin: 0;
 }
@@ -1413,8 +1485,8 @@ button {
    ======================================== */
 
 .footer {
-    background: var(--bg-cream);
-    border-top: 1px solid var(--sand);
+    background: var(--sand-light);
+    border-top: 1px solid var(--sand-dark);
     padding: var(--space-16) 0 var(--space-8);
 }
 
@@ -1444,19 +1516,21 @@ button {
 }
 
 .footer-social a {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--sand);
+    background: var(--bg-card);
+    border: 1px solid var(--sand-dark);
     border-radius: var(--radius-sm);
     transition: all var(--duration);
     cursor: pointer;
 }
 
 .footer-social a:hover {
-    background: var(--forest);
+    background: var(--ocean);
+    border-color: var(--ocean);
 }
 
 .footer-social i {
@@ -1473,7 +1547,7 @@ button {
 .footer-links h4,
 .footer-contact h4 {
     font-family: var(--font-display);
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: var(--space-4);
     color: var(--text-primary);
@@ -1489,7 +1563,7 @@ button {
 }
 
 .footer-links a:hover {
-    color: var(--forest);
+    color: var(--ocean);
 }
 
 .footer-contact a {
@@ -1504,18 +1578,18 @@ button {
 }
 
 .footer-contact a:hover {
-    color: var(--forest);
+    color: var(--ocean);
 }
 
 .footer-contact i {
     width: 18px;
     height: 18px;
-    color: var(--sage);
+    color: var(--sunset);
 }
 
 .footer-bottom {
     padding-top: var(--space-8);
-    border-top: 1px solid var(--sand);
+    border-top: 1px solid var(--sand-dark);
     text-align: center;
 }
 
