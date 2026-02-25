@@ -397,6 +397,51 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* Trust Bar */
+/* Booking Widget */
+.booking-widget {
+    max-width: 1100px;
+    margin: var(--space-xl) auto 0;
+    padding: var(--space-md);
+    overflow: hidden;
+}
+
+.booking-widget .bookerContainer {
+    min-height: 80px;
+}
+
+/* Service Link Cards */
+.service-link-card {
+    padding: 0;
+}
+
+.service-card-link {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-lg);
+    height: 100%;
+    transition: all var(--transition);
+}
+
+.service-card-link:hover {
+    background: var(--glass-bg-strong);
+}
+
+.card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: var(--space-md);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.card-cta i {
+    width: 14px;
+    height: 14px;
+}
+
 .trust-bar {
     max-width: 900px;
     margin: var(--space-xl) auto 0;
