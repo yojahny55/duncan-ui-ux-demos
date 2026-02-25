@@ -1,5 +1,5 @@
 {
-  "nextIndex": 39,
+  "nextIndex": 40,
   "totalStyles": 54,
   "styles": [
     {
@@ -272,7 +272,8 @@
       "id": 39,
       "name": "Parallax Storytelling",
       "slug": "39-parallax-storytelling",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-25"
     },
     {
       "id": 40,

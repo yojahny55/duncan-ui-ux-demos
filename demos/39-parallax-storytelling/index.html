@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Storytelling | UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i data-lucide="layers"></i>
+                <span>Parallax</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">Story</a></li>
+                <li><a href="#services">Journey</a></li>
+                <li><a href="#testimonials">Voices</a></li>
+                <li><a href="#contact">Connect</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero parallax-section">
+        <div class="parallax-layer layer-back"></div>
+        <div class="parallax-layer layer-mid"></div>
+        <div class="parallax-layer layer-front"></div>
+        <div class="hero-content">
+            <span class="chapter-indicator">Chapter 01</span>
+            <h1 class="hero-title">Every Scroll<br>Tells a Story</h1>
+            <p class="hero-subtitle">Immerse yourself in a journey where design meets narrative, where every pixel unfolds a new chapter of experience.</p>
+            <a href="#about" class="hero-cta">
+                <span>Begin the Journey</span>
+                <i data-lucide="chevrons-down"></i>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about parallax-section">
+        <div class="parallax-bg about-bg"></div>
+        <div class="section-content">
+            <span class="chapter-indicator">Chapter 02</span>
+            <h2 class="section-title">The Art of Storytelling</h2>
+            <div class="about-grid">
+                <div class="about-text reveal-up">
+                    <p class="lead">We believe that every brand has a story worth telling. Through immersive design and strategic narrative, we transform ideas into unforgettable experiences.</p>
+                    <p>Our approach combines the timeless art of storytelling with cutting-edge parallax technology, creating digital experiences that captivate, engage, and inspire action.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card reveal-left" data-delay="200">
+                        <i data-lucide="book-open"></i>
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Stories Told</span>
+                    </div>
+                    <div class="stat-card reveal-left" data-delay="400">
+                        <i data-lucide="users"></i>
+                        <span class="stat-number">2M+</span>
+                        <span class="stat-label">Readers Engaged</span>
+                    </div>
+                    <div class="stat-card reveal-left" data-delay="600">
+                        <i data-lucide="award"></i>
+                        <span class="stat-number">35</span>
+                        <span class="stat-label">Awards Won</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services parallax-section">
+        <div class="parallax-bg services-bg"></div>
+        <div class="section-content">
+            <span class="chapter-indicator">Chapter 03</span>
+            <h2 class="section-title">Our Journey Together</h2>
+            <p class="section-subtitle">Every great story follows a path. Here's how we'll craft yours.</p>
+            
+            <div class="journey-timeline">
+                <div class="journey-step reveal-right" data-step="01">
+                    <div class="step-icon">
+                        <i data-lucide="compass"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Discovery</h3>
+                        <p>We dive deep into your brand's essence, uncovering the unique threads that make your story compelling.</p>
+                    </div>
+                </div>
+                <div class="journey-step reveal-left" data-step="02">
+                    <div class="step-icon">
+                        <i data-lucide="pen-tool"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Narrative Design</h3>
+                        <p>Crafting the perfect storyline with strategic pacing, emotional beats, and visual metaphors.</p>
+                    </div>
+                </div>
+                <div class="journey-step reveal-right" data-step="03">
+                    <div class="step-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Immersive Creation</h3>
+                        <p>Building parallax experiences that pull users into your world, scroll by scroll.</p>
+                    </div>
+                </div>
+                <div class="journey-step reveal-left" data-step="04">
+                    <div class="step-icon">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Launch & Beyond</h3>
+                        <p>Your story goes live, captivating audiences and driving meaningful engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials parallax-section">
+        <div class="parallax-bg testimonials-bg"></div>
+        <div class="section-content">
+            <span class="chapter-indicator">Chapter 04</span>
+            <h2 class="section-title">Voices from the Journey</h2>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card active reveal-scale">
+                    <div class="quote-icon">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <blockquote>
+                        "They didn't just build us a website—they crafted an experience. Our users now spend 3x more time exploring our story."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Sarah Chen</strong>
+                            <span>CEO, Wanderlust Travel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card reveal-scale" data-delay="200">
+                    <div class="quote-icon">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <blockquote>
+                        "The parallax storytelling approach transformed our annual report from boring to breathtaking. Stakeholders were genuinely excited to read it."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Marcus Rivera</strong>
+                            <span>CMO, GreenTech Industries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card reveal-scale" data-delay="400">
+                    <div class="quote-icon">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <blockquote>
+                        "Our product launch page achieved a 89% scroll completion rate. Unheard of in our industry. The story pulled people in."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Elena Kowalski</strong>
+                            <span>Product Lead, NovaSoft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact parallax-section">
+        <div class="parallax-bg contact-bg"></div>
+        <div class="section-content">
+            <span class="chapter-indicator">Chapter 05</span>
+            <h2 class="section-title">Begin Your Story</h2>
+            <p class="section-subtitle">Every great narrative starts with a conversation. Let's write yours together.</p>
+            
+            <div class="contact-wrapper">
+                <form class="contact-form reveal-up">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            <i data-lucide="user" class="input-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <i data-lucide="mail" class="input-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="story">Tell Us Your Story</label>
+                        <textarea id="story" name="story" rows="5" placeholder="What story do you want to tell?" required></textarea>
+                        <i data-lucide="message-square" class="input-icon"></i>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Start Our Journey</span>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+                
+                <div class="contact-info reveal-right">
+                    <div class="info-card">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <strong>Visit Our Studio</strong>
+                            <p>123 Story Lane, Creative District<br>San Francisco, CA 94102</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <strong>Call Us</strong>
+                            <p>+1 (555) 234-5678</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i data-lucide="clock"></i>
+                        <div>
+                            <strong>Working Hours</strong>
+                            <p>Mon - Fri: 9am - 6pm PST</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    <i data-lucide="layers"></i>
+                    <span>Parallax</span>
+                </a>
+                <p>Crafting immersive digital stories that captivate and inspire.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Dribbble"><i data-lucide="dribbble"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Brand Storytelling</a></li>
+                        <li><a href="#">Parallax Design</a></li>
+                        <li><a href="#">Interactive Experiences</a></li>
+                        <li><a href="#">Annual Reports</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Parallax Storytelling. All rights reserved.</p>
+            <p class="demo-credit">UI/UX Demo #39 — Parallax Storytelling Style</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
