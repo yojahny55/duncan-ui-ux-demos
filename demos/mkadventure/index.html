@@ -7,625 +7,362 @@
     <meta name="description" content="Agencia de viajes premium en Tampa. Cruceros, vuelos, paquetes turísticos, envíos a Cuba, taxes, notaría y LLC.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <!-- Animated Aurora Background -->
-    <div class="aurora-bg">
-        <div class="aurora-gradient"></div>
-        <div class="aurora-gradient aurora-gradient-2"></div>
-        <div class="aurora-gradient aurora-gradient-3"></div>
-    </div>
-
-    <!-- Glass Navigation -->
-    <nav class="glass-nav">
-        <div class="nav-container">
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
             <a href="#" class="logo">
-                <img src="logo.webp" alt="MK Adventure">
+                <img src="logo.webp" alt="MK Adventure" width="120" height="40">
             </a>
-            <div class="nav-menu">
-                <a href="#viajes" class="nav-link">Viajes</a>
-                <a href="#servicios" class="nav-link">Servicios</a>
-                <a href="#partners" class="nav-link">Partners</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
+            <div class="nav-links">
+                <a href="#viajes">Viajes</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#faq">FAQ</a>
             </div>
             <div class="nav-right">
                 <div class="lang-toggle">
                     <button class="lang-btn active" data-lang="es">ES</button>
                     <button class="lang-btn" data-lang="en">EN</button>
                 </div>
-                <a href="https://wa.me/19562172274" class="glass-btn glass-btn-accent">
+                <a href="https://wa.me/19562172274" class="btn btn-accent">
                     <i data-lucide="message-circle"></i>
-                    WhatsApp
+                    <span class="btn-text">WhatsApp</span>
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge glass-badge">
-                    <i data-lucide="map-pin"></i>
-                    Tampa, FL
-                </div>
-                <h1>
-                    <span class="translatable" data-es="Diseñamos Tu" data-en="We Design Your">Diseñamos Tu</span>
-                    <span class="gradient-text translatable" data-es="Aventura" data-en="Adventure">Aventura</span>
-                </h1>
-                <p class="hero-desc translatable" data-es="Agencia de viajes premium y centro de servicios. Cruceros, vuelos, envíos a Cuba, taxes, notaría y más." data-en="Premium travel agency and service center. Cruises, flights, shipping to Cuba, taxes, notary and more.">
-                    Agencia de viajes premium y centro de servicios. Cruceros, vuelos, envíos a Cuba, taxes, notaría y más.
-                </p>
-                <div class="hero-actions">
-                    <a href="#contacto" class="glass-btn glass-btn-primary">
-                        <span class="translatable" data-es="Planificar Viaje" data-en="Plan Trip">Planificar Viaje</span>
-                        <i data-lucide="arrow-right"></i>
-                    </a>
-                    <a href="#servicios" class="glass-btn glass-btn-secondary">
-                        <span class="translatable" data-es="Ver Servicios" data-en="See Services">Ver Servicios</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Floating Glass Cards -->
-            <div class="hero-cards">
-                <div class="floating-card glass-card" style="--delay: 0s; --y: 0;">
-                    <i data-lucide="ship"></i>
-                    <span>Cruceros</span>
-                </div>
-                <div class="floating-card glass-card" style="--delay: 0.5s; --y: 40px;">
-                    <i data-lucide="plane"></i>
-                    <span>Vuelos</span>
-                </div>
-                <div class="floating-card glass-card" style="--delay: 1s; --y: -20px;">
-                    <i data-lucide="package"></i>
-                    <span>Envíos</span>
-                </div>
-                <div class="floating-card glass-card" style="--delay: 1.5s; --y: 60px;">
-                    <i data-lucide="calculator"></i>
-                    <span>Taxes</span>
-                </div>
-                <div class="floating-card glass-card" style="--delay: 2s; --y: 10px;">
-                    <i data-lucide="building-2"></i>
-                    <span>LLC</span>
-                </div>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">
+                <i data-lucide="map-pin"></i>
+                Tampa, FL
+            </span>
+            <h1>
+                <span class="t" data-es="Diseñamos Tu" data-en="We Design Your">Diseñamos Tu</span>
+                <span class="accent">Aventura</span>
+            </h1>
+            <p class="t" data-es="Agencia de viajes premium. Cruceros, vuelos, envíos a Cuba, taxes, notaría y más." data-en="Premium travel agency. Cruises, flights, shipping to Cuba, taxes, notary and more.">Agencia de viajes premium. Cruceros, vuelos, envíos a Cuba, taxes, notaría y más.</p>
+            <div class="hero-actions">
+                <a href="#contacto" class="btn btn-primary">
+                    <span class="t" data-es="Planificar Viaje" data-en="Plan Trip">Planificar Viaje</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="tel:+18133751532" class="btn btn-outline">
+                    <i data-lucide="phone"></i>
+                    (813) 375-1532
+                </a>
             </div>
         </div>
 
-        <!-- Booking Widget -->
-        <div class="booking-widget glass-card">
-            <div id="ptw-container" class="ptw-horizontal-search bookerContainer">
-                <script type="text/javascript" src="https://widgets.priceres.com/travel-agencyweb/jsonpBooker/startWidget?container=ptw-container&UseConfigs=false&IsHorizontal=true&WhiteLabelId=mk-adventure-llc"></script>
+        <!-- Trust Bar -->
+        <div class="trust-bar">
+            <div class="trust-item">
+                <span class="trust-value">10+</span>
+                <span class="trust-label t" data-es="Años" data-en="Years">Años</span>
             </div>
-        </div>
-
-        <!-- Trust Stats -->
-        <div class="trust-bar glass-card">
-            <div class="trust-stat">
-                <span class="stat-value">10+</span>
-                <span class="stat-label translatable" data-es="Años" data-en="Years">Años</span>
+            <div class="trust-item">
+                <span class="trust-value">2,000+</span>
+                <span class="trust-label t" data-es="Familias" data-en="Families">Familias</span>
             </div>
-            <div class="trust-divider"></div>
-            <div class="trust-stat">
-                <span class="stat-value">2,000+</span>
-                <span class="stat-label translatable" data-es="Familias" data-en="Families">Familias</span>
+            <div class="trust-item">
+                <span class="trust-value">4.9★</span>
+                <span class="trust-label">Google</span>
             </div>
-            <div class="trust-divider"></div>
-            <div class="trust-stat">
-                <span class="stat-value">4.9★</span>
-                <span class="stat-label">Google</span>
-            </div>
-            <div class="trust-divider"></div>
-            <div class="trust-stat">
+            <div class="trust-item">
                 <i data-lucide="shield-check"></i>
-                <span class="stat-label translatable" data-es="Licenciados" data-en="Licensed">Licenciados</span>
+                <span class="trust-label t" data-es="Licenciados" data-en="Licensed">Licenciados</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Widget -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-widget">
+                <div id="ptw-container" class="ptw-horizontal-search bookerContainer">
+                    <script type="text/javascript" src="https://widgets.priceres.com/travel-agencyweb/jsonpBooker/startWidget?container=ptw-container&UseConfigs=false&IsHorizontal=true&WhiteLabelId=mk-adventure-llc"></script>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Travel Services Section -->
+    <!-- Travel Services - Bento Grid -->
     <section class="section" id="viajes">
-        <div class="section-container">
+        <div class="container">
             <div class="section-header">
-                <span class="section-tag glass-badge">
+                <span class="section-tag">
                     <i data-lucide="plane"></i>
-                    <span class="translatable" data-es="Viajes" data-en="Travel">Viajes</span>
+                    <span class="t" data-es="Viajes" data-en="Travel">Viajes</span>
                 </span>
-                <h2 class="translatable" data-es="Experiencias Inolvidables" data-en="Unforgettable Experiences">Experiencias Inolvidables</h2>
-                <p class="translatable" data-es="Desde la planificación hasta tu regreso, te acompañamos en cada paso." data-en="From planning to your return, we accompany you every step of the way.">Desde la planificación hasta tu regreso, te acompañamos en cada paso.</p>
+                <h2 class="t" data-es="Experiencias Inolvidables" data-en="Unforgettable Experiences">Experiencias Inolvidables</h2>
             </div>
 
-            <div class="services-grid travel-grid">
-                <div class="service-card glass-card service-large">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&q=80" alt="Cruceros">
-                        <div class="service-overlay"></div>
-                    </div>
-                    <div class="service-content">
+            <div class="bento-grid">
+                <!-- Large Cruise Card -->
+                <article class="bento-card bento-large">
+                    <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&q=80" alt="Cruceros" loading="lazy">
+                    <div class="bento-overlay">
                         <h3>Cruceros</h3>
-                        <p class="translatable" data-es="Royal Caribbean, Carnival, Norwegian. Caribe, Alaska, Europa, y más destinos increíbles." data-en="Royal Caribbean, Carnival, Norwegian. Caribbean, Alaska, Europe, and more incredible destinations.">Royal Caribbean, Carnival, Norwegian. Caribe, Alaska, Europa, y más destinos increíbles.</p>
-                        <a href="#contacto" class="service-link">
-                            <span class="translatable" data-es="Cotizar" data-en="Quote">Cotizar</span>
+                        <p class="t" data-es="Royal Caribbean, Carnival, Norwegian. Caribe, Alaska, Europa." data-en="Royal Caribbean, Carnival, Norwegian. Caribbean, Alaska, Europe.">Royal Caribbean, Carnival, Norwegian. Caribe, Alaska, Europa.</p>
+                        <a href="#contacto" class="card-link">
+                            <span class="t" data-es="Cotizar" data-en="Quote">Cotizar</span>
                             <i data-lucide="arrow-right"></i>
                         </a>
                     </div>
-                </div>
+                </article>
 
-                <div class="service-card glass-card service-link-card">
-                    <a href="https://inspires.to/experiences/hot-cruise-deals-for-last-minute-sailings-58yp4" target="_blank" rel="noopener" class="service-card-link">
-                        <div class="service-icon">
-                            <i data-lucide="ship"></i>
-                        </div>
-                        <h3 class="translatable" data-es="Ofertas de Cruceros" data-en="Cruise Deals">Ofertas de Cruceros</h3>
-                        <p class="translatable" data-es="Últimas ofertas en cruceros de última hora" data-en="Latest last-minute cruise deals">Últimas ofertas en cruceros de última hora</p>
-                        <span class="card-cta">
-                            <span class="translatable" data-es="Ver Ofertas" data-en="See Deals">Ver Ofertas</span>
-                            <i data-lucide="external-link"></i>
-                        </span>
-                    </a>
-                </div>
+                <!-- Flights -->
+                <article class="bento-card">
+                    <div class="bento-icon" style="--icon-color: #0EA5E9">
+                        <i data-lucide="plane"></i>
+                    </div>
+                    <h3 class="t" data-es="Vuelos" data-en="Flights">Vuelos</h3>
+                    <p class="t" data-es="Nacionales e internacionales" data-en="Domestic and international">Nacionales e internacionales</p>
+                </article>
 
-                <div class="service-card glass-card service-link-card">
-                    <a href="https://www.resortpass.com/?utm_source=rakuten&utm_medium=affiliate&utm_campaign=Viajes%20inolvidables%20con%20M&K%20Adventure%20LLC%20|%20M&K%20ADVENTURE%20LLC&utm_content=6&ranMID=44713&ranEAID=xy/CiSKSgz0&ranSiteID=xy_CiSKSgz0-nLh7ZUfeD6RTtD3lGEqsqg" target="_blank" rel="noopener" class="service-card-link">
-                        <div class="service-icon">
-                            <i data-lucide="bed"></i>
-                        </div>
-                        <h3 class="translatable" data-es="Day Pass de Hoteles" data-en="Hotel Day Passes">Day Pass de Hoteles</h3>
-                        <p class="translatable" data-es="Acceso a piscinas, spas y amenidades de resorts" data-en="Access to pools, spas and resort amenities">Acceso a piscinas, spas y amenidades de resorts</p>
-                        <span class="card-cta">
-                            <span class="translatable" data-es="Explorar" data-en="Explore">Explorar</span>
-                            <i data-lucide="external-link"></i>
-                        </span>
-                    </a>
-                </div>
-
-                <div class="service-card glass-card">
-                    <div class="service-icon">
+                <!-- Packages -->
+                <article class="bento-card">
+                    <div class="bento-icon" style="--icon-color: #8B5CF6">
                         <i data-lucide="map"></i>
                     </div>
-                    <h3 class="translatable" data-es="Paquetes" data-en="Packages">Paquetes</h3>
-                    <p class="translatable" data-es="Disney, Europa, Luna de Miel" data-en="Disney, Europe, Honeymoon">Disney, Europa, Luna de Miel</p>
-                </div>
+                    <h3 class="t" data-es="Paquetes" data-en="Packages">Paquetes</h3>
+                    <p class="t" data-es="Disney, Europa, Luna de Miel" data-en="Disney, Europe, Honeymoon">Disney, Europa, Luna de Miel</p>
+                </article>
+
+                <!-- Cruise Deals Link -->
+                <a href="https://inspires.to/experiences/hot-cruise-deals-for-last-minute-sailings-58yp4" target="_blank" rel="noopener" class="bento-card bento-link">
+                    <div class="bento-icon" style="--icon-color: #F97316">
+                        <i data-lucide="ship"></i>
+                    </div>
+                    <h3 class="t" data-es="Ofertas de Cruceros" data-en="Cruise Deals">Ofertas de Cruceros</h3>
+                    <span class="link-arrow"><i data-lucide="external-link"></i></span>
+                </a>
+
+                <!-- Hotel Day Pass -->
+                <a href="https://www.resortpass.com/?utm_source=rakuten&utm_medium=affiliate&utm_campaign=Viajes%20inolvidables%20con%20M&K%20Adventure%20LLC%20|%20M&K%20ADVENTURE%20LLC&utm_content=6" target="_blank" rel="noopener" class="bento-card bento-link">
+                    <div class="bento-icon" style="--icon-color: #EC4899">
+                        <i data-lucide="bed"></i>
+                    </div>
+                    <h3 class="t" data-es="Day Pass Hoteles" data-en="Hotel Day Passes">Day Pass Hoteles</h3>
+                    <span class="link-arrow"><i data-lucide="external-link"></i></span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Other Services Section -->
-    <section class="section section-dark" id="servicios">
-        <div class="section-container">
+    <!-- Other Services -->
+    <section class="section section-alt" id="servicios">
+        <div class="container">
             <div class="section-header">
-                <span class="section-tag glass-badge">
+                <span class="section-tag">
                     <i data-lucide="grid-3x3"></i>
-                    <span class="translatable" data-es="Más Servicios" data-en="More Services">Más Servicios</span>
+                    <span class="t" data-es="Más Servicios" data-en="More Services">Más Servicios</span>
                 </span>
-                <h2 class="translatable" data-es="Todo en Un Solo Lugar" data-en="Everything in One Place">Todo en Un Solo Lugar</h2>
-                <p class="translatable" data-es="Un equipo que habla tu idioma y entiende tus necesidades." data-en="A team that speaks your language and understands your needs.">Un equipo que habla tu idioma y entiende tus necesidades.</p>
+                <h2 class="t" data-es="Todo en Un Solo Lugar" data-en="Everything in One Place">Todo en Un Solo Lugar</h2>
             </div>
 
-            <div class="services-grid other-grid">
-                <div class="service-card glass-card glass-card-dark">
-                    <div class="service-icon" style="--icon-color: #8B5CF6;">
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon" style="--icon-color: #8B5CF6">
                         <i data-lucide="package"></i>
                     </div>
-                    <h3 class="translatable" data-es="Envíos a Cuba" data-en="Shipping to Cuba">Envíos a Cuba</h3>
-                    <p class="translatable" data-es="Paquetes, medicinas, seguimiento completo hasta la puerta de tu familia." data-en="Packages, medicines, complete tracking to your family's door.">Paquetes, medicinas, seguimiento completo hasta la puerta de tu familia.</p>
+                    <h3 class="t" data-es="Envíos a Cuba" data-en="Shipping to Cuba">Envíos a Cuba</h3>
+                    <p class="t" data-es="Paquetes, medicinas, seguimiento completo hasta la puerta." data-en="Packages, medicines, complete tracking to the door.">Paquetes, medicinas, seguimiento completo hasta la puerta.</p>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> <span class="translatable" data-es="Seguimiento en tiempo real" data-en="Real-time tracking">Seguimiento en tiempo real</span></li>
-                        <li><i data-lucide="check"></i> <span class="translatable" data-es="Precios competitivos" data-en="Competitive prices">Precios competitivos</span></li>
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Seguimiento en tiempo real" data-en="Real-time tracking">Seguimiento en tiempo real</span></li>
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Precios competitivos" data-en="Competitive prices">Precios competitivos</span></li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="service-card glass-card glass-card-dark">
-                    <div class="service-icon" style="--icon-color: #10B981;">
+                <article class="service-card">
+                    <div class="service-icon" style="--icon-color: #10B981">
                         <i data-lucide="calculator"></i>
                     </div>
                     <h3>Taxes</h3>
-                    <p class="translatable" data-es="Preparación de impuestos personal y de negocios. ITIN disponible." data-en="Personal and business tax preparation. ITIN available.">Preparación de impuestos personal y de negocios. ITIN disponible.</p>
+                    <p class="t" data-es="Preparación de impuestos personal y de negocios. ITIN disponible." data-en="Personal and business tax preparation. ITIN available.">Preparación de impuestos personal y de negocios. ITIN disponible.</p>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> <span class="translatable" data-es="Reembolso máximo" data-en="Maximum refund">Reembolso máximo</span></li>
-                        <li><i data-lucide="check"></i> <span class="translatable" data-es="Representación IRS" data-en="IRS representation">Representación IRS</span></li>
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Reembolso máximo" data-en="Maximum refund">Reembolso máximo</span></li>
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Representación IRS" data-en="IRS representation">Representación IRS</span></li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="service-card glass-card glass-card-dark">
-                    <div class="service-icon" style="--icon-color: #F59E0B;">
+                <article class="service-card">
+                    <div class="service-icon" style="--icon-color: #F59E0B">
                         <i data-lucide="stamp"></i>
                     </div>
-                    <h3 class="translatable" data-es="Notaría" data-en="Notary">Notaría</h3>
-                    <p class="translatable" data-es="Documentos certificados, poderes legales, traducciones." data-en="Certified documents, powers of attorney, translations.">Documentos certificados, poderes legales, traducciones.</p>
+                    <h3 class="t" data-es="Notaría" data-en="Notary">Notaría</h3>
+                    <p class="t" data-es="Documentos certificados, poderes legales, traducciones." data-en="Certified documents, powers of attorney, translations.">Documentos certificados, poderes legales, traducciones.</p>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> <span class="translatable" data-es="Apostillas" data-en="Apostilles">Apostillas</span></li>
-                        <li><i data-lucide="check"></i> <span class="translatable" data-es="Traducciones certificadas" data-en="Certified translations">Traducciones certificadas</span></li>
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Apostillas" data-en="Apostilles">Apostillas</span></li>
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Traducciones certificadas" data-en="Certified translations">Traducciones certificadas</span></li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="service-card glass-card glass-card-dark">
-                    <div class="service-icon" style="--icon-color: #EC4899;">
+                <article class="service-card">
+                    <div class="service-icon" style="--icon-color: #EC4899">
                         <i data-lucide="building-2"></i>
                     </div>
-                    <h3 class="translatable" data-es="Formación de Empresas" data-en="Business Formation">Formación de Empresas</h3>
-                    <p class="translatable" data-es="LLC, corporaciones, EIN. Tu negocio legal en USA." data-en="LLC, corporations, EIN. Your legal business in USA.">LLC, corporaciones, EIN. Tu negocio legal en USA.</p>
+                    <h3 class="t" data-es="Formación de Empresas" data-en="Business Formation">Formación de Empresas</h3>
+                    <p class="t" data-es="LLC, corporaciones, EIN. Tu negocio legal en USA." data-en="LLC, corporations, EIN. Your legal business in USA.">LLC, corporaciones, EIN. Tu negocio legal en USA.</p>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> <span class="translatable" data-es="Registro completo" data-en="Complete registration">Registro completo</span></li>
-                        <li><i data-lucide="check"></i> <span class="translatable" data-es="Asesoría incluida" data-en="Advisory included">Asesoría incluida</span></li>
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Registro completo" data-en="Complete registration">Registro completo</span></li>
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Asesoría incluida" data-en="Advisory included">Asesoría incluida</span></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications & Partners -->
-    <section class="section" id="partners">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag glass-badge">
-                    <i data-lucide="award"></i>
-                    <span class="translatable" data-es="Credenciales" data-en="Credentials">Credenciales</span>
-                </span>
-                <h2 class="translatable" data-es="Certificaciones y Partners" data-en="Certifications & Partners">Certificaciones y Partners</h2>
-                <p class="translatable" data-es="Trabajamos con los mejores proveedores y mantenemos las certificaciones que garantizan tu tranquilidad." data-en="We work with the best providers and maintain certifications that guarantee your peace of mind.">Trabajamos con los mejores proveedores y mantenemos las certificaciones que garantizan tu tranquilidad.</p>
-            </div>
-
-            <div class="credentials-grid">
-                <!-- Certifications -->
-                <div class="credential-card glass-card">
-                    <div class="credential-icon">
-                        <i data-lucide="shield-check"></i>
-                    </div>
-                    <h3 class="translatable" data-es="Agencia Licenciada" data-en="Licensed Agency">Agencia Licenciada</h3>
-                    <p class="translatable" data-es="Registrados en el Estado de Florida como agencia de viajes autorizada." data-en="Registered in the State of Florida as an authorized travel agency.">Registrados en el Estado de Florida como agencia de viajes autorizada.</p>
-                </div>
-
-                <div class="credential-card glass-card">
-                    <div class="credential-icon">
-                        <i data-lucide="file-badge"></i>
-                    </div>
-                    <h3 class="translatable" data-es="Notario Público" data-en="Notary Public">Notario Público</h3>
-                    <p class="translatable" data-es="Notario público certificado por el Estado de Florida." data-en="Notary public certified by the State of Florida.">Notario público certificado por el Estado de Florida.</p>
-                </div>
-
-                <div class="credential-card glass-card">
-                    <div class="credential-icon">
-                        <i data-lucide="calculator"></i>
-                    </div>
-                    <h3 class="translatable" data-es="Preparador de Taxes" data-en="Tax Preparer">Preparador de Taxes</h3>
-                    <p class="translatable" data-es="Certificados por el IRS para preparación de impuestos." data-en="IRS certified for tax preparation.">Certificados por el IRS para preparación de impuestos.</p>
-                </div>
-
-                <div class="credential-card glass-card">
-                    <div class="credential-icon">
-                        <i data-lucide="lock"></i>
-                    </div>
-                    <h3 class="translatable" data-es="Negocio Asegurado" data-en="Insured Business">Negocio Asegurado</h3>
-                    <p class="translatable" data-es="Póliza de responsabilidad comercial para tu protección." data-en="Commercial liability policy for your protection.">Póliza de responsabilidad comercial para tu protección.</p>
-                </div>
-            </div>
-
-            <!-- Travel Partners -->
-            <div class="partners-section">
-                <h3 class="partners-title translatable" data-es="Partners de Viajes" data-en="Travel Partners">Partners de Viajes</h3>
-                <div class="partners-grid">
-                    <div class="partner-logo glass-card">
-                        <i data-lucide="ship"></i>
-                        <span>Royal Caribbean</span>
-                    </div>
-                    <div class="partner-logo glass-card">
-                        <i data-lucide="ship"></i>
-                        <span>Carnival</span>
-                    </div>
-                    <div class="partner-logo glass-card">
-                        <i data-lucide="ship"></i>
-                        <span>Norwegian</span>
-                    </div>
-                    <div class="partner-logo glass-card">
-                        <i data-lucide="plane"></i>
-                        <span>American Airlines</span>
-                    </div>
-                    <div class="partner-logo glass-card">
-                        <i data-lucide="plane"></i>
-                        <span>Delta</span>
-                    </div>
-                    <div class="partner-logo glass-card">
-                        <i data-lucide="bed"></i>
-                        <span>Marriott</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section class="section section-dark" id="blog">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag glass-badge">
-                    <i data-lucide="book-open"></i>
-                    <span>Blog</span>
-                </span>
-                <h2 class="translatable" data-es="Recursos y Consejos" data-en="Resources & Tips">Recursos y Consejos</h2>
-                <p class="translatable" data-es="Información útil sobre viajes, impuestos y negocios." data-en="Useful information about travel, taxes and business.">Información útil sobre viajes, impuestos y negocios.</p>
-            </div>
-
-            <div class="blog-grid">
-                <article class="blog-card glass-card glass-card-dark">
-                    <div class="blog-image">
-                        <div class="blog-placeholder" style="--bg: var(--aurora-1);">
-                            <i data-lucide="ship"></i>
-                        </div>
-                        <span class="blog-category">Viajes</span>
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="translatable" data-es="Los Mejores Cruceros para Familias en 2026" data-en="Best Cruises for Families in 2026">Los Mejores Cruceros para Familias en 2026</h3>
-                        <p class="translatable" data-es="Descubre las mejores opciones de cruceros para viajar con niños este año." data-en="Discover the best cruise options for traveling with kids this year.">Descubre las mejores opciones de cruceros para viajar con niños este año.</p>
-                        <a href="#" class="blog-link">
-                            <span class="translatable" data-es="Leer más" data-en="Read more">Leer más</span>
-                            <i data-lucide="arrow-right"></i>
-                        </a>
-                    </div>
                 </article>
-
-                <article class="blog-card glass-card glass-card-dark">
-                    <div class="blog-image">
-                        <div class="blog-placeholder" style="--bg: var(--aurora-2);">
-                            <i data-lucide="calculator"></i>
-                        </div>
-                        <span class="blog-category">Taxes</span>
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="translatable" data-es="Fechas Importantes para tus Taxes 2026" data-en="Important Dates for Your 2026 Taxes">Fechas Importantes para tus Taxes 2026</h3>
-                        <p class="translatable" data-es="No te pierdas ninguna fecha límite del IRS este año." data-en="Don't miss any IRS deadline this year.">No te pierdas ninguna fecha límite del IRS este año.</p>
-                        <a href="#" class="blog-link">
-                            <span class="translatable" data-es="Leer más" data-en="Read more">Leer más</span>
-                            <i data-lucide="arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="blog-card glass-card glass-card-dark">
-                    <div class="blog-image">
-                        <div class="blog-placeholder" style="--bg: var(--aurora-3);">
-                            <i data-lucide="building-2"></i>
-                        </div>
-                        <span class="blog-category">Negocios</span>
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="translatable" data-es="LLC vs Corporación: ¿Cuál Elegir?" data-en="LLC vs Corporation: Which to Choose?">LLC vs Corporación: ¿Cuál Elegir?</h3>
-                        <p class="translatable" data-es="Guía completa para elegir la estructura legal de tu negocio." data-en="Complete guide to choosing your business legal structure.">Guía completa para elegir la estructura legal de tu negocio.</p>
-                        <a href="#" class="blog-link">
-                            <span class="translatable" data-es="Leer más" data-en="Read more">Leer más</span>
-                            <i data-lucide="arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="blog-cta">
-                <a href="#" class="glass-btn glass-btn-secondary">
-                    <span class="translatable" data-es="Ver Todos los Artículos" data-en="View All Articles">Ver Todos los Artículos</span>
-                    <i data-lucide="arrow-right"></i>
-                </a>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
     <section class="section" id="faq">
-        <div class="section-container">
+        <div class="container">
             <div class="section-header">
-                <span class="section-tag glass-badge">
+                <span class="section-tag">
                     <i data-lucide="help-circle"></i>
-                    <span class="translatable" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</span>
+                    <span class="t" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</span>
                 </span>
-                <h2 class="translatable" data-es="¿Tienes Preguntas?" data-en="Have Questions?">¿Tienes Preguntas?</h2>
-                <p class="translatable" data-es="Aquí respondemos las dudas más comunes de nuestros clientes." data-en="Here we answer our clients' most common questions.">Aquí respondemos las dudas más comunes de nuestros clientes.</p>
+                <h2 class="t" data-es="¿Tienes Preguntas?" data-en="Have Questions?">¿Tienes Preguntas?</h2>
             </div>
 
             <div class="faq-grid">
-                <!-- Travel FAQs -->
-                <div class="faq-category glass-card">
-                    <h3 class="faq-category-title">
+                <div class="faq-column">
+                    <h3 class="faq-category">
                         <i data-lucide="plane"></i>
-                        <span class="translatable" data-es="Viajes" data-en="Travel">Viajes</span>
+                        <span class="t" data-es="Viajes" data-en="Travel">Viajes</span>
                     </h3>
                     
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span class="translatable" data-es="¿Puedo pagar mi crucero en cuotas?" data-en="Can I pay for my cruise in installments?">¿Puedo pagar mi crucero en cuotas?</span>
-                            <i data-lucide="chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p class="translatable" data-es="Sí, trabajamos con planes de pago flexibles. Puedes reservar tu crucero con un depósito inicial y pagar el resto en cuotas mensuales hasta la fecha límite de pago final, generalmente 90 días antes de la salida." data-en="Yes, we work with flexible payment plans. You can reserve your cruise with an initial deposit and pay the rest in monthly installments until the final payment deadline, usually 90 days before departure.">Sí, trabajamos con planes de pago flexibles. Puedes reservar tu crucero con un depósito inicial y pagar el resto en cuotas mensuales hasta la fecha límite de pago final, generalmente 90 días antes de la salida.</p>
-                        </div>
-                    </div>
+                    <details class="faq-item">
+                        <summary class="t" data-es="¿Puedo pagar mi crucero en cuotas?" data-en="Can I pay for my cruise in installments?">¿Puedo pagar mi crucero en cuotas?</summary>
+                        <p class="t" data-es="Sí, trabajamos con planes de pago flexibles. Puedes reservar con un depósito inicial y pagar el resto en cuotas mensuales hasta 90 días antes de la salida." data-en="Yes, we work with flexible payment plans. You can reserve with an initial deposit and pay the rest in monthly installments until 90 days before departure.">Sí, trabajamos con planes de pago flexibles. Puedes reservar con un depósito inicial y pagar el resto en cuotas mensuales hasta 90 días antes de la salida.</p>
+                    </details>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span class="translatable" data-es="¿Qué documentos necesito para viajar?" data-en="What documents do I need to travel?">¿Qué documentos necesito para viajar?</span>
-                            <i data-lucide="chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p class="translatable" data-es="Para cruceros al Caribe desde EE.UU., ciudadanos americanos pueden usar pasaporte (recomendado) o certificado de nacimiento original con ID con foto. Para viajes internacionales, siempre se requiere pasaporte vigente. Te ayudamos a verificar los requisitos específicos de tu destino." data-en="For Caribbean cruises from the US, American citizens can use a passport (recommended) or original birth certificate with photo ID. For international travel, a valid passport is always required. We help you verify the specific requirements for your destination.">Para cruceros al Caribe desde EE.UU., ciudadanos americanos pueden usar pasaporte (recomendado) o certificado de nacimiento original con ID con foto. Para viajes internacionales, siempre se requiere pasaporte vigente. Te ayudamos a verificar los requisitos específicos de tu destino.</p>
-                        </div>
-                    </div>
+                    <details class="faq-item">
+                        <summary class="t" data-es="¿Qué documentos necesito para viajar?" data-en="What documents do I need to travel?">¿Qué documentos necesito para viajar?</summary>
+                        <p class="t" data-es="Para cruceros al Caribe desde EE.UU., ciudadanos americanos pueden usar pasaporte (recomendado) o certificado de nacimiento con ID. Para viajes internacionales, siempre pasaporte vigente." data-en="For Caribbean cruises from the US, American citizens can use a passport (recommended) or birth certificate with ID. For international travel, always a valid passport.">Para cruceros al Caribe desde EE.UU., ciudadanos americanos pueden usar pasaporte (recomendado) o certificado de nacimiento con ID. Para viajes internacionales, siempre pasaporte vigente.</p>
+                    </details>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span class="translatable" data-es="¿Ofrecen seguro de viaje?" data-en="Do you offer travel insurance?">¿Ofrecen seguro de viaje?</span>
-                            <i data-lucide="chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p class="translatable" data-es="Sí, ofrecemos varias opciones de seguro de viaje que cubren cancelación, emergencias médicas, equipaje perdido y más. Te recomendamos siempre proteger tu inversión con un seguro adecuado." data-en="Yes, we offer various travel insurance options that cover cancellation, medical emergencies, lost luggage and more. We always recommend protecting your investment with proper insurance.">Sí, ofrecemos varias opciones de seguro de viaje que cubren cancelación, emergencias médicas, equipaje perdido y más. Te recomendamos siempre proteger tu inversión con un seguro adecuado.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cuba Shipping FAQs -->
-                <div class="faq-category glass-card">
-                    <h3 class="faq-category-title">
+                    <h3 class="faq-category">
                         <i data-lucide="package"></i>
-                        <span class="translatable" data-es="Envíos a Cuba" data-en="Shipping to Cuba">Envíos a Cuba</span>
+                        <span class="t" data-es="Envíos" data-en="Shipping">Envíos</span>
                     </h3>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span class="translatable" data-es="¿Cuánto tiempo tarda un envío a Cuba?" data-en="How long does a shipment to Cuba take?">¿Cuánto tiempo tarda un envío a Cuba?</span>
-                            <i data-lucide="chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p class="translatable" data-es="El tiempo promedio de entrega es de 15-30 días dependiendo de la provincia. La Habana suele ser más rápido. Ofrecemos seguimiento en tiempo real para que puedas ver el estado de tu paquete." data-en="Average delivery time is 15-30 days depending on the province. Havana is usually faster. We offer real-time tracking so you can see your package status.">El tiempo promedio de entrega es de 15-30 días dependiendo de la provincia. La Habana suele ser más rápido. Ofrecemos seguimiento en tiempo real para que puedas ver el estado de tu paquete.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span class="translatable" data-es="¿Puedo enviar medicinas a Cuba?" data-en="Can I send medicines to Cuba?">¿Puedo enviar medicinas a Cuba?</span>
-                            <i data-lucide="chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p class="translatable" data-es="Sí, puedes enviar medicamentos de uso personal. Deben estar en su empaque original y recomendamos incluir la receta médica. Hay restricciones en cantidades y ciertos medicamentos controlados. Consúltanos para verificar qué puedes enviar." data-en="Yes, you can send medications for personal use. They must be in original packaging and we recommend including the prescription. There are quantity restrictions and certain controlled medications. Contact us to verify what you can send.">Sí, puedes enviar medicamentos de uso personal. Deben estar en su empaque original y recomendamos incluir la receta médica. Hay restricciones en cantidades y ciertos medicamentos controlados. Consúltanos para verificar qué puedes enviar.</p>
-                        </div>
-                    </div>
+                    <details class="faq-item">
+                        <summary class="t" data-es="¿Cuánto tiempo tarda un envío a Cuba?" data-en="How long does a shipment to Cuba take?">¿Cuánto tiempo tarda un envío a Cuba?</summary>
+                        <p class="t" data-es="El tiempo promedio es de 15-30 días dependiendo de la provincia. La Habana suele ser más rápido. Ofrecemos seguimiento en tiempo real." data-en="Average time is 15-30 days depending on the province. Havana is usually faster. We offer real-time tracking.">El tiempo promedio es de 15-30 días dependiendo de la provincia. La Habana suele ser más rápido. Ofrecemos seguimiento en tiempo real.</p>
+                    </details>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span class="translatable" data-es="¿Qué artículos están prohibidos?" data-en="What items are prohibited?">¿Qué artículos están prohibidos?</span>
-                            <i data-lucide="chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p class="translatable" data-es="No se pueden enviar: armas, explosivos, drogas, productos perecederos, dinero en efectivo, y ciertos equipos electrónicos restringidos. También hay límites en cantidades de algunos artículos. Contáctanos para una lista completa actualizada." data-en="Cannot be shipped: weapons, explosives, drugs, perishable products, cash, and certain restricted electronic equipment. There are also quantity limits on some items. Contact us for a complete updated list.">No se pueden enviar: armas, explosivos, drogas, productos perecederos, dinero en efectivo, y ciertos equipos electrónicos restringidos. También hay límites en cantidades de algunos artículos. Contáctanos para una lista completa actualizada.</p>
-                        </div>
-                    </div>
+                    <details class="faq-item">
+                        <summary class="t" data-es="¿Puedo enviar medicinas a Cuba?" data-en="Can I send medicines to Cuba?">¿Puedo enviar medicinas a Cuba?</summary>
+                        <p class="t" data-es="Sí, puedes enviar medicamentos de uso personal en su empaque original. Recomendamos incluir la receta médica. Hay restricciones en cantidades." data-en="Yes, you can send medications for personal use in original packaging. We recommend including the prescription. There are quantity restrictions.">Sí, puedes enviar medicamentos de uso personal en su empaque original. Recomendamos incluir la receta médica. Hay restricciones en cantidades.</p>
+                    </details>
                 </div>
 
-                <!-- Taxes FAQs -->
-                <div class="faq-category glass-card">
-                    <h3 class="faq-category-title">
+                <div class="faq-column">
+                    <h3 class="faq-category">
                         <i data-lucide="calculator"></i>
                         <span>Taxes</span>
                     </h3>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span class="translatable" data-es="¿Puedo hacer mis taxes sin número de seguro social?" data-en="Can I file taxes without a social security number?">¿Puedo hacer mis taxes sin número de seguro social?</span>
-                            <i data-lucide="chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p class="translatable" data-es="Sí, puedes usar un ITIN (Número de Identificación Personal del Contribuyente). Te ayudamos a solicitar tu ITIN y preparar tus impuestos. Es importante para construir historial financiero en EE.UU." data-en="Yes, you can use an ITIN (Individual Taxpayer Identification Number). We help you apply for your ITIN and prepare your taxes. It's important for building financial history in the US.">Sí, puedes usar un ITIN (Número de Identificación Personal del Contribuyente). Te ayudamos a solicitar tu ITIN y preparar tus impuestos. Es importante para construir historial financiero en EE.UU.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span class="translatable" data-es="¿Qué documentos necesito para mis taxes?" data-en="What documents do I need for my taxes?">¿Qué documentos necesito para mis taxes?</span>
-                            <i data-lucide="chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p class="translatable" data-es="Generalmente necesitas: W-2 de empleadores, 1099s si eres independiente, identificación con foto, números de seguro social de dependientes, y recibos de deducciones. Te damos una lista personalizada según tu situación." data-en="Generally you need: W-2s from employers, 1099s if self-employed, photo ID, social security numbers for dependents, and deduction receipts. We give you a personalized list based on your situation.">Generalmente necesitas: W-2 de empleadores, 1099s si eres independiente, identificación con foto, números de seguro social de dependientes, y recibos de deducciones. Te damos una lista personalizada según tu situación.</p>
-                        </div>
-                    </div>
-                </div>
+                    <details class="faq-item">
+                        <summary class="t" data-es="¿Puedo hacer mis taxes sin número de seguro social?" data-en="Can I file taxes without a social security number?">¿Puedo hacer mis taxes sin número de seguro social?</summary>
+                        <p class="t" data-es="Sí, puedes usar un ITIN. Te ayudamos a solicitarlo y preparar tus impuestos. Es importante para construir historial financiero en EE.UU." data-en="Yes, you can use an ITIN. We help you apply for it and prepare your taxes. It's important for building financial history in the US.">Sí, puedes usar un ITIN. Te ayudamos a solicitarlo y preparar tus impuestos. Es importante para construir historial financiero en EE.UU.</p>
+                    </details>
 
-                <!-- Business/LLC FAQs -->
-                <div class="faq-category glass-card">
-                    <h3 class="faq-category-title">
+                    <h3 class="faq-category">
                         <i data-lucide="building-2"></i>
-                        <span class="translatable" data-es="Negocios y LLC" data-en="Business & LLC">Negocios y LLC</span>
+                        <span class="t" data-es="Negocios" data-en="Business">Negocios</span>
                     </h3>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span class="translatable" data-es="¿Cuánto cuesta formar una LLC?" data-en="How much does it cost to form an LLC?">¿Cuánto cuesta formar una LLC?</span>
-                            <i data-lucide="chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p class="translatable" data-es="El costo varía según el estado. En Florida, la tarifa estatal es aproximadamente $125. Nuestro servicio incluye preparación de documentos, registro, obtención de EIN, y asesoría inicial. Contáctanos para una cotización completa." data-en="The cost varies by state. In Florida, the state fee is approximately $125. Our service includes document preparation, registration, EIN obtainment, and initial advisory. Contact us for a complete quote.">El costo varía según el estado. En Florida, la tarifa estatal es aproximadamente $125. Nuestro servicio incluye preparación de documentos, registro, obtención de EIN, y asesoría inicial. Contáctanos para una cotización completa.</p>
-                        </div>
-                    </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span class="translatable" data-es="¿Necesito ser ciudadano para abrir una LLC?" data-en="Do I need to be a citizen to open an LLC?">¿Necesito ser ciudadano para abrir una LLC?</span>
-                            <i data-lucide="chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p class="translatable" data-es="No, cualquier persona puede formar una LLC en EE.UU., incluyendo extranjeros y residentes. No se requiere ciudadanía ni Green Card. Te ayudamos con todo el proceso sin importar tu estatus migratorio." data-en="No, anyone can form an LLC in the US, including foreigners and residents. No citizenship or Green Card required. We help you with the entire process regardless of your immigration status.">No, cualquier persona puede formar una LLC en EE.UU., incluyendo extranjeros y residentes. No se requiere ciudadanía ni Green Card. Te ayudamos con todo el proceso sin importar tu estatus migratorio.</p>
-                        </div>
-                    </div>
+                    <details class="faq-item">
+                        <summary class="t" data-es="¿Cuánto cuesta formar una LLC?" data-en="How much does it cost to form an LLC?">¿Cuánto cuesta formar una LLC?</summary>
+                        <p class="t" data-es="En Florida, la tarifa estatal es ~$125. Nuestro servicio incluye preparación de documentos, registro, obtención de EIN, y asesoría inicial." data-en="In Florida, the state fee is ~$125. Our service includes document preparation, registration, EIN obtainment, and initial advisory.">En Florida, la tarifa estatal es ~$125. Nuestro servicio incluye preparación de documentos, registro, obtención de EIN, y asesoría inicial.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="t" data-es="¿Necesito ser ciudadano para abrir una LLC?" data-en="Do I need to be a citizen to open an LLC?">¿Necesito ser ciudadano para abrir una LLC?</summary>
+                        <p class="t" data-es="No, cualquier persona puede formar una LLC en EE.UU. No se requiere ciudadanía ni Green Card. Te ayudamos sin importar tu estatus." data-en="No, anyone can form an LLC in the US. No citizenship or Green Card required. We help you regardless of your status.">No, cualquier persona puede formar una LLC en EE.UU. No se requiere ciudadanía ni Green Card. Te ayudamos sin importar tu estatus.</p>
+                    </details>
                 </div>
             </div>
 
             <div class="faq-cta">
-                <p class="translatable" data-es="¿No encontraste tu respuesta?" data-en="Didn't find your answer?">¿No encontraste tu respuesta?</p>
-                <a href="https://wa.me/19562172274" class="glass-btn glass-btn-accent">
+                <p class="t" data-es="¿No encontraste tu respuesta?" data-en="Didn't find your answer?">¿No encontraste tu respuesta?</p>
+                <a href="https://wa.me/19562172274" class="btn btn-accent">
                     <i data-lucide="message-circle"></i>
-                    <span class="translatable" data-es="Pregúntanos por WhatsApp" data-en="Ask us on WhatsApp">Pregúntanos por WhatsApp</span>
+                    <span class="t" data-es="Pregúntanos por WhatsApp" data-en="Ask us on WhatsApp">Pregúntanos por WhatsApp</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="contacto">
-        <div class="cta-container glass-card glass-card-cta">
-            <h2 class="translatable" data-es="¿Listo Para Comenzar?" data-en="Ready to Get Started?">¿Listo Para Comenzar?</h2>
-            <p class="translatable" data-es="Contáctanos hoy. Consulta inicial sin compromiso." data-en="Contact us today. Free initial consultation.">Contáctanos hoy. Consulta inicial sin compromiso.</p>
-            
-            <div class="contact-cards">
-                <a href="https://wa.me/19562172274" class="contact-card glass-card whatsapp-card">
-                    <i data-lucide="message-circle"></i>
-                    <div>
-                        <strong>WhatsApp</strong>
-                        <span>+1 (956) 217-2274</span>
-                    </div>
-                </a>
-                <a href="tel:+18133751532" class="contact-card glass-card">
-                    <i data-lucide="phone"></i>
-                    <div>
-                        <strong class="translatable" data-es="Teléfono" data-en="Phone">Teléfono</strong>
-                        <span>(813) 375-1532</span>
-                    </div>
-                </a>
-                <a href="mailto:info@mkadventure.com" class="contact-card glass-card">
-                    <i data-lucide="mail"></i>
-                    <div>
-                        <strong>Email</strong>
-                        <span>info@mkadventure.com</span>
-                    </div>
-                </a>
-            </div>
+    <!-- Contact CTA -->
+    <section class="section section-cta" id="contacto">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="t" data-es="¿Listo Para Comenzar?" data-en="Ready to Get Started?">¿Listo Para Comenzar?</h2>
+                <p class="t" data-es="Contáctanos hoy. Consulta inicial sin compromiso." data-en="Contact us today. Free initial consultation.">Contáctanos hoy. Consulta inicial sin compromiso.</p>
+                
+                <div class="contact-grid">
+                    <a href="https://wa.me/19562172274" class="contact-card contact-wa">
+                        <i data-lucide="message-circle"></i>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <span>+1 (956) 217-2274</span>
+                        </div>
+                    </a>
+                    <a href="tel:+18133751532" class="contact-card">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <strong class="t" data-es="Teléfono" data-en="Phone">Teléfono</strong>
+                            <span>(813) 375-1532</span>
+                        </div>
+                    </a>
+                    <a href="mailto:info@mkadventure.com" class="contact-card">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <span>info@mkadventure.com</span>
+                        </div>
+                    </a>
+                </div>
 
-            <div class="contact-meta">
-                <span><i data-lucide="map-pin"></i> Tampa, FL — <span class="translatable" data-es="Servimos todo USA" data-en="Serving all USA">Servimos todo USA</span></span>
-                <span><i data-lucide="clock"></i> Lun-Vie 9AM-6PM, Sáb 10AM-2PM</span>
+                <div class="contact-meta">
+                    <span><i data-lucide="map-pin"></i> Tampa, FL</span>
+                    <span><i data-lucide="clock"></i> Lun-Vie 9AM-6PM</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer glass-card">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <img src="logo.webp" alt="MK Adventure">
-                <p class="translatable" data-es="Tu aventura comienza aquí." data-en="Your adventure starts here.">Tu aventura comienza aquí.</p>
-            </div>
-            <div class="footer-social">
-                <a href="https://www.facebook.com/people/MK-Adventure-Travel-Agency/61561337021713/"><i data-lucide="facebook"></i></a>
-                <a href="https://www.instagram.com/mk_adventurellc/"><i data-lucide="instagram"></i></a>
-                <a href="https://www.tiktok.com/@mk.adventurellc"><i data-lucide="music-2"></i></a>
-            </div>
-            <div class="footer-legal">
-                <span>© 2026 M&K Adventure LLC</span>
-                <span><i data-lucide="shield-check"></i> <span class="translatable" data-es="Licenciados" data-en="Licensed">Licenciados</span></span>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="logo.webp" alt="MK Adventure" width="100" height="33">
+                    <p class="t" data-es="Tu aventura comienza aquí." data-en="Your adventure starts here.">Tu aventura comienza aquí.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/people/MK-Adventure-Travel-Agency/61561337021713/" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="https://www.instagram.com/mk_adventurellc/" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="https://www.tiktok.com/@mk.adventurellc" aria-label="TikTok"><i data-lucide="music-2"></i></a>
+                </div>
+                <div class="footer-legal">
+                    <span>© 2026 M&K Adventure LLC</span>
+                    <span><i data-lucide="shield-check"></i> <span class="t" data-es="Licenciados" data-en="Licensed">Licenciados</span></span>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/19562172274" class="wa-float glass-card">
+    <a href="https://wa.me/19562172274" class="wa-float" aria-label="WhatsApp">
         <i data-lucide="message-circle"></i>
     </a>
 
