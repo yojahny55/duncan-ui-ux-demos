@@ -25,7 +25,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--font); font-size: 16px; line-height: 1.6; color: var(--dark); background: var(--light); }
+body { font-family: var(--font); font-size: 17px; line-height: 1.65; color: var(--dark); background: var(--light); }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
@@ -95,15 +95,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .badge i { width: 14px; height: 14px; }
 .hero-main h1 { font-size: clamp(32px, 6vw, 52px); font-weight: 700; line-height: 1.1; margin-bottom: 16px; }
 .hero-main h1 span { display: block; }
-.hero-main > p { font-size: 17px; color: var(--gray); margin-bottom: 32px; max-width: 400px; }
+.hero-main > p { font-size: 18px; color: #475569; margin-bottom: 32px; max-width: 450px; line-height: 1.7; }
 .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; }
 
 .hero-stat {
     background: var(--white); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow);
     display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
 }
-.stat-num { font-size: 28px; font-weight: 700; line-height: 1; }
-.stat-label { font-size: 12px; color: var(--gray); margin-top: 4px; }
+.stat-num { font-size: 32px; font-weight: 700; line-height: 1; }
+.stat-label { font-size: 14px; color: #475569; margin-top: 6px; font-weight: 500; }
 .stat-gold { background: var(--gold-light); }
 .stat-gold .stat-num { color: var(--gold); }
 .stat-blue { background: var(--blue-light); }
@@ -132,7 +132,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .section-head { margin-bottom: 48px; }
 .section-head h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin-bottom: 8px; }
-.section-head p { font-size: 17px; color: var(--gray); }
+.section-head p { font-size: 18px; color: #475569; }
 .section-dark .section-head p { color: rgba(255,255,255,0.7); }
 
 .section-tag {
@@ -167,7 +167,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .bento-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
 .bento-big h3 { font-size: 28px; }
-.bento-card > p, .bento-content > p { font-size: 14px; color: var(--gray); }
+.bento-card > p, .bento-content > p { font-size: 15px; color: #475569; line-height: 1.5; }
 .bento-content > p { color: rgba(255,255,255,0.8); margin-bottom: 16px; }
 
 .bento-icon {
@@ -269,13 +269,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .faq-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; }
 .faq-item { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .faq-item summary {
-    display: flex; align-items: center; justify-content: space-between; padding: 20px 24px;
-    font-weight: 500; cursor: pointer; list-style: none;
+    display: flex; align-items: center; justify-content: space-between; padding: 22px 26px;
+    font-weight: 600; font-size: 16px; cursor: pointer; list-style: none; color: var(--dark);
 }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary i { width: 20px; height: 20px; color: var(--gray); transition: transform 0.2s; }
 .faq-item[open] summary i { transform: rotate(45deg); }
-.faq-item p { padding: 0 24px 20px; font-size: 15px; color: var(--gray); line-height: 1.7; }
+.faq-item p { padding: 0 24px 24px; font-size: 16px; color: #475569; line-height: 1.75; }
 .faq-cta { text-align: center; }
 .faq-cta p { color: var(--gray); margin-bottom: 16px; }
 
