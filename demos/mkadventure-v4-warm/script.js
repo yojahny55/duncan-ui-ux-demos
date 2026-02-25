@@ -89,34 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ========================================
-    // Intersection Observer for Reveals
+    // Intersection Observer for Reveals (Disabled for better static rendering)
+    // All content visible by default - animations removed to ensure reliability
     // ========================================
-    if (!prefersReducedMotion) {
-        const revealElements = document.querySelectorAll('.travel-card, .cuba-card, .service-card, .blog-card, .booking-card, .section-header, .hero-content, .hero-visual');
-        
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 50);
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            root: null,
-            rootMargin: '0px 0px -60px 0px',
-            threshold: 0.1
-        });
-
-        revealElements.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-            revealObserver.observe(el);
-        });
-    }
+    // Note: Reveal animations have been disabled to ensure content is always 
+    // visible in all contexts (screenshots, SSR, slow JS loading).
+    // The warm design aesthetic relies on hover interactions instead.
 
     // ========================================
     // FAQ Accordion
@@ -240,17 +218,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ========================================
-    // Image Lazy Load Enhancement
+    // Image Lazy Load Enhancement (Non-blocking)
+    // Images always visible; fade-in is purely decorative
     // ========================================
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     
     lazyImages.forEach(img => {
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 0.4s ease';
-        
-        if (img.complete) {
-            img.style.opacity = '1';
-        } else {
+        // Only add fade effect for images not yet loaded
+        // Don't hide images - they should always be visible
+        if (!img.complete) {
+            img.style.transition = 'opacity 0.4s ease';
             img.addEventListener('load', () => {
                 img.style.opacity = '1';
             });

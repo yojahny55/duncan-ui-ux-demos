@@ -1028,11 +1028,12 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--sage-light) 0%, var(--sage) 100%);
+    background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
     border-radius: var(--radius);
     margin: 0 auto var(--space-5);
     color: var(--text-inverse);
     transition: all var(--duration);
+    box-shadow: 0 4px 12px rgba(107, 138, 94, 0.3);
 }
 
 .service-icon i {
@@ -1053,8 +1054,9 @@ button {
 
 .service-card p {
     font-size: 0.9375rem;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     line-height: 1.6;
+    opacity: 0.85;
 }
 
 @media (max-width: 900px) {
@@ -1094,8 +1096,8 @@ button {
 .partner-logo img {
     height: 48px;
     width: auto;
-    filter: grayscale(100%);
-    opacity: 0.5;
+    filter: grayscale(50%);
+    opacity: 0.75;
     transition: all var(--duration);
 }
 
@@ -1123,6 +1125,7 @@ button {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(45, 75, 62, 0.1);
     transition: all var(--duration) var(--ease-out);
     cursor: pointer;
 }
