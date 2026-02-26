@@ -247,7 +247,11 @@ button {
     display: none;
     flex-direction: column;
     gap: 5px;
-    padding: var(--space-2);
+    padding: var(--space-3);
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-toggle span {
@@ -287,9 +291,9 @@ button {
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(10, 14, 23, 0.5) 0%,
-        rgba(10, 14, 23, 0.7) 50%,
-        rgba(10, 14, 23, 0.9) 100%
+        rgba(10, 14, 23, 0.55) 0%,
+        rgba(10, 14, 23, 0.75) 50%,
+        rgba(10, 14, 23, 0.92) 100%
     );
 }
 
@@ -347,11 +351,12 @@ button {
 }
 
 .hero-sub {
-    font-size: 1.15rem;
-    color: var(--text-light-muted);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
     margin: 0 auto var(--space-8);
     line-height: 1.8;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .hero-actions {
@@ -385,7 +390,7 @@ button {
 
 .stat-label {
     font-size: 0.85rem;
-    color: var(--text-light-muted);
+    color: rgba(255, 255, 255, 0.85);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -598,11 +603,11 @@ button {
 }
 
 .travel-card-featured {
-    grid-column: span 6;
+    grid-column: span 12;
 }
 
 .travel-card:not(.travel-card-featured) {
-    grid-column: span 3;
+    grid-column: span 4;
 }
 
 .card-image {
@@ -840,21 +845,38 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-12);
+    gap: var(--space-10);
     flex-wrap: wrap;
+    padding: var(--space-8) 0;
 }
 
 .partners-row img {
-    height: 40px;
+    height: 60px;
     width: auto;
-    opacity: 0.6;
-    filter: grayscale(100%);
+    min-width: 120px;
+    opacity: 0.85;
     transition: all var(--duration);
 }
 
 .partners-row img:hover {
     opacity: 1;
-    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.partner-logo {
+    color: var(--text-secondary);
+    transition: all var(--duration);
+    opacity: 0.7;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    color: var(--gold-dark);
+}
+
+.partner-logo svg {
+    height: 60px;
+    width: auto;
 }
 
 /* ========================================
@@ -1077,7 +1099,9 @@ button {
    ======================================== */
 
 @media (max-width: 1024px) {
-    .travel-card-featured,
+    .travel-card-featured {
+        grid-column: span 12;
+    }
     .travel-card:not(.travel-card-featured) {
         grid-column: span 6;
     }
@@ -1125,6 +1149,10 @@ button {
         padding: var(--space-20) var(--space-4);
     }
     
+    .hero-sub {
+        font-size: 1.05rem;
+    }
+    
     .hero-stats {
         flex-wrap: wrap;
         gap: var(--space-6);
@@ -1148,6 +1176,11 @@ button {
         grid-template-columns: 1fr;
     }
     
+    .cuba-card p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.85);
+    }
+    
     .services-grid {
         grid-template-columns: 1fr;
     }
@@ -1157,12 +1190,43 @@ button {
         gap: var(--space-8);
     }
     
+    .footer-links a,
+    .footer-links p {
+        font-size: 1rem;
+        padding: var(--space-2) 0;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .footer-brand p {
+        font-size: 1rem;
+    }
+    
+    .footer-bottom {
+        font-size: 0.9rem;
+    }
+    
     .partners-row {
         gap: var(--space-6);
     }
     
     .partners-row img {
-        height: 30px;
+        height: 36px;
+    }
+    
+    .faq-question {
+        font-size: 1rem;
+        padding: var(--space-4) var(--space-5);
+        min-height: 48px;
+    }
+    
+    .faq-answer p {
+        font-size: 1rem;
+    }
+    
+    .card-content p {
+        font-size: 1rem;
     }
     
     .cta-buttons {
@@ -1173,6 +1237,10 @@ button {
     .btn-lg {
         width: 100%;
         justify-content: center;
+    }
+    
+    .section-sub {
+        font-size: 1rem;
     }
 }
 
@@ -1198,6 +1266,47 @@ button {
         width: 100%;
         justify-content: center;
     }
+}
+
+/* ========================================
+   Back to Top Button
+   ======================================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: var(--space-6);
+    left: var(--space-6);
+    width: 48px;
+    height: 48px;
+    background: var(--navy-deep);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all var(--duration) var(--ease-out);
+    cursor: pointer;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--gold);
+    color: var(--navy-deepest);
+}
+
+.back-to-top i {
+    width: 22px;
+    height: 22px;
 }
 
 /* ========================================
@@ -1284,7 +1393,7 @@ button {
     pointer-events: auto !important;
 }
 
-/* Fallback: show content if AOS fails to load */
+/* Fallback: show content if AOS/GSAP fails to trigger */
 .hero-badge,
 .hero-title,
 .hero-sub,
@@ -1292,6 +1401,13 @@ button {
 .hero-stats {
     opacity: 1 !important;
     transform: none !important;
+}
+
+/* Ensure GSAP-animated elements are visible even if ScrollTrigger doesn't fire */
+.partners-row img,
+.cert-badge {
+    opacity: 0.85 !important;
+    visibility: visible !important;
 }
 
 /* AOS initialization states */

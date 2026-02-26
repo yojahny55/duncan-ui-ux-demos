@@ -31,7 +31,7 @@ async function screenshot(demoName, mode = 'both') {
   for (const m of modes) {
     const page = await browser.newPage({ viewport: VIEWPORTS[m] });
     await page.goto('file://' + demoPath);
-    await page.waitForTimeout(3000); // Wait for animations/fonts
+    await page.waitForTimeout(5000); // Wait for animations/fonts/images
     
     const outPath = path.join(OUTPUT_DIR, `${demoName}-${m}.png`);
     await page.screenshot({ path: outPath, fullPage: true });
