@@ -1,5 +1,5 @@
 {
-  "nextIndex": 40,
+  "nextIndex": 41,
   "totalStyles": 54,
   "styles": [
     {
@@ -279,7 +279,8 @@
       "id": 40,
       "name": "Swiss Modernism 2.0",
       "slug": "40-swiss-modernism",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-26"
     },
     {
       "id": 41,

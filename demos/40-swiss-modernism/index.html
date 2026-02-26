@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiss Modernism 2.0 | UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-block"></span>
+                <span class="logo-text">SWISS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#testimonials">Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cta">Get Started</button>
+            <button class="mobile-menu" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="hero-label">Design Philosophy</span>
+                <h1 class="hero-title">
+                    Form follows<br>
+                    <span class="accent">function.</span>
+                </h1>
+                <p class="hero-text">
+                    We create digital experiences rooted in the principles of Swiss design—
+                    clarity, precision, and timeless elegance through systematic thinking.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary">
+                        <span>Our Process</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">247</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="grid-showcase">
+                    <div class="grid-block block-1"></div>
+                    <div class="grid-block block-2"></div>
+                    <div class="grid-block block-3"></div>
+                    <div class="grid-block block-4"></div>
+                    <div class="grid-block block-5"></div>
+                    <div class="grid-block block-6"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">About Us</h2>
+                </div>
+                <div class="about-content">
+                    <p class="about-lead">
+                        We are a design studio committed to the International Typographic Style—
+                        a methodology that prioritizes objectivity, readability, and visual hierarchy.
+                    </p>
+                    <div class="about-details">
+                        <div class="about-column">
+                            <h3>Our Approach</h3>
+                            <p>
+                                Every project begins with a systematic analysis of objectives, 
+                                audience, and constraints. We believe design solutions emerge 
+                                from rigorous methodology, not arbitrary aesthetics.
+                            </p>
+                        </div>
+                        <div class="about-column">
+                            <h3>Our Values</h3>
+                            <p>
+                                Clarity over complexity. Function over decoration. Precision in 
+                                every pixel. These principles guide our work and ensure designs 
+                                that communicate effectively and endure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-grid">
+                        <div class="v-block v1">
+                            <i data-lucide="grid-3x3"></i>
+                        </div>
+                        <div class="v-block v2">
+                            <i data-lucide="type"></i>
+                        </div>
+                        <div class="v-block v3">
+                            <i data-lucide="ruler"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-container">
+            <div class="services-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">Systematic solutions for modern challenges</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="layout-grid"></i>
+                    </div>
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">Grid Systems</h3>
+                    <p class="service-desc">
+                        Mathematical frameworks that bring order and consistency 
+                        to complex information architectures.
+                    </p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="type"></i>
+                    </div>
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">Typography</h3>
+                    <p class="service-desc">
+                        Sans-serif clarity with precise hierarchies that guide 
+                        readers through content effortlessly.
+                    </p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">Visual Identity</h3>
+                    <p class="service-desc">
+                        Clean, rational brand systems built on geometric 
+                        forms and purposeful color application.
+                    </p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="monitor"></i>
+                    </div>
+                    <div class="service-number">04</div>
+                    <h3 class="service-title">Digital Products</h3>
+                    <p class="service-desc">
+                        User interfaces where every element serves a function, 
+                        creating intuitive digital experiences.
+                    </p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <div class="service-number">05</div>
+                    <h3 class="service-title">Editorial Design</h3>
+                    <p class="service-desc">
+                        Publications and reports structured with Swiss precision, 
+                        maximizing readability and impact.
+                    </p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="component"></i>
+                    </div>
+                    <div class="service-number">06</div>
+                    <h3 class="service-title">Design Systems</h3>
+                    <p class="service-desc">
+                        Modular component libraries ensuring consistency 
+                        across all touchpoints and platforms.
+                    </p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <div class="section-container">
+            <div class="work-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Selected Work</h2>
+            </div>
+            <div class="work-grid">
+                <article class="work-item large">
+                    <div class="work-image">
+                        <div class="work-placeholder">
+                            <i data-lucide="building-2"></i>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">Brand Identity</span>
+                        <h3 class="work-title">Helvetica Museum</h3>
+                        <p class="work-year">2024</p>
+                    </div>
+                </article>
+                <article class="work-item">
+                    <div class="work-image">
+                        <div class="work-placeholder">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">Digital Product</span>
+                        <h3 class="work-title">Ratio Finance</h3>
+                        <p class="work-year">2024</p>
+                    </div>
+                </article>
+                <article class="work-item">
+                    <div class="work-image">
+                        <div class="work-placeholder">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">Web Platform</span>
+                        <h3 class="work-title">Basel Academy</h3>
+                        <p class="work-year">2023</p>
+                    </div>
+                </article>
+                <article class="work-item wide">
+                    <div class="work-image">
+                        <div class="work-placeholder">
+                            <i data-lucide="film"></i>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">Editorial</span>
+                        <h3 class="work-title">Grid Magazine</h3>
+                        <p class="work-year">2023</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-container">
+            <div class="testimonials-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Client Perspectives</h2>
+            </div>
+            <div class="testimonials-grid">
+                <blockquote class="testimonial featured">
+                    <div class="quote-mark">
+                        <i data-lucide="quote"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Their systematic approach transformed our brand. Every decision 
+                        was backed by clear reasoning, resulting in a visual identity 
+                        that communicates with remarkable clarity."
+                    </p>
+                    <footer class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <cite class="author-name">Anna Müller</cite>
+                            <span class="author-role">Creative Director, Zürich Design</span>
+                        </div>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p class="testimonial-text">
+                        "The grid system they developed has become the foundation 
+                        of our entire digital ecosystem. Consistency across 
+                        twelve platforms, flawlessly."
+                    </p>
+                    <footer class="testimonial-author">
+                        <div class="author-info">
+                            <cite class="author-name">Thomas Berg</cite>
+                            <span class="author-role">CTO, Nordic Systems</span>
+                        </div>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p class="testimonial-text">
+                        "Less became more. They removed the unnecessary and 
+                        what remained was pure, functional beauty. Our 
+                        conversion rates increased 40%."
+                    </p>
+                    <footer class="testimonial-author">
+                        <div class="author-info">
+                            <cite class="author-name">Elena Voss</cite>
+                            <span class="author-role">Head of Product, Forma Labs</span>
+                        </div>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="clients-bar">
+                <span class="clients-label">Trusted By</span>
+                <div class="clients-logos">
+                    <div class="client-logo"><i data-lucide="building"></i><span>Helvetica</span></div>
+                    <div class="client-logo"><i data-lucide="mountain"></i><span>Alpine</span></div>
+                    <div class="client-logo"><i data-lucide="hexagon"></i><span>Modular</span></div>
+                    <div class="client-logo"><i data-lucide="square"></i><span>Ratio</span></div>
+                    <div class="client-logo"><i data-lucide="circle"></i><span>Punkt</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">Start a Project</h2>
+                    <p class="contact-text">
+                        Ready to bring Swiss precision to your next project? 
+                        Let's discuss how systematic design can solve your challenges.
+                    </p>
+                    <div class="contact-details">
+                        <a href="mailto:hello@swiss.design" class="contact-link">
+                            <i data-lucide="mail"></i>
+                            <span>hello@swiss.design</span>
+                        </a>
+                        <a href="tel:+41445551234" class="contact-link">
+                            <i data-lucide="phone"></i>
+                            <span>+41 44 555 1234</span>
+                        </a>
+                        <div class="contact-link">
+                            <i data-lucide="map-pin"></i>
+                            <span>Bahnhofstrasse 12, Zürich</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Project Type</label>
+                        <select id="project" name="project">
+                            <option value="">Select a service</option>
+                            <option value="brand">Brand Identity</option>
+                            <option value="digital">Digital Product</option>
+                            <option value="editorial">Editorial Design</option>
+                            <option value="system">Design System</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Submit Inquiry</span>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-block"></span>
+                        <span class="logo-text">SWISS</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Clarity through systematic design.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Studio</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Process</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guidelines</a></li>
+                            <li><a href="#">Press Kit</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Dribbble</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Swiss Design Studio. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
