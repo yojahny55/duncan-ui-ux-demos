@@ -1,11 +1,11 @@
 {
   "demos": {
-    "demo-complete": { "score": 7, "lastHealed": "2026-02-26", "runs": 1 },
+    "demo-complete": { "score": 8.5, "lastHealed": "2026-02-26", "runs": 2 },
     "mkadventure": { "score": 7.5, "lastHealed": "2026-02-26", "runs": 2 },
     "mkadventure-v2-bento": { "score": 7, "lastHealed": "2026-02-26", "runs": 1 },
     "mkadventure-v3-motion": { "score": 7, "lastHealed": "2026-02-26", "runs": 1 },
     "mkadventure-v4-warm": { "score": 8.5, "lastHealed": "2026-02-26", "runs": 2 },
     "mkadventure-v5-bold": { "score": 7.5, "lastHealed": "2026-02-26", "runs": 2 }
   },
-  "lastDemo": "mkadventure-v5-bold"
+  "lastDemo": "demo-complete"
 }
