@@ -388,13 +388,8 @@
             display: none;
         }
     }
-    /* Progressive Enhancement - Content always visible */
+    /* Ensure all content is visible - GSAP handles animations, not AOS CSS */
     [data-aos] {
-      opacity: 1 !important;
-      transform: none !important;
-      transition: none !important;
-    }
-    .char {
       opacity: 1 !important;
       transform: none !important;
     }
@@ -734,6 +729,64 @@
                 <img src="assets/partners/carnival.svg" alt="Carnival" loading="lazy">
                 <img src="assets/partners/msc.svg" alt="MSC" loading="lazy">
                 <img src="assets/partners/norwegian.svg" alt="Norwegian" loading="lazy">
+            </div>
+            <div class="certifications" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-badge">
+                    <img src="assets/partners/irs-authorized.svg" alt="IRS Authorized e-File Provider" loading="lazy">
+                    <span>IRS Authorized</span>
+                </div>
+                <div class="cert-badge">
+                    <img src="assets/partners/florida-notary.svg" alt="Florida Notary Public" loading="lazy">
+                    <span>FL Notary Public</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-cream" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">❓ FAQ</span>
+                <h2 class="section-title t" data-es="Preguntas Frecuentes" data-en="Frequently Asked Questions">Preguntas Frecuentes</h2>
+            </div>
+            <div class="faq-grid">
+                <details class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <summary class="faq-question">
+                        <span class="t" data-es="¿Necesito pasaporte para un crucero?" data-en="Do I need a passport for a cruise?">¿Necesito pasaporte para un crucero?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p class="t" data-es="Para cruceros cerrados (que salen y regresan al mismo puerto en USA), ciudadanos americanos pueden usar pasaporte vigente o acta de nacimiento original con ID. Para cruceros internacionales, siempre se requiere pasaporte." data-en="For closed-loop cruises (departing and returning to the same US port), American citizens can use a valid passport or original birth certificate with ID. For international cruises, a passport is always required.">Para cruceros cerrados (que salen y regresan al mismo puerto en USA), ciudadanos americanos pueden usar pasaporte vigente o acta de nacimiento original con ID. Para cruceros internacionales, siempre se requiere pasaporte.</p>
+                    </div>
+                </details>
+                <details class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <summary class="faq-question">
+                        <span class="t" data-es="¿Cuánto tarda un envío a Cuba?" data-en="How long does a shipment to Cuba take?">¿Cuánto tarda un envío a Cuba?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p class="t" data-es="Los envíos de dinero se procesan en 24-48 horas. Los paquetes generalmente toman de 7 a 15 días dependiendo del destino en Cuba." data-en="Money transfers are processed in 24-48 hours. Packages generally take 7 to 15 days depending on the destination in Cuba.">Los envíos de dinero se procesan en 24-48 horas. Los paquetes generalmente toman de 7 a 15 días dependiendo del destino en Cuba.</p>
+                    </div>
+                </details>
+                <details class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <summary class="faq-question">
+                        <span class="t" data-es="¿Ofrecen planes de pago para cruceros?" data-en="Do you offer payment plans for cruises?">¿Ofrecen planes de pago para cruceros?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p class="t" data-es="¡Sí! Ofrecemos planes de pago flexibles para que puedas reservar tu crucero con un depósito inicial y pagar el resto en cuotas cómodas antes de la fecha de salida." data-en="Yes! We offer flexible payment plans so you can book your cruise with an initial deposit and pay the rest in comfortable installments before the departure date.">¡Sí! Ofrecemos planes de pago flexibles para que puedas reservar tu crucero con un depósito inicial y pagar el resto en cuotas cómodas antes de la fecha de salida.</p>
+                    </div>
+                </details>
+                <details class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <summary class="faq-question">
+                        <span class="t" data-es="¿Qué necesito para preparar mis taxes?" data-en="What do I need to prepare my taxes?">¿Qué necesito para preparar mis taxes?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p class="t" data-es="Necesitas tu Social Security o ITIN, W-2 o 1099 de todos tus empleos, ID con foto, y cualquier documento de deducciones (gastos médicos, educación, etc.)." data-en="You need your Social Security or ITIN, W-2 or 1099 from all your jobs, photo ID, and any deduction documents (medical expenses, education, etc.).">Necesitas tu Social Security o ITIN, W-2 o 1099 de todos tus empleos, ID con foto, y cualquier documento de deducciones (gastos médicos, educación, etc.).</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>

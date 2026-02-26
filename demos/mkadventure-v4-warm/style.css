@@ -857,6 +857,102 @@ button {
 }
 
 /* ========================================
+   FAQ Section
+   ======================================== */
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.faq-item {
+    background: white;
+    border-radius: var(--radius);
+    border: 1px solid var(--cream-dark);
+    overflow: hidden;
+    transition: all var(--duration) var(--ease-out);
+}
+
+.faq-item[open] {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-5) var(--space-6);
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    list-style: none;
+    transition: color var(--duration);
+}
+
+.faq-question::-webkit-details-marker { display: none; }
+
+.faq-question:hover { color: var(--gold-dark); }
+
+.faq-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--gold);
+    transition: transform var(--duration) var(--ease-out);
+    flex-shrink: 0;
+}
+
+.faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 var(--space-6) var(--space-5);
+}
+
+.faq-answer p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ========================================
+   Certifications
+   ======================================== */
+
+.certifications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-8);
+    margin-top: var(--space-8);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--cream-dark);
+}
+
+.cert-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-5);
+    background: var(--cream);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.cert-badge img {
+    height: 28px;
+    width: auto;
+}
+
+/* ========================================
    CTA Section
    ======================================== */
 
