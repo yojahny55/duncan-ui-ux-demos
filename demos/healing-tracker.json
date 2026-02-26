@@ -4,8 +4,8 @@
     "mkadventure": { "score": 6, "lastHealed": "2026-02-26", "runs": 1 },
     "mkadventure-v2-bento": { "score": 7, "lastHealed": "2026-02-26", "runs": 1 },
     "mkadventure-v3-motion": { "score": 7, "lastHealed": "2026-02-26", "runs": 1 },
-    "mkadventure-v4-warm": { "score": 0, "lastHealed": null, "runs": 0 },
+    "mkadventure-v4-warm": { "score": 6, "lastHealed": "2026-02-26", "runs": 1 },
     "mkadventure-v5-bold": { "score": 0, "lastHealed": null, "runs": 0 }
   },
-  "lastDemo": "mkadventure-v3-motion"
+  "lastDemo": "mkadventure-v4-warm"
 }
