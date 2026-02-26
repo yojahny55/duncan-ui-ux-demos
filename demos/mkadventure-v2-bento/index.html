@@ -7,9 +7,14 @@
     <meta name="description" content="Agencia de viajes premium en Tampa, FL.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js" defer></script>
   <style>
     /* Footer centering fix */
     .footer .container {
@@ -51,10 +56,13 @@
                     <button class="lang-btn active" data-lang="es">ES</button>
                     <button class="lang-btn" data-lang="en">EN</button>
                 </div>
-                <a href="https://wa.me/19562172274" class="btn btn-sm">
+                <a href="https://wa.me/19562172274" class="btn btn-sm btn-nav-wa">
                     <i data-lucide="message-circle"></i>
-                    WhatsApp
+                    <span class="hide-mobile">WhatsApp</span>
                 </a>
+                <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -100,13 +108,13 @@
     <!-- Travel Bento -->
     <section class="section" id="viajes">
         <div class="container">
-            <div class="section-head">
+            <div class="section-head" data-aos="fade-up">
                 <h2 class="t" data-es="Tu Próxima Aventura" data-en="Your Next Adventure">Tu Próxima Aventura</h2>
                 <p class="t" data-es="Cruceros, vuelos y paquetes con planes de pago." data-en="Cruises, flights and packages with payment plans.">Cruceros, vuelos y paquetes con planes de pago.</p>
             </div>
 
             <div class="travel-bento">
-                <a href="https://wa.me/19562172274?text=Cruceros" class="bento-card bento-big">
+                <a href="https://wa.me/19562172274?text=Cruceros" class="bento-card bento-big" data-aos="fade-up" data-aos-delay="100">
                     <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=1000&q=80" alt="Cruise">
                     <div class="bento-content">
                         <span class="bento-tag t" data-es="Más Popular" data-en="Most Popular">Más Popular</span>
@@ -116,21 +124,21 @@
                     </div>
                 </a>
 
-                <a href="https://wa.me/19562172274?text=Vuelos" class="bento-card">
+                <a href="https://wa.me/19562172274?text=Vuelos" class="bento-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="bento-icon blue"><i data-lucide="plane"></i></div>
                     <h3 class="t" data-es="Vuelos" data-en="Flights">Vuelos</h3>
                     <p class="t" data-es="Nacionales e internacionales" data-en="Domestic & international">Nacionales e internacionales</p>
                     <span class="bento-cta"><i data-lucide="arrow-right"></i></span>
                 </a>
 
-                <a href="https://wa.me/19562172274?text=Paquetes" class="bento-card">
+                <a href="https://wa.me/19562172274?text=Paquetes" class="bento-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="bento-icon purple"><i data-lucide="sparkles"></i></div>
                     <h3 class="t" data-es="Paquetes" data-en="Packages">Paquetes</h3>
                     <p>Disney, Universal, Europa</p>
                     <span class="bento-cta"><i data-lucide="arrow-right"></i></span>
                 </a>
 
-                <a href="https://inspires.to/experiences/hot-cruise-deals" target="_blank" class="bento-card bento-accent">
+                <a href="https://inspires.to/experiences/hot-cruise-deals" target="_blank" class="bento-card bento-accent" data-aos="fade-up" data-aos-delay="400">
                     <div class="bento-icon white"><i data-lucide="zap"></i></div>
                     <h3 class="t" data-es="Ofertas" data-en="Deals">Ofertas</h3>
                     <p class="t" data-es="Hasta 40% off" data-en="Up to 40% off">Hasta 40% off</p>
@@ -144,7 +152,7 @@
     <section class="section section-dark" id="cuba">
         <div class="container">
             <div class="cuba-layout">
-                <div class="cuba-text">
+                <div class="cuba-text" data-aos="fade-right">
                     <span class="section-tag"><i data-lucide="heart"></i> <span class="t" data-es="El puente a tu familia" data-en="The bridge to your family">El puente a tu familia</span></span>
                     <h2 class="t" data-es="Envíos a Cuba" data-en="Shipping to Cuba">Envíos a Cuba</h2>
                     <p class="t" data-es="Paquetes, medicinas, y más. Entrega puerta a puerta. 15-30 días." data-en="Packages, medicines, and more. Door-to-door delivery. 15-30 days.">Paquetes, medicinas, y más. Entrega puerta a puerta. 15-30 días.</p>
@@ -158,7 +166,7 @@
                         <span class="t" data-es="Enviar Paquete" data-en="Send Package">Enviar Paquete</span>
                     </a>
                 </div>
-                <div class="cuba-card">
+                <div class="cuba-card" data-aos="fade-left" data-aos-delay="200">
                     <div class="track-card">
                         <div class="track-head"><i data-lucide="package"></i> Paquete #MK-2847</div>
                         <div class="track-route">
@@ -179,13 +187,13 @@
     <!-- Services -->
     <section class="section" id="servicios">
         <div class="container">
-            <div class="section-head">
+            <div class="section-head" data-aos="fade-up">
                 <h2 class="t" data-es="Más Servicios" data-en="More Services">Más Servicios</h2>
                 <p class="t" data-es="Todo en un solo lugar, en español." data-en="Everything in one place, in Spanish.">Todo en un solo lugar, en español.</p>
             </div>
 
             <div class="services-bento">
-                <a href="https://wa.me/19562172274?text=Taxes" class="service-card service-big">
+                <a href="https://wa.me/19562172274?text=Taxes" class="service-card service-big" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon green"><i data-lucide="calculator"></i></div>
                     <div>
                         <span class="service-badge t" data-es="Temporada Abierta" data-en="Season Open">Temporada Abierta</span>
@@ -199,14 +207,14 @@
                     <span class="service-cta"><span class="t" data-es="Agendar" data-en="Schedule">Agendar</span> <i data-lucide="arrow-right"></i></span>
                 </a>
 
-                <a href="https://wa.me/19562172274?text=Notaria" class="service-card">
+                <a href="https://wa.me/19562172274?text=Notaria" class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon amber"><i data-lucide="stamp"></i></div>
                     <h3 class="t" data-es="Notaría" data-en="Notary">Notaría</h3>
                     <p class="t" data-es="Apostillas, traducciones, poderes" data-en="Apostilles, translations, powers">Apostillas, traducciones, poderes</p>
                     <span class="service-cta"><i data-lucide="arrow-right"></i></span>
                 </a>
 
-                <a href="https://wa.me/19562172274?text=LLC" class="service-card">
+                <a href="https://wa.me/19562172274?text=LLC" class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon purple"><i data-lucide="building-2"></i></div>
                     <h3>LLC</h3>
                     <p class="t" data-es="Formación de empresas $125+" data-en="Business formation $125+">Formación de empresas $125+</p>
@@ -218,7 +226,7 @@
 
     <!-- Partners -->
     <section class="section section-alt" id="partners">
-        <div class="container center">
+        <div class="container center" data-aos="fade-up">
             <span class="section-tag"><i data-lucide="award"></i> Partners</span>
             <h2 class="t" data-es="Trabajamos con los mejores" data-en="We work with the best">Trabajamos con los mejores</h2>
             
@@ -241,7 +249,7 @@
     <!-- Blog -->
     <section class="section" id="blog">
         <div class="container">
-            <div class="section-head">
+            <div class="section-head" data-aos="fade-up">
                 <h2 class="t" data-es="Blog & Consejos" data-en="Blog & Tips">Blog & Consejos</h2>
                 <p class="t" data-es="Información útil para tus viajes y trámites." data-en="Useful info for your travels and paperwork.">Información útil para tus viajes y trámites.</p>
             </div>
