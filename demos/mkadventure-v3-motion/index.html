@@ -533,6 +533,11 @@
         </div>
     </section>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Volver arriba" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
@@ -667,10 +672,12 @@
         });
     });
     
-    // Nav scroll effect
+    // Nav scroll effect + back to top
     const nav = document.querySelector('.nav');
+    const backToTop = document.querySelector('.back-to-top');
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 50);
+        if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 400);
     });
     
     // Mobile menu toggle

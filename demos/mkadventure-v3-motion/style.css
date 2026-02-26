@@ -1032,22 +1032,92 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--navy-deepest);
 }
 
+/* ========== Back to Top Button ========== */
+.back-to-top {
+    position: fixed; bottom: var(--space-6); right: var(--space-6);
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--gold); color: var(--navy-deepest);
+    border-radius: 50%; border: none; cursor: pointer;
+    box-shadow: var(--shadow-gold);
+    opacity: 0; visibility: hidden;
+    transition: all var(--dur) var(--ease-out);
+    z-index: 999;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 24px var(--gold-glow); }
+.back-to-top i { width: 22px; height: 22px; }
+
+/* ========== Contrast Fixes for Gold on Light Backgrounds ========== */
+/* Ensure gold accents on cream/white pass WCAG AA (4.5:1) */
+.section-title-dark em,
+.section-tag-gold {
+    color: #7A5A10; /* Darker gold — 5.2:1 contrast on cream */
+}
+.section-tag-gold {
+    background: rgba(122, 90, 16, 0.12);
+    border-color: rgba(122, 90, 16, 0.3);
+}
+.blog-date {
+    color: #5C440A; /* Already good — 7.5:1 */
+}
+.blog-link {
+    color: #4A3508; /* 9.2:1 — excellent */
+}
+
+/* Muted text on light backgrounds — enforce minimum contrast */
+.cuba-card:not(.cuba-card-featured) p,
+.blog-card p,
+.contact-content p,
+.info-card p,
+.section-desc-dark {
+    color: #3D4656; /* ~7:1 on cream */
+}
+
+/* ========== Partner Logos Larger ========== */
+.partner-logo img {
+    height: 56px;
+}
+
 /* ========== Mobile Enhancements ========== */
 @media (max-width: 600px) {
-    body { font-size: 1rem; }
-    .hero-sub { font-size: 1.0625rem; }
-    .section-desc, .section-desc-dark { font-size: 1rem; }
-    .cuba-card p, .service-card p, .blog-card p { font-size: 1rem; }
+    body { font-size: 1.0625rem; }
+    .hero-sub { font-size: 1.125rem; line-height: 1.7; }
+    .section-desc, .section-desc-dark { font-size: 1.0625rem; }
+    .cuba-card p, .service-card p, .blog-card p { font-size: 1rem; line-height: 1.7; }
     .travel-content p { font-size: 1rem; }
-    .faq-item summary { font-size: 1rem; padding: var(--space-5); min-height: 56px; }
-    .mobile-menu a { padding: var(--space-5) 0; min-height: 48px; display: flex; align-items: center; }
-    .nav-toggle { padding: var(--space-3); min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
-    .nav-cta { min-width: 44px; min-height: 44px; }
-    .btn { min-height: 48px; padding: var(--space-4) var(--space-6); }
+    .travel-content h3 { font-size: 1.125rem; }
+    .faq-item summary { font-size: 1.0625rem; padding: var(--space-5); min-height: 56px; }
+    .faq-answer p { font-size: 1rem; }
+    .mobile-menu a { padding: var(--space-5) 0; min-height: 48px; display: flex; align-items: center; font-size: 1.125rem; }
+    .nav-toggle { padding: var(--space-3); min-width: 48px; min-height: 48px; align-items: center; justify-content: center; }
+    .nav-toggle span { width: 28px; height: 2.5px; }
+    .nav-cta { min-width: 48px; min-height: 48px; }
+    .btn { min-height: 52px; padding: var(--space-4) var(--space-6); font-size: 1.0625rem; }
     .footer-links a, .footer-contact a { padding: var(--space-2) 0; min-height: 44px; display: flex; align-items: center; }
+    .footer-social a { width: 48px; height: 48px; }
+    .footer-social { gap: var(--space-4); }
+    .footer-bottom p { font-size: 0.875rem; }
     .section { padding: var(--space-16) 0; }
-    .hero-title { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+    .hero-title { font-size: clamp(2.4rem, 9vw, 3.5rem); }
+    .hero-badge { font-size: 0.9375rem; }
+    .hero-stats { gap: var(--space-6); }
+    .hero-stat .stat-num { font-size: 1.75rem; }
+    .hero-stat .stat-label { font-size: 0.75rem; }
     .travel-card { width: 280px; }
+    .travel-content { padding: var(--space-5); }
+    .cuba-card { padding: var(--space-5); }
+    .cuba-card h3 { font-size: 1.125rem; }
+    .service-card { padding: var(--space-6); }
+    .service-card h3 { font-size: 1.125rem; }
+    .blog-card h3 { font-size: 1.0625rem; }
+    .back-to-top { bottom: var(--space-4); right: var(--space-4); }
+    .partner-logo img { height: 44px; }
+
+    /* Better card internal spacing */
+    .booking-card { padding: var(--space-4); gap: var(--space-3); }
+    .booking-info h3 { font-size: 0.9375rem; }
+    .booking-info p { font-size: 0.875rem; }
 }
 
 /* ========== Reduced Motion ========== */
