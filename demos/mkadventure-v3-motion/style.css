@@ -415,7 +415,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .section-tag-gold {
     background: rgba(200, 150, 46, 0.12);
-    color: var(--gold-dark);
+    color: #8A6610;
     border-color: rgba(200, 150, 46, 0.3);
 }
 
@@ -748,7 +748,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .blog-date {
     display: inline-block; font-size: 0.75rem;
     text-transform: uppercase; letter-spacing: 0.05em;
-    color: var(--gold-dark); margin-bottom: var(--space-3);
+    color: #8A6610; margin-bottom: var(--space-3);
     font-weight: 600;
 }
 .blog-card h3 {
@@ -761,7 +761,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-size: 0.9375rem; color: var(--text-on-light-muted);
     margin-bottom: var(--space-4); line-height: 1.6;
 }
-.blog-link { color: var(--gold-dark); font-weight: 600; font-size: 0.875rem; }
+.blog-link { color: #7A5A0E; font-weight: 600; font-size: 0.875rem; transition: color var(--dur-fast); }
+.blog-link:hover { color: var(--navy-deepest); }
 
 @media (max-width: 900px) {
     .blog-grid { grid-template-columns: 1fr; }
@@ -916,19 +917,115 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     .footer-brand { grid-column: span 1; }
 }
 
-/* ========== AOS Fallback - content always visible ========== */
-[data-aos] {
+/* ========== AOS Fallback - content always visible if AOS fails ========== */
+[data-aos]:not(.aos-init) {
     opacity: 1 !important;
     transform: none !important;
-    transition-property: opacity, transform !important;
 }
-/* When AOS is initialized and ready, allow it to animate */
-.aos-init [data-aos] {
-    opacity: 0 !important;
-    transition-property: opacity, transform !important;
+
+/* ========== Motion Edition Signature Effects ========== */
+
+/* Magnetic hover cursor effect */
+.magnetic-wrap {
+    display: inline-block;
+    transition: transform 0.4s var(--ease-spring);
 }
-.aos-init [data-aos].aos-animate {
-    opacity: 1 !important;
+
+/* Horizontal reveal mask */
+.reveal-mask {
+    overflow: hidden;
+    display: inline-block;
+}
+.reveal-mask > * {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.8s var(--ease-out);
+}
+.reveal-mask.revealed > * {
+    transform: translateY(0);
+}
+
+/* Section divider with animated line */
+.section-divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    margin: var(--space-4) auto 0;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+.section-divider::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
+    animation: shimmer 2s ease-in-out infinite;
+}
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Parallax floating elements */
+.float-element {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--gold-glow), transparent 70%);
+    filter: blur(40px);
+    opacity: 0.3;
+}
+
+/* Stagger entrance for grids */
+.stagger-in > * {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.stagger-in.in-view > * {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+.stagger-in.in-view > *:nth-child(1) { transition-delay: 0s; }
+.stagger-in.in-view > *:nth-child(2) { transition-delay: 0.1s; }
+.stagger-in.in-view > *:nth-child(3) { transition-delay: 0.2s; }
+.stagger-in.in-view > *:nth-child(4) { transition-delay: 0.3s; }
+.stagger-in.in-view > *:nth-child(5) { transition-delay: 0.4s; }
+.stagger-in.in-view > *:nth-child(6) { transition-delay: 0.5s; }
+
+/* Hero title word-by-word emphasis on v3 */
+.hero-title .word {
+    display: inline-block;
+    transition: transform 0.3s var(--ease-spring);
+}
+.hero-title .word:hover {
+    transform: scale(1.05) translateY(-2px);
+    color: var(--gold-light);
+}
+
+/* Cursor follower dot */
+.cursor-dot {
+    position: fixed;
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.15s ease-out, width 0.3s, height 0.3s;
+}
+.cursor-dot.expanded {
+    width: 40px; height: 40px;
+    background: rgba(200, 150, 46, 0.15);
+    mix-blend-mode: normal;
+}
+
+/* Section text color fixes for light backgrounds */
+.section-cuba .cuba-card:not(.cuba-card-featured) h3,
+.section-blog .blog-card h3,
+.section-contact .section-title-dark,
+.section-contact .contact-content p,
+.section-contact .info-card h4 {
+    color: var(--navy-deepest);
 }
 
 /* ========== Reduced Motion ========== */

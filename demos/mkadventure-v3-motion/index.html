@@ -44,6 +44,9 @@
   </style>
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    
     <!-- Grain Overlay -->
     <div class="grain-overlay" aria-hidden="true"></div>
     
@@ -200,6 +203,7 @@
             <div class="section-header">
                 <span class="section-tag" data-aos="fade-up">Viajes</span>
                 <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Tu Próxima <em>Aventura</em></h2>
+                <div class="section-divider" data-aos="fade-up" data-aos-delay="150"></div>
                 <p class="section-desc" data-aos="fade-up" data-aos-delay="200">
                     <span class="t" data-es="Descubre destinos increíbles con los mejores precios" data-en="Discover incredible destinations at the best prices">Descubre destinos increíbles con los mejores precios</span>
                 </p>
@@ -266,6 +270,7 @@
             <div class="section-header">
                 <span class="section-tag section-tag-gold" data-aos="fade-up">Cuba</span>
                 <h2 class="section-title section-title-dark" data-aos="fade-up" data-aos-delay="100">Conecta con Tu <em>Familia</em></h2>
+                <div class="section-divider" data-aos="fade-up" data-aos-delay="150"></div>
                 <p class="section-desc section-desc-dark" data-aos="fade-up" data-aos-delay="200">
                     <span class="t" data-es="Servicios confiables para mantenerte cerca de los tuyos" data-en="Reliable services to keep you close to your loved ones">Servicios confiables para mantenerte cerca de los tuyos</span>
                 </p>
@@ -316,6 +321,7 @@
             <div class="section-header">
                 <span class="section-tag" data-aos="fade-up">Servicios</span>
                 <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Todo lo que <em>Necesitas</em></h2>
+                <div class="section-divider" data-aos="fade-up" data-aos-delay="150"></div>
                 <p class="section-desc" data-aos="fade-up" data-aos-delay="200">
                     <span class="t" data-es="Servicios profesionales para nuestra comunidad" data-en="Professional services for our community">Servicios profesionales para nuestra comunidad</span>
                 </p>
@@ -372,10 +378,15 @@
                     <div class="partner-logo"><img src="assets/partners/carnival.svg" alt="Carnival"></div>
                     <div class="partner-logo"><img src="assets/partners/norwegian.svg" alt="Norwegian"></div>
                     <div class="partner-logo"><img src="assets/partners/msc.svg" alt="MSC"></div>
+                    <div class="partner-logo"><img src="assets/partners/irs-authorized.svg" alt="IRS Authorized"></div>
+                    <div class="partner-logo"><img src="assets/partners/florida-notary.svg" alt="Florida Notary"></div>
+                    <!-- Duplicated for seamless loop -->
                     <div class="partner-logo"><img src="assets/partners/royal-caribbean.svg" alt="Royal Caribbean"></div>
                     <div class="partner-logo"><img src="assets/partners/carnival.svg" alt="Carnival"></div>
                     <div class="partner-logo"><img src="assets/partners/norwegian.svg" alt="Norwegian"></div>
                     <div class="partner-logo"><img src="assets/partners/msc.svg" alt="MSC"></div>
+                    <div class="partner-logo"><img src="assets/partners/irs-authorized.svg" alt="IRS Authorized"></div>
+                    <div class="partner-logo"><img src="assets/partners/florida-notary.svg" alt="Florida Notary"></div>
                 </div>
             </div>
         </div>
@@ -692,6 +703,88 @@
                 const text = el.getAttribute(`data-${currentLang}`);
                 if (text) el.textContent = text;
             });
+        });
+    });
+    
+    // Custom cursor follower
+    const cursorDot = document.querySelector('.cursor-dot');
+    if (cursorDot && window.matchMedia('(pointer: fine)').matches) {
+        document.addEventListener('mousemove', (e) => {
+            gsap.to(cursorDot, {
+                x: e.clientX - 4,
+                y: e.clientY - 4,
+                duration: 0.15,
+                ease: 'power2.out'
+            });
+        });
+        // Expand on interactive elements
+        document.querySelectorAll('a, button, .travel-card, .service-card, .cuba-card, .faq-item summary').forEach(el => {
+            el.addEventListener('mouseenter', () => cursorDot.classList.add('expanded'));
+            el.addEventListener('mouseleave', () => cursorDot.classList.remove('expanded'));
+        });
+    } else if (cursorDot) {
+        cursorDot.style.display = 'none';
+    }
+    
+    // Parallax floating elements on sections
+    document.querySelectorAll('.section').forEach(section => {
+        gsap.to(section, {
+            scrollTrigger: {
+                trigger: section,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 1,
+            },
+            '--parallax-y': '40px',
+            ease: 'none'
+        });
+    });
+    
+    // Reveal animations for section titles
+    gsap.utils.toArray('.section-title').forEach(title => {
+        gsap.from(title, {
+            scrollTrigger: {
+                trigger: title,
+                start: 'top 85%',
+                once: true,
+            },
+            y: 60,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.out',
+        });
+    });
+    
+    // Stagger grid reveals
+    document.querySelectorAll('.services-grid, .cuba-grid').forEach(grid => {
+        ScrollTrigger.create({
+            trigger: grid,
+            start: 'top 80%',
+            once: true,
+            onEnter: () => grid.classList.add('stagger-in', 'in-view'),
+        });
+    });
+    
+    // Horizontal slide for travel cards
+    gsap.from('.travel-track', {
+        x: 200,
+        opacity: 0.5,
+        duration: 1.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.section-travel',
+            start: 'top 70%',
+            once: true,
+        }
+    });
+    
+    // FAQ accordion animation
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('toggle', () => {
+            const answer = item.querySelector('.faq-answer');
+            if (item.open) {
+                gsap.from(answer, { height: 0, opacity: 0, duration: 0.4, ease: 'power2.out' });
+            }
         });
     });
     
