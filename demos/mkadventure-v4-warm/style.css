@@ -569,8 +569,9 @@ button {
 }
 
 .question-content p {
-    color: var(--navy-mid);
+    color: var(--navy-deepest);
     font-size: 1.1rem;
+    opacity: 0.8;
 }
 
 /* ========================================
@@ -1197,6 +1198,82 @@ button {
         width: 100%;
         justify-content: center;
     }
+}
+
+/* ========================================
+   V4 WARM — Distinctive Identity
+   Warm gradients, soft glows, organic shapes
+   ======================================== */
+
+/* Warm glow on cream sections */
+.section-cream {
+    position: relative;
+}
+.section-cream::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(200, 150, 46, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+/* Warm underline accent on section titles */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+/* Service cards — warm hover glow */
+.service-card:hover {
+    border-bottom: 3px solid var(--gold);
+}
+
+/* Cuba cards — warm inner glow */
+.cuba-card:hover {
+    box-shadow: inset 0 0 30px rgba(200, 150, 46, 0.08), 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Travel cards — warm shadow on hover */
+.travel-card:hover {
+    box-shadow: 0 16px 48px rgba(200, 150, 46, 0.15), 0 8px 24px rgba(10, 14, 23, 0.1);
+}
+
+/* FAQ items — warm open state */
+.faq-item[open] {
+    background: linear-gradient(135deg, #FFFDF8 0%, white 100%);
+}
+
+/* CTA section — warm gradient overlay */
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at bottom center, rgba(200, 150, 46, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* Partners section — subtle warm divider */
+.certifications {
+    border-top-color: var(--cream-dark);
+}
+
+/* Warm scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-dark);
 }
 
 /* ========================================
