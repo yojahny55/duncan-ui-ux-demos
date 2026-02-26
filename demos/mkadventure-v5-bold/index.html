@@ -8,30 +8,10 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="style.css">
     <script src="lucide.min.js"></script>
-  <style>
-    /* Footer centering fix */
-    .footer .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .footer-grid, .footer-main, .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
-      text-align: left;
-    }
-    .footer-bottom {
-      text-align: center;
-      padding-top: 2rem;
-      margin-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-  </style>
 </head>
 <body>
     <!-- Skip Link -->
@@ -150,7 +130,7 @@
     <!-- Travel Section -->
     <section class="section section-travel" id="viajes">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <span class="section-number">01</span>
                 <h2 class="section-title t" data-es="Viajes" data-en="Travel">Viajes</h2>
                 <p class="section-subtitle t" data-es="Tu próxima aventura" data-en="Your next adventure">Tu próxima aventura</p>
@@ -209,7 +189,7 @@
     <!-- Cuba Section -->
     <section class="section section-cuba" id="cuba">
         <div class="container">
-            <div class="section-header section-header-light">
+            <div class="section-header section-header-light" data-aos="fade-up">
                 <span class="section-number">02</span>
                 <h2 class="section-title">Cuba</h2>
                 <p class="section-subtitle t" data-es="Conecta con tu familia" data-en="Connect with your family">Conecta con tu familia</p>
@@ -267,7 +247,7 @@
     <!-- Services Section -->
     <section class="section section-services" id="servicios">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <span class="section-number">03</span>
                 <h2 class="section-title t" data-es="Servicios" data-en="Services">Servicios</h2>
                 <p class="section-subtitle t" data-es="Todo en un lugar" data-en="All in one place">Todo en un lugar</p>
@@ -358,7 +338,7 @@
     <!-- Blog Section -->
     <section class="section section-blog" id="blog">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <span class="section-number">04</span>
                 <h2 class="section-title">Blog</h2>
                 <p class="section-subtitle t" data-es="Consejos de viaje" data-en="Travel tips">Consejos de viaje</p>
@@ -403,7 +383,7 @@
     <!-- FAQ Section -->
     <section class="section section-faq" id="faq">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <span class="section-number">05</span>
                 <h2 class="section-title">Preguntas Frecuentes</h2>
             </div>
@@ -536,6 +516,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
