@@ -1,9 +1,13 @@
 
 # Screenshots
 *.png
-_screenshots/
-*screenshot*
 *.jpg
 *.jpeg
+_screenshots/
 screenshots/
+
+# Dependencies
 node_modules/
+
+# Allow scripts
+!scripts/
