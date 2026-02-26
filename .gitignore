@@ -6,3 +6,4 @@ _screenshots/
 *.jpg
 *.jpeg
 screenshots/
+node_modules/
