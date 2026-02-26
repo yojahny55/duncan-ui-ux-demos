@@ -16,6 +16,8 @@
   <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     /* ============================================================
        IMPROVED HOMEPAGE - Full Rewrite
@@ -1164,6 +1166,16 @@
       transform: scale(1.1);
       box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
     }
+    /* Progressive Enhancement - Content always visible */
+    [data-aos] {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    .char {
+      opacity: 1 !important;
+      transform: none !important;
+    }
   </style>
 </head>
 <body>
@@ -1827,5 +1839,7 @@
       });
     }
   </script>
+  <script src="js/main.js"></script>
+  <script src="js/pages/home.js"></script>
 </body>
 </html>

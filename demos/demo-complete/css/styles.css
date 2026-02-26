@@ -1344,3 +1344,13 @@ body { padding-top: var(--header-height); }
   font-weight: 700;
   color: var(--gold-primary);
 }
+
+/* Progressive Enhancement - Content always visible */
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
