@@ -12,6 +12,7 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
   <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -137,19 +138,57 @@
     .btn--gold {
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
       color: var(--navy-deepest);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn--gold::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255,255,255,0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+    .btn--gold:hover::before {
+      width: 300px;
+      height: 300px;
     }
     .btn--gold:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(200, 150, 46, 0.4);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(200, 150, 46, 0.5), 0 0 20px rgba(200, 150, 46, 0.3);
+    }
+    .btn--gold:active {
+      transform: translateY(-1px) scale(0.98);
     }
     .btn--outline {
       background: transparent;
       border: 2px solid rgba(255,255,255,0.3);
       color: var(--text-light);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn--outline::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: -1;
+    }
+    .btn--outline:hover::before {
+      transform: scaleX(1);
     }
     .btn--outline:hover {
       border-color: var(--gold-primary);
-      color: var(--gold-primary);
+      color: var(--navy-deepest);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(200, 150, 46, 0.3);
     }
 
     /* ========== MOBILE HAMBURGER MENU ========== */
@@ -284,6 +323,29 @@
       z-index: 1;
       pointer-events: none;
     }
+    
+    /* Grain texture overlay for distinctive look */
+    .grain-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+    
+    /* Scroll progress bar */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+      z-index: 10000;
+      transition: width 0.1s linear;
+      box-shadow: 0 0 10px rgba(200, 150, 46, 0.5);
+    }
     .deco-circle {
       position: absolute;
       border-radius: 50%;
@@ -395,7 +457,45 @@
       50% { transform: translateX(-20px) translateY(-10px) rotate(0deg); }
     }
     @media (max-width: 1200px) {
-      .hero__float-cards { display: none; }
+      .hero__float-cards {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 32px;
+        padding: 0 24px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .hero__float-cards::-webkit-scrollbar { display: none; }
+      .hero__content {
+        padding-bottom: 40px;
+      }
+      .float-card {
+        flex-shrink: 0;
+        width: 160px;
+        height: 120px;
+        transform: none !important;
+        animation: none !important;
+        scroll-snap-align: center;
+      }
+      .float-card__label {
+        font-size: 0.65rem;
+        padding: 4px 10px;
+        bottom: 8px;
+        left: 8px;
+      }
+    }
+    @media (max-width: 640px) {
+      .float-card {
+        width: 140px;
+        height: 100px;
+      }
     }
     
     /* ========== HERO ========== */
@@ -422,10 +522,19 @@
       inset: 0;
       background: linear-gradient(
         135deg,
-        rgba(10, 14, 23, 0.92) 0%,
-        rgba(10, 14, 23, 0.8) 40%,
-        rgba(10, 14, 23, 0.6) 100%
+        rgba(10, 14, 23, 0.95) 0%,
+        rgba(10, 14, 23, 0.88) 40%,
+        rgba(10, 14, 23, 0.75) 100%
       );
+    }
+    /* Extra text protection layer */
+    .hero__content::before {
+      content: '';
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(ellipse at left, rgba(10, 14, 23, 0.6), transparent 70%);
+      z-index: -1;
+      pointer-events: none;
     }
     .hero__content {
       position: relative;
@@ -468,16 +577,19 @@
     .hero__title span.accent {
       color: var(--gold-primary);
       position: relative;
+      text-shadow: 0 0 40px rgba(200, 150, 46, 0.4);
     }
     .hero__title span.accent::after {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: -4px;
       left: 0;
       width: 0;
-      height: 3px;
-      background: var(--gold-primary);
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
       animation: underline-grow 1s cubic-bezier(0.4, 0, 0.2, 1) forwards 1.5s;
+      border-radius: 2px;
+      box-shadow: 0 2px 12px rgba(200, 150, 46, 0.5);
     }
     @keyframes char-reveal {
       to { transform: translateY(0); }
@@ -501,18 +613,28 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      background: rgba(255,255,255,0.1);
-      padding: 8px 16px;
+      background: rgba(10, 14, 23, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 10px 18px;
       border-radius: 50px;
       font-size: 0.85rem;
-      color: var(--text-muted-light);
+      font-weight: 500;
+      color: var(--text-light);
+      border: 1px solid rgba(200, 150, 46, 0.3);
+      transition: all 0.3s ease;
+    }
+    .hero__service-tag:hover {
+      background: rgba(200, 150, 46, 0.2);
+      border-color: var(--gold-primary);
+      transform: translateY(-2px);
     }
     .hero__service-tag::before {
       content: '';
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       background: var(--gold-primary);
       border-radius: 50%;
+      box-shadow: 0 0 8px rgba(200, 150, 46, 0.5);
     }
     .hero__ctas {
       display: flex;
@@ -695,13 +817,23 @@
       overflow: hidden;
       height: 400px;
       text-decoration: none;
-      transition: transform 0.4s ease;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid transparent;
     }
     .dest-card:hover {
-      transform: scale(1.02);
+      transform: translateY(-12px) scale(1.02);
+      border-color: var(--gold-primary);
+      box-shadow: 0 30px 60px rgba(200, 150, 46, 0.25), 0 0 0 1px rgba(200, 150, 46, 0.1);
     }
     .dest-card:hover .dest-card__img {
-      transform: scale(1.1);
+      transform: scale(1.15);
+    }
+    .dest-card:hover .dest-card__badge {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(200, 150, 46, 0.4);
+    }
+    .dest-card:hover .dest-card__price {
+      transform: scale(1.05);
     }
     .dest-card__img {
       position: absolute;
@@ -735,6 +867,7 @@
       padding: 4px 12px;
       border-radius: 50px;
       margin-bottom: 12px;
+      transition: all 0.3s ease;
     }
     .dest-card__name {
       font-family: 'Playfair Display', serif;
@@ -753,6 +886,8 @@
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--gold-primary);
+      transition: transform 0.3s ease;
+      display: inline-block;
     }
     .dest-card__price small {
       font-size: 0.8rem;
@@ -1032,6 +1167,11 @@
   </style>
 </head>
 <body>
+  <!-- Grain texture overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+  
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress" aria-hidden="true"></div>
 
   <!-- ========== HEADER ========== -->
   <header class="header" id="header">
@@ -1453,6 +1593,29 @@
   <!-- AOS Animation Library -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
+    // Initialize Lenis Smooth Scroll
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      smoothWheel: true
+    });
+    
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    
+    // Integrate Lenis with GSAP ScrollTrigger
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+      gsap.ticker.lagSmoothing(0);
+    }
+
     // Initialize AOS
     AOS.init({
       duration: 800,
@@ -1540,14 +1703,23 @@
       });
     }
 
-    // Header scroll effect
+    // Header scroll effect + scroll progress
     const header = document.getElementById('header');
+    const scrollProgress = document.querySelector('.scroll-progress');
+    
     window.addEventListener('scroll', () => {
+      // Header effect
       if (window.scrollY > 100) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
       }
+      
+      // Scroll progress bar
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
     });
     
     // Mobile Menu Toggle
@@ -1604,6 +1776,76 @@
             ease: 'power2.out'
           });
         });
+      });
+      
+      // Staggered reveal for destination cards
+      gsap.from('.dest-card', {
+        scrollTrigger: {
+          trigger: '.destinations__grid',
+          start: 'top 80%',
+          toggleActions: 'play none none none'
+        },
+        y: 80,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power3.out'
+      });
+      
+      // Why-us cards with rotation reveal
+      gsap.from('.why-card', {
+        scrollTrigger: {
+          trigger: '.why-us__grid',
+          start: 'top 80%',
+          toggleActions: 'play none none none'
+        },
+        y: 60,
+        rotateY: 15,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.1,
+        ease: 'power2.out'
+      });
+      
+      // Blog cards staggered reveal
+      gsap.from('.blog-card', {
+        scrollTrigger: {
+          trigger: '.blog__grid',
+          start: 'top 80%',
+          toggleActions: 'play none none none'
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.12,
+        ease: 'power2.out'
+      });
+      
+      // CTA section animation
+      gsap.from('.cta__title', {
+        scrollTrigger: {
+          trigger: '.cta',
+          start: 'top 80%',
+          toggleActions: 'play none none none'
+        },
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+      });
+      
+      gsap.from('.cta__actions > *', {
+        scrollTrigger: {
+          trigger: '.cta',
+          start: 'top 80%',
+          toggleActions: 'play none none none'
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        delay: 0.3,
+        ease: 'power2.out'
       });
     }
   </script>

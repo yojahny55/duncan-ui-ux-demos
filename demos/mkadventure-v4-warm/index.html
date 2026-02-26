@@ -8,20 +8,22 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animation Libraries -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js" defer></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
+    
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body>
     <!-- Skip Link -->
     <a href="#main" class="skip-link">Saltar al contenido</a>
-
-    <!-- Decorative Elements -->
-    <div class="bg-shapes" aria-hidden="true">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-    </div>
 
     <!-- Navigation -->
     <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -59,656 +61,448 @@
 
     <!-- Hero Section -->
     <header class="hero" id="main" role="banner">
-        <div class="hero-inner">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i data-lucide="map-pin"></i>
-                    Tampa, Florida
-                </div>
-                
-                <h1 class="hero-title">
-                    <span class="t" data-es="Conectamos" data-en="We Connect">Conectamos</span>
-                    <span class="hero-accent">Familias.</span>
-                    <span class="t" data-es="Creamos" data-en="We Create">Creamos</span>
-                    <span class="hero-accent">Aventuras.</span>
-                </h1>
-                
-                <p class="hero-sub">
-                    <span class="t" data-es="Más de 10 años sirviendo a la comunidad hispana con amor y dedicación. Cruceros, vuelos, envíos a Cuba, y todos los servicios que tu familia necesita." data-en="Over 10 years serving the Hispanic community with love and dedication. Cruises, flights, shipping to Cuba, and all the services your family needs.">Más de 10 años sirviendo a la comunidad hispana con amor y dedicación. Cruceros, vuelos, envíos a Cuba, y todos los servicios que tu familia necesita.</span>
-                </p>
-                
-                <div class="hero-actions">
-                    <a href="https://wa.me/19562172274" class="btn btn-primary">
-                        <i data-lucide="message-circle"></i>
-                        <span class="t" data-es="Escríbenos Ahora" data-en="Message Us Now">Escríbenos Ahora</span>
-                    </a>
-                    <a href="#viajes" class="btn btn-outline">
-                        <span class="t" data-es="Explorar Destinos" data-en="Explore Destinations">Explorar Destinos</span>
-                        <i data-lucide="arrow-down"></i>
-                    </a>
-                </div>
-                
-                <div class="hero-trust">
-                    <div class="trust-item">
-                        <strong>10+</strong>
-                        <span class="t" data-es="Años" data-en="Years">Años</span>
-                    </div>
-                    <div class="trust-divider"></div>
-                    <div class="trust-item">
-                        <strong>5K+</strong>
-                        <span class="t" data-es="Familias" data-en="Families">Familias</span>
-                    </div>
-                    <div class="trust-divider"></div>
-                    <div class="trust-item">
-                        <strong>100%</strong>
-                        <span class="t" data-es="Confianza" data-en="Trust">Confianza</span>
-                    </div>
-                </div>
+        <div class="hero-media">
+            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80" class="hero-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-cruise-ship-in-the-caribbean-4702-large.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+                <span class="badge-dot"></span>
+                Tampa, Florida
             </div>
             
-            <div class="hero-visual">
-                <div class="hero-image hero-image-main">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Tropical beach">
+            <h1 class="hero-title" data-splitting>
+                <span class="title-line" data-aos="fade-up" data-aos-delay="200">
+                    <span class="t" data-es="Conectamos" data-en="We Connect">Conectamos</span>
+                </span>
+                <span class="title-accent" data-aos="fade-up" data-aos-delay="300">Familias.</span>
+                <span class="title-line" data-aos="fade-up" data-aos-delay="400">
+                    <span class="t" data-es="Creamos" data-en="We Create">Creamos</span>
+                </span>
+                <span class="title-accent" data-aos="fade-up" data-aos-delay="500">Aventuras.</span>
+            </h1>
+            
+            <p class="hero-sub" data-aos="fade-up" data-aos-delay="600">
+                <span class="t" data-es="Más de 10 años sirviendo a la comunidad hispana con amor y dedicación. Cruceros, vuelos, envíos a Cuba, y todos los servicios que tu familia necesita." data-en="Over 10 years serving the Hispanic community with love and dedication. Cruises, flights, shipping to Cuba, and all the services your family needs.">Más de 10 años sirviendo a la comunidad hispana con amor y dedicación. Cruceros, vuelos, envíos a Cuba, y todos los servicios que tu familia necesita.</span>
+            </p>
+            
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="700">
+                <a href="https://wa.me/19562172274" class="btn btn-primary btn-glow">
+                    <i data-lucide="message-circle"></i>
+                    <span class="t" data-es="Escríbenos Ahora" data-en="Message Us Now">Escríbenos Ahora</span>
+                </a>
+                <a href="#viajes" class="btn btn-outline">
+                    <span class="t" data-es="Explorar Destinos" data-en="Explore Destinations">Explorar Destinos</span>
+                    <i data-lucide="arrow-down"></i>
+                </a>
+            </div>
+            
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
+                <div class="stat-item">
+                    <span class="stat-num" data-count="10">10+</span>
+                    <span class="stat-label t" data-es="Años" data-en="Years">Años</span>
                 </div>
-                <div class="hero-image hero-image-accent">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Cruise ship">
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-count="5000">5K+</span>
+                    <span class="stat-label t" data-es="Familias" data-en="Families">Familias</span>
                 </div>
-                <div class="hero-leaf" aria-hidden="true">
-                    <svg viewBox="0 0 100 100" fill="currentColor">
-                        <path d="M50 0C50 0 60 30 90 50C60 70 50 100 50 100C50 100 40 70 10 50C40 30 50 0 50 0Z"/>
-                    </svg>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">4.9★</span>
+                    <span class="stat-label">Google</span>
                 </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll" aria-hidden="true">
+            <div class="scroll-indicator">
+                <div class="scroll-wheel"></div>
             </div>
         </div>
     </header>
 
-    <!-- Booking Search Section -->
-    <section class="section section-booking" id="booking">
+    <!-- Question Banner -->
+    <section class="question-banner">
         <div class="container">
-            <div class="booking-search-card">
-                <div class="booking-search-header">
-                    <h3 class="t" data-es="¿A Dónde Quieres Ir?" data-en="Where Do You Want to Go?">¿A Dónde Quieres Ir?</h3>
-                    <p class="t" data-es="Cuéntanos tu viaje soñado y te damos la mejor cotización" data-en="Tell us your dream trip and we'll give you the best quote">Cuéntanos tu viaje soñado y te damos la mejor cotización</p>
-                </div>
-                <form class="booking-search-form">
-                    <div class="booking-field">
-                        <label class="t" data-es="Tipo de Viaje" data-en="Trip Type">Tipo de Viaje</label>
-                        <select>
-                            <option value="cruise" class="t" data-es="🚢 Crucero" data-en="🚢 Cruise">🚢 Crucero</option>
-                            <option value="flight" class="t" data-es="✈️ Vuelo" data-en="✈️ Flight">✈️ Vuelo</option>
-                            <option value="hotel" class="t" data-es="🏨 Hotel" data-en="🏨 Hotel">🏨 Hotel</option>
-                            <option value="package" class="t" data-es="📦 Paquete" data-en="📦 Package">📦 Paquete</option>
-                        </select>
-                    </div>
-                    <div class="booking-field">
-                        <label class="t" data-es="Destino" data-en="Destination">Destino</label>
-                        <input type="text" placeholder="Caribe, Cuba, México..." class="t" data-es-placeholder="Caribe, Cuba, México..." data-en-placeholder="Caribbean, Cuba, Mexico...">
-                    </div>
-                    <div class="booking-field booking-field-date">
-                        <label class="t" data-es="Fecha" data-en="Date">Fecha</label>
-                        <input type="date">
-                    </div>
-                    <div class="booking-field booking-field-travelers">
-                        <label class="t" data-es="Viajeros" data-en="Travelers">Viajeros</label>
-                        <select>
-                            <option>1</option>
-                            <option selected>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5+</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="booking-submit">
-                        <i data-lucide="search"></i>
-                        <span class="t" data-es="Cotizar Ahora" data-en="Get Quote">Cotizar Ahora</span>
-                    </button>
-                </form>
-            </div>
-            
-            <div class="booking-cards">
-                <a href="tel:+18133751532" class="booking-card">
-                    <div class="booking-icon">
-                        <i data-lucide="phone-call"></i>
-                    </div>
-                    <div class="booking-text">
-                        <h3 class="t" data-es="Llámanos" data-en="Call Us">Llámanos</h3>
-                        <p>(813) 375-1532</p>
-                    </div>
-                </a>
-                
-                <a href="https://wa.me/19562172274" class="booking-card booking-whatsapp">
-                    <div class="booking-icon">
-                        <i data-lucide="message-circle"></i>
-                    </div>
-                    <div class="booking-text">
-                        <h3>WhatsApp</h3>
-                        <p>+1 (956) 217-2274</p>
-                    </div>
-                </a>
-                
-                <a href="mailto:info@mkadventure.com" class="booking-card">
-                    <div class="booking-icon">
-                        <i data-lucide="mail"></i>
-                    </div>
-                    <div class="booking-text">
-                        <h3>Email</h3>
-                        <p>info@mkadventure.com</p>
-                    </div>
-                </a>
+            <div class="question-content" data-aos="fade-up">
+                <h2 class="t" data-es="¿A Dónde Quieres Ir?" data-en="Where Do You Want To Go?">¿A Dónde Quieres Ir?</h2>
+                <p class="t" data-es="Te ayudamos a planificar tu próxima aventura" data-en="We help you plan your next adventure">Te ayudamos a planificar tu próxima aventura</p>
             </div>
         </div>
     </section>
 
     <!-- Travel Section -->
-    <section class="section section-travel" id="viajes">
+    <section class="section section-cream" id="viajes">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label t" data-es="Viajes" data-en="Travel">Viajes</span>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">✈️ Viajes</span>
                 <h2 class="section-title t" data-es="Tu Próxima Aventura Te Espera" data-en="Your Next Adventure Awaits">Tu Próxima Aventura Te Espera</h2>
-                <p class="section-desc t" data-es="Descubre destinos increíbles con precios que se ajustan a tu bolsillo" data-en="Discover incredible destinations with prices that fit your budget">Descubre destinos increíbles con precios que se ajustan a tu bolsillo</p>
             </div>
-            
+
             <div class="travel-grid">
-                <article class="travel-card travel-card-featured">
-                    <div class="travel-image">
-                        <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=900&q=80" alt="Caribbean Cruise" loading="lazy">
-                        <span class="travel-badge t" data-es="Más Popular" data-en="Most Popular">Más Popular</span>
+                <!-- Main Card: Cruises -->
+                <a href="https://wa.me/19562172274?text=Cruceros" class="travel-card travel-card-featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=800&q=80" alt="Crucero al Caribe" loading="lazy">
+                        <div class="card-overlay"></div>
                     </div>
-                    <div class="travel-content">
-                        <h3 class="t" data-es="Cruceros al Caribe" data-en="Caribbean Cruises">Cruceros al Caribe</h3>
-                        <p class="t" data-es="Navega por aguas cristalinas con Royal Caribbean, Carnival, MSC y más. Destinos inolvidables para toda la familia." data-en="Sail through crystal waters with Royal Caribbean, Carnival, MSC and more. Unforgettable destinations for the whole family.">Navega por aguas cristalinas con Royal Caribbean, Carnival, MSC y más. Destinos inolvidables para toda la familia.</p>
-                        <div class="travel-footer">
-                            <div class="travel-price">
-                                <span class="t" data-es="Desde" data-en="From">Desde</span>
-                                <strong>$299</strong>
-                            </div>
-                            <span class="travel-link t" data-es="Ver ofertas →" data-en="See offers →">Ver ofertas →</span>
+                    <div class="card-content">
+                        <span class="card-tag">Popular</span>
+                        <h3>Cruceros al Caribe</h3>
+                        <p class="t" data-es="Royal Caribbean, Carnival, MSC. Salidas desde Miami y Tampa." data-en="Royal Caribbean, Carnival, MSC. Departures from Miami and Tampa.">Royal Caribbean, Carnival, MSC. Salidas desde Miami y Tampa.</p>
+                        <div class="card-footer">
+                            <span class="card-price t" data-es="Desde" data-en="From">Desde <strong>$299</strong></span>
+                            <span class="card-cta">Ver Cruceros <i data-lucide="arrow-right"></i></span>
                         </div>
                     </div>
-                </article>
-                
-                <article class="travel-card">
-                    <div class="travel-image">
-                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80" alt="Flights" loading="lazy">
+                </a>
+
+                <!-- Secondary Cards -->
+                <a href="https://wa.me/19562172274?text=Vuelos" class="travel-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80" alt="Vuelos" loading="lazy">
+                        <div class="card-overlay"></div>
                     </div>
-                    <div class="travel-content">
-                        <h3 class="t" data-es="Vuelos" data-en="Flights">Vuelos</h3>
-                        <p class="t" data-es="Nacionales e internacionales a los mejores precios" data-en="Domestic and international at the best prices">Nacionales e internacionales a los mejores precios</p>
-                        <span class="travel-link t" data-es="Cotizar →" data-en="Get Quote →">Cotizar →</span>
+                    <div class="card-content">
+                        <h3>Vuelos</h3>
+                        <p class="t" data-es="Nacionales e internacionales" data-en="Domestic and international">Nacionales e internacionales</p>
                     </div>
-                </article>
-                
-                <article class="travel-card">
-                    <div class="travel-image">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Hotels" loading="lazy">
+                </a>
+
+                <a href="https://wa.me/19562172274?text=Paquetes" class="travel-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80" alt="Paquetes" loading="lazy">
+                        <div class="card-overlay"></div>
                     </div>
-                    <div class="travel-content">
-                        <h3 class="t" data-es="Hoteles" data-en="Hotels">Hoteles</h3>
-                        <p class="t" data-es="Reservas en todo el mundo" data-en="Worldwide bookings">Reservas en todo el mundo</p>
-                        <span class="travel-link t" data-es="Buscar →" data-en="Search →">Buscar →</span>
+                    <div class="card-content">
+                        <h3>Paquetes</h3>
+                        <p class="t" data-es="Todo incluido con planes de pago" data-en="All-inclusive with payment plans">Todo incluido con planes de pago</p>
                     </div>
-                </article>
-                
-                <article class="travel-card">
-                    <div class="travel-image">
-                        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Vacation Packages" loading="lazy">
-                        <span class="travel-badge travel-badge-gold t" data-es="Todo Incluido" data-en="All Inclusive">Todo Incluido</span>
+                </a>
+
+                <a href="https://wa.me/19562172274?text=Hoteles" class="travel-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Hoteles" loading="lazy">
+                        <div class="card-overlay"></div>
                     </div>
-                    <div class="travel-content">
-                        <h3 class="t" data-es="Paquetes Vacacionales" data-en="Vacation Packages">Paquetes Vacacionales</h3>
-                        <p class="t" data-es="Cancún, Punta Cana, y más destinos" data-en="Cancun, Punta Cana, and more destinations">Cancún, Punta Cana, y más destinos</p>
-                        <span class="travel-link t" data-es="Explorar →" data-en="Explore →">Explorar →</span>
+                    <div class="card-content">
+                        <h3>Hoteles</h3>
+                        <p class="t" data-es="Mejores precios garantizados" data-en="Best prices guaranteed">Mejores precios garantizados</p>
                     </div>
-                </article>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Cuba Section -->
-    <section class="section section-cuba" id="cuba">
+    <section class="section section-dark" id="cuba">
         <div class="container">
-            <div class="cuba-layout">
-                <div class="cuba-header">
-                    <span class="section-label">Cuba</span>
-                    <h2 class="section-title t" data-es="Conecta con Tu Familia en Cuba" data-en="Connect with Your Family in Cuba">Conecta con Tu Familia en Cuba</h2>
-                    <p class="section-desc t" data-es="Servicios confiables y seguros para mantener a tu familia cerca, sin importar la distancia" data-en="Reliable and secure services to keep your family close, no matter the distance">Servicios confiables y seguros para mantener a tu familia cerca, sin importar la distancia</p>
+            <div class="section-header section-header-light" data-aos="fade-up">
+                <span class="section-tag section-tag-gold">🇨🇺 Cuba</span>
+                <h2 class="section-title t" data-es="Conecta con Tu Familia en Cuba" data-en="Connect with Your Family in Cuba">Conecta con Tu Familia en Cuba</h2>
+                <p class="section-sub t" data-es="Los mejores precios y servicios para envíos a Cuba" data-en="The best prices and services for shipping to Cuba">Los mejores precios y servicios para envíos a Cuba</p>
+            </div>
+
+            <div class="cuba-grid">
+                <div class="cuba-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cuba-icon">
+                        <i data-lucide="banknote"></i>
+                    </div>
+                    <h3>Envío de Dinero</h3>
+                    <p class="t" data-es="Remesas rápidas y seguras. Tu familia recibe el dinero en 24-48 horas." data-en="Fast and secure remittances. Your family receives the money in 24-48 hours.">Remesas rápidas y seguras. Tu familia recibe el dinero en 24-48 horas.</p>
+                    <ul class="cuba-list">
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Mejores tasas de cambio" data-en="Best exchange rates">Mejores tasas de cambio</span></li>
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Entrega garantizada" data-en="Guaranteed delivery">Entrega garantizada</span></li>
+                        <li><i data-lucide="check"></i> <span class="t" data-es="Sin comisiones ocultas" data-en="No hidden fees">Sin comisiones ocultas</span></li>
+                    </ul>
                 </div>
-                
-                <div class="cuba-grid">
-                    <div class="cuba-card cuba-card-main">
-                        <div class="cuba-card-inner">
-                            <div class="cuba-icon">
-                                <i data-lucide="banknote"></i>
-                            </div>
-                            <h3 class="t" data-es="Envío de Dinero" data-en="Money Transfers">Envío de Dinero</h3>
-                            <p class="t" data-es="Remesas rápidas y seguras. Tu familia recibe en 24-48 horas con las mejores tasas del mercado." data-en="Fast and secure remittances. Your family receives in 24-48 hours with the best market rates.">Remesas rápidas y seguras. Tu familia recibe en 24-48 horas con las mejores tasas del mercado.</p>
-                            <ul class="cuba-features">
-                                <li><i data-lucide="check-circle"></i> <span class="t" data-es="Sin comisiones ocultas" data-en="No hidden fees">Sin comisiones ocultas</span></li>
-                                <li><i data-lucide="check-circle"></i> <span class="t" data-es="Tasa competitiva" data-en="Competitive rates">Tasa competitiva</span></li>
-                                <li><i data-lucide="check-circle"></i> <span class="t" data-es="Entrega garantizada" data-en="Guaranteed delivery">Entrega garantizada</span></li>
-                            </ul>
-                        </div>
+
+                <div class="cuba-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cuba-icon">
+                        <i data-lucide="package"></i>
                     </div>
-                    
-                    <div class="cuba-card">
-                        <div class="cuba-icon">
-                            <i data-lucide="package"></i>
-                        </div>
-                        <h3 class="t" data-es="Paquetería" data-en="Packages">Paquetería</h3>
-                        <p class="t" data-es="Envíos puerta a puerta a toda Cuba" data-en="Door-to-door shipping to all Cuba">Envíos puerta a puerta a toda Cuba</p>
-                    </div>
-                    
-                    <div class="cuba-card">
-                        <div class="cuba-icon">
-                            <i data-lucide="shopping-basket"></i>
-                        </div>
-                        <h3 class="t" data-es="Combos" data-en="Combos">Combos</h3>
-                        <p class="t" data-es="Alimentos y productos esenciales" data-en="Food and essential products">Alimentos y productos esenciales</p>
-                    </div>
-                    
-                    <div class="cuba-card">
-                        <div class="cuba-icon">
-                            <i data-lucide="smartphone"></i>
-                        </div>
-                        <h3 class="t" data-es="Recargas" data-en="Top-ups">Recargas</h3>
-                        <p class="t" data-es="Nauta y móvil al instante" data-en="Instant Nauta & mobile">Nauta y móvil al instante</p>
-                    </div>
-                    
-                    <div class="cuba-card">
-                        <div class="cuba-icon">
-                            <i data-lucide="plane"></i>
-                        </div>
-                        <h3 class="t" data-es="Vuelos a Cuba" data-en="Flights to Cuba">Vuelos a Cuba</h3>
-                        <p class="t" data-es="Los mejores precios garantizados" data-en="Best prices guaranteed">Los mejores precios garantizados</p>
-                    </div>
+                    <h3>Paquetería</h3>
+                    <p class="t" data-es="Envía medicinas, ropa, comida y más a toda Cuba." data-en="Send medicine, clothes, food and more to all of Cuba.">Envía medicinas, ropa, comida y más a toda Cuba.</p>
                 </div>
+
+                <div class="cuba-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cuba-icon">
+                        <i data-lucide="shopping-bag"></i>
+                    </div>
+                    <h3>Combos</h3>
+                    <p class="t" data-es="Combos de comida y productos con entrega a domicilio." data-en="Food and product combos with home delivery.">Combos de comida y productos con entrega a domicilio.</p>
+                </div>
+
+                <div class="cuba-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cuba-icon">
+                        <i data-lucide="phone-call"></i>
+                    </div>
+                    <h3>Recargas</h3>
+                    <p class="t" data-es="Recargas Cubacel instantáneas. Mantén conectada a tu familia." data-en="Instant Cubacel recharges. Keep your family connected.">Recargas Cubacel instantáneas. Mantén conectada a tu familia.</p>
+                </div>
+
+                <div class="cuba-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="cuba-icon">
+                        <i data-lucide="plane"></i>
+                    </div>
+                    <h3>Viajes a Cuba</h3>
+                    <p class="t" data-es="Vuelos charter y comerciales. Visas y documentación." data-en="Charter and commercial flights. Visas and documentation.">Vuelos charter y comerciales. Visas y documentación.</p>
+                </div>
+            </div>
+
+            <div class="cuba-cta" data-aos="fade-up" data-aos-delay="600">
+                <a href="https://wa.me/19562172274?text=Cuba" class="btn btn-gold btn-glow">
+                    <i data-lucide="message-circle"></i>
+                    <span class="t" data-es="Consultar Precios Cuba" data-en="Check Cuba Prices">Consultar Precios Cuba</span>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="section section-services" id="servicios">
+    <section class="section section-cream" id="servicios">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label t" data-es="Servicios" data-en="Services">Servicios</span>
-                <h2 class="section-title t" data-es="Todo lo que Necesitas en Un Lugar" data-en="Everything You Need in One Place">Todo lo que Necesitas en Un Lugar</h2>
-                <p class="section-desc t" data-es="Servicios profesionales para nuestra comunidad hispana" data-en="Professional services for our Hispanic community">Servicios profesionales para nuestra comunidad hispana</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">💼 Servicios</span>
+                <h2 class="section-title t" data-es="Todo lo que Necesitas" data-en="Everything You Need">Todo lo que Necesitas</h2>
+                <p class="section-sub t" data-es="Servicios profesionales para nuestra comunidad" data-en="Professional services for our community">Servicios profesionales para nuestra comunidad</p>
             </div>
-            
+
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon">
                         <i data-lucide="calculator"></i>
                     </div>
-                    <h3 class="t" data-es="Taxes" data-en="Taxes">Taxes</h3>
-                    <p class="t" data-es="Declaración de impuestos personal y de negocios con expertos certificados" data-en="Personal and business tax filing with certified experts">Declaración de impuestos personal y de negocios con expertos certificados</p>
+                    <h3>Taxes</h3>
+                    <p class="t" data-es="Preparación de impuestos personales y de negocios. Máximo reembolso garantizado." data-en="Personal and business tax preparation. Maximum refund guaranteed.">Preparación de impuestos personales y de negocios. Máximo reembolso garantizado.</p>
                 </div>
-                
-                <div class="service-card">
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon">
                         <i data-lucide="stamp"></i>
                     </div>
-                    <h3 class="t" data-es="Notaría" data-en="Notary">Notaría</h3>
-                    <p class="t" data-es="Servicios notariales certificados para todos tus documentos" data-en="Certified notary services for all your documents">Servicios notariales certificados para todos tus documentos</p>
+                    <h3>Notaría</h3>
+                    <p class="t" data-es="Servicios notariales en español. Poderes, affidavits, certificaciones." data-en="Notary services in Spanish. Powers of attorney, affidavits, certifications.">Servicios notariales en español. Poderes, affidavits, certificaciones.</p>
                 </div>
-                
-                <div class="service-card">
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon">
-                        <i data-lucide="building"></i>
+                        <i data-lucide="building-2"></i>
                     </div>
-                    <h3 class="t" data-es="LLC & Corp" data-en="LLC & Corp">LLC & Corp</h3>
-                    <p class="t" data-es="Formación de empresas en Florida de manera rápida y sencilla" data-en="Quick and easy business formation in Florida">Formación de empresas en Florida de manera rápida y sencilla</p>
+                    <h3>LLC & Corp</h3>
+                    <p class="t" data-es="Formación de empresas. LLC, Corporaciones, registros estatales." data-en="Business formation. LLC, Corporations, state registrations.">Formación de empresas. LLC, Corporaciones, registros estatales.</p>
                 </div>
-                
-                <div class="service-card">
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon">
                         <i data-lucide="file-text"></i>
                     </div>
-                    <h3 class="t" data-es="Traducciones" data-en="Translations">Traducciones</h3>
-                    <p class="t" data-es="Documentos oficiales certificados con validez legal" data-en="Certified official documents with legal validity">Documentos oficiales certificados con validez legal</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="shield-check"></i>
-                    </div>
-                    <h3 class="t" data-es="Seguros" data-en="Insurance">Seguros</h3>
-                    <p class="t" data-es="Auto, vida, salud y más. Protege lo que más quieres" data-en="Auto, life, health and more. Protect what you love most">Auto, vida, salud y más. Protege lo que más quieres</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="users"></i>
-                    </div>
-                    <h3 class="t" data-es="Inmigración" data-en="Immigration">Inmigración</h3>
-                    <p class="t" data-es="Asesoría y trámites migratorios con profesionales" data-en="Immigration advice and procedures with professionals">Asesoría y trámites migratorios con profesionales</p>
+                    <h3>Inmigración</h3>
+                    <p class="t" data-es="Ayuda con formularios y documentos de inmigración." data-en="Help with immigration forms and documents.">Ayuda con formularios y documentos de inmigración.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Partners Section -->
-    <section class="section section-partners" id="partners">
+    <section class="section" id="partners">
         <div class="container">
-            <div class="section-header section-header-sm">
-                <span class="section-label t" data-es="Partners" data-en="Partners">Partners</span>
+            <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title t" data-es="Trabajamos con los Mejores" data-en="We Work with the Best">Trabajamos con los Mejores</h2>
             </div>
-            
-            <div class="partners-wrapper">
-                <div class="partners-row">
-                    <div class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Royal_Caribbean_International_logo.svg/320px-Royal_Caribbean_International_logo.svg.png" alt="Royal Caribbean">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Carnival_Cruise_Line_Logo.svg/320px-Carnival_Cruise_Line_Logo.svg.png" alt="Carnival">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Norwegian_Cruise_Line_logo.svg/320px-Norwegian_Cruise_Line_logo.svg.png" alt="Norwegian">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/MSC_Cruises_Logo.svg/320px-MSC_Cruises_Logo.svg.png" alt="MSC">
-                    </div>
-                </div>
+            <div class="partners-row" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Royal_Caribbean_International_logo.svg/320px-Royal_Caribbean_International_logo.svg.png" alt="Royal Caribbean" loading="lazy">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Carnival_Cruise_Line_Logo.svg/320px-Carnival_Cruise_Line_Logo.svg.png" alt="Carnival" loading="lazy">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/MSC_Cruises_%28logo%29.svg/320px-MSC_Cruises_%28logo%29.svg.png" alt="MSC" loading="lazy">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Norwegian_Cruise_Line_logo.svg/320px-Norwegian_Cruise_Line_logo.svg.png" alt="Norwegian" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section section-testimonials" id="testimonials">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label t" data-es="Testimonios" data-en="Testimonials">Testimonios</span>
-                <h2 class="section-title t" data-es="Lo Que Dicen Nuestras Familias" data-en="What Our Families Say">Lo Que Dicen Nuestras Familias</h2>
-                <p class="section-desc t" data-es="Miles de familias confían en nosotros para sus viajes y servicios" data-en="Thousands of families trust us for their travel and services">Miles de familias confían en nosotros para sus viajes y servicios</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <article class="testimonial-card testimonial-featured">
-                    <div class="testimonial-rating">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                    </div>
-                    <blockquote class="t" data-es="Increíble servicio desde el primer momento. Maribel nos ayudó a planificar el crucero perfecto para nuestra familia. Los niños todavía hablan del viaje. ¡100% recomendados!" data-en="Incredible service from the first moment. Maribel helped us plan the perfect cruise for our family. The kids still talk about the trip. 100% recommended!">"Increíble servicio desde el primer momento. Maribel nos ayudó a planificar el crucero perfecto para nuestra familia. Los niños todavía hablan del viaje. ¡100% recomendados!"</blockquote>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Maria G." loading="lazy">
-                        </div>
-                        <div class="testimonial-info">
-                            <strong>María González</strong>
-                            <span class="t" data-es="Crucero Royal Caribbean" data-en="Royal Caribbean Cruise">Crucero Royal Caribbean</span>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                    </div>
-                    <blockquote class="t" data-es="Las remesas llegan rapidísimo. Mi mamá en Cuba siempre recibe el dinero al día siguiente. Muy confiables." data-en="Remittances arrive super fast. My mom in Cuba always receives the money the next day. Very reliable.">"Las remesas llegan rapidísimo. Mi mamá en Cuba siempre recibe el dinero al día siguiente. Muy confiables."</blockquote>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Carlos R." loading="lazy">
-                        </div>
-                        <div class="testimonial-info">
-                            <strong>Carlos Rodríguez</strong>
-                            <span class="t" data-es="Envíos a Cuba" data-en="Cuba Remittances">Envíos a Cuba</span>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                    </div>
-                    <blockquote class="t" data-es="Me ayudaron con mis taxes y la formación de mi LLC. Todo súper profesional y en español. ¡Gracias MK Adventure!" data-en="They helped me with my taxes and LLC formation. Everything super professional and in Spanish. Thanks MK Adventure!">"Me ayudaron con mis taxes y la formación de mi LLC. Todo súper profesional y en español. ¡Gracias MK Adventure!"</blockquote>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Ana M." loading="lazy">
-                        </div>
-                        <div class="testimonial-info">
-                            <strong>Ana Martínez</strong>
-                            <span class="t" data-es="Taxes & LLC" data-en="Taxes & LLC">Taxes & LLC</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="testimonials-cta">
-                <a href="https://wa.me/19562172274" class="btn btn-primary">
-                    <i data-lucide="message-circle"></i>
-                    <span class="t" data-es="Únete a Nuestras Familias Felices" data-en="Join Our Happy Families">Únete a Nuestras Familias Felices</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section class="section section-blog" id="blog">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Blog</span>
-                <h2 class="section-title t" data-es="Consejos de Viaje" data-en="Travel Tips">Consejos de Viaje</h2>
-            </div>
-            
-            <div class="blog-grid">
-                <article class="blog-card blog-card-featured">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&q=80" alt="Cruise tips" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-meta">Feb 2026</span>
-                        <h3 class="t" data-es="5 Tips para Tu Primer Crucero en Familia" data-en="5 Tips for Your First Family Cruise">5 Tips para Tu Primer Crucero en Familia</h3>
-                        <p class="t" data-es="Todo lo que necesitas saber antes de zarpar. Desde qué empacar hasta cómo aprovechar cada momento a bordo." data-en="Everything you need to know before setting sail. From what to pack to how to make the most of every moment on board.">Todo lo que necesitas saber antes de zarpar. Desde qué empacar hasta cómo aprovechar cada momento a bordo.</p>
-                        <span class="blog-link t" data-es="Leer artículo →" data-en="Read article →">Leer artículo →</span>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80" alt="Beach" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-meta">Ene 2026</span>
-                        <h3 class="t" data-es="Las Mejores Playas del Caribe" data-en="The Best Caribbean Beaches">Las Mejores Playas del Caribe</h3>
-                        <span class="blog-link t" data-es="Leer →" data-en="Read →">Leer →</span>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&q=80" alt="Havana" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-meta">Dic 2025</span>
-                        <h3 class="t" data-es="Guía Completa: Viajar a Cuba" data-en="Complete Guide: Travel to Cuba">Guía Completa: Viajar a Cuba</h3>
-                        <span class="blog-link t" data-es="Leer →" data-en="Read →">Leer →</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section section-faq" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">FAQ</span>
-                <h2 class="section-title t" data-es="Preguntas Frecuentes" data-en="Frequently Asked Questions">Preguntas Frecuentes</h2>
-            </div>
-            
-            <div class="faq-wrapper">
-                <details class="faq-item">
-                    <summary>
-                        <span class="t" data-es="¿Cómo puedo reservar un crucero?" data-en="How can I book a cruise?">¿Cómo puedo reservar un crucero?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </summary>
-                    <div class="faq-content">
-                        <p class="t" data-es="¡Es muy fácil! Puedes llamarnos al (813) 375-1532, escribirnos por WhatsApp al +1 (956) 217-2274, o visitarnos en nuestra oficina. Te ayudamos a encontrar el crucero perfecto para tu presupuesto y preferencias." data-en="It's very easy! You can call us at (813) 375-1532, message us on WhatsApp at +1 (956) 217-2274, or visit our office. We help you find the perfect cruise for your budget and preferences.">¡Es muy fácil! Puedes llamarnos al (813) 375-1532, escribirnos por WhatsApp al +1 (956) 217-2274, o visitarnos en nuestra oficina. Te ayudamos a encontrar el crucero perfecto para tu presupuesto y preferencias.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary>
-                        <span class="t" data-es="¿Cuánto tarda una remesa a Cuba?" data-en="How long does a remittance to Cuba take?">¿Cuánto tarda una remesa a Cuba?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </summary>
-                    <div class="faq-content">
-                        <p class="t" data-es="Las remesas normalmente llegan en 24 a 48 horas. Ofrecemos las mejores tasas del mercado y sin comisiones ocultas. Tu familia recibe el dinero de forma segura y rápida." data-en="Remittances normally arrive within 24 to 48 hours. We offer the best market rates with no hidden fees. Your family receives the money safely and quickly.">Las remesas normalmente llegan en 24 a 48 horas. Ofrecemos las mejores tasas del mercado y sin comisiones ocultas. Tu familia recibe el dinero de forma segura y rápida.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary>
-                        <span class="t" data-es="¿Qué documentos necesito para formar una LLC?" data-en="What documents do I need to form an LLC?">¿Qué documentos necesito para formar una LLC?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </summary>
-                    <div class="faq-content">
-                        <p class="t" data-es="Solo necesitas una identificación válida (pasaporte o ID). Nosotros nos encargamos de todo el proceso de registro en Florida, incluyendo Articles of Organization y EIN si lo necesitas." data-en="You only need a valid ID (passport or ID). We take care of the entire registration process in Florida, including Articles of Organization and EIN if you need it.">Solo necesitas una identificación válida (pasaporte o ID). Nosotros nos encargamos de todo el proceso de registro en Florida, incluyendo Articles of Organization y EIN si lo necesitas.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary>
-                        <span class="t" data-es="¿Ofrecen planes de pago para viajes?" data-en="Do you offer payment plans for trips?">¿Ofrecen planes de pago para viajes?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </summary>
-                    <div class="faq-content">
-                        <p class="t" data-es="¡Sí! Entendemos que planificar un viaje requiere preparación. Ofrecemos planes de pago flexibles para que puedas reservar tu viaje hoy y pagar cómodamente en cuotas." data-en="Yes! We understand that planning a trip requires preparation. We offer flexible payment plans so you can book your trip today and pay comfortably in installments.">¡Sí! Entendemos que planificar un viaje requiere preparación. Ofrecemos planes de pago flexibles para que puedas reservar tu viaje hoy y pagar cómodamente en cuotas.</p>
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section section-contact" id="contact">
-        <div class="container">
-            <div class="contact-layout">
-                <div class="contact-content">
-                    <span class="section-label t" data-es="Contacto" data-en="Contact">Contacto</span>
-                    <h2 class="section-title t" data-es="¿Listo para Tu Próxima Aventura?" data-en="Ready for Your Next Adventure?">¿Listo para Tu Próxima Aventura?</h2>
-                    <p class="t" data-es="Contáctanos hoy y déjanos ayudarte a planificar el viaje de tus sueños. Estamos aquí para ti y tu familia." data-en="Contact us today and let us help you plan the trip of your dreams. We're here for you and your family.">Contáctanos hoy y déjanos ayudarte a planificar el viaje de tus sueños. Estamos aquí para ti y tu familia.</p>
-                    
-                    <div class="contact-buttons">
-                        <a href="https://wa.me/19562172274" class="btn btn-primary btn-lg">
-                            <i data-lucide="message-circle"></i>
-                            <span>WhatsApp</span>
-                        </a>
-                        <a href="tel:+18133751532" class="btn btn-outline btn-lg">
-                            <i data-lucide="phone"></i>
-                            <span>(813) 375-1532</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i data-lucide="map-pin"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4 class="t" data-es="Ubicación" data-en="Location">Ubicación</h4>
-                            <p>Tampa, FL</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i data-lucide="clock"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4 class="t" data-es="Horario" data-en="Hours">Horario</h4>
-                            <p class="t" data-es="Lun - Sáb: 9am - 6pm" data-en="Mon - Sat: 9am - 6pm">Lun - Sáb: 9am - 6pm</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i data-lucide="mail"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Email</h4>
-                            <p>info@mkadventure.com</p>
-                        </div>
-                    </div>
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="t" data-es="¿Listo para tu Próxima Aventura?" data-en="Ready for Your Next Adventure?">¿Listo para tu Próxima Aventura?</h2>
+                <p class="t" data-es="Contáctanos hoy y empieza a planificar el viaje de tus sueños" data-en="Contact us today and start planning the trip of your dreams">Contáctanos hoy y empieza a planificar el viaje de tus sueños</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/19562172274" class="btn btn-primary btn-lg btn-glow">
+                        <i data-lucide="message-circle"></i>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+18133751532" class="btn btn-outline btn-lg">
+                        <i data-lucide="phone"></i>
+                        (813) 375-1532
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="logo.webp" alt="MK Adventure" class="footer-logo" width="160" height="53">
-                    <p class="t" data-es="Conectando familias, creando aventuras desde 2014. Tu agencia de confianza en Tampa." data-en="Connecting families, creating adventures since 2014. Your trusted agency in Tampa.">Conectando familias, creando aventuras desde 2014. Tu agencia de confianza en Tampa.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                        <a href="#" aria-label="TikTok"><i data-lucide="music-2"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h4 class="t" data-es="Viajes" data-en="Travel">Viajes</h4>
-                    <a href="#viajes">Cruceros</a>
-                    <a href="#viajes">Vuelos</a>
-                    <a href="#viajes">Hoteles</a>
-                    <a href="#viajes">Paquetes</a>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Cuba</h4>
-                    <a href="#cuba" class="t" data-es="Remesas" data-en="Remittances">Remesas</a>
-                    <a href="#cuba" class="t" data-es="Paquetería" data-en="Packages">Paquetería</a>
-                    <a href="#cuba">Combos</a>
-                    <a href="#cuba" class="t" data-es="Recargas" data-en="Top-ups">Recargas</a>
+                    <img src="logo.webp" alt="MK Adventure" width="140" height="46">
+                    <p class="t" data-es="Tu agencia de confianza en Tampa, FL. Más de 10 años sirviendo a nuestra comunidad." data-en="Your trusted agency in Tampa, FL. Over 10 years serving our community.">Tu agencia de confianza en Tampa, FL. Más de 10 años sirviendo a nuestra comunidad.</p>
                 </div>
                 
                 <div class="footer-links">
                     <h4 class="t" data-es="Servicios" data-en="Services">Servicios</h4>
+                    <a href="#viajes">Viajes</a>
+                    <a href="#cuba">Cuba</a>
                     <a href="#servicios">Taxes</a>
-                    <a href="#servicios" class="t" data-es="Notaría" data-en="Notary">Notaría</a>
-                    <a href="#servicios">LLC</a>
-                    <a href="#servicios" class="t" data-es="Seguros" data-en="Insurance">Seguros</a>
+                    <a href="#servicios">Notaría</a>
                 </div>
                 
-                <div class="footer-contact">
+                <div class="footer-links">
                     <h4 class="t" data-es="Contacto" data-en="Contact">Contacto</h4>
-                    <a href="tel:+18133751532">
-                        <i data-lucide="phone"></i>
-                        (813) 375-1532
-                    </a>
-                    <a href="https://wa.me/19562172274">
-                        <i data-lucide="message-circle"></i>
-                        +1 (956) 217-2274
-                    </a>
-                    <a href="mailto:info@mkadventure.com">
-                        <i data-lucide="mail"></i>
-                        info@mkadventure.com
-                    </a>
+                    <a href="tel:+18133751532">(813) 375-1532</a>
+                    <a href="mailto:info@mkadventure.com">info@mkadventure.com</a>
+                    <a href="https://wa.me/19562172274">WhatsApp</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="t" data-es="Horario" data-en="Hours">Horario</h4>
+                    <p class="t" data-es="Lun - Vie: 9am - 6pm" data-en="Mon - Fri: 9am - 6pm">Lun - Vie: 9am - 6pm</p>
+                    <p class="t" data-es="Sáb: 10am - 4pm" data-en="Sat: 10am - 4pm">Sáb: 10am - 4pm</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>© 2026 MK Adventure. <span class="t" data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></p>
+                <p>&copy; 2025 MK Adventure LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/19562172274" class="whatsapp-fab" aria-label="WhatsApp">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // Initialize Lenis smooth scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof Lenis !== 'undefined') {
+                const lenis = new Lenis({
+                    duration: 1.2,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    smooth: true
+                });
+                
+                function raf(time) {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+                requestAnimationFrame(raf);
+            }
+        });
+
+        // GSAP animations
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+                
+                // Hero parallax
+                gsap.to('.hero-video', {
+                    yPercent: 30,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '.hero',
+                        start: 'top top',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                });
+                
+                // Stats counter animation
+                gsap.utils.toArray('.stat-num').forEach(stat => {
+                    const count = stat.dataset.count;
+                    if (count) {
+                        gsap.from(stat, {
+                            textContent: 0,
+                            duration: 2,
+                            ease: 'power1.out',
+                            snap: { textContent: 1 },
+                            scrollTrigger: {
+                                trigger: stat,
+                                start: 'top 80%'
+                            },
+                            onUpdate: function() {
+                                stat.textContent = Math.ceil(this.targets()[0].textContent) + (count > 100 ? '+' : '+');
+                            }
+                        });
+                    }
+                });
+                
+                // Card hover lift
+                gsap.utils.toArray('.travel-card, .cuba-card, .service-card').forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        gsap.to(card, { y: -8, duration: 0.3, ease: 'power2.out' });
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        gsap.to(card, { y: 0, duration: 0.3, ease: 'power2.out' });
+                    });
+                });
+            }
+        });
+
+        // Navigation scroll behavior
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                navToggle.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+            });
+        }
+
+        // Language toggle
+        const langBtns = document.querySelectorAll('.lang-btn');
+        langBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                langBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                document.querySelectorAll('.t').forEach(el => {
+                    const text = el.dataset[lang];
+                    if (text) el.textContent = text;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
