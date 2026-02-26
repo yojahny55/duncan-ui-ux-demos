@@ -34,7 +34,7 @@
       --cream-light: #FAF7F2;
       --teal-accent: #1B7B6C;
       --text-light: #FFFFFF;
-      --text-muted-light: rgba(255,255,255,0.7);
+      --text-muted-light: rgba(255,255,255,0.85);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -601,9 +601,10 @@
     }
     .hero__subtitle {
       font-size: 1.2rem;
-      color: var(--text-muted-light);
+      color: rgba(255,255,255,0.95);
       margin-bottom: 16px;
       line-height: 1.7;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
     }
     .hero__services {
       display: flex;
@@ -745,7 +746,7 @@
     }
     .section-header__subtitle {
       font-size: 1.1rem;
-      color: #666;
+      color: #444;
       margin-top: 16px;
       max-width: 600px;
       margin-left: auto;
@@ -791,7 +792,7 @@
     }
     .service-card__text {
       font-size: 0.9rem;
-      color: #666;
+      color: #444;
       line-height: 1.6;
     }
     @media (max-width: 1024px) {
@@ -851,7 +852,7 @@
     .dest-card__overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(10, 14, 23, 0.9) 0%, transparent 60%);
+      background: linear-gradient(to top, rgba(10, 14, 23, 0.95) 0%, rgba(10, 14, 23, 0.6) 40%, transparent 70%);
     }
     .dest-card__content {
       position: absolute;
@@ -878,6 +879,7 @@
       font-weight: 700;
       color: var(--text-light);
       margin-bottom: 4px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
     }
     .dest-card__location {
       font-size: 0.9rem;
@@ -1065,7 +1067,7 @@
     }
     .blog-card__excerpt {
       font-size: 0.9rem;
-      color: #666;
+      color: #444;
       line-height: 1.6;
     }
     @media (max-width: 768px) {
@@ -1075,8 +1077,12 @@
     /* ========== PARTNERS ========== */
     .partners {
       background: var(--navy-deepest);
-      padding: 60px 0;
+      padding: 80px 0;
       border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    @media (max-width: 768px) {
+      .partners__inner { gap: 32px; }
+      .partners__inner img { height: 48px !important; }
     }
     .partners__inner {
       display: flex;
@@ -1084,7 +1090,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 48px;
-      opacity: 0.7;
+      opacity: 0.85;
     }
     .partners__item {
       font-size: 1.1rem;
@@ -1177,6 +1183,37 @@
       transform: scale(1.1);
       box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
     }
+    /* ========== GOLD SECTION DIVIDER ========== */
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 0;
+      overflow: hidden;
+    }
+    .gold-divider__line {
+      height: 1px;
+      flex: 1;
+      max-width: 120px;
+      background: linear-gradient(90deg, transparent, var(--gold-primary));
+    }
+    .gold-divider__line--right {
+      background: linear-gradient(90deg, var(--gold-primary), transparent);
+    }
+    .gold-divider__icon {
+      color: var(--gold-primary);
+      opacity: 0.6;
+    }
+
+    /* ========== IMPROVED STAT LABELS ========== */
+    .stat__label {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.9);
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
     /* Progressive Enhancement - Content always visible */
     [data-aos] {
       opacity: 1 !important;
@@ -1517,7 +1554,7 @@
             <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold-primary),var(--gold-light));display:flex;align-items:center;justify-content:center;color:var(--navy-deepest);font-weight:700;font-size:1rem;">MR</div>
             <div>
               <div style="font-weight:700;color:var(--navy-deepest);font-size:0.95rem;">Maria Rodriguez</div>
-              <div style="font-size:0.8rem;color:#666;">Tampa, FL — Shipping Client</div>
+              <div style="font-size:0.8rem;color:#555;">Tampa, FL — Shipping Client</div>
             </div>
           </div>
         </div>
@@ -1534,7 +1571,7 @@
             <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold-primary),var(--gold-light));display:flex;align-items:center;justify-content:center;color:var(--navy-deepest);font-weight:700;font-size:1rem;">CP</div>
             <div>
               <div style="font-weight:700;color:var(--navy-deepest);font-size:0.95rem;">Carlos Perez</div>
-              <div style="font-size:0.8rem;color:#666;">Brandon, FL — Business & Tax Client</div>
+              <div style="font-size:0.8rem;color:#555;">Brandon, FL — Business & Tax Client</div>
             </div>
           </div>
         </div>
@@ -1551,7 +1588,7 @@
             <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold-primary),var(--gold-light));display:flex;align-items:center;justify-content:center;color:var(--navy-deepest);font-weight:700;font-size:1rem;">AG</div>
             <div>
               <div style="font-weight:700;color:var(--navy-deepest);font-size:0.95rem;">Ana Garcia</div>
-              <div style="font-size:0.8rem;color:#666;">Miami, FL — Travel Client</div>
+              <div style="font-size:0.8rem;color:#555;">Miami, FL — Travel Client</div>
             </div>
           </div>
         </div>
@@ -1627,12 +1664,12 @@
     <div class="container">
       <p style="text-align:center;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.85);margin-bottom:32px;font-weight:700;">Trusted Partners & Certifications</p>
       <div class="partners__inner" data-aos="fade-up">
-        <img src="assets/partners/royal-caribbean.svg" alt="Royal Caribbean" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
-        <img src="assets/partners/carnival.svg" alt="Carnival Cruise Line" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
-        <img src="assets/partners/norwegian.svg" alt="Norwegian Cruise Line" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
-        <img src="assets/partners/msc.svg" alt="MSC Cruises" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
-        <img src="assets/partners/irs-authorized.svg" alt="IRS Authorized e-File Provider" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
-        <img src="assets/partners/florida-notary.svg" alt="Florida Notary Public" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/royal-caribbean.svg" alt="Royal Caribbean" style="height:72px;opacity:0.85;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/carnival.svg" alt="Carnival Cruise Line" style="height:72px;opacity:0.85;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/norwegian.svg" alt="Norwegian Cruise Line" style="height:72px;opacity:0.85;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/msc.svg" alt="MSC Cruises" style="height:72px;opacity:0.85;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/irs-authorized.svg" alt="IRS Authorized e-File Provider" style="height:72px;opacity:0.85;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/florida-notary.svg" alt="Florida Notary Public" style="height:72px;opacity:0.85;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
       </div>
     </div>
   </section>
