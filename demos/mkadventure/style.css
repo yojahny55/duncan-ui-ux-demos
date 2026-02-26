@@ -151,7 +151,7 @@ button {
 }
 
 .text-accent {
-    color: #9A7316;  /* Darkened gold for WCAG AA on white/cream (4.6:1) */
+    color: #7A5C0E;  /* Darkened gold for WCAG AA on white/cream (~7:1) */
 }
 
 .text-dark {
@@ -415,9 +415,9 @@ body::before {
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(10, 14, 23, 0.75) 0%,
-        rgba(12, 74, 110, 0.65) 40%,
-        rgba(10, 14, 23, 0.9) 100%
+        rgba(10, 14, 23, 0.6) 0%,
+        rgba(12, 74, 110, 0.5) 40%,
+        rgba(10, 14, 23, 0.8) 100%
     );
 }
 
@@ -512,11 +512,12 @@ body::before {
 }
 
 .hero-sub {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-size: clamp(1.05rem, 2.5vw, 1.3rem);
     line-height: 1.7;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.95);
     max-width: 650px;
     margin: 0 auto var(--space-10);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.4);
 }
 
 .hero-actions {
@@ -726,7 +727,7 @@ body::before {
 
 .section-desc {
     font-size: 1.1rem;
-    color: var(--gray-600);
+    color: var(--gray-700);
     margin-top: var(--space-4);
     line-height: 1.7;
 }
@@ -762,10 +763,11 @@ body::before {
     align-items: center;
     justify-content: center;
     gap: var(--space-2);
-    padding: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    min-height: 52px;
     color: rgba(255,255,255,0.7);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     border-radius: var(--radius);
     transition: all var(--duration) var(--ease-out);
 }
@@ -1347,9 +1349,9 @@ body::before {
 }
 
 .service-card > p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--gray-600);
-    line-height: 1.6;
+    line-height: 1.65;
     margin-bottom: var(--space-5);
 }
 
@@ -1426,15 +1428,15 @@ body::before {
 }
 
 .partner-logo {
-    height: 72px;
+    height: 80px;
     display: flex;
     align-items: center;
-    padding: var(--space-4) var(--space-6);
+    padding: var(--space-4) var(--space-8);
     background: var(--white);
     border-radius: var(--radius);
     border: 1px solid var(--gray-200);
-    filter: grayscale(60%);
-    opacity: 0.8;
+    filter: grayscale(40%);
+    opacity: 0.85;
     transition: all var(--duration) var(--ease-out);
 }
 
@@ -1538,11 +1540,21 @@ body::before {
 
 .blog-media {
     position: relative;
-    height: 160px;
+    height: 180px;
     background: linear-gradient(135deg, var(--ocean) 0%, var(--ocean-light) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.blog-media::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .blog-media-green {
@@ -1632,7 +1644,7 @@ body::before {
 }
 
 .section-faq .section-title .text-accent {
-    color: #9A7316;  /* Ensure contrast on cream */
+    color: #7A5C0E;  /* Ensure contrast on cream (~6:1) */
 }
 
 .faq-grid {
@@ -1932,7 +1944,7 @@ body::before {
 
 .footer-brand p {
     font-size: 0.95rem;
-    color: var(--gray-400);
+    color: var(--gray-300);
     line-height: 1.7;
     margin-bottom: var(--space-6);
     max-width: 300px;
@@ -1982,8 +1994,8 @@ body::before {
 
 .footer-col a {
     display: block;
-    font-size: 0.9rem;
-    color: var(--gray-400);
+    font-size: 0.95rem;
+    color: var(--gray-300);
     padding: var(--space-2) 0;
     transition: color var(--duration-fast) var(--ease-out);
 }
@@ -2000,8 +2012,8 @@ body::before {
     gap: var(--space-4);
     padding-top: var(--space-8);
     border-top: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.85rem;
-    color: var(--gray-500);
+    font-size: 0.9rem;
+    color: var(--gray-400);
 }
 
 .footer-badges {
@@ -2309,11 +2321,15 @@ body::before {
     .blog-card p,
     .section-desc {
         font-size: 1rem;
+        line-height: 1.7;
     }
 
     .service-list li,
     .travel-features li {
         font-size: 0.95rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
     }
 
     .cert-content h4 {
@@ -2328,5 +2344,27 @@ body::before {
         font-size: 1rem;
         padding: var(--space-5) var(--space-4);
         min-height: 52px;
+    }
+
+    .booking-tab {
+        min-height: 48px;
+        font-size: 0.85rem;
+    }
+
+    .section-eyebrow {
+        font-size: 0.9rem;
+        padding: var(--space-3) var(--space-5);
+    }
+
+    .cuba-feature {
+        min-height: 44px;
+    }
+
+    .blog-link,
+    .service-cta,
+    .travel-cta {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
     }
 }
