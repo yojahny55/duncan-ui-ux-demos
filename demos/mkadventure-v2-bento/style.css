@@ -12,8 +12,8 @@
     --blue: #0EA5E9;
     --green: #10B981;
     --dark: #0A0E17;
-    --gray: #64748B;
-    --gray-dark: #475569;
+    --gray: #4B5563;
+    --gray-dark: #374151;
     --light: #FAF7F2;
     --cream: #F5F0E8;
     --white: #FFFFFF;
@@ -233,7 +233,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--gold-dark); 
     text-shadow: 0 2px 12px rgba(212,165,54,0.3);
 }
-.hero-main > p { font-size: 18px; color: #475569; margin-bottom: 36px; max-width: 420px; line-height: 1.7; }
+.hero-main > p { font-size: 18px; color: #374151; margin-bottom: 36px; max-width: 420px; line-height: 1.7; }
 .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
 
 /* STAT CARDS WITH SHIMMER */
@@ -618,7 +618,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .blog-card:hover h3 { color: var(--gold-dark); }
 .blog-big h3 { font-size: 24px; }
 .blog-card p { font-size: 15px; color: var(--gray); line-height: 1.6; }
-.blog-meta { font-size: 14px; color: #374151; margin-top: auto; font-weight: 600; }
+.blog-meta { font-size: 14px; color: #1F2937; margin-top: auto; font-weight: 600; }
 .blog-cta {
     display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700;
     color: var(--navy); margin-top: auto; padding-top: 8px;
@@ -660,7 +660,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .faq-item summary > i[data-lucide] { width: 22px; height: 22px; color: var(--gray); transition: transform 0.3s, color 0.3s; }
 .faq-item[open] summary i { transform: rotate(45deg); color: var(--gold); }
 .faq-item[open] summary { color: var(--navy); background: rgba(200,150,46,0.08); }
-.faq-item p { padding: 0 28px 28px; font-size: 16px; color: #475569; line-height: 1.75; }
+.faq-item p { padding: 0 28px 28px; font-size: 16px; color: #374151; line-height: 1.75; }
 .faq-cta { text-align: center; }
 .faq-cta p { color: var(--gray-dark); margin-bottom: 20px; font-size: 18px; font-weight: 500; }
 
@@ -670,7 +670,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .cta-layout { display: grid; gap: 48px; align-items: center; }
 @media (min-width: 768px) { .cta-layout { grid-template-columns: 1fr 1.5fr; } }
 .cta-layout h2 { font-family: var(--font-display); font-size: clamp(32px, 5vw, 48px); font-weight: 700; color: var(--navy-dark); margin-bottom: 12px; }
-.cta-layout > div > p { font-size: 18px; color: rgba(0,0,0,0.6); }
+.cta-layout > div > p { font-size: 18px; color: rgba(10,14,23,0.75); }
 .cta-cards { display: grid; gap: 16px; }
 .cta-cards { grid-template-columns: 1fr; }
 @media (min-width: 500px) { .cta-cards { grid-template-columns: repeat(3, 1fr); } }
@@ -680,7 +680,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .contact-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-lg); }
 .contact-card > i { width: 24px; height: 24px; color: var(--navy); }
-.contact-card strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray); }
+.contact-card strong { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-dark); }
 .contact-card span { font-weight: 600; font-size: 15px; color: var(--navy); white-space: nowrap; }
 .contact-card.wa { background: var(--whatsapp); }
 .contact-card.wa:hover { box-shadow: 0 12px 32px rgba(37,211,102,0.35); }
@@ -694,7 +694,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer-inner { display: grid; gap: 48px; margin-bottom: 48px; }
 @media (min-width: 768px) { .footer-inner { grid-template-columns: 1fr 2fr; } }
 .footer-brand img { height: 32px; margin-bottom: 16px; }
-.footer-brand p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+.footer-brand p { font-size: 15px; color: rgba(255,255,255,0.75); margin-bottom: 24px; }
 .social { display: flex; gap: 12px; }
 .social a {
     width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
@@ -703,7 +703,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .social a:hover { background: var(--gold); color: var(--navy-dark); transform: translateY(-4px); }
 .social i { width: 20px; height: 20px; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 16px 36px; align-items: flex-start; }
-.footer-links a { font-size: 15px; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.footer-links a { font-size: 15px; color: rgba(255,255,255,0.75); transition: color 0.2s; padding: 8px 0; min-height: 44px; display: inline-flex; align-items: center; }
 .footer-links a:hover { color: var(--gold); }
 .footer-bottom {
     display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
@@ -755,6 +755,40 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ========================================
    ACCESSIBILITY
 ======================================== */
+/* ========================================
+   MOBILE ENHANCEMENTS
+======================================== */
+@media (max-width: 767px) {
+    /* Services: single column on mobile */
+    .services-bento { grid-template-columns: 1fr; }
+    .service-big { flex-direction: column; }
+    
+    /* Bigger touch targets for category pills / certs */
+    .cert { padding: 16px 20px; font-size: 14px; min-height: 48px; }
+    .certs-row { gap: 12px; }
+    
+    /* Footer links as stacked column on mobile */
+    .footer-links { flex-direction: column; gap: 4px; }
+    .footer-links a { min-height: 48px; padding: 12px 0; }
+    
+    /* CTA cards stack */
+    .cta-cards { grid-template-columns: 1fr; }
+    
+    /* Blog small images taller */
+    .blog-sm img { height: 160px; }
+    
+    /* Hero less padding */
+    .hero { padding: 100px 16px 60px; }
+    .hero-main { padding: 32px 24px; }
+    
+    /* FAQ touch targets */
+    .faq-item summary { padding: 20px 24px; min-height: 56px; }
+    
+    /* Partners row wrap better */
+    .partners-row { gap: 24px 32px; }
+    .partners-row img { height: 40px; }
+}
+
 @media (prefers-reduced-motion: reduce) { 
     *, *::before, *::after { 
         transition: none !important; 
