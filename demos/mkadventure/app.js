@@ -9,8 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
     
+    // Initialize Lenis smooth scroll
+    initLenis();
+    
     // Initialize all modules
     initScrollAnimations();
+    initGSAPAnimations();
     initNavScroll();
     initMobileMenu();
     initLanguageSwitch();
@@ -241,6 +245,92 @@ function initVideoFallback() {
  */
 function prefersReducedMotion() {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+/**
+ * Lenis smooth scroll
+ */
+function initLenis() {
+    if (typeof Lenis === 'undefined' || prefersReducedMotion()) return;
+    
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+    });
+    
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    
+    // Integrate with GSAP ScrollTrigger
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => lenis.raf(time * 1000));
+        gsap.ticker.lagSmoothing(0);
+    }
+}
+
+/**
+ * GSAP scroll-triggered animations
+ */
+function initGSAPAnimations() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined' || prefersReducedMotion()) return;
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Staggered card reveals
+    document.querySelectorAll('.travel-grid, .services-grid, .blog-grid, .certifications').forEach(grid => {
+        const cards = grid.children;
+        if (!cards.length) return;
+        
+        gsap.from(cards, {
+            y: 40,
+            opacity: 0,
+            duration: 0.7,
+            stagger: 0.12,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: grid,
+                start: 'top 80%',
+                once: true,
+            }
+        });
+    });
+    
+    // Section headers — subtle slide up
+    document.querySelectorAll('.section-header').forEach(header => {
+        gsap.from(header, {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: header,
+                start: 'top 85%',
+                once: true,
+            }
+        });
+    });
+    
+    // FAQ items stagger
+    document.querySelectorAll('.faq-column').forEach(col => {
+        const items = col.querySelectorAll('.faq-item');
+        gsap.from(items, {
+            x: -20,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.08,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: col,
+                start: 'top 80%',
+                once: true,
+            }
+        });
+    });
 }
 
 /**
