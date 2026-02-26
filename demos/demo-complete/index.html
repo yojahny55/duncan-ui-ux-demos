@@ -727,7 +727,7 @@
     .section-header__label {
       display: inline-block;
       background: rgba(200, 150, 46, 0.15);
-      color: var(--gold-dark);
+      color: #7A5A10;
       font-size: 0.8rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -808,6 +808,7 @@
     }
     .destinations .section-header__title { color: var(--text-light); }
     .destinations .section-header__subtitle { color: var(--text-muted-light); }
+    .destinations .section-header__label { color: var(--gold-light); background: rgba(200, 150, 46, 0.2); }
     .destinations__grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -919,6 +920,7 @@
       background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
     }
     .why-us .section-header__title { color: var(--text-light); }
+    .why-us .section-header__label { color: var(--gold-light); background: rgba(200, 150, 46, 0.2); }
     .why-us__grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -1045,7 +1047,7 @@
     .blog-card__tag {
       display: inline-block;
       background: rgba(200, 150, 46, 0.15);
-      color: var(--gold-dark);
+      color: #7A5A10;
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -1227,7 +1229,7 @@
 
         <div class="header__cta">
           <a href="tel:+18133751532" class="btn btn--outline">
-            📞 +1 813-375-1532
+            <i data-lucide="phone" style="width:16px;height:16px;"></i> +1 813-375-1532
           </a>
         </div>
         
@@ -1244,16 +1246,16 @@
   <div class="mobile-nav__overlay" id="mobileOverlay"></div>
   <nav class="mobile-nav" id="mobileNav">
     <div class="mobile-nav__links">
-      <a href="#" class="mobile-nav__link"><span class="icon">🏠</span> Home</a>
-      <a href="#services" class="mobile-nav__link"><span class="icon">⚡</span> Services</a>
-      <a href="#destinations" class="mobile-nav__link"><span class="icon">✈️</span> Travel</a>
-      <a href="#" class="mobile-nav__link"><span class="icon">👥</span> About</a>
-      <a href="#blog" class="mobile-nav__link"><span class="icon">📝</span> Blog</a>
-      <a href="#" class="mobile-nav__link"><span class="icon">📧</span> Contact</a>
+      <a href="#" class="mobile-nav__link"><span class="icon"><i data-lucide="home" style="width:20px;height:20px;color:var(--gold-primary);"></i></span> Home</a>
+      <a href="#services" class="mobile-nav__link"><span class="icon"><i data-lucide="briefcase" style="width:20px;height:20px;color:var(--gold-primary);"></i></span> Services</a>
+      <a href="#destinations" class="mobile-nav__link"><span class="icon"><i data-lucide="plane" style="width:20px;height:20px;color:var(--gold-primary);"></i></span> Travel</a>
+      <a href="#" class="mobile-nav__link"><span class="icon"><i data-lucide="users" style="width:20px;height:20px;color:var(--gold-primary);"></i></span> About</a>
+      <a href="#blog" class="mobile-nav__link"><span class="icon"><i data-lucide="pen-line" style="width:20px;height:20px;color:var(--gold-primary);"></i></span> Blog</a>
+      <a href="#" class="mobile-nav__link"><span class="icon"><i data-lucide="mail" style="width:20px;height:20px;color:var(--gold-primary);"></i></span> Contact</a>
     </div>
     <div class="mobile-nav__cta">
       <a href="tel:+18133751532" class="mobile-nav__phone">
-        📞 +1 813-375-1532
+        <i data-lucide="phone" style="width:18px;height:18px;"></i> +1 813-375-1532
       </a>
     </div>
   </nav>
@@ -1275,7 +1277,7 @@
     <div class="container">
       <div class="hero__content" id="heroContent">
         <span class="hero__badge" data-aos="fade-down" data-aos-duration="600">
-          <span style="color: var(--gold-primary);">✦</span> Tampa's Multiservice Hub
+          <i data-lucide="sparkles" style="width:14px;height:14px;color:var(--gold-primary);"></i> Tampa's Multiservice Hub
         </span>
         <h1 class="hero__title" data-splitting>
           Connecting <span class="accent">Families</span>,<br>
@@ -1293,10 +1295,10 @@
         </div>
         <div class="hero__ctas" data-aos="fade-up" data-aos-delay="600">
           <a href="#destinations" class="btn btn--gold">
-            ✈️ Plan Your Trip
+            <i data-lucide="plane" style="width:18px;height:18px;"></i> Plan Your Trip
           </a>
           <a href="#services" class="btn btn--outline">
-            📦 Ship a Package
+            <i data-lucide="package" style="width:18px;height:18px;"></i> Ship a Package
           </a>
         </div>
       </div>
@@ -1306,15 +1308,15 @@
     <div class="hero__float-cards">
       <div class="float-card" style="position: relative;">
         <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=400&q=80" alt="Cruise ship">
-        <span class="float-card__label">🚢 Cruises</span>
+        <span class="float-card__label"><i data-lucide="ship" style="width:12px;height:12px;"></i> Cruises</span>
       </div>
       <div class="float-card" style="position: relative;">
         <img src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=400&q=80" alt="Havana Cuba">
-        <span class="float-card__label">🇨🇺 Cuba</span>
+        <span class="float-card__label"><i data-lucide="map-pin" style="width:12px;height:12px;"></i> Cuba</span>
       </div>
       <div class="float-card" style="position: relative;">
         <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=80" alt="Airplane">
-        <span class="float-card__label">✈️ Flights</span>
+        <span class="float-card__label"><i data-lucide="plane" style="width:12px;height:12px;"></i> Flights</span>
       </div>
     </div>
     
@@ -1325,6 +1327,30 @@
   </section>
 
 
+
+  <!-- ========== STATS BAR ========== -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-bar__inner">
+        <div class="stat">
+          <div class="stat__number">8+</div>
+          <div class="stat__label">Years of Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">5000+</div>
+          <div class="stat__label">Happy Clients</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">15+</div>
+          <div class="stat__label">Destinations</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number">5</div>
+          <div class="stat__label">Services Offered</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ========== SERVICES ========== -->
   <section class="services" id="services">
@@ -1337,27 +1363,27 @@
 
       <div class="services__grid">
         <a href="#" class="service-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="service-card__icon">✈️</div>
+          <div class="service-card__icon"><i data-lucide="plane" style="width:28px;height:28px;color:var(--navy-deepest);"></i></div>
           <h3 class="service-card__title">Travel Agency</h3>
           <p class="service-card__text">Flights, cruises, tours & vacation packages at the best prices.</p>
         </a>
         <a href="#" class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card__icon">📦</div>
+          <div class="service-card__icon"><i data-lucide="package" style="width:28px;height:28px;color:var(--navy-deepest);"></i></div>
           <h3 class="service-card__title">Shipping to Cuba</h3>
           <p class="service-card__text">Reliable package delivery and shipping services to Cuba.</p>
         </a>
         <a href="#" class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-card__icon">🧾</div>
+          <div class="service-card__icon"><i data-lucide="calculator" style="width:28px;height:28px;color:var(--navy-deepest);"></i></div>
           <h3 class="service-card__title">Tax Preparation</h3>
           <p class="service-card__text">Professional personal and business tax filing services.</p>
         </a>
         <a href="#" class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-card__icon">📋</div>
+          <div class="service-card__icon"><i data-lucide="stamp" style="width:28px;height:28px;color:var(--navy-deepest);"></i></div>
           <h3 class="service-card__title">Notary Services</h3>
           <p class="service-card__text">In-office and mobile notary options available.</p>
         </a>
         <a href="#" class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-card__icon">🏢</div>
+          <div class="service-card__icon"><i data-lucide="building-2" style="width:28px;height:28px;color:var(--navy-deepest);"></i></div>
           <h3 class="service-card__title">Business Formation</h3>
           <p class="service-card__text">LLC and Corporation formation with full assistance.</p>
         </a>
@@ -1438,22 +1464,22 @@
 
       <div class="why-us__grid">
         <div class="why-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="why-card__icon">🏠</div>
+          <div class="why-card__icon"><i data-lucide="layout-grid" style="width:32px;height:32px;color:var(--gold-primary);"></i></div>
           <h3 class="why-card__title">All Under One Roof</h3>
           <p class="why-card__text">Travel, shipping, taxes, notary, and business services — everything you need in one place.</p>
         </div>
         <div class="why-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="why-card__icon">🗣️</div>
+          <div class="why-card__icon"><i data-lucide="languages" style="width:32px;height:32px;color:var(--gold-primary);"></i></div>
           <h3 class="why-card__title">Bilingual Team</h3>
           <p class="why-card__text">Our team speaks fluent English and Spanish, serving the full community with ease.</p>
         </div>
         <div class="why-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="why-card__icon">📍</div>
+          <div class="why-card__icon"><i data-lucide="map-pin" style="width:32px;height:32px;color:var(--gold-primary);"></i></div>
           <h3 class="why-card__title">Tampa-Based, US-Wide</h3>
           <p class="why-card__text">Headquartered in Tampa, Florida with services available across the United States.</p>
         </div>
         <div class="why-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="why-card__icon">❤️</div>
+          <div class="why-card__icon"><i data-lucide="heart" style="width:32px;height:32px;color:var(--gold-primary);"></i></div>
           <h3 class="why-card__title">Personalized Service</h3>
           <p class="why-card__text">We treat every client like family, providing dedicated one-on-one support.</p>
         </div>
@@ -1467,10 +1493,10 @@
       <h2 class="cta__title" data-aos="fade-up">Ready to Get Started?</h2>
       <div class="cta__actions" data-aos="fade-up" data-aos-delay="100">
         <a href="tel:+18133751532" class="cta__phone">
-          📞 +1 813-375-1532
+          <i data-lucide="phone" style="width:20px;height:20px;"></i> +1 813-375-1532
         </a>
         <a href="https://wa.me/18133751532" class="btn btn--dark" target="_blank">
-          💬 WhatsApp
+          <i data-lucide="message-circle" style="width:18px;height:18px;"></i> WhatsApp
         </a>
         <a href="#" class="btn btn--dark">
           Contact Us
@@ -1527,13 +1553,14 @@
   <!-- ========== PARTNERS ========== -->
   <section class="partners">
     <div class="container">
+      <p style="text-align:center;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--text-muted-light);margin-bottom:32px;font-weight:600;">Trusted Partners & Certifications</p>
       <div class="partners__inner" data-aos="fade-up">
-        <span class="partners__item">American Airlines</span>
-        <span class="partners__item">Delta</span>
-        <span class="partners__item">JetBlue</span>
-        <span class="partners__item">Royal Caribbean</span>
-        <span class="partners__item">Carnival</span>
-        <span class="partners__item">IRS Authorized</span>
+        <img src="assets/partners/royal-caribbean.svg" alt="Royal Caribbean" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+        <img src="assets/partners/carnival.svg" alt="Carnival Cruise Line" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+        <img src="assets/partners/norwegian.svg" alt="Norwegian Cruise Line" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+        <img src="assets/partners/msc.svg" alt="MSC Cruises" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+        <img src="assets/partners/irs-authorized.svg" alt="IRS Authorized e-File Provider" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+        <img src="assets/partners/florida-notary.svg" alt="Florida Notary Public" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
       </div>
     </div>
   </section>
@@ -1596,7 +1623,7 @@
 
   <!-- WhatsApp Float -->
   <a href="https://wa.me/18133751532" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    💬
+    <i data-lucide="message-circle" style="width:28px;height:28px;color:#fff;"></i>
   </a>
 
   <!-- AOS Animation Library -->
@@ -1856,6 +1883,12 @@
         delay: 0.3,
         ease: 'power2.out'
       });
+    }
+  </script>
+  <script>
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
     }
   </script>
   <script src="js/main.js"></script>
