@@ -182,6 +182,22 @@ button {
     transform: translateY(0) !important;
 }
 
+/* GSAP safety net — ensure content is NEVER hidden if GSAP fails or ScrollTrigger doesn't fire */
+.travel-grid > *,
+.services-grid > *,
+.blog-grid > *,
+.certifications > *,
+.faq-column > .faq-item,
+.section-header,
+.partners-section,
+.cuba-content,
+.cuba-visual,
+.cta-content,
+.faq-cta {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 /* Subtle noise grain overlay for premium feel */
 body::before {
     content: '';
@@ -395,10 +411,30 @@ body::before {
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(12, 74, 110, 0.8) 0%,
-        rgba(12, 74, 110, 0.6) 40%,
-        rgba(12, 74, 110, 0.85) 100%
+        rgba(10, 14, 23, 0.7) 0%,
+        rgba(12, 74, 110, 0.55) 40%,
+        rgba(10, 14, 23, 0.85) 100%
     );
+}
+
+/* Subtle animated light sweep across hero */
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        transparent 40%,
+        rgba(212, 165, 54, 0.05) 50%,
+        transparent 60%
+    );
+    background-size: 200% 100%;
+    animation: hero-shimmer 8s ease-in-out infinite;
+}
+
+@keyframes hero-shimmer {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
 }
 
 .hero-content {
@@ -413,13 +449,14 @@ body::before {
     align-items: center;
     gap: var(--space-3);
     padding: var(--space-3) var(--space-5);
-    background: rgba(255,255,255,0.1);
+    background: rgba(212, 165, 54, 0.12);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(212, 165, 54, 0.3);
     border-radius: var(--radius-full);
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: var(--space-8);
+    letter-spacing: 0.02em;
 }
 
 .badge-dot {
@@ -442,6 +479,7 @@ body::before {
     line-height: 1.05;
     margin-bottom: var(--space-8);
     letter-spacing: -0.02em;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
 .hero-title span {
@@ -1621,7 +1659,8 @@ body::before {
     align-items: center;
     justify-content: space-between;
     padding: var(--space-5);
-    font-weight: 500;
+    font-weight: 600;
+    color: var(--gray-800);
     cursor: pointer;
     list-style: none;
     transition: background var(--duration) var(--ease-out);
@@ -1725,7 +1764,7 @@ body::before {
 
 .cta-content > p {
     font-size: 1.1rem;
-    color: rgba(0,0,0,0.7);
+    color: var(--gray-800);
     margin-bottom: var(--space-10);
 }
 
@@ -1829,7 +1868,7 @@ body::before {
     align-items: center;
     gap: var(--space-2);
     font-size: 0.9rem;
-    color: rgba(0,0,0,0.6);
+    color: var(--gray-700);
 }
 
 .cta-hours i {
@@ -2063,9 +2102,26 @@ body::before {
     display: block;
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+    background: linear-gradient(90deg, var(--gold), var(--ocean-light));
     margin: 0 auto var(--space-16);
     border-radius: 2px;
+}
+
+/* Wave divider above travel section */
+.section-travel {
+    position: relative;
+}
+
+.section-travel::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23FFFFFF' d='M0,0 C360,60 1080,0 1440,40 L1440,0 L0,0 Z'/%3E%3C/svg%3E") no-repeat center top;
+    background-size: 100% 100%;
+    pointer-events: none;
 }
 
 /* Refined card hover lift with gold accent border */
@@ -2073,18 +2129,20 @@ body::before {
 .blog-card::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--gold), var(--ocean-light));
     transform: scaleX(0);
-    transition: transform var(--duration) var(--ease-out);
-    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease-out);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    z-index: 1;
 }
 
-.service-card { position: relative; }
-.blog-card { position: relative; }
+.service-card { position: relative; overflow: hidden; }
+.blog-card { position: relative; overflow: hidden; }
 
 .service-card:hover::before,
 .blog-card:hover::before {
@@ -2174,7 +2232,7 @@ body::before {
     }
 
     .footer-nav {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-6);
     }
 

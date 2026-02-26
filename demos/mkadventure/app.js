@@ -281,56 +281,75 @@ function initGSAPAnimations() {
     
     gsap.registerPlugin(ScrollTrigger);
     
-    // Staggered card reveals
+    // Staggered card reveals — use fromTo for safety (never leaves elements hidden)
     document.querySelectorAll('.travel-grid, .services-grid, .blog-grid, .certifications').forEach(grid => {
         const cards = grid.children;
         if (!cards.length) return;
         
-        gsap.from(cards, {
-            y: 40,
-            opacity: 0,
-            duration: 0.7,
-            stagger: 0.12,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: grid,
-                start: 'top 80%',
-                once: true,
+        gsap.fromTo(cards, 
+            { y: 30, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.7,
+                stagger: 0.12,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: grid,
+                    start: 'top 82%',
+                    once: true,
+                }
             }
-        });
+        );
     });
     
     // Section headers — subtle slide up
     document.querySelectorAll('.section-header').forEach(header => {
-        gsap.from(header, {
-            y: 30,
-            opacity: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: header,
-                start: 'top 85%',
-                once: true,
+        gsap.fromTo(header,
+            { y: 20, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: header,
+                    start: 'top 85%',
+                    once: true,
+                }
             }
-        });
+        );
     });
     
     // FAQ items stagger
     document.querySelectorAll('.faq-column').forEach(col => {
         const items = col.querySelectorAll('.faq-item');
-        gsap.from(items, {
-            x: -20,
-            opacity: 0,
-            duration: 0.5,
-            stagger: 0.08,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: col,
-                start: 'top 80%',
-                once: true,
+        gsap.fromTo(items,
+            { x: -15, opacity: 0 },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 0.5,
+                stagger: 0.08,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: col,
+                    start: 'top 80%',
+                    once: true,
+                }
+            }
+        );
+    });
+    
+    // Safety: ensure all animated elements become visible after 3s regardless
+    setTimeout(() => {
+        document.querySelectorAll('.travel-grid > *, .services-grid > *, .blog-grid > *, .certifications > *, .section-header, .faq-item').forEach(el => {
+            if (getComputedStyle(el).opacity === '0') {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
             }
         });
-    });
+    }, 3000);
 }
 
 /**
