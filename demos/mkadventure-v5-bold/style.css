@@ -1248,10 +1248,10 @@ body.nav-open .nav-toggle span:last-child {
 }
 
 .partner-item img {
-    height: 56px;
+    height: 64px;
     width: auto;
-    filter: grayscale(50%);
-    opacity: 0.75;
+    filter: grayscale(30%);
+    opacity: 0.85;
     transition: all var(--duration);
 }
 
@@ -1698,6 +1698,158 @@ body.nav-open .nav-toggle span:last-child {
     .footer-brand {
         grid-column: span 1;
     }
+}
+
+/* ========================================
+   CONTRAST & MOBILE FIXES
+   ======================================== */
+
+/* Fix #1: Service description text contrast — slate-600 → slate-700 */
+.service-block p {
+    color: var(--slate-700);
+}
+
+/* Fix #2: Cuba card description contrast — slate-400 → slate-300 */
+.cuba-block p {
+    color: var(--slate-300);
+}
+
+/* Fix #3: Footer links contrast — slate-400 → slate-300 */
+.footer-links a,
+.footer-contact a {
+    color: var(--slate-300);
+}
+
+.footer-brand p {
+    color: var(--slate-300);
+}
+
+.footer-bottom p {
+    color: var(--slate-300);
+}
+
+/* Fix #4: CTA subtitle contrast */
+.cta-content p {
+    color: var(--slate-300);
+}
+
+.cta-info-item {
+    color: var(--slate-300);
+}
+
+/* Fix #5: Blog card description contrast */
+.blog-block p {
+    color: var(--slate-700);
+}
+
+/* Fix #6: Mobile nav toggle visibility — BOLD and obvious */
+@media (max-width: 900px) {
+    .nav-toggle {
+        background: var(--gold);
+        border-radius: var(--radius-md);
+        min-width: 48px;
+        min-height: 48px;
+        box-shadow: 0 2px 8px var(--gold-glow);
+    }
+    .nav-toggle span {
+        background: var(--navy);
+        width: 24px;
+        height: 3px;
+    }
+    body.nav-open .nav-toggle {
+        background: var(--accent);
+    }
+    body.nav-open .nav-toggle span {
+        background: var(--white);
+    }
+}
+
+/* Fix #7: Mobile text sizing improvements */
+@media (max-width: 600px) {
+    .cuba-block h3 { font-size: 1.25rem; }
+    .cuba-block p { font-size: 1rem; }
+    .cuba-list li { font-size: 1rem; }
+    
+    .service-block p { font-size: 1rem; }
+    .service-block h3 { font-size: 1.25rem; }
+    
+    .blog-block h3 { font-size: 1.125rem; }
+    .blog-block p { font-size: 1rem; }
+    .blog-info { padding: var(--space-5); }
+    .blog-date { font-size: 0.8125rem; }
+    
+    .footer-links a,
+    .footer-contact a {
+        font-size: 1rem;
+        padding: var(--space-2) 0;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .faq-q { font-size: 1rem; }
+    .faq-block summary { min-height: 56px; padding: var(--space-5); }
+    
+    .contact-item { min-height: 56px; padding: var(--space-4) var(--space-5); }
+    .contact-value { font-size: 1rem; }
+}
+
+/* Fix #8: Memorable element — animated gold line accent on section headers */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--accent));
+    border-radius: 2px;
+    margin-top: var(--space-3);
+    transition: width 0.6s var(--ease-out);
+}
+
+.section-header:hover .section-title::after,
+.section-header-light:hover .section-title::after {
+    width: 140px;
+}
+
+/* Fix #9: Hero image layout cleanup — less cluttered */
+.hero-image-main {
+    border: 3px solid rgba(200, 150, 46, 0.3);
+}
+
+/* Fix #10: Bold signature — animated counter strip */
+.contact-bar {
+    position: relative;
+}
+
+.contact-bar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--accent) 50%, var(--gold) 100%);
+    background-size: 200% 100%;
+    animation: shimmer-bar 4s ease-in-out infinite;
+}
+
+@keyframes shimmer-bar {
+    0%, 100% { background-position: 0% 0; }
+    50% { background-position: 100% 0; }
+}
+
+/* Fix #11: Partner logos section bigger gap and sizing */
+.partners-row {
+    gap: var(--space-8);
+}
+
+.partner-item {
+    padding: var(--space-5) var(--space-8);
 }
 
 /* ========================================
