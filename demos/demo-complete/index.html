@@ -727,7 +727,7 @@
     .section-header__label {
       display: inline-block;
       background: rgba(200, 150, 46, 0.15);
-      color: #7A5A10;
+      color: #5C4308;
       font-size: 0.8rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -971,7 +971,7 @@
     /* ========== CTA SECTION ========== */
     .cta {
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-      padding: 80px 0;
+      padding: 80px 24px;
       text-align: center;
     }
     .cta__title {
@@ -1046,8 +1046,8 @@
     }
     .blog-card__tag {
       display: inline-block;
-      background: rgba(200, 150, 46, 0.15);
-      color: #7A5A10;
+      background: rgba(200, 150, 46, 0.18);
+      color: #5C4308;
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -1084,7 +1084,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 48px;
-      opacity: 0.5;
+      opacity: 0.7;
     }
     .partners__item {
       font-size: 1.1rem;
@@ -1120,13 +1120,17 @@
     .footer__links {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 4px;
     }
     .footer__links a {
       color: var(--text-muted-light);
       text-decoration: none;
       font-size: 0.9rem;
       transition: color 0.2s;
+      padding: 8px 0;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
     }
     .footer__links a:hover { color: var(--gold-primary); }
     .footer__bottom {
@@ -1144,6 +1148,11 @@
     @media (max-width: 480px) {
       .footer__grid { grid-template-columns: 1fr; }
       .footer__bottom { flex-direction: column; gap: 16px; text-align: center; }
+    }
+
+    /* ========== TESTIMONIALS RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      .testimonials__grid { grid-template-columns: 1fr !important; }
     }
 
     /* ========== WHATSAPP FLOAT ========== */
@@ -1487,6 +1496,69 @@
     </div>
   </section>
 
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials" style="background:var(--cream-light);padding:100px 0;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-header__label">What Our Clients Say</span>
+        <h2 class="section-header__title" style="color:var(--navy-deepest);">Trusted by Thousands of Families</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;" class="testimonials__grid">
+        <div data-aos="fade-up" data-aos-delay="0" style="background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.05);position:relative;">
+          <div style="display:flex;gap:4px;margin-bottom:16px;">
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+          </div>
+          <p style="font-size:1rem;color:#333;line-height:1.7;margin-bottom:20px;font-style:italic;">"M&K made shipping packages to my family in Cuba so easy. They handle everything with care and the prices are very fair. Highly recommended!"</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold-primary),var(--gold-light));display:flex;align-items:center;justify-content:center;color:var(--navy-deepest);font-weight:700;font-size:1rem;">MR</div>
+            <div>
+              <div style="font-weight:700;color:var(--navy-deepest);font-size:0.95rem;">Maria Rodriguez</div>
+              <div style="font-size:0.8rem;color:#666;">Tampa, FL — Shipping Client</div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" style="background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.05);position:relative;">
+          <div style="display:flex;gap:4px;margin-bottom:16px;">
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+          </div>
+          <p style="font-size:1rem;color:#333;line-height:1.7;margin-bottom:20px;font-style:italic;">"They helped me form my LLC and handled all my taxes. Having one place for everything saves me so much time. The bilingual staff is a huge plus!"</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold-primary),var(--gold-light));display:flex;align-items:center;justify-content:center;color:var(--navy-deepest);font-weight:700;font-size:1rem;">CP</div>
+            <div>
+              <div style="font-weight:700;color:var(--navy-deepest);font-size:0.95rem;">Carlos Perez</div>
+              <div style="font-size:0.8rem;color:#666;">Brandon, FL — Business & Tax Client</div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" style="background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.05);position:relative;">
+          <div style="display:flex;gap:4px;margin-bottom:16px;">
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+            <i data-lucide="star" style="width:18px;height:18px;fill:#C8962E;color:#C8962E;"></i>
+          </div>
+          <p style="font-size:1rem;color:#333;line-height:1.7;margin-bottom:20px;font-style:italic;">"Booked our family trip to Havana through M&K and it was flawless. They know Cuba inside and out. Already planning our next adventure!"</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold-primary),var(--gold-light));display:flex;align-items:center;justify-content:center;color:var(--navy-deepest);font-weight:700;font-size:1rem;">AG</div>
+            <div>
+              <div style="font-weight:700;color:var(--navy-deepest);font-size:0.95rem;">Ana Garcia</div>
+              <div style="font-size:0.8rem;color:#666;">Miami, FL — Travel Client</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== CTA ========== -->
   <section class="cta">
     <div class="container">
@@ -1553,14 +1625,14 @@
   <!-- ========== PARTNERS ========== -->
   <section class="partners">
     <div class="container">
-      <p style="text-align:center;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--text-muted-light);margin-bottom:32px;font-weight:600;">Trusted Partners & Certifications</p>
+      <p style="text-align:center;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.85);margin-bottom:32px;font-weight:700;">Trusted Partners & Certifications</p>
       <div class="partners__inner" data-aos="fade-up">
-        <img src="assets/partners/royal-caribbean.svg" alt="Royal Caribbean" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
-        <img src="assets/partners/carnival.svg" alt="Carnival Cruise Line" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
-        <img src="assets/partners/norwegian.svg" alt="Norwegian Cruise Line" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
-        <img src="assets/partners/msc.svg" alt="MSC Cruises" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
-        <img src="assets/partners/irs-authorized.svg" alt="IRS Authorized e-File Provider" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
-        <img src="assets/partners/florida-notary.svg" alt="Florida Notary Public" style="height:40px;opacity:0.6;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+        <img src="assets/partners/royal-caribbean.svg" alt="Royal Caribbean" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/carnival.svg" alt="Carnival Cruise Line" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/norwegian.svg" alt="Norwegian Cruise Line" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/msc.svg" alt="MSC Cruises" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/irs-authorized.svg" alt="IRS Authorized e-File Provider" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <img src="assets/partners/florida-notary.svg" alt="Florida Notary Public" style="height:52px;opacity:0.7;filter:brightness(0) invert(1);transition:opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
       </div>
     </div>
   </section>
