@@ -782,6 +782,12 @@ body.nav-open .nav-toggle span:last-child {
     margin-top: var(--space-3);
 }
 
+@media (max-width: 600px) {
+    .section-subtitle {
+        font-size: 1rem;
+    }
+}
+
 /* ========================================
    Travel Section — On cream background
    ======================================== */
@@ -1843,13 +1849,124 @@ body.nav-open .nav-toggle span:last-child {
     50% { background-position: 100% 0; }
 }
 
-/* Fix #11: Partner logos section bigger gap and sizing */
+/* Fix #11: Partner logos section — elevated visual weight */
+.section-partners {
+    background: var(--navy-mid);
+    padding: var(--space-20) 0;
+    border-top: 3px solid var(--gold);
+    border-bottom: 3px solid var(--gold);
+}
+
+.partners-header h2 {
+    color: var(--cream);
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    font-weight: 700;
+}
+
+.partners-header::after {
+    background: var(--accent);
+}
+
 .partners-row {
     gap: var(--space-8);
 }
 
 .partner-item {
-    padding: var(--space-5) var(--space-8);
+    padding: var(--space-6) var(--space-10);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(200, 150, 46, 0.25);
+}
+
+.partner-item:hover {
+    background: rgba(200, 150, 46, 0.12);
+    border-color: var(--gold);
+}
+
+.partner-item img {
+    height: 72px;
+    filter: brightness(1.1) grayscale(20%);
+    opacity: 0.9;
+}
+
+.partner-item:hover img {
+    filter: brightness(1.2) grayscale(0%);
+    opacity: 1;
+}
+
+/* Fix #12: CTA to Footer visual separation */
+.section-cta::after {
+    top: 0;
+}
+
+.footer {
+    border-top: none;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* Fix #13: Mobile section titles — scale cursive down gracefully */
+@media (max-width: 600px) {
+    .section-title {
+        font-size: clamp(2rem, 8vw, 2.75rem);
+    }
+    
+    .cta-content h2 {
+        font-size: clamp(1.75rem, 7vw, 2.5rem);
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+}
+
+/* Fix #14: Mobile footer — single column with proper touch targets */
+@media (max-width: 600px) {
+    .footer {
+        padding: var(--space-12) 0 var(--space-6);
+    }
+    
+    .footer-grid {
+        gap: var(--space-6);
+    }
+    
+    .footer-links a,
+    .footer-contact a {
+        min-height: 48px;
+        font-size: 1.0625rem;
+        padding: var(--space-3) 0;
+    }
+    
+    .footer-links h4,
+    .footer-contact h4 {
+        font-size: 0.875rem;
+        margin-bottom: var(--space-3);
+    }
+}
+
+/* Fix #15: Partner section mobile */
+@media (max-width: 600px) {
+    .partners-row {
+        gap: var(--space-4);
+    }
+    
+    .partner-item {
+        padding: var(--space-4) var(--space-6);
+        flex: 1 1 40%;
+    }
+    
+    .partner-item img {
+        height: 48px;
+    }
 }
 
 /* ========================================
