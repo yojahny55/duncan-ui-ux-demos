@@ -142,6 +142,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn-outline:hover { background: var(--navy); color: var(--white); }
 .btn-white { background: white; color: var(--navy); box-shadow: var(--shadow); }
 .btn-white:hover { background: var(--cream); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.btn-nav-wa { background: var(--whatsapp); color: white; font-weight: 700; }
+.btn-nav-wa:hover { background: #1fb855; transform: translateY(-2px); }
 
 /* ========================================
    HERO WITH FLOATING ORBS
@@ -228,7 +230,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero-main h1 { font-family: var(--font-display); font-size: clamp(36px, 6vw, 56px); font-weight: 700; line-height: 1.08; margin-bottom: 20px; color: var(--navy); }
 .hero-main h1 span { display: block; }
 .hero-main h1 .gold { 
-    color: var(--gold); 
+    color: var(--gold-dark); 
     text-shadow: 0 2px 12px rgba(212,165,54,0.3);
 }
 .hero-main > p { font-size: 18px; color: #475569; margin-bottom: 36px; max-width: 420px; line-height: 1.7; }
@@ -334,6 +336,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 ======================================== */
 .travel-bento { display: grid; gap: 20px; grid-template-columns: 1fr; }
 @media (min-width: 768px) {
+    .travel-bento { grid-template-columns: repeat(3, 1fr); grid-template-rows: 200px 200px; }
+    .bento-big { grid-column: span 1; grid-row: span 2; }
+}
+@media (min-width: 1024px) {
     .travel-bento { grid-template-columns: repeat(4, 1fr); grid-template-rows: 200px 200px; }
     .bento-big { grid-column: span 2; grid-row: span 2; }
 }
@@ -431,7 +437,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .cuba-features i { width: 22px; height: 22px; color: var(--gold); }
 
-.cuba-card { display: none; }
+.cuba-card { display: block; }
 @media (min-width: 900px) { .cuba-card { display: block; } }
 .track-card {
     background: rgba(255,255,255,0.08); backdrop-filter: blur(20px);
@@ -546,7 +552,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .partners-marquee:hover { animation-play-state: paused; }
 .partners-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 48px; margin: 48px 0; }
 .partners-row img { 
-    height: 40px; opacity: 0.5; filter: grayscale(1); 
+    height: 56px; opacity: 0.85; filter: grayscale(0.3); 
     transition: 0.3s;
 }
 .partners-row img:hover { opacity: 1; filter: grayscale(0); transform: scale(1.1); }
@@ -612,10 +618,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .blog-card:hover h3 { color: var(--gold-dark); }
 .blog-big h3 { font-size: 24px; }
 .blog-card p { font-size: 15px; color: var(--gray); line-height: 1.6; }
-.blog-meta { font-size: 13px; color: var(--gray); margin-top: auto; }
+.blog-meta { font-size: 14px; color: #374151; margin-top: auto; font-weight: 600; }
 .blog-cta {
-    display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600;
+    display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700;
     color: var(--navy); margin-top: auto; padding-top: 8px;
+    min-height: 44px;
 }
 .blog-cta i { width: 18px; height: 18px; transition: 0.2s; }
 .blog-card:hover .blog-cta i { transform: translateX(6px); }
@@ -643,17 +650,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     display: flex; align-items: center; justify-content: space-between; padding: 24px 28px;
     font-weight: 600; font-size: 17px; cursor: pointer; list-style: none; color: var(--navy);
     transition: color 0.3s, background 0.3s;
+    min-height: 64px;
 }
+.faq-item summary i { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
 .faq-item summary:hover {
     background: rgba(212,165,54,0.03);
 }
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary i { width: 22px; height: 22px; color: var(--gray); transition: transform 0.3s, color 0.3s; }
+.faq-item summary > i[data-lucide] { width: 22px; height: 22px; color: var(--gray); transition: transform 0.3s, color 0.3s; }
 .faq-item[open] summary i { transform: rotate(45deg); color: var(--gold); }
 .faq-item[open] summary { color: var(--navy); background: rgba(200,150,46,0.08); }
 .faq-item p { padding: 0 28px 28px; font-size: 16px; color: #475569; line-height: 1.75; }
 .faq-cta { text-align: center; }
-.faq-cta p { color: var(--gray); margin-bottom: 20px; font-size: 18px; }
+.faq-cta p { color: var(--gray-dark); margin-bottom: 20px; font-size: 18px; font-weight: 500; }
 
 /* ========================================
    CTA SECTION
@@ -663,6 +672,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .cta-layout h2 { font-family: var(--font-display); font-size: clamp(32px, 5vw, 48px); font-weight: 700; color: var(--navy-dark); margin-bottom: 12px; }
 .cta-layout > div > p { font-size: 18px; color: rgba(0,0,0,0.6); }
 .cta-cards { display: grid; gap: 16px; }
+.cta-cards { grid-template-columns: 1fr; }
 @media (min-width: 500px) { .cta-cards { grid-template-columns: repeat(3, 1fr); } }
 .contact-card {
     display: flex; align-items: center; gap: 16px; padding: 22px; background: var(--white);
@@ -671,7 +681,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .contact-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-lg); }
 .contact-card > i { width: 24px; height: 24px; color: var(--navy); }
 .contact-card strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray); }
-.contact-card span { font-weight: 600; font-size: 15px; color: var(--navy); }
+.contact-card span { font-weight: 600; font-size: 15px; color: var(--navy); white-space: nowrap; }
 .contact-card.wa { background: var(--whatsapp); }
 .contact-card.wa:hover { box-shadow: 0 12px 32px rgba(37,211,102,0.35); }
 .contact-card.wa > i, .contact-card.wa strong { color: rgba(255,255,255,0.85); }
