@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS SYSTEMS | HUD / Sci-Fi FUI Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Scanline Overlay -->
+    <div class="scanlines"></div>
+    
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="hud-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-brackets">[</div>
+                <span class="logo-text">NEXUS</span>
+                <div class="logo-brackets">]</div>
+                <span class="logo-suffix">_SYS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-label="01">HOME</a></li>
+                <li><a href="#about" class="nav-link" data-label="02">ABOUT</a></li>
+                <li><a href="#services" class="nav-link" data-label="03">SERVICES</a></li>
+                <li><a href="#testimonials" class="nav-link" data-label="04">COMMS</a></li>
+                <li><a href="#contact" class="nav-link" data-label="05">CONTACT</a></li>
+            </ul>
+            <div class="nav-status">
+                <div class="status-indicator online"></div>
+                <span class="status-text">SYSTEM ONLINE</span>
+            </div>
+            <button class="mobile-toggle" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-hud-frame">
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket top-right"></div>
+            <div class="corner-bracket bottom-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-label">
+                <span class="blink">&gt;</span> SYSTEM INITIALIZATION COMPLETE
+            </div>
+            <h1 class="hero-title">
+                <span class="title-prefix">NEXUS</span>
+                <span class="title-main">ADVANCED<br>INTERFACE<br>SYSTEMS</span>
+            </h1>
+            <p class="hero-subtitle">
+                // NEXT-GEN HUD TECHNOLOGY FOR IMMERSIVE EXPERIENCES
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value" data-target="99.9">0</span>
+                    <span class="stat-unit">%</span>
+                    <span class="stat-label">UPTIME</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value" data-target="2.4">0</span>
+                    <span class="stat-unit">MS</span>
+                    <span class="stat-label">LATENCY</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value" data-target="847">0</span>
+                    <span class="stat-unit">K</span>
+                    <span class="stat-label">NODES</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">
+                    <span class="btn-brackets">[</span>
+                    <i data-lucide="zap"></i>
+                    <span>INITIALIZE</span>
+                    <span class="btn-brackets">]</span>
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <span class="btn-brackets">&lt;</span>
+                    <i data-lucide="scan"></i>
+                    <span>SCAN SYSTEMS</span>
+                    <span class="btn-brackets">&gt;</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-radar">
+            <div class="radar-ring"></div>
+            <div class="radar-ring"></div>
+            <div class="radar-ring"></div>
+            <div class="radar-sweep"></div>
+            <div class="radar-blips">
+                <div class="blip" style="--x: 30%; --y: 40%;"></div>
+                <div class="blip" style="--x: 70%; --y: 25%;"></div>
+                <div class="blip" style="--x: 55%; --y: 65%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <div class="section-marker">
+                <span class="marker-line"></span>
+                <span class="marker-text">// SECTION 02</span>
+            </div>
+            <h2 class="section-title">
+                <span class="title-bracket">&lt;</span>
+                SYSTEM_OVERVIEW
+                <span class="title-bracket">/&gt;</span>
+            </h2>
+        </div>
+        <div class="about-container">
+            <div class="about-visual">
+                <div class="hologram">
+                    <div class="holo-ring holo-ring-1"></div>
+                    <div class="holo-ring holo-ring-2"></div>
+                    <div class="holo-ring holo-ring-3"></div>
+                    <div class="holo-core">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                </div>
+                <div class="data-readouts">
+                    <div class="readout">
+                        <span class="readout-label">CPU_LOAD</span>
+                        <div class="readout-bar">
+                            <div class="readout-fill" style="--fill: 67%;"></div>
+                        </div>
+                        <span class="readout-value">67%</span>
+                    </div>
+                    <div class="readout">
+                        <span class="readout-label">MEM_USAGE</span>
+                        <div class="readout-bar">
+                            <div class="readout-fill" style="--fill: 42%;"></div>
+                        </div>
+                        <span class="readout-value">42%</span>
+                    </div>
+                    <div class="readout">
+                        <span class="readout-label">NET_SYNC</span>
+                        <div class="readout-bar">
+                            <div class="readout-fill" style="--fill: 98%;"></div>
+                        </div>
+                        <span class="readout-value">98%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-title">nexus_info.sys</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-line">
+                            <span class="prompt">&gt;</span> Nexus Systems represents the pinnacle of human-machine interface technology. Our advanced HUD platforms deliver real-time data visualization with sub-millisecond response times.
+                        </p>
+                        <p class="terminal-line">
+                            <span class="prompt">&gt;</span> Deployed across defense, aerospace, and enterprise sectors, our systems process over 10 million data points per second while maintaining crystal-clear visual fidelity.
+                        </p>
+                        <p class="terminal-line">
+                            <span class="prompt">&gt;</span> Built on quantum-encrypted protocols and AI-driven predictive algorithms, Nexus ensures mission-critical reliability in the most demanding environments.
+                        </p>
+                        <span class="cursor-blink">_</span>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="feature-chip">
+                        <i data-lucide="shield-check"></i>
+                        <span>QUANTUM ENCRYPTION</span>
+                    </div>
+                    <div class="feature-chip">
+                        <i data-lucide="brain"></i>
+                        <span>AI INTEGRATION</span>
+                    </div>
+                    <div class="feature-chip">
+                        <i data-lucide="globe"></i>
+                        <span>GLOBAL NETWORK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <div class="section-marker">
+                <span class="marker-line"></span>
+                <span class="marker-text">// SECTION 03</span>
+            </div>
+            <h2 class="section-title">
+                <span class="title-bracket">&lt;</span>
+                CAPABILITIES
+                <span class="title-bracket">/&gt;</span>
+            </h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <div class="card-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                </div>
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="monitor"></i>
+                    </div>
+                    <div class="card-id">SYS_001</div>
+                </div>
+                <h3 class="card-title">HUD DEVELOPMENT</h3>
+                <p class="card-desc">Custom heads-up display solutions with augmented reality overlays and real-time telemetry integration.</p>
+                <div class="card-footer">
+                    <div class="card-status">
+                        <span class="status-dot active"></span>
+                        <span>OPERATIONAL</span>
+                    </div>
+                    <a href="#" class="card-link">
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                </div>
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <div class="card-id">SYS_002</div>
+                </div>
+                <h3 class="card-title">DATA ANALYTICS</h3>
+                <p class="card-desc">Advanced data processing pipelines with visualization dashboards and predictive modeling capabilities.</p>
+                <div class="card-footer">
+                    <div class="card-status">
+                        <span class="status-dot active"></span>
+                        <span>OPERATIONAL</span>
+                    </div>
+                    <a href="#" class="card-link">
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                </div>
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="lock"></i>
+                    </div>
+                    <div class="card-id">SYS_003</div>
+                </div>
+                <h3 class="card-title">CYBER SECURITY</h3>
+                <p class="card-desc">Military-grade encryption protocols with intrusion detection and zero-trust architecture implementation.</p>
+                <div class="card-footer">
+                    <div class="card-status">
+                        <span class="status-dot active"></span>
+                        <span>OPERATIONAL</span>
+                    </div>
+                    <a href="#" class="card-link">
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                </div>
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="satellite"></i>
+                    </div>
+                    <div class="card-id">SYS_004</div>
+                </div>
+                <h3 class="card-title">NETWORK OPS</h3>
+                <p class="card-desc">Global satellite communication networks with redundant pathways and autonomous failover systems.</p>
+                <div class="card-footer">
+                    <div class="card-status">
+                        <span class="status-dot active"></span>
+                        <span>OPERATIONAL</span>
+                    </div>
+                    <a href="#" class="card-link">
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                </div>
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="bot"></i>
+                    </div>
+                    <div class="card-id">SYS_005</div>
+                </div>
+                <h3 class="card-title">AI SYSTEMS</h3>
+                <p class="card-desc">Neural network integration with machine learning models for autonomous decision support systems.</p>
+                <div class="card-footer">
+                    <div class="card-status">
+                        <span class="status-dot active"></span>
+                        <span>OPERATIONAL</span>
+                    </div>
+                    <a href="#" class="card-link">
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="card-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                </div>
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="scan-face"></i>
+                    </div>
+                    <div class="card-id">SYS_006</div>
+                </div>
+                <h3 class="card-title">BIOMETRICS</h3>
+                <p class="card-desc">Advanced biometric authentication with multi-factor verification and behavioral analysis algorithms.</p>
+                <div class="card-footer">
+                    <div class="card-status">
+                        <span class="status-dot active"></span>
+                        <span>OPERATIONAL</span>
+                    </div>
+                    <a href="#" class="card-link">
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-header">
+            <div class="section-marker">
+                <span class="marker-line"></span>
+                <span class="marker-text">// SECTION 04</span>
+            </div>
+            <h2 class="section-title">
+                <span class="title-bracket">&lt;</span>
+                TRANSMISSIONS
+                <span class="title-bracket">/&gt;</span>
+            </h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="transmission-header">
+                    <div class="signal-icon">
+                        <i data-lucide="radio"></i>
+                    </div>
+                    <div class="transmission-meta">
+                        <span class="transmission-id">TX-7742</span>
+                        <span class="transmission-time">14:32:07 UTC</span>
+                    </div>
+                </div>
+                <div class="transmission-content">
+                    <p>"Nexus HUD systems have transformed our flight operations. Real-time threat assessment and navigation data displayed seamlessly. Outstanding performance under extreme conditions."</p>
+                </div>
+                <div class="transmission-footer">
+                    <div class="sender-info">
+                        <div class="sender-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="sender-details">
+                            <span class="sender-name">CDR. SARAH CHEN</span>
+                            <span class="sender-role">AEROSPACE DEFENSE CORPS</span>
+                        </div>
+                    </div>
+                    <div class="verification-badge">
+                        <i data-lucide="shield-check"></i>
+                        <span>VERIFIED</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="transmission-header">
+                    <div class="signal-icon">
+                        <i data-lucide="radio"></i>
+                    </div>
+                    <div class="transmission-meta">
+                        <span class="transmission-id">TX-8891</span>
+                        <span class="transmission-time">09:15:42 UTC</span>
+                    </div>
+                </div>
+                <div class="transmission-content">
+                    <p>"The cybersecurity protocols exceeded our stringent requirements. Zero breaches in 18 months of deployment across our global network infrastructure."</p>
+                </div>
+                <div class="transmission-footer">
+                    <div class="sender-info">
+                        <div class="sender-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="sender-details">
+                            <span class="sender-name">DR. MARCUS WEBB</span>
+                            <span class="sender-role">CISO, QUANTUM INDUSTRIES</span>
+                        </div>
+                    </div>
+                    <div class="verification-badge">
+                        <i data-lucide="shield-check"></i>
+                        <span>VERIFIED</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="transmission-header">
+                    <div class="signal-icon">
+                        <i data-lucide="radio"></i>
+                    </div>
+                    <div class="transmission-meta">
+                        <span class="transmission-id">TX-5523</span>
+                        <span class="transmission-time">22:48:19 UTC</span>
+                    </div>
+                </div>
+                <div class="transmission-content">
+                    <p>"Their AI-driven analytics platform processes our satellite telemetry in real-time. Response times improved by 340%. Mission-critical reliability achieved."</p>
+                </div>
+                <div class="transmission-footer">
+                    <div class="sender-info">
+                        <div class="sender-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="sender-details">
+                            <span class="sender-name">ELENA VORONOVA</span>
+                            <span class="sender-role">DIRECTOR, ORBITAL DYNAMICS</span>
+                        </div>
+                    </div>
+                    <div class="verification-badge">
+                        <i data-lucide="shield-check"></i>
+                        <span>VERIFIED</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <div class="section-marker">
+                <span class="marker-line"></span>
+                <span class="marker-text">// SECTION 05</span>
+            </div>
+            <h2 class="section-title">
+                <span class="title-bracket">&lt;</span>
+                ESTABLISH_LINK
+                <span class="title-bracket">/&gt;</span>
+            </h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-panel">
+                    <div class="panel-header">
+                        <i data-lucide="radio-tower"></i>
+                        <span>COMMUNICATION CHANNELS</span>
+                    </div>
+                    <div class="panel-content">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">HEADQUARTERS</span>
+                                <span class="info-value">Sector 7, Neo Tokyo Complex<br>Coordinates: 35.6762° N, 139.6503° E</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">SECURE CHANNEL</span>
+                                <span class="info-value">ops@nexus-systems.net</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">DIRECT LINE</span>
+                                <span class="info-value">+1-800-NEXUS-SYS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="status-panel">
+                    <div class="status-row">
+                        <span class="status-label">ENCRYPTION</span>
+                        <span class="status-value active">AES-256 ACTIVE</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-label">SECURE TUNNEL</span>
+                        <span class="status-value active">ESTABLISHED</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-label">FIREWALL</span>
+                        <span class="status-value active">LEVEL 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-header">
+                        <i data-lucide="terminal"></i>
+                        <span>SECURE TRANSMISSION FORM</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">IDENTIFIER</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">&gt;</span>
+                            <input type="text" id="name" name="name" placeholder="Enter your designation" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">COMM_ADDRESS</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">&gt;</span>
+                            <input type="email" id="email" name="email" placeholder="Enter secure channel" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">SUBJECT_LINE</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">&gt;</span>
+                            <input type="text" id="subject" name="subject" placeholder="Transmission subject" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">MESSAGE_BODY</label>
+                        <div class="input-wrapper textarea-wrapper">
+                            <span class="input-prefix">&gt;</span>
+                            <textarea id="message" name="message" rows="5" placeholder="Enter transmission data..." required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-brackets">[</span>
+                        <i data-lucide="send"></i>
+                        <span>TRANSMIT</span>
+                        <span class="btn-brackets">]</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid-bg"></div>
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-brackets">[</span>
+                        <span class="logo-text">NEXUS</span>
+                        <span class="logo-brackets">]</span>
+                        <span class="logo-suffix">_SYS</span>
+                    </div>
+                    <p class="footer-tagline">// ADVANCED INTERFACE TECHNOLOGY</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Discord">
+                            <i data-lucide="message-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>NAVIGATION</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>RESOURCES</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Status</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>LEGAL</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Compliance</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-line"></div>
+                <div class="footer-meta">
+                    <span class="copyright">&copy; 2026 NEXUS SYSTEMS. ALL RIGHTS RESERVED.</span>
+                    <span class="system-info">
+                        <span class="pulse-dot"></span>
+                        SYSTEM BUILD v4.2.1 | UPTIME: 99.99%
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

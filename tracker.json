@@ -1,5 +1,5 @@
 {
-  "nextIndex": 41,
+  "nextIndex": 42,
   "totalStyles": 54,
   "styles": [
     {
@@ -286,7 +286,8 @@
       "id": 41,
       "name": "HUD / Sci-Fi FUI",
       "slug": "41-hud-scifi",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-26"
     },
     {
       "id": 42,
