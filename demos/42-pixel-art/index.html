@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelCraft Studios | Retro Game Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Scanline Overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">▶</span>
+                <span>PIXELCRAFT</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#testimonials">REVIEWS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu" class="pixel-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#testimonials">REVIEWS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="pixel-grid"></div>
+            <div class="floating-pixels">
+                <div class="pixel p1"></div>
+                <div class="pixel p2"></div>
+                <div class="pixel p3"></div>
+                <div class="pixel p4"></div>
+                <div class="pixel p5"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i data-lucide="gamepad-2" class="pixel-icon"></i>
+                    <span>LEVEL 1 START</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">RETRO GAME</span>
+                    <span class="title-line accent">DEVELOPMENT</span>
+                </h1>
+                <p class="hero-text">We craft pixel-perfect games that capture the magic of the 8-bit and 16-bit eras. Press START to begin your adventure!</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">
+                        <i data-lucide="play" class="pixel-icon"></i>
+                        <span>START GAME</span>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <i data-lucide="info" class="pixel-icon"></i>
+                        <span>HOW TO PLAY</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">150+</span>
+                        <span class="stat-label">GAMES MADE</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">50K+</span>
+                        <span class="stat-label">PLAYERS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">99%</span>
+                        <span class="stat-label">FUN RATING</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="game-screen">
+                    <div class="screen-header">
+                        <span class="lives">
+                            <i data-lucide="heart" class="pixel-icon filled"></i>
+                            <i data-lucide="heart" class="pixel-icon filled"></i>
+                            <i data-lucide="heart" class="pixel-icon filled"></i>
+                        </span>
+                        <span class="score">SCORE: <span id="score">00000</span></span>
+                    </div>
+                    <div class="screen-content">
+                        <div class="player"></div>
+                        <div class="enemy e1"></div>
+                        <div class="enemy e2"></div>
+                        <div class="coin c1"></div>
+                        <div class="coin c2"></div>
+                        <div class="coin c3"></div>
+                        <div class="platform p-ground"></div>
+                        <div class="platform p-float1"></div>
+                        <div class="platform p-float2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i data-lucide="user" class="pixel-icon"></i>
+                    PLAYER SELECT
+                </span>
+                <h2 class="section-title">ABOUT US</h2>
+                <p class="section-subtitle">Choose your character and learn our story</p>
+            </div>
+            <div class="about-content">
+                <div class="about-visual">
+                    <div class="character-select">
+                        <div class="character active" data-char="warrior">
+                            <div class="char-sprite warrior"></div>
+                            <span class="char-name">WARRIOR</span>
+                        </div>
+                        <div class="character" data-char="mage">
+                            <div class="char-sprite mage"></div>
+                            <span class="char-name">MAGE</span>
+                        </div>
+                        <div class="character" data-char="rogue">
+                            <div class="char-sprite rogue"></div>
+                            <span class="char-name">ROGUE</span>
+                        </div>
+                    </div>
+                    <div class="char-info">
+                        <div class="stat-bars">
+                            <div class="stat-bar">
+                                <span class="bar-label">STR</span>
+                                <div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+                            </div>
+                            <div class="stat-bar">
+                                <span class="bar-label">DEX</span>
+                                <div class="bar-track"><div class="bar-fill" style="width: 60%"></div></div>
+                            </div>
+                            <div class="stat-bar">
+                                <span class="bar-label">INT</span>
+                                <div class="bar-track"><div class="bar-fill" style="width: 40%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>OUR QUEST BEGAN IN 2015</h3>
+                    <p>PixelCraft Studios was founded by a group of passionate retro gaming enthusiasts who wanted to bring back the magic of classic games.</p>
+                    <p>We specialize in creating pixel art games that combine nostalgic aesthetics with modern gameplay mechanics. Every sprite is hand-crafted, every chiptune composed with love.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i data-lucide="palette" class="pixel-icon"></i>
+                            <span>Hand-drawn pixel art</span>
+                        </div>
+                        <div class="feature">
+                            <i data-lucide="music" class="pixel-icon"></i>
+                            <span>Original chiptune music</span>
+                        </div>
+                        <div class="feature">
+                            <i data-lucide="code" class="pixel-icon"></i>
+                            <span>Clean, optimized code</span>
+                        </div>
+                        <div class="feature">
+                            <i data-lucide="heart" class="pixel-icon"></i>
+                            <span>Made with passion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i data-lucide="sword" class="pixel-icon"></i>
+                    POWER-UPS
+                </span>
+                <h2 class="section-title">OUR SERVICES</h2>
+                <p class="section-subtitle">Collect these power-ups to level up your project</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i data-lucide="gamepad-2" class="pixel-icon"></i>
+                    </div>
+                    <h3>GAME DEV</h3>
+                    <p>Full game development from concept to release. 2D platformers, RPGs, puzzles, and more!</p>
+                    <div class="card-stats">
+                        <span class="xp">+500 XP</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i data-lucide="image" class="pixel-icon"></i>
+                    </div>
+                    <h3>PIXEL ART</h3>
+                    <p>Custom sprites, tilesets, animations, and UI elements. From 8-bit to 32-bit styles.</p>
+                    <div class="card-stats">
+                        <span class="xp">+350 XP</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i data-lucide="music-2" class="pixel-icon"></i>
+                    </div>
+                    <h3>CHIPTUNE</h3>
+                    <p>Original 8-bit soundtracks and SFX that capture the authentic retro gaming vibe.</p>
+                    <div class="card-stats">
+                        <span class="xp">+300 XP</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i data-lucide="monitor" class="pixel-icon"></i>
+                    </div>
+                    <h3>PORTING</h3>
+                    <p>Bring your game to multiple platforms. PC, consoles, mobile, and web.</p>
+                    <div class="card-stats">
+                        <span class="xp">+400 XP</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i data-lucide="book-open" class="pixel-icon"></i>
+                    </div>
+                    <h3>CONSULTING</h3>
+                    <p>Game design advice, code reviews, and pixel art tutorials from industry veterans.</p>
+                    <div class="card-stats">
+                        <span class="xp">+250 XP</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i data-lucide="wrench" class="pixel-icon"></i>
+                    </div>
+                    <h3>QA TESTING</h3>
+                    <p>Thorough bug hunting and balance testing. We find the glitches before players do!</p>
+                    <div class="card-stats">
+                        <span class="xp">+200 XP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i data-lucide="star" class="pixel-icon"></i>
+                    HIGH SCORES
+                </span>
+                <h2 class="section-title">PLAYER REVIEWS</h2>
+                <p class="section-subtitle">What our clients say about their adventure</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <div class="pixel-avatar a1"></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">ALEX_GAMER</span>
+                            <span class="reviewer-title">Indie Developer</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                    </div>
+                    <p class="review-text">"PixelCraft turned my game idea into reality! The pixel art exceeded my expectations. 10/10 would hire again!"</p>
+                    <div class="review-game">
+                        <i data-lucide="trophy" class="pixel-icon"></i>
+                        <span>DRAGON QUEST CLONE</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <div class="pixel-avatar a2"></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">SARAH_8BIT</span>
+                            <span class="reviewer-title">Game Publisher</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                    </div>
+                    <p class="review-text">"The chiptune soundtrack they created is absolutely fire! Players can't stop humming the main theme."</p>
+                    <div class="review-game">
+                        <i data-lucide="trophy" class="pixel-icon"></i>
+                        <span>NEON RUNNER</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <div class="pixel-avatar a3"></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">MIKE_RETRO</span>
+                            <span class="reviewer-title">Studio Owner</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon filled"></i>
+                        <i data-lucide="star" class="pixel-icon"></i>
+                    </div>
+                    <p class="review-text">"Professional team, great communication, and they delivered on time. Our platformer hit #1 on itch.io!"</p>
+                    <div class="review-game">
+                        <i data-lucide="trophy" class="pixel-icon"></i>
+                        <span>PIXEL KNIGHTS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i data-lucide="mail" class="pixel-icon"></i>
+                    SAVE POINT
+                </span>
+                <h2 class="section-title">CONTACT US</h2>
+                <p class="section-subtitle">Ready to start your quest? Send us a message!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i data-lucide="map-pin" class="pixel-icon"></i>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">LOCATION</span>
+                            <span class="info-value">PIXEL CITY, PC 8080</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i data-lucide="mail" class="pixel-icon"></i>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">EMAIL</span>
+                            <span class="info-value">PLAY@PIXELCRAFT.DEV</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i data-lucide="phone" class="pixel-icon"></i>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">HOTLINE</span>
+                            <span class="info-value">1-800-PIXELS</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter" class="pixel-icon"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Discord">
+                            <i data-lucide="message-circle" class="pixel-icon"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i data-lucide="github" class="pixel-icon"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i data-lucide="youtube" class="pixel-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">PLAYER NAME</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">EMAIL ADDRESS</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project">PROJECT TYPE</label>
+                        <select id="project" name="project">
+                            <option value="">Select quest type...</option>
+                            <option value="game">Full Game Development</option>
+                            <option value="art">Pixel Art Only</option>
+                            <option value="music">Chiptune Music</option>
+                            <option value="porting">Game Porting</option>
+                            <option value="other">Other Quest</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">YOUR MESSAGE</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your quest..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i data-lucide="send" class="pixel-icon"></i>
+                        <span>SEND MESSAGE</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">▶</span>
+                        <span>PIXELCRAFT</span>
+                    </a>
+                    <p>Crafting pixel-perfect games since 2015. Press any key to continue...</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>MENU</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#testimonials">Reviews</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>LEGAL</h4>
+                        <ul>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PIXELCRAFT STUDIOS. ALL RIGHTS RESERVED.</p>
+                <p class="footer-credit">
+                    <i data-lucide="heart" class="pixel-icon"></i>
+                    INSERT COIN TO CONTINUE
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

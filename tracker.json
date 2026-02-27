@@ -1,5 +1,5 @@
 {
-  "nextIndex": 42,
+  "nextIndex": 43,
   "totalStyles": 54,
   "styles": [
     {
@@ -293,7 +293,8 @@
       "id": 42,
       "name": "Pixel Art",
       "slug": "42-pixel-art",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-27"
     },
     {
       "id": 43,
