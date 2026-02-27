@@ -352,11 +352,11 @@ button {
 
 .hero-sub {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
     max-width: 600px;
     margin: 0 auto var(--space-8);
     line-height: 1.8;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .hero-actions {
@@ -709,10 +709,16 @@ button {
    ======================================== */
 
 .cuba-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--space-6);
     margin-bottom: var(--space-10);
+    justify-content: center;
+}
+
+.cuba-card {
+    flex: 0 1 calc(33.333% - var(--space-6));
+    min-width: 280px;
 }
 
 .cuba-card {
@@ -864,19 +870,22 @@ button {
 }
 
 .partner-logo {
-    color: var(--text-secondary);
+    color: var(--text-dark);
     transition: all var(--duration);
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 .partner-logo:hover {
     opacity: 1;
     color: var(--gold-dark);
+    transform: scale(1.05);
 }
 
-.partner-logo svg {
-    height: 60px;
+.partner-logo svg,
+.partner-logo img {
+    height: 70px;
     width: auto;
+    max-width: 200px;
 }
 
 /* ========================================
@@ -1173,7 +1182,12 @@ button {
     }
     
     .cuba-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    
+    .cuba-card {
+        flex: 1 1 100%;
+        min-width: unset;
     }
     
     .cuba-card p {
@@ -1368,6 +1382,23 @@ button {
 /* Partners section — subtle warm divider */
 .certifications {
     border-top-color: var(--cream-dark);
+}
+
+/* Question banner warm enhancement */
+.question-banner {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    position: relative;
+}
+
+/* Warm floating accent on hero */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
 }
 
 /* Warm scrollbar */
