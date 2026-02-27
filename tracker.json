@@ -1,5 +1,5 @@
 {
-  "nextIndex": 43,
+  "nextIndex": 44,
   "totalStyles": 54,
   "styles": [
     {
@@ -300,7 +300,8 @@
       "id": 43,
       "name": "Spatial UI (VisionOS)",
       "slug": "43-spatial-visionos",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-27"
     },
     {
       "id": 44,
