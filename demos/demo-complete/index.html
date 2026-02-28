@@ -798,36 +798,7 @@
       50% { opacity: 0.3; top: 20px; }
     }
 
-    /* ========== STATS BAR ========== */
-    .stats-bar {
-      background: var(--navy-deep);
-      border-top: 1px solid rgba(200, 150, 46, 0.2);
-      border-bottom: 1px solid rgba(200, 150, 46, 0.2);
-      padding: 40px 0;
-    }
-    .stats-bar__inner {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-    .stat {
-      text-align: center;
-    }
-    .stat__number {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--gold-primary);
-      line-height: 1;
-    }
-    .stat__label {
-      font-size: 0.9rem;
-      color: var(--text-muted-light);
-      margin-top: 8px;
-    }
-    @media (max-width: 768px) {
-      .stats-bar__inner { grid-template-columns: repeat(2, 1fr); }
-    }
+
 
     /* ========== SERVICES GRID ========== */
     .services {
@@ -1491,29 +1462,7 @@
 
 
 
-  <!-- ========== STATS BAR ========== -->
-  <section class="stats-bar">
-    <div class="container">
-      <div class="stats-bar__inner">
-        <div class="stat">
-          <div class="stat__number">8+</div>
-          <div class="stat__label">Years of Experience</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number">5000+</div>
-          <div class="stat__label">Happy Clients</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number">15+</div>
-          <div class="stat__label">Destinations</div>
-        </div>
-        <div class="stat">
-          <div class="stat__number">5</div>
-          <div class="stat__label">Services Offered</div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- ========== SERVICES ========== -->
   <section class="services" id="services">
