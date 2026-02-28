@@ -268,10 +268,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .stat-blue::after { display: none; }
 .stat-blue .stat-num { color: var(--navy); }
 .stat-blue .stat-label { color: var(--gray); }
-.stat-green { background: var(--navy); }
+.stat-green { background: var(--cream); }
 .stat-green::after { background: linear-gradient(90deg, transparent 0%, rgba(212,165,54,0.2) 50%, transparent 100%); }
-.stat-green .stat-num { color: var(--gold); }
-.stat-green .stat-label { color: rgba(255,255,255,0.8); }
+.stat-green .stat-num { color: var(--gold-dark); }
+.stat-green .stat-label { color: var(--gray); }
 
 .hero-preview {
     position: relative; border-radius: var(--radius); overflow: hidden; min-height: 180px;
@@ -328,7 +328,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .section-tag {
     display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px;
-    background: var(--navy); color: var(--gold); font-size: 13px; font-weight: 600;
+    background: var(--gold-light); color: var(--gold-dark); font-size: 13px; font-weight: 600;
     border-radius: 100px; margin-bottom: 20px;
 }
 .section-tag i { width: 16px; height: 16px; }
@@ -377,7 +377,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: white; border-radius: var(--radius);
 }
 .bento-tag {
-    align-self: flex-start; padding: 8px 14px; background: var(--gold); color: var(--navy-dark);
+    align-self: flex-start; padding: 8px 14px; background: var(--gold); color: #FFFFFF;
     font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; border-radius: 6px; margin-bottom: 14px;
 }
 .bento-card h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
@@ -396,19 +396,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     box-shadow: 0 8px 24px rgba(212,165,54,0.3);
 }
 .bento-icon i { width: 28px; height: 28px; }
-.bento-icon.blue { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color: var(--gold); }
-.bento-icon.purple { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color: var(--gold); }
+.bento-icon.blue { background: var(--gold-light); color: var(--gold-dark); }
+.bento-icon.purple { background: var(--gold-light); color: var(--gold-dark); }
 .bento-icon.white { background: rgba(255,255,255,0.2); color: white; }
 
 .bento-accent { 
     background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); 
-    color: var(--navy-dark); 
+    color: #FFFFFF; 
     border: none;
     animation: pulse-glow 3s ease-in-out infinite;
 }
-.bento-accent h3 { color: var(--navy-dark); }
-.bento-accent p { color: var(--navy); }
-.bento-accent .bento-icon { background: var(--navy); color: var(--gold); }
+.bento-accent h3 { color: #FFFFFF; }
+.bento-accent p { color: rgba(255,255,255,0.9); }
+.bento-accent .bento-icon { background: rgba(255,255,255,0.2); color: #FFFFFF; }
 
 .bento-cta {
     display: inline-flex; align-items: center; gap: 8px; margin-top: auto; font-weight: 600;
@@ -416,7 +416,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .bento-cta i { width: 18px; height: 18px; transition: transform 0.2s; }
 .bento-card:hover .bento-cta i { transform: translateX(6px); }
-.bento-cta.light { color: var(--navy-dark); }
+.bento-cta.light { color: #FFFFFF; }
 
 /* ========================================
    CUBA SECTION
@@ -508,7 +508,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .service-icon i { width: 32px; height: 32px; color: white; }
 .service-icon.green { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); }
 .service-icon.amber { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); }
-.service-icon.purple { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); }
+.service-icon.purple { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); }
 .service-badge {
     display: inline-block; padding: 6px 12px; background: var(--gold-light); color: var(--gold-dark);
     font-size: 11px; font-weight: 700; border-radius: 6px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.02em;
@@ -564,15 +564,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .certs-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
 .cert {
-    display: flex; align-items: center; gap: 10px; padding: 14px 22px; background: var(--navy);
-    border-radius: 100px; font-size: 13px; font-weight: 600; color: white;
+    display: flex; align-items: center; gap: 10px; padding: 14px 22px; background: var(--gold-light);
+    border-radius: 100px; font-size: 13px; font-weight: 600; color: var(--navy);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .cert:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(12,46,78,0.3);
 }
-.cert i { width: 18px; height: 18px; color: var(--gold); }
+.cert i { width: 18px; height: 18px; color: var(--gold-dark); }
 
 /* ========================================
    BLOG WITH GRADIENT REVEAL
