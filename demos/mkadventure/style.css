@@ -648,11 +648,17 @@ body::before {
 
 .btn-primary {
     background: var(--gold);
-    color: var(--gray-900);
+    color: #FFFFFF !important;
+}
+
+.btn-primary *,
+.btn-primary i {
+    color: #FFFFFF !important;
 }
 
 .btn-primary:hover {
     background: var(--gold-dark);
+    color: #FFFFFF !important;
     transform: translateY(-3px);
     box-shadow: var(--shadow-gold);
 }
