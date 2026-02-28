@@ -1078,10 +1078,13 @@ body::before {
 .travel-promo h3 {
     font-size: 1.5rem;
     margin-bottom: var(--space-2);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .travel-promo p {
-    opacity: 0.9;
+    opacity: 1;
+    color: var(--white);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     margin-bottom: var(--space-4);
 }
 
