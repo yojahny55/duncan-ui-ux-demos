@@ -313,6 +313,37 @@
       .nav, .header__cta { display: none; }
       .header__hamburger { display: flex; }
     }
+    @media (max-width: 768px) {
+      .header {
+        padding: 12px 0;
+      }
+      .header.scrolled {
+        padding: 8px 0;
+      }
+      .header__inner {
+        align-items: center;
+        min-height: 48px;
+      }
+      .header__logo img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        flex-shrink: 0;
+      }
+      .header__logo {
+        gap: 8px;
+        overflow: hidden;
+      }
+      .header__logo-text {
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .header__logo-text small {
+        font-size: 0.6rem;
+      }
+    }
 
     /* ========== DECORATIVE ELEMENTS ========== */
     .deco-grid {
