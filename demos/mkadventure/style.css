@@ -969,8 +969,8 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--sky-light);
-    color: var(--ocean);
+    background: var(--gold-light);
+    color: var(--gold-dark);
     border-radius: var(--radius);
     margin-bottom: var(--space-4);
 }
@@ -1332,19 +1332,13 @@ body::before {
 .service-icon i {
     width: 28px;
     height: 28px;
-    color: var(--white);
+    color: var(--gold-dark);
 }
 
-.service-icon-green {
-    background: var(--gold);
-}
-
-.service-icon-amber {
-    background: var(--ocean-deep);
-}
-
+.service-icon-green,
+.service-icon-amber,
 .service-icon-purple {
-    background: var(--ocean);
+    background: var(--gold-light);
 }
 
 .service-badge {
