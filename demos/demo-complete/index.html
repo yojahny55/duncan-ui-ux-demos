@@ -437,6 +437,20 @@
       flex-direction: column;
       gap: 20px;
     }
+    @media (max-width: 768px) {
+      .hero__float-cards {
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        flex-direction: row;
+        gap: 12px;
+        padding: 0 20px;
+        margin-top: 20px;
+        overflow-x: auto;
+        width: 100%;
+      }
+    }
     .float-card {
       width: 200px;
       height: 140px;
@@ -750,6 +764,11 @@
       color: var(--text-muted-light);
       font-size: 0.8rem;
       animation: bounce 2s infinite;
+    }
+    @media (max-width: 768px) {
+      .hero__scroll {
+        display: none !important;
+      }
     }
     .hero__scroll-icon {
       width: 24px;
