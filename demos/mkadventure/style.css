@@ -1015,11 +1015,14 @@ body::before {
 
 /* Promo Card */
 .travel-promo {
-    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
+    background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean) 100%);
     color: var(--white);
     min-height: 220px;
     display: flex;
     align-items: center;
+}
+.travel-promo * {
+    color: #FFFFFF !important;
 }
 
 .travel-promo:hover {
