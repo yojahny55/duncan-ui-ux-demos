@@ -305,7 +305,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .section-dark { background: var(--navy); color: white; }
 .section-alt { background: var(--white); }
 .section-cream { background: var(--cream); }
-.section-cta { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); color: var(--navy); }
+.section-cta { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); color: #FFFFFF; }
+.section-cta h2, .section-cta p, .section-cta span, .section-cta .section-tag { color: #FFFFFF !important; }
+.section-cta .section-tag { background: rgba(255,255,255,0.2); }
 
 /* Gradient divider between sections */
 .section + .section-dark::before,
@@ -421,18 +423,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 ======================================== */
 .cuba-layout { display: grid; gap: 56px; align-items: center; }
 @media (min-width: 900px) { .cuba-layout { grid-template-columns: 1.2fr 1fr; } }
-.cuba-text h2 { font-family: var(--font-display); font-size: clamp(36px, 5vw, 52px); margin-bottom: 20px; }
-.cuba-text > p { font-size: 18px; opacity: 0.9; margin-bottom: 36px; line-height: 1.7; }
+.cuba-text h2 { font-family: var(--font-display); font-size: clamp(36px, 5vw, 52px); margin-bottom: 20px; color: var(--navy); }
+.cuba-text > p { font-size: 18px; opacity: 0.9; margin-bottom: 36px; line-height: 1.7; color: var(--gray); }
 .cuba-features { list-style: none; margin-bottom: 44px; }
 .cuba-features li { 
     display: flex; align-items: center; gap: 14px; margin-bottom: 16px; font-size: 16px;
     padding: 12px 16px;
-    background: rgba(255,255,255,0.05);
+    background: var(--white);
     border-radius: 12px;
     transition: background 0.3s, transform 0.3s;
+    color: var(--navy);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 .cuba-features li:hover {
-    background: rgba(212,165,54,0.1);
+    background: var(--gold-light);
     transform: translateX(8px);
 }
 .cuba-features i { width: 22px; height: 22px; color: var(--gold); }
@@ -440,22 +444,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .cuba-card { display: block; }
 @media (min-width: 900px) { .cuba-card { display: block; } }
 .track-card {
-    background: rgba(255,255,255,0.08); backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 32px;
+    background: var(--white); backdrop-filter: none;
+    border: 1px solid rgba(200,150,46,0.15); border-radius: var(--radius); padding: 32px;
     transition: transform 0.3s, border-color 0.3s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
 .track-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(212,165,54,0.4);
+    border-color: var(--gold);
 }
-.track-head { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 17px; margin-bottom: 28px; }
+.track-head { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 17px; margin-bottom: 28px; color: var(--navy); }
 .track-head i { width: 22px; height: 22px; color: var(--gold); }
-.track-route { display: flex; align-items: center; gap: 14px; font-size: 15px; margin-bottom: 28px; font-weight: 500; }
+.track-route { display: flex; align-items: center; gap: 14px; font-size: 15px; margin-bottom: 28px; font-weight: 500; color: var(--navy); }
 .track-line { flex: 1; display: flex; align-items: center; }
-.dot { width: 12px; height: 12px; background: rgba(255,255,255,0.3); border-radius: 50%; }
+.dot { width: 12px; height: 12px; background: rgba(0,0,0,0.15); border-radius: 50%; }
 .dot.on { background: var(--gold); box-shadow: 0 0 12px var(--gold); animation: pulse-glow 2s infinite; }
-.line { flex: 1; height: 2px; background: linear-gradient(to right, var(--gold), rgba(255,255,255,0.2)); }
-.track-status { display: flex; align-items: center; justify-content: space-between; font-size: 14px; }
+.line { flex: 1; height: 2px; background: linear-gradient(to right, var(--gold), rgba(0,0,0,0.1)); }
+.track-status { display: flex; align-items: center; justify-content: space-between; font-size: 14px; color: var(--gray); }
 .status-ok {
     display: flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--gold);
     color: white; border-radius: 100px; font-weight: 600;
