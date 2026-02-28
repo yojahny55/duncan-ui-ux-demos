@@ -1,5 +1,5 @@
 {
-  "nextIndex": 44,
+  "nextIndex": 45,
   "totalStyles": 54,
   "styles": [
     {
@@ -307,7 +307,8 @@
       "id": 44,
       "name": "E-Ink / Paper",
       "slug": "44-eink-paper",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-02-28"
     },
     {
       "id": 45,

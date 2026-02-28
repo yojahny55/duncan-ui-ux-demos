@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ink / Paper Style | Duncan UI/UX Demos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Paper Texture Overlay -->
+    <div class="paper-texture"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i data-lucide="book-open"></i>
+                <span>Quietude</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Voices</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Digital Calm</p>
+                <h1 class="hero-title">Find peace in the<br><span class="highlight">absence of noise</span></h1>
+                <p class="hero-subtitle">A space for focused reading, mindful creation, and intentional living. No distractions. No clutter. Just what matters.</p>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn-primary">
+                        <i data-lucide="feather"></i>
+                        Begin Reading
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <i data-lucide="compass"></i>
+                        Explore
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="book-illustration">
+                    <div class="book-page page-left">
+                        <div class="page-lines"></div>
+                    </div>
+                    <div class="book-page page-right">
+                        <div class="page-lines"></div>
+                    </div>
+                    <div class="book-spine"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-divider">
+            <i data-lucide="minus"></i>
+            <i data-lucide="circle" class="divider-dot"></i>
+            <i data-lucide="minus"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Philosophy</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-lead">We believe in the power of stillness. In a world of infinite scroll and endless notifications, we create spaces where thoughts can breathe.</p>
+                    <p>The e-ink aesthetic isn't just a visual choice—it's a philosophy. High contrast for clarity. No animations for focus. Paper textures for warmth. Every element serves a purpose.</p>
+                    <p>Like ink on paper, our designs are permanent, considered, and meant to endure. We reject the ephemeral in favor of the meaningful.</p>
+                </div>
+                <aside class="about-aside">
+                    <blockquote>
+                        <i data-lucide="quote" class="quote-icon"></i>
+                        <p>"In the midst of movement and chaos, keep stillness inside of you."</p>
+                        <cite>— Deepak Chopra</cite>
+                    </blockquote>
+                </aside>
+            </div>
+            <div class="about-values">
+                <div class="value-item">
+                    <i data-lucide="eye"></i>
+                    <h3>Clarity</h3>
+                    <p>Every element visible. Nothing hidden. Truth in simplicity.</p>
+                </div>
+                <div class="value-item">
+                    <i data-lucide="clock"></i>
+                    <h3>Permanence</h3>
+                    <p>Designs that age like paper, not screens. Built to last.</p>
+                </div>
+                <div class="value-item">
+                    <i data-lucide="leaf"></i>
+                    <h3>Calm</h3>
+                    <p>No flashing lights. No urgent alerts. Just peaceful presence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Offerings</h2>
+            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-number">I</div>
+                    <div class="service-icon">
+                        <i data-lucide="pen-tool"></i>
+                    </div>
+                    <h3>Distraction-Free Writing</h3>
+                    <p>Tools and environments designed for deep work. No notifications. No sidebars. Just you and your thoughts.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Minimal interface</li>
+                        <li><i data-lucide="check"></i> Focus mode</li>
+                        <li><i data-lucide="check"></i> Typewriter sounds</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <div class="service-number">II</div>
+                    <div class="service-icon">
+                        <i data-lucide="book"></i>
+                    </div>
+                    <h3>Reading Sanctuaries</h3>
+                    <p>Digital spaces optimized for long-form reading. Eye-friendly contrast. Thoughtful typography. No infinite scroll.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Serif typography</li>
+                        <li><i data-lucide="check"></i> Paper-like display</li>
+                        <li><i data-lucide="check"></i> Page-based navigation</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <div class="service-number">III</div>
+                    <div class="service-icon">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3>Editorial Design</h3>
+                    <p>Print-quality layouts for digital publications. Magazine aesthetics without the magazine waste.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Grid systems</li>
+                        <li><i data-lucide="check"></i> Drop caps</li>
+                        <li><i data-lucide="check"></i> Pull quotes</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <div class="service-number">IV</div>
+                    <div class="service-icon">
+                        <i data-lucide="moon"></i>
+                    </div>
+                    <h3>Slow Technology</h3>
+                    <p>Intentional digital experiences that respect your attention. Technology that waits for you, not the other way around.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Calm notifications</li>
+                        <li><i data-lucide="check"></i> Async-first</li>
+                        <li><i data-lucide="check"></i> No dark patterns</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Voices</h2>
+            </div>
+            <div class="testimonials-grid">
+                <blockquote class="testimonial-card">
+                    <div class="testimonial-header">
+                        <i data-lucide="user-circle"></i>
+                        <div>
+                            <cite>Eleanor Vance</cite>
+                            <span>Author & Essayist</span>
+                        </div>
+                    </div>
+                    <p>"Finally, a digital space that feels like my favorite reading chair. I've written more in the last month than the entire previous year."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </blockquote>
+                <blockquote class="testimonial-card featured">
+                    <div class="testimonial-header">
+                        <i data-lucide="user-circle"></i>
+                        <div>
+                            <cite>Marcus Chen</cite>
+                            <span>Editor, The Quarterly Review</span>
+                        </div>
+                    </div>
+                    <p>"The e-ink aesthetic transformed our publication. Readers spend three times longer on articles. Engagement isn't about flashy animations—it's about respect for the reader's time."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <div class="testimonial-header">
+                        <i data-lucide="user-circle"></i>
+                        <div>
+                            <cite>Dr. Sarah Kim</cite>
+                            <span>Digital Wellness Researcher</span>
+                        </div>
+                    </div>
+                    <p>"This approach reduces cognitive load by 40%. It's not just beautiful—it's backed by science. The brain craves this simplicity."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Correspond</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-intro">
+                    <p class="contact-lead">We read every letter. We respond thoughtfully. Good things take time.</p>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i data-lucide="mail"></i>
+                            <span>letters@quietude.co</span>
+                        </div>
+                        <div class="info-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Portland, Oregon</span>
+                        </div>
+                        <div class="info-item">
+                            <i data-lucide="clock"></i>
+                            <span>Response within 48 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="How shall we address you?">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Where can we reach you?">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic...</option>
+                            <option value="inquiry">General Inquiry</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="project">Project Discussion</option>
+                            <option value="other">Something Else</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Take your time. We're listening."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i data-lucide="send"></i>
+                        Send Letter
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i data-lucide="book-open"></i>
+                        <span>Quietude</span>
+                    </a>
+                    <p>Creating calm in a noisy world.<br>One page at a time.</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="footer-column">
+                        <h4>Navigate</h4>
+                        <ul>
+                            <li><a href="#about">Philosophy</a></li>
+                            <li><a href="#services">Offerings</a></li>
+                            <li><a href="#testimonials">Voices</a></li>
+                            <li><a href="#contact">Correspond</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Reading List</a></li>
+                            <li><a href="#">Style Guide</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">RSS Feed</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul class="social-links">
+                            <li>
+                                <a href="#" aria-label="Twitter">
+                                    <i data-lucide="twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="RSS">
+                                    <i data-lucide="rss"></i>
+                                    <span>RSS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Email">
+                                    <i data-lucide="mail"></i>
+                                    <span>Email</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Quietude. Designed with intention.</p>
+                <p class="style-credit">
+                    <i data-lucide="palette"></i>
+                    E-Ink / Paper Style Demo — 
+                    <a href="https://github.com/yojahny55/duncan-ui-ux-demos" target="_blank">Duncan UI/UX Demos</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
