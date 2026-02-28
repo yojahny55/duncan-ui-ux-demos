@@ -553,7 +553,7 @@
         width: 100%;
       }
       .hero__content {
-        padding: 16px 0 16px !important;
+        padding: 70px 0 16px !important;
       }
       .hero__title {
         font-size: clamp(2rem, 8vw, 2.8rem);
@@ -649,7 +649,7 @@
     }
     @media (max-width: 768px) {
       .hero__content {
-        padding: 56px 0 16px !important;
+        padding: 70px 0 16px !important;
       }
     }
     .hero__badge {
@@ -1333,9 +1333,13 @@
       transform: none !important;
       transition: none !important;
     }
-    .char {
+    .char,
+    .hero__title .char {
       opacity: 1 !important;
       transform: none !important;
+    }
+    .hero__title .word {
+      overflow: visible !important;
     }
     /* Footer centering fix */
     .footer .container {
