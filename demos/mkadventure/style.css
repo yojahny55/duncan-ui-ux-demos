@@ -106,8 +106,19 @@
 .back-to-top {
     color: #FFFFFF;
 }
-.section-cta *,
-.contact-whatsapp *,
+.section-cta .cta-content > h2,
+.section-cta .cta-content > h2 *,
+.section-cta .cta-content > p {
+    color: #FFFFFF !important;
+}
+.contact-whatsapp,
+.contact-whatsapp > i,
+.contact-whatsapp strong,
+.contact-whatsapp span,
+.contact-whatsapp .contact-arrow {
+    color: #FFFFFF !important;
+}
+.travel-promo,
 .travel-promo * {
     color: #FFFFFF !important;
 }
