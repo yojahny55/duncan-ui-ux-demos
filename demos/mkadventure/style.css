@@ -981,8 +981,8 @@ body::before {
 }
 
 .travel-icon-teal {
-    background: #CCFBF1;
-    color: #0D9488;
+    background: var(--gold-light);
+    color: var(--gold-dark);
 }
 
 .travel-link {
@@ -1015,7 +1015,7 @@ body::before {
 
 /* Promo Card */
 .travel-promo {
-    background: linear-gradient(135deg, var(--sunset) 0%, var(--coral) 100%);
+    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
     color: var(--white);
     min-height: 220px;
     display: flex;
@@ -1263,7 +1263,7 @@ body::before {
     align-items: center;
     gap: var(--space-2);
     padding: var(--space-2) var(--space-4);
-    background: var(--success);
+    background: var(--gold);
     border-radius: var(--radius-full);
     font-size: 0.8rem;
     font-weight: 600;
@@ -1333,21 +1333,21 @@ body::before {
 }
 
 .service-icon-green {
-    background: var(--success);
+    background: var(--gold);
 }
 
 .service-icon-amber {
-    background: var(--amber);
+    background: var(--ocean-deep);
 }
 
 .service-icon-purple {
-    background: var(--purple);
+    background: var(--ocean);
 }
 
 .service-badge {
     padding: var(--space-1) var(--space-3);
-    background: var(--success-light);
-    color: var(--success);
+    background: var(--gold-light);
+    color: var(--gold-dark);
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1388,7 +1388,7 @@ body::before {
 .service-list i {
     width: 18px;
     height: 18px;
-    color: var(--success);
+    color: var(--gold-dark);
     flex-shrink: 0;
 }
 
@@ -1647,11 +1647,11 @@ body::before {
 }
 
 .blog-media-green {
-    background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+    background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean) 100%);
 }
 
 .blog-media-purple {
-    background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);
+    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
 }
 
 .blog-icon {
@@ -1966,28 +1966,28 @@ body::before {
 }
 
 .contact-whatsapp {
-    background: var(--whatsapp);
+    background: var(--gold);
 }
 
 .contact-whatsapp > i,
 .contact-whatsapp strong {
-    color: rgba(255,255,255,0.8);
+    color: var(--gray-900);
 }
 
 .contact-whatsapp span {
-    color: var(--white);
+    color: var(--gray-900);
 }
 
 .contact-whatsapp .contact-arrow {
-    color: rgba(255,255,255,0.5);
+    color: var(--gray-700);
 }
 
 .contact-whatsapp:hover {
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 10px 30px var(--gold-glow);
 }
 
 .contact-whatsapp:hover .contact-arrow {
-    color: var(--white);
+    color: var(--gray-900);
 }
 
 .cta-hours {
@@ -2114,7 +2114,7 @@ body::before {
     display: flex;
     align-items: center;
     gap: var(--space-2);
-    color: var(--success);
+    color: var(--gold-dark);
 }
 
 .footer-badge i {
@@ -2135,10 +2135,10 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--whatsapp);
+    background: var(--gold);
     color: var(--white);
     border-radius: 50%;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 6px 20px var(--gold-glow);
     z-index: 999;
     transition: transform var(--duration) var(--ease-out);
 }
@@ -2155,7 +2155,7 @@ body::before {
 .wa-pulse {
     position: absolute;
     inset: -4px;
-    border: 2px solid var(--whatsapp);
+    border: 2px solid var(--gold);
     border-radius: 50%;
     animation: wa-ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
