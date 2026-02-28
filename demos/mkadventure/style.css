@@ -95,6 +95,24 @@
 }
 
 /* ========================================
+   Global Rule: White text on gold backgrounds
+   ======================================== */
+.section-cta,
+.contact-whatsapp,
+.wa-float,
+.booking-tab.active,
+.btn-primary,
+.promo-badge,
+.back-to-top {
+    color: #FFFFFF;
+}
+.section-cta *,
+.contact-whatsapp *,
+.travel-promo * {
+    color: #FFFFFF !important;
+}
+
+/* ========================================
    Reset & Base
    ======================================== */
 
