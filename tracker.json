@@ -1,5 +1,5 @@
 {
-  "nextIndex": 47,
+  "nextIndex": 48,
   "totalStyles": 54,
   "styles": [
     {
@@ -328,7 +328,8 @@
       "id": 47,
       "name": "Anti-Polish / Raw Aesthetic",
       "slug": "47-anti-polish-raw",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-03-01"
     },
     {
       "id": 48,
