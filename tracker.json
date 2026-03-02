@@ -1,5 +1,5 @@
 {
-  "nextIndex": 49,
+  "nextIndex": 50,
   "totalStyles": 54,
   "styles": [
     {
@@ -342,7 +342,8 @@
       "id": 49,
       "name": "Nature Distilled",
       "slug": "49-nature-distilled",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-03-02"
     },
     {
       "id": 50,
