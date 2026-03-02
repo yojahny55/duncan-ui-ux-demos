@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactile Digital / Deformable UI Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo tactile-btn">
+                <i data-lucide="fingerprint"></i>
+                <span>Tactile</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link tactile-link">Home</a></li>
+                <li><a href="#about" class="nav-link tactile-link">About</a></li>
+                <li><a href="#services" class="nav-link tactile-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link tactile-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link tactile-link">Contact</a></li>
+            </ul>
+            <button class="nav-cta jelly-btn">Get Started</button>
+            <button class="mobile-menu-btn tactile-btn" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge squishy-badge">
+                <i data-lucide="sparkles"></i>
+                <span>Feel the Future</span>
+            </div>
+            <h1 class="hero-title">
+                Touch. Press.<br>
+                <span class="gradient-text">Experience.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Interfaces that respond like real objects. Buttons that squish, 
+                surfaces that bounce, and interactions that feel alive.
+            </p>
+            <div class="hero-buttons">
+                <button class="jelly-btn primary">
+                    <i data-lucide="play"></i>
+                    <span>Try Demo</span>
+                </button>
+                <button class="chrome-btn">
+                    <i data-lucide="download"></i>
+                    <span>Download</span>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item bounce-card">
+                    <span class="stat-number">50ms</span>
+                    <span class="stat-label">Response Time</span>
+                </div>
+                <div class="stat-item bounce-card">
+                    <span class="stat-number">99%</span>
+                    <span class="stat-label">User Delight</span>
+                </div>
+                <div class="stat-item bounce-card">
+                    <span class="stat-number">3D</span>
+                    <span class="stat-label">Depth Feel</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="demo-phone">
+                <div class="phone-notch"></div>
+                <div class="phone-content">
+                    <div class="demo-buttons">
+                        <button class="demo-jelly pink">Press Me</button>
+                        <button class="demo-jelly blue">Squish</button>
+                        <button class="demo-jelly mint">Bounce</button>
+                    </div>
+                    <div class="demo-slider">
+                        <div class="slider-track">
+                            <div class="slider-fill"></div>
+                            <div class="slider-thumb squishy"></div>
+                        </div>
+                    </div>
+                    <div class="demo-toggle">
+                        <div class="toggle-bg">
+                            <div class="toggle-knob"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag squishy-badge">
+                    <i data-lucide="info"></i>
+                    About Us
+                </span>
+                <h2>Tactile Design <span class="gradient-text">Philosophy</span></h2>
+                <p>We believe digital interfaces should feel as satisfying as physical objects.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card clay-card">
+                    <div class="card-icon jelly-icon pink">
+                        <i data-lucide="hand"></i>
+                    </div>
+                    <h3>Physical Response</h3>
+                    <p>Every touch triggers real physics. Press harder, get deeper feedback. Our interfaces understand pressure and respond accordingly.</p>
+                </div>
+                <div class="about-card clay-card">
+                    <div class="card-icon jelly-icon blue">
+                        <i data-lucide="atom"></i>
+                    </div>
+                    <h3>Spring Physics</h3>
+                    <p>Natural bounce and momentum. Elements don't just move—they spring, settle, and come to rest like real materials.</p>
+                </div>
+                <div class="about-card clay-card">
+                    <div class="card-icon jelly-icon mint">
+                        <i data-lucide="smile"></i>
+                    </div>
+                    <h3>Delight Factor</h3>
+                    <p>Micro-moments of joy in every interaction. Squishy buttons that make users want to tap again and again.</p>
+                </div>
+            </div>
+            <div class="about-showcase">
+                <div class="showcase-item">
+                    <div class="material-demo chrome">
+                        <span>Chrome</span>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <div class="material-demo jelly">
+                        <span>Jelly</span>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <div class="material-demo clay">
+                        <span>Clay</span>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <div class="material-demo rubber">
+                        <span>Rubber</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag squishy-badge">
+                    <i data-lucide="layers"></i>
+                    Services
+                </span>
+                <h2>What We <span class="gradient-text">Create</span></h2>
+                <p>Transforming flat interfaces into touchable experiences.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card bounce-card featured">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon jelly-icon large pink">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                    </div>
+                    <h3>Mobile Interfaces</h3>
+                    <p>Squishy buttons, bouncy lists, and haptic-synced animations for iOS and Android.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Pressure-sensitive</li>
+                        <li><i data-lucide="check"></i> Haptic feedback</li>
+                        <li><i data-lucide="check"></i> 60fps animations</li>
+                    </ul>
+                    <button class="jelly-btn small">Learn More</button>
+                </div>
+                <div class="service-card bounce-card">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon jelly-icon large blue">
+                            <i data-lucide="monitor"></i>
+                        </div>
+                    </div>
+                    <h3>Web Applications</h3>
+                    <p>Spring-physics powered web components that feel alive under your cursor.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> React/Vue ready</li>
+                        <li><i data-lucide="check"></i> CSS animations</li>
+                        <li><i data-lucide="check"></i> GPU optimized</li>
+                    </ul>
+                    <button class="jelly-btn small">Learn More</button>
+                </div>
+                <div class="service-card bounce-card">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon jelly-icon large mint">
+                            <i data-lucide="gamepad-2"></i>
+                        </div>
+                    </div>
+                    <h3>Gaming UI</h3>
+                    <p>Satisfying menu interactions that match the quality of your game's mechanics.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Controller support</li>
+                        <li><i data-lucide="check"></i> Sound design</li>
+                        <li><i data-lucide="check"></i> Material physics</li>
+                    </ul>
+                    <button class="jelly-btn small">Learn More</button>
+                </div>
+                <div class="service-card bounce-card">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon jelly-icon large lavender">
+                            <i data-lucide="glasses"></i>
+                        </div>
+                    </div>
+                    <h3>XR Interfaces</h3>
+                    <p>Spatial UI that you can reach out and touch in VR and AR environments.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Hand tracking</li>
+                        <li><i data-lucide="check"></i> Spatial audio</li>
+                        <li><i data-lucide="check"></i> 3D depth</li>
+                    </ul>
+                    <button class="jelly-btn small">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag squishy-badge">
+                    <i data-lucide="message-circle"></i>
+                    Testimonials
+                </span>
+                <h2>What People <span class="gradient-text">Feel</span></h2>
+                <p>Real reactions to our tactile interfaces.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card squishy-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"I literally cannot stop pressing these buttons. The bounce-back effect is so satisfying it should be illegal."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar jelly-avatar pink">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Sarah Chen</strong>
+                            <span>Product Designer @ Figma</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card squishy-card featured">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"Finally, digital interfaces that feel as good as physical ones. User engagement went up 47% after implementing Tactile UI."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar jelly-avatar blue">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Marcus Johnson</strong>
+                            <span>CTO @ Gaming Studio</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card squishy-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"The jelly buttons make our kids' app so much more engaging. Children keep coming back just to play with the UI!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar jelly-avatar mint">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <strong>Elena Kowalski</strong>
+                            <span>Founder @ KidsLearn App</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag squishy-badge">
+                        <i data-lucide="mail"></i>
+                        Contact
+                    </span>
+                    <h2>Let's Create Something <span class="gradient-text">Touchable</span></h2>
+                    <p>Ready to make your interfaces feel alive? Reach out and let's add some bounce to your product.</p>
+                    <div class="contact-methods">
+                        <div class="contact-item bounce-card">
+                            <div class="contact-icon jelly-icon pink">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <strong>Email Us</strong>
+                                <span>hello@tactile.design</span>
+                            </div>
+                        </div>
+                        <div class="contact-item bounce-card">
+                            <div class="contact-icon jelly-icon blue">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <strong>Call Us</strong>
+                                <span>+1 (555) SQUISH</span>
+                            </div>
+                        </div>
+                        <div class="contact-item bounce-card">
+                            <div class="contact-icon jelly-icon mint">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <strong>Visit Us</strong>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrap clay-card">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="squishy-input" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="squishy-input" placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="squishy-input" placeholder="Tell us about your project..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="jelly-btn primary full-width">
+                            <i data-lucide="send"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <i data-lucide="fingerprint"></i>
+                        <span>Tactile</span>
+                    </a>
+                    <p>Making digital interfaces that you can feel.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn jelly-btn small">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-btn jelly-btn small">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="#" class="social-btn jelly-btn small">
+                            <i data-lucide="dribbble"></i>
+                        </a>
+                        <a href="#" class="social-btn jelly-btn small">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#" class="tactile-link">Components</a></li>
+                        <li><a href="#" class="tactile-link">Documentation</a></li>
+                        <li><a href="#" class="tactile-link">Pricing</a></li>
+                        <li><a href="#" class="tactile-link">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#" class="tactile-link">Blog</a></li>
+                        <li><a href="#" class="tactile-link">Tutorials</a></li>
+                        <li><a href="#" class="tactile-link">Examples</a></li>
+                        <li><a href="#" class="tactile-link">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#" class="tactile-link">About</a></li>
+                        <li><a href="#" class="tactile-link">Careers</a></li>
+                        <li><a href="#" class="tactile-link">Privacy</a></li>
+                        <li><a href="#" class="tactile-link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tactile Design. Made with <i data-lucide="heart"></i> and spring physics.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
