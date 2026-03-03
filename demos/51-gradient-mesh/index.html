@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Mesh / Aurora Evolved | UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Animated Gradient Mesh Background -->
+    <div class="gradient-mesh-bg">
+        <div class="mesh-blob mesh-blob-1"></div>
+        <div class="mesh-blob mesh-blob-2"></div>
+        <div class="mesh-blob mesh-blob-3"></div>
+        <div class="mesh-blob mesh-blob-4"></div>
+        <div class="mesh-blob mesh-blob-5"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon">
+                    <i data-lucide="sparkles"></i>
+                </div>
+                <span>Prisma</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Stories</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-ghost">Sign In</button>
+                <button class="btn btn-primary">
+                    <i data-lucide="rocket"></i>
+                    <span>Get Started</span>
+                </button>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i data-lucide="zap"></i>
+                <span>Next-Gen Design Platform</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="gradient-text">Create stunning</span>
+                <br>
+                <span class="gradient-text-alt">visual experiences</span>
+            </h1>
+            <p class="hero-subtitle">
+                Harness the power of gradient mesh technology to craft mesmerizing 
+                interfaces that captivate users and elevate your brand to new dimensions.
+            </p>
+            <div class="hero-cta">
+                <button class="btn btn-primary btn-large">
+                    <i data-lucide="play"></i>
+                    <span>Start Creating</span>
+                </button>
+                <button class="btn btn-glass btn-large">
+                    <i data-lucide="monitor-play"></i>
+                    <span>Watch Demo</span>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">50K+</span>
+                    <span class="stat-label">Creators</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">2M+</span>
+                    <span class="stat-label">Designs</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">99.9%</span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="aurora-card">
+                <div class="aurora-glow"></div>
+                <div class="card-inner">
+                    <div class="preview-grid">
+                        <div class="preview-item preview-item-1"></div>
+                        <div class="preview-item preview-item-2"></div>
+                        <div class="preview-item preview-item-3"></div>
+                        <div class="preview-item preview-item-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="palette"></i>
+                    About Us
+                </span>
+                <h2 class="section-title">Where color meets <span class="gradient-text">innovation</span></h2>
+                <p class="section-subtitle">
+                    We're pioneering the future of digital aesthetics with our revolutionary 
+                    gradient mesh technology that brings aurora-like beauty to every interface.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card">
+                    <div class="card-icon">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3>Multi-Layer Gradients</h3>
+                    <p>Stack unlimited gradient layers with smooth blending for depth and dimension.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="card-icon">
+                        <i data-lucide="wand-2"></i>
+                    </div>
+                    <h3>AI-Powered Palettes</h3>
+                    <p>Let our AI generate harmonious color combinations that evoke emotion.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="card-icon">
+                        <i data-lucide="move-3d"></i>
+                    </div>
+                    <h3>Dynamic Animation</h3>
+                    <p>Bring gradients to life with flowing, morphing animations.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <div class="card-icon">
+                        <i data-lucide="download"></i>
+                    </div>
+                    <h3>Export Anywhere</h3>
+                    <p>Export to CSS, SVG, PNG, or integrate directly with your design tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="briefcase"></i>
+                    Services
+                </span>
+                <h2 class="section-title">Everything you need to <span class="gradient-text-alt">create magic</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-visual mesh-preview-1"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i data-lucide="brush"></i>
+                        </div>
+                        <h3>Gradient Studio</h3>
+                        <p>Professional-grade gradient editor with mesh point control, bezier curves, and real-time preview.</p>
+                        <ul class="service-features">
+                            <li><i data-lucide="check"></i> Unlimited color stops</li>
+                            <li><i data-lucide="check"></i> Custom mesh topology</li>
+                            <li><i data-lucide="check"></i> Noise & texture overlays</li>
+                        </ul>
+                        <a href="#" class="service-link">
+                            <span>Explore Studio</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card reverse">
+                    <div class="service-visual mesh-preview-2"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i data-lucide="film"></i>
+                        </div>
+                        <h3>Motion Lab</h3>
+                        <p>Animate your gradients with physics-based motion, keyframes, and seamless loops.</p>
+                        <ul class="service-features">
+                            <li><i data-lucide="check"></i> Timeline editor</li>
+                            <li><i data-lucide="check"></i> Easing presets</li>
+                            <li><i data-lucide="check"></i> Lottie & GIF export</li>
+                        </ul>
+                        <a href="#" class="service-link">
+                            <span>Enter Lab</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-visual mesh-preview-3"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i data-lucide="puzzle"></i>
+                        </div>
+                        <h3>Component Library</h3>
+                        <p>Ready-to-use gradient components for buttons, cards, backgrounds, and more.</p>
+                        <ul class="service-features">
+                            <li><i data-lucide="check"></i> React & Vue support</li>
+                            <li><i data-lucide="check"></i> Tailwind integration</li>
+                            <li><i data-lucide="check"></i> Figma plugin</li>
+                        </ul>
+                        <a href="#" class="service-link">
+                            <span>Browse Components</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i data-lucide="message-circle"></i>
+                    Testimonials
+                </span>
+                <h2 class="section-title">Loved by <span class="gradient-text">creators worldwide</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"Prisma transformed how we approach visual design. The aurora effects are simply mesmerizing."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar gradient-avatar-1"></div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Chen</span>
+                            <span class="author-role">Design Lead at Stripe</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card featured">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"The gradient mesh editor is years ahead of anything else. It's like painting with light itself."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar gradient-avatar-2"></div>
+                        <div class="author-info">
+                            <span class="author-name">Marcus Reid</span>
+                            <span class="author-role">Creative Director at Adobe</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"Our conversion rates jumped 40% after implementing Prisma gradients. Users can't look away."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar gradient-avatar-3"></div>
+                        <div class="author-info">
+                            <span class="author-name">Elena Volkov</span>
+                            <span class="author-role">Product VP at Spotify</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">
+                        <i data-lucide="mail"></i>
+                        Contact Us
+                    </span>
+                    <h2 class="section-title">Ready to create <span class="gradient-text-alt">something beautiful?</span></h2>
+                    <p>Join thousands of designers crafting the next generation of visual experiences.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>hello@prisma.design</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="social-link"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form glass-card">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i data-lucide="send"></i>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo">
+                    <div class="logo-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <span>Prisma</span>
+                </a>
+                <p>Crafting the future of visual design with gradient mesh technology.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Prisma Design. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
