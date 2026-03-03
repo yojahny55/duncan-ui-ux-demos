@@ -1,5 +1,5 @@
 {
-  "nextIndex": 50,
+  "nextIndex": 51,
   "totalStyles": 54,
   "styles": [
     {
@@ -349,7 +349,8 @@
       "id": 50,
       "name": "Interactive Cursor Design",
       "slug": "50-interactive-cursor",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-03-03"
     },
     {
       "id": 51,

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cursor Design | UI/UX Demo #50</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo magnetic" data-cursor="text">
+                <i data-lucide="mouse-pointer-2"></i>
+                <span>CursorCraft</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link magnetic" data-cursor="link">Home</a></li>
+                <li><a href="#about" class="nav-link magnetic" data-cursor="link">About</a></li>
+                <li><a href="#services" class="nav-link magnetic" data-cursor="link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link magnetic" data-cursor="link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link magnetic" data-cursor="link">Contact</a></li>
+            </ul>
+            <button class="nav-cta magnetic" data-cursor="button">
+                <span>Get Started</span>
+                <i data-lucide="arrow-right"></i>
+            </button>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge magnetic" data-cursor="badge">
+                <i data-lucide="sparkles"></i>
+                <span>Interactive Experience Studio</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line" data-cursor="text">Your Cursor Is</span>
+                <span class="title-line title-gradient" data-cursor="text">The Interface</span>
+            </h1>
+            <p class="hero-description" data-cursor="text">
+                We craft immersive digital experiences where every hover, click, and gesture 
+                transforms into meaningful interaction. Move your cursor to explore.
+            </p>
+            <div class="hero-actions">
+                <button class="btn-primary magnetic" data-cursor="button">
+                    <span>Explore Our Work</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </button>
+                <button class="btn-secondary magnetic" data-cursor="button">
+                    <i data-lucide="play-circle"></i>
+                    <span>Watch Demo</span>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item" data-cursor="card">
+                    <span class="stat-number">250+</span>
+                    <span class="stat-label">Projects Shipped</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item" data-cursor="card">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item" data-cursor="card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Design Awards</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator magnetic" data-cursor="link">
+            <i data-lucide="mouse"></i>
+            <span>Scroll to explore</span>
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-cursor="badge">
+                    <i data-lucide="info"></i>
+                    About Us
+                </span>
+                <h2 class="section-title" data-cursor="text">Crafting Cursor<br>Magic Since 2019</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-lead" data-cursor="text">
+                        We believe the cursor is more than a pointer—it's the user's digital 
+                        hand reaching into your interface. Every interaction should feel intentional, 
+                        responsive, and delightful.
+                    </p>
+                    <p class="about-text" data-cursor="text">
+                        Our team specializes in creating cursor-driven experiences that transform 
+                        static websites into living, breathing interfaces. From magnetic buttons 
+                        to morphing cursors, we push the boundaries of what's possible.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item magnetic" data-cursor="card">
+                            <div class="feature-icon">
+                                <i data-lucide="target"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Magnetic Interactions</h4>
+                                <p>Elements that attract and respond to cursor proximity</p>
+                            </div>
+                        </div>
+                        <div class="feature-item magnetic" data-cursor="card">
+                            <div class="feature-icon">
+                                <i data-lucide="sparkles"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Cursor Morphing</h4>
+                                <p>Dynamic cursor shapes that adapt to context</p>
+                            </div>
+                        </div>
+                        <div class="feature-item magnetic" data-cursor="card">
+                            <div class="feature-icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Trail Effects</h4>
+                                <p>Beautiful motion trails that follow movement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-card magnetic" data-cursor="card">
+                        <div class="visual-demo">
+                            <div class="demo-cursor"></div>
+                            <div class="demo-element" data-cursor="hover-demo"></div>
+                            <div class="demo-element" data-cursor="hover-demo"></div>
+                            <div class="demo-element" data-cursor="hover-demo"></div>
+                        </div>
+                        <div class="visual-label">
+                            <i data-lucide="move"></i>
+                            <span>Hover the elements above</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label" data-cursor="badge">
+                    <i data-lucide="layers"></i>
+                    Our Services
+                </span>
+                <h2 class="section-title" data-cursor="text">Interaction Design<br>That Captivates</h2>
+                <p class="section-subtitle" data-cursor="text">
+                    From subtle micro-interactions to full cursor transformations
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card magnetic" data-cursor="card">
+                    <div class="service-icon">
+                        <i data-lucide="mouse-pointer-click"></i>
+                    </div>
+                    <h3>Custom Cursors</h3>
+                    <p>Unique cursor designs that reflect your brand identity and enhance user experience.</p>
+                    <div class="service-tags">
+                        <span class="tag">Branding</span>
+                        <span class="tag">UX</span>
+                    </div>
+                    <a href="#" class="service-link magnetic" data-cursor="link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card magnetic" data-cursor="card">
+                    <div class="service-icon">
+                        <i data-lucide="magnet"></i>
+                    </div>
+                    <h3>Magnetic Effects</h3>
+                    <p>Buttons and elements that pull the cursor toward them, creating satisfying interactions.</p>
+                    <div class="service-tags">
+                        <span class="tag">Animation</span>
+                        <span class="tag">Physics</span>
+                    </div>
+                    <a href="#" class="service-link magnetic" data-cursor="link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card magnetic" data-cursor="card">
+                    <div class="service-icon">
+                        <i data-lucide="blend"></i>
+                    </div>
+                    <h3>Blend Modes</h3>
+                    <p>Cursors that interact with page content using difference, invert, and color effects.</p>
+                    <div class="service-tags">
+                        <span class="tag">Visual</span>
+                        <span class="tag">Creative</span>
+                    </div>
+                    <a href="#" class="service-link magnetic" data-cursor="link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card magnetic" data-cursor="card">
+                    <div class="service-icon">
+                        <i data-lucide="wind"></i>
+                    </div>
+                    <h3>Trail Effects</h3>
+                    <p>Elegant motion trails that add fluidity and visual interest to cursor movement.</p>
+                    <div class="service-tags">
+                        <span class="tag">Motion</span>
+                        <span class="tag">Performance</span>
+                    </div>
+                    <a href="#" class="service-link magnetic" data-cursor="link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card magnetic" data-cursor="card">
+                    <div class="service-icon">
+                        <i data-lucide="scan"></i>
+                    </div>
+                    <h3>Hover Reveals</h3>
+                    <p>Content that appears and transforms as the cursor explores the interface.</p>
+                    <div class="service-tags">
+                        <span class="tag">Interactive</span>
+                        <span class="tag">Discovery</span>
+                    </div>
+                    <a href="#" class="service-link magnetic" data-cursor="link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card magnetic" data-cursor="card">
+                    <div class="service-icon">
+                        <i data-lucide="hand"></i>
+                    </div>
+                    <h3>Click Feedback</h3>
+                    <p>Satisfying visual and animated feedback that makes every click feel meaningful.</p>
+                    <div class="service-tags">
+                        <span class="tag">Feedback</span>
+                        <span class="tag">Haptic</span>
+                    </div>
+                    <a href="#" class="service-link magnetic" data-cursor="link">
+                        <span>Learn more</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label" data-cursor="badge">
+                    <i data-lucide="message-square-quote"></i>
+                    Testimonials
+                </span>
+                <h2 class="section-title" data-cursor="text">What Our Clients<br>Say About Us</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card magnetic" data-cursor="card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The cursor interactions they created for our portfolio site are absolutely 
+                        mesmerizing. Our bounce rate dropped 40% because visitors can't stop exploring."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Chen</span>
+                            <span class="author-role">Creative Director, Pixel Studios</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card featured magnetic" data-cursor="card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "We wanted our SaaS dashboard to feel premium and responsive. The magnetic 
+                        buttons and custom cursor completely transformed the user experience. Worth every penny."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Marcus Rodriguez</span>
+                            <span class="author-role">Product Lead, CloudSync</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card magnetic" data-cursor="card">
+                    <div class="testimonial-rating">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The attention to detail is incredible. Every hover state, every click 
+                        animation—it all feels so intentional. Our clients are constantly impressed."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Emma Larsson</span>
+                            <span class="author-role">UX Lead, Nordic Digital</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-label" data-cursor="badge">
+                        <i data-lucide="mail"></i>
+                        Get In Touch
+                    </span>
+                    <h2 class="section-title" data-cursor="text">Let's Create<br>Something Amazing</h2>
+                    <p class="contact-description" data-cursor="text">
+                        Ready to transform your interface with cursor magic? 
+                        Drop us a line and let's discuss your project.
+                    </p>
+                    <div class="contact-details">
+                        <a href="mailto:hello@cursorcraft.io" class="contact-item magnetic" data-cursor="link">
+                            <i data-lucide="mail"></i>
+                            <span>hello@cursorcraft.io</span>
+                        </a>
+                        <a href="tel:+1234567890" class="contact-item magnetic" data-cursor="link">
+                            <i data-lucide="phone"></i>
+                            <span>+1 (234) 567-890</span>
+                        </a>
+                        <div class="contact-item" data-cursor="text">
+                            <i data-lucide="map-pin"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link magnetic" data-cursor="button" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link magnetic" data-cursor="button" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link magnetic" data-cursor="button" aria-label="GitHub">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="#" class="social-link magnetic" data-cursor="button" aria-label="Dribbble">
+                            <i data-lucide="dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required data-cursor="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required data-cursor="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Project Type</label>
+                        <select id="project" name="project" data-cursor="input">
+                            <option value="">Select a service</option>
+                            <option value="custom-cursor">Custom Cursor Design</option>
+                            <option value="magnetic">Magnetic Interactions</option>
+                            <option value="full-experience">Full Experience Package</option>
+                            <option value="consultation">Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Project</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your vision..." required data-cursor="input"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary magnetic" data-cursor="button">
+                        <span>Send Message</span>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo magnetic" data-cursor="link">
+                        <i data-lucide="mouse-pointer-2"></i>
+                        <span>CursorCraft</span>
+                    </a>
+                    <p>Crafting interactive cursor experiences that transform digital interfaces.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about" class="magnetic" data-cursor="link">About Us</a></li>
+                        <li><a href="#services" class="magnetic" data-cursor="link">Services</a></li>
+                        <li><a href="#testimonials" class="magnetic" data-cursor="link">Reviews</a></li>
+                        <li><a href="#contact" class="magnetic" data-cursor="link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#" class="magnetic" data-cursor="link">Custom Cursors</a></li>
+                        <li><a href="#" class="magnetic" data-cursor="link">Magnetic Effects</a></li>
+                        <li><a href="#" class="magnetic" data-cursor="link">Trail Effects</a></li>
+                        <li><a href="#" class="magnetic" data-cursor="link">Click Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get cursor design tips and inspiration delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" data-cursor="input">
+                        <button type="submit" class="magnetic" data-cursor="button">
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CursorCraft. All rights reserved.</p>
+                <p class="demo-credit">
+                    <i data-lucide="palette"></i>
+                    UI/UX Demo #50 — Interactive Cursor Design
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
