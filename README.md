@@ -65,17 +65,6 @@ Built using the [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-ma
 | 53 | Chromatic Aberration / RGB Split | Coming soon | — |
 | 54 | Vintage Analog / Retro Film | Coming soon | — |
 
-## MK Adventure Demos
-
-| Style | Preview | Date |
-|-------|---------|------|
-| MK Adventure (v1) | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/mkadventure/) | 2026-02-24 |
-| MK Adventure v2 — Bento | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/mkadventure-v2-bento/) | 2026-02-25 |
-| MK Adventure v3 — Motion | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/mkadventure-v3-motion/) | 2026-02-25 |
-| MK Adventure v4 — Warm | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/mkadventure-v4-warm/) | 2026-02-25 |
-| MK Adventure v5 — Bold | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/mkadventure-v5-bold/) | 2026-02-25 |
-| MK Adventure — Complete | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/demo-complete/) | 2026-02-25 |
-
 ## About
 
 This portfolio demonstrates various UI/UX design styles applied to small business landing pages. Each demo is production-ready and can be customized for real clients.
