@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial Grid / Magazine Style Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">THE CHRONICLE</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Voices</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-grid">
+            <div class="hero-main">
+                <span class="hero-category">Featured Story</span>
+                <h1 class="hero-headline">
+                    The Art of <em>Editorial</em> Design in the Digital Age
+                </h1>
+                <p class="hero-excerpt">
+                    How traditional magazine layouts are being reimagined for modern web experiences, 
+                    creating immersive storytelling through typography and visual hierarchy.
+                </p>
+                <div class="hero-meta">
+                    <span class="author">
+                        <i data-lucide="user" class="meta-icon"></i>
+                        By Alexandra Chen
+                    </span>
+                    <span class="date">
+                        <i data-lucide="calendar" class="meta-icon"></i>
+                        March 4, 2026
+                    </span>
+                    <span class="read-time">
+                        <i data-lucide="clock" class="meta-icon"></i>
+                        8 min read
+                    </span>
+                </div>
+            </div>
+            <div class="hero-secondary">
+                <article class="hero-card">
+                    <span class="card-category">Typography</span>
+                    <h3>Drop Caps & Pull Quotes: A Visual Journey</h3>
+                    <p>Exploring the timeless techniques that make editorial design captivating.</p>
+                </article>
+                <article class="hero-card">
+                    <span class="card-category">Layout</span>
+                    <h3>Breaking the Grid: Asymmetric Compositions</h3>
+                    <p>Why the best magazine layouts embrace controlled chaos.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <span class="section-label">About Us</span>
+            <h2 class="section-title">Crafting Stories That Matter</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-main">
+                <p class="drop-cap">
+                    We believe in the power of exceptional editorial design to transform how stories are told and experienced. 
+                    Our approach combines the elegance of traditional print journalism with the dynamic possibilities of digital media.
+                </p>
+                <p>
+                    Founded on the principles of clarity, beauty, and purpose, we create visual narratives that captivate 
+                    readers and elevate content. Every element—from typography to white space—is carefully considered to 
+                    enhance the reading experience.
+                </p>
+                <blockquote class="pull-quote">
+                    <p>"Design is not just what it looks like. Design is how it works."</p>
+                    <cite>— Steve Jobs</cite>
+                </blockquote>
+                <p>
+                    Our team of designers, writers, and strategists work collaboratively to bring stories to life. 
+                    We understand that great design serves the content, never overshadowing the message but always 
+                    amplifying its impact.
+                </p>
+            </div>
+            <aside class="about-sidebar">
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Industry Awards</span>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header section-header--light">
+            <span class="section-label">Our Services</span>
+            <h2 class="section-title">Editorial Excellence</h2>
+        </div>
+        <div class="services-grid">
+            <article class="service-card service-card--featured">
+                <div class="service-icon">
+                    <i data-lucide="layout"></i>
+                </div>
+                <h3>Magazine Design</h3>
+                <p>Complete editorial layouts that balance visual impact with readability. From cover to cover, 
+                   we craft publications that readers love to hold and explore.</p>
+                <a href="#" class="service-link">
+                    Learn More <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">
+                    <i data-lucide="type"></i>
+                </div>
+                <h3>Typography Systems</h3>
+                <p>Custom typeface selection and hierarchy design that gives your publication a distinctive voice.</p>
+                <a href="#" class="service-link">
+                    Learn More <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">
+                    <i data-lucide="image"></i>
+                </div>
+                <h3>Photo Direction</h3>
+                <p>Strategic visual storytelling through compelling photography and art direction.</p>
+                <a href="#" class="service-link">
+                    Learn More <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">
+                    <i data-lucide="monitor"></i>
+                </div>
+                <h3>Digital Publishing</h3>
+                <p>Responsive editorial experiences that translate print excellence to screens of all sizes.</p>
+                <a href="#" class="service-link">
+                    Learn More <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">
+                    <i data-lucide="book-open"></i>
+                </div>
+                <h3>Content Strategy</h3>
+                <p>Editorial planning and content architecture that keeps readers engaged and coming back.</p>
+                <a href="#" class="service-link">
+                    Learn More <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">
+                    <i data-lucide="palette"></i>
+                </div>
+                <h3>Brand Identity</h3>
+                <p>Publication branding that establishes authority and builds lasting recognition.</p>
+                <a href="#" class="service-link">
+                    Learn More <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <span class="section-label">Testimonials</span>
+            <h2 class="section-title">Voices of Our Readers</h2>
+        </div>
+        <div class="testimonials-grid">
+            <article class="testimonial testimonial--large">
+                <blockquote>
+                    <p>"Working with The Chronicle transformed our quarterly publication. Their understanding of 
+                       editorial hierarchy and visual storytelling is unmatched. Every issue now feels like a 
+                       collector's piece."</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div class="author-info">
+                        <span class="author-name">Marcus Webb</span>
+                        <span class="author-role">Editor-in-Chief, Artisan Quarterly</span>
+                    </div>
+                </div>
+            </article>
+            <article class="testimonial">
+                <blockquote>
+                    <p>"The attention to typography alone was worth every penny. They elevated our brand through 
+                       thoughtful design decisions."</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div class="author-info">
+                        <span class="author-name">Sarah Chen</span>
+                        <span class="author-role">Creative Director, Vogue Living</span>
+                    </div>
+                </div>
+            </article>
+            <article class="testimonial">
+                <blockquote>
+                    <p>"Finally, a team that understands that white space isn't empty—it's breathing room 
+                       for ideas."</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div class="author-info">
+                        <span class="author-name">James Morrison</span>
+                        <span class="author-role">Publisher, The Atlantic Review</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-grid">
+            <div class="contact-content">
+                <span class="section-label">Get in Touch</span>
+                <h2 class="section-title">Start Your Story</h2>
+                <p class="contact-intro">
+                    Ready to transform your publication? Let's discuss how editorial design 
+                    can elevate your content and captivate your audience.
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i data-lucide="mail"></i>
+                        <span>hello@thechronicle.design</span>
+                    </div>
+                    <div class="contact-item">
+                        <i data-lucide="phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>New York, NY</span>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="publication">Publication Type</label>
+                    <select id="publication" name="publication">
+                        <option value="">Select one...</option>
+                        <option value="magazine">Magazine</option>
+                        <option value="newspaper">Newspaper</option>
+                        <option value="journal">Journal</option>
+                        <option value="digital">Digital Only</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Story</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Send Message
+                    <i data-lucide="send"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="footer-logo">THE CHRONICLE</span>
+                <p class="footer-tagline">Elevating stories through exceptional editorial design since 2011.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Dribbble"><i data-lucide="dribbble"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Voices</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Magazine Design</a></li>
+                    <li><a href="#">Typography</a></li>
+                    <li><a href="#">Digital Publishing</a></li>
+                    <li><a href="#">Brand Identity</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Subscribe</h4>
+                <p>Get editorial insights delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="your@email.com" required>
+                    <button type="submit" aria-label="Subscribe">
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Chronicle. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
