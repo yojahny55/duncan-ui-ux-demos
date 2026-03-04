@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromatic Aberration / RGB Split | UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Scanlines Overlay -->
+    <div class="scanlines"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo rgb-text" data-text="GLITCH">GLITCH</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i data-lucide="zap"></i>
+                <span>RGB SPLIT EFFECT</span>
+            </div>
+            <h1 class="hero-title glitch-text" data-text="CHROMATIC ABERRATION">CHROMATIC ABERRATION</h1>
+            <p class="hero-subtitle">Embrace the beautiful imperfection of analog distortion. Where digital meets retro tech aesthetics.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary rgb-border">
+                    <i data-lucide="play"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <i data-lucide="info"></i>
+                    <span>Learn More</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="rgb-cube">
+                <div class="cube-face front"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// ABOUT_US</span>
+                <h2 class="section-title rgb-text" data-text="SIGNAL DISTORTION">SIGNAL DISTORTION</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">We harness the raw aesthetic of chromatic aberration—the beautiful color fringing that occurs when light bends through imperfect lenses. This visual language speaks to a generation raised on VHS tapes and CRT monitors.</p>
+                    <p class="about-text">Our designs channel the energy of retro tech failures, transforming glitches and errors into intentional art. Every RGB split tells a story of analog warmth in a digital world.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number glitch-hover" data-text="2px">2px</span>
+                            <span class="stat-label">RGB Offset</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number glitch-hover" data-text="0.3s">0.3s</span>
+                            <span class="stat-label">Glitch Duration</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number glitch-hover" data-text="100%">100%</span>
+                            <span class="stat-label">Retro Vibes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="vhs-frame">
+                        <div class="vhs-content">
+                            <div class="vhs-static"></div>
+                            <div class="vhs-text">
+                                <span class="rec-indicator"><i data-lucide="circle"></i> REC</span>
+                                <span class="timestamp">00:00:00:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// SERVICES</span>
+                <h2 class="section-title rgb-text" data-text="WHAT WE DO">WHAT WE DO</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-glitch>
+                    <div class="service-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="service-title">RGB Design</h3>
+                    <p class="service-desc">Color channel separation and chromatic effects that make your visuals pop with retro-tech energy.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-glitch>
+                    <div class="service-icon">
+                        <i data-lucide="tv"></i>
+                    </div>
+                    <h3 class="service-title">VHS Aesthetics</h3>
+                    <p class="service-desc">Tracking errors, scan lines, and analog warmth brought into the digital realm.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-glitch>
+                    <div class="service-icon">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3 class="service-title">Glitch Effects</h3>
+                    <p class="service-desc">Controlled chaos that captures attention and creates memorable digital experiences.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-glitch>
+                    <div class="service-icon">
+                        <i data-lucide="film"></i>
+                    </div>
+                    <h3 class="service-title">Motion Graphics</h3>
+                    <p class="service-desc">Dynamic animations with distortion effects that tell your brand's story.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-glitch>
+                    <div class="service-icon">
+                        <i data-lucide="monitor"></i>
+                    </div>
+                    <h3 class="service-title">CRT Simulation</h3>
+                    <p class="service-desc">Authentic retro display effects that transport users back to the golden age of tech.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card" data-glitch>
+                    <div class="service-icon">
+                        <i data-lucide="radio"></i>
+                    </div>
+                    <h3 class="service-title">Signal Processing</h3>
+                    <p class="service-desc">Audio-reactive visuals and frequency-based distortions for immersive experiences.</p>
+                    <a href="#" class="service-link">
+                        <span>Learn More</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// TESTIMONIALS</span>
+                <h2 class="section-title rgb-text" data-text="CLIENT SIGNALS">CLIENT SIGNALS</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar rgb-border">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Alex Chen</h4>
+                            <span class="testimonial-role">Creative Director</span>
+                        </div>
+                        <div class="signal-bars">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"The chromatic aberration effects they created gave our music video that perfect retro-futuristic vibe we were chasing. Absolutely mind-blowing work."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar rgb-border">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Sarah Kim</h4>
+                            <span class="testimonial-role">Game Designer</span>
+                        </div>
+                        <div class="signal-bars">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"They understood our vision for a cyberpunk aesthetic perfectly. The glitch effects integrated seamlessly with our game's interface."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar rgb-border">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Marcus Webb</h4>
+                            <span class="testimonial-role">Tech Startup CEO</span>
+                        </div>
+                        <div class="signal-bars">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Our brand now stands out with a unique visual identity. The RGB split effect became our signature look across all platforms."</p>
+                    <div class="testimonial-rating">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// CONTACT</span>
+                <h2 class="section-title rgb-text" data-text="SEND SIGNAL">SEND SIGNAL</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon rgb-border">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>404 Glitch Street<br>Retro City, VHS 80808</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon rgb-border">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>signal@glitch.rgb</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon rgb-border">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+1 (RGB) 255-255-255</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link rgb-border"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="social-link rgb-border"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-link rgb-border"><i data-lucide="youtube"></i></a>
+                        <a href="#" class="social-link rgb-border"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary rgb-border">
+                        <i data-lucide="send"></i>
+                        <span>Transmit Signal</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo rgb-text" data-text="GLITCH">GLITCH</a>
+                    <p>Embracing the beauty of digital imperfection since 2024.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">RGB Design</a></li>
+                        <li><a href="#">VHS Effects</a></li>
+                        <li><a href="#">Glitch Art</a></li>
+                        <li><a href="#">Motion Graphics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe for glitchy updates</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="your@email.com">
+                        <button type="button" class="btn-icon">
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GLITCH. All signals reserved.</p>
+                <p class="credits">Chromatic Aberration / RGB Split Style Demo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "nextIndex": 53,
+  "nextIndex": 54,
   "totalStyles": 54,
   "styles": [
     {
@@ -370,7 +370,8 @@
       "id": 53,
       "name": "Chromatic Aberration / RGB Split",
       "slug": "53-chromatic-aberration",
-      "status": "pending"
+      "status": "done",
+      "date": "2026-03-04"
     },
     {
       "id": 54,
