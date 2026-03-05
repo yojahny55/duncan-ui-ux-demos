@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Analog / Retro Film - UI Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Film Grain Overlay -->
+    <div class="film-grain"></div>
+    
+    <!-- Light Leak Overlay -->
+    <div class="light-leak"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="logo">
+                <i data-lucide="aperture"></i>
+                <span>Analog Studio</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-vhs-line"></div>
+        <div class="container hero-content">
+            <div class="polaroid hero-polaroid">
+                <div class="polaroid-image">
+                    <div class="polaroid-placeholder">
+                        <i data-lucide="camera"></i>
+                    </div>
+                </div>
+                <div class="polaroid-caption">Summer '87</div>
+            </div>
+            <div class="hero-text">
+                <p class="hero-tagline">— Capturing moments since 1985 —</p>
+                <h1 class="hero-title">The Beauty of<br><span class="script-text">Imperfection</span></h1>
+                <p class="hero-description">Authentic film photography and analog aesthetics for those who appreciate the warmth of vintage.</p>
+                <div class="hero-cta">
+                    <a href="#services" class="btn btn-primary">
+                        <i data-lucide="film"></i>
+                        View Our Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i data-lucide="mail"></i>
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Story</span>
+                <h2 class="section-title">Memories Worth Keeping</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="lead-text">In a world of instant digital perfection, we believe in the soulful imperfections of analog.</p>
+                    <p>Every grain, every light leak, every faded color tells a story. We're a collective of photographers and artists dedicated to preserving the authentic warmth of film photography.</p>
+                    <p>Our studio combines vintage techniques with modern sensibilities, creating timeless imagery that feels like a memory the moment you see it.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">1985</span>
+                            <span class="stat-label">Established</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2,400+</span>
+                            <span class="stat-label">Rolls Shot</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Memories Made</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="film-strip">
+                        <div class="film-frame">
+                            <i data-lucide="sun"></i>
+                        </div>
+                        <div class="film-frame">
+                            <i data-lucide="mountain"></i>
+                        </div>
+                        <div class="film-frame">
+                            <i data-lucide="heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="camera"></i>
+                    </div>
+                    <h3>Film Photography</h3>
+                    <p>Authentic 35mm and medium format photography capturing life's precious moments with timeless warmth.</p>
+                    <span class="service-tag">From $350</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="image"></i>
+                    </div>
+                    <h3>Photo Restoration</h3>
+                    <p>Bring faded memories back to life. We carefully restore damaged vintage photographs.</p>
+                    <span class="service-tag">From $75</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="disc-3"></i>
+                    </div>
+                    <h3>Vinyl Sessions</h3>
+                    <p>Album cover photography and music video direction with authentic retro aesthetics.</p>
+                    <span class="service-tag">From $800</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Analog Editing</h3>
+                    <p>Digital-to-analog conversion. We add authentic film grain, light leaks, and vintage color grading.</p>
+                    <span class="service-tag">From $50</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Portrait Sessions</h3>
+                    <p>Intimate portrait photography with the character and depth only film can provide.</p>
+                    <span class="service-tag">From $200</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="gift"></i>
+                    </div>
+                    <h3>Polaroid Parties</h3>
+                    <p>Instant film photo booths for events. Guests take home real Polaroid memories.</p>
+                    <span class="service-tag">From $450</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Gallery Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Kind Words</span>
+                <h2 class="section-title">What They Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card polaroid">
+                    <div class="testimonial-content">
+                        <i data-lucide="quote" class="quote-icon"></i>
+                        <p>"The photos have this magical quality—like memories I've always had but never captured. Absolutely stunning work."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Mitchell</span>
+                            <span class="author-role">Bride, June 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card polaroid">
+                    <div class="testimonial-content">
+                        <i data-lucide="quote" class="quote-icon"></i>
+                        <p>"They restored my grandmother's wedding photos from 1952. I cried when I saw the results. Priceless."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Michael Torres</span>
+                            <span class="author-role">Family Archive Project</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card polaroid">
+                    <div class="testimonial-content">
+                        <i data-lucide="quote" class="quote-icon"></i>
+                        <p>"Our album cover has that authentic 70s vibe we were going for. The vinyl pressing looks incredible."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">The Sunset Collective</span>
+                            <span class="author-role">Indie Band</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <span class="section-tag">Get in Touch</span>
+                        <h2 class="section-title">Let's Create<br>Together</h2>
+                    </div>
+                    <p>Ready to capture your moments with the warmth and soul of analog? Drop us a line.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>47 Vintage Lane, Brooklyn, NY</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>(718) 555-FILM</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>hello@analogstudio.com</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="photography">Film Photography</option>
+                                <option value="restoration">Photo Restoration</option>
+                                <option value="vinyl">Vinyl Sessions</option>
+                                <option value="editing">Analog Editing</option>
+                                <option value="portrait">Portrait Sessions</option>
+                                <option value="polaroid">Polaroid Parties</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i data-lucide="send"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i data-lucide="aperture"></i>
+                        <span>Analog Studio</span>
+                    </a>
+                    <p>Authentic film photography<br>for timeless memories.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Studio</h4>
+                        <ul>
+                            <li><a href="#about">Our Story</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#testimonials">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Film Guide</a></li>
+                            <li><a href="#">Camera Rentals</a></li>
+                            <li><a href="#">Darkroom Access</a></li>
+                            <li><a href="#">Workshops</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Analog Studio. Shot on film with love.</p>
+                <div class="footer-badges">
+                    <span class="badge"><i data-lucide="film"></i> 35mm</span>
+                    <span class="badge"><i data-lucide="square"></i> Medium Format</span>
+                    <span class="badge"><i data-lucide="zap"></i> Instant Film</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
