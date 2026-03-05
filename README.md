@@ -62,8 +62,8 @@ Built using the [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-ma
 | 50 | Interactive Cursor Design | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/50-interactive-cursor/) | 2026-03-03 |
 | 51 | Gradient Mesh / Aurora Evolved | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/51-gradient-mesh/) | 2026-03-03 |
 | 52 | Editorial Grid / Magazine | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/52-editorial-magazine/) | 2026-03-04 |
-| 53 | Chromatic Aberration / RGB Split | Coming soon | — |
-| 54 | Vintage Analog / Retro Film | Coming soon | — |
+| 53 | Chromatic Aberration / RGB Split | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/53-chromatic-aberration/) | 2026-03-04 |
+| 54 | Vintage Analog / Retro Film | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/54-vintage-analog/) | 2026-03-05 |
 
 ## About
 
