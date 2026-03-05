@@ -64,6 +64,19 @@ Built using the [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-ma
 | 52 | Editorial Grid / Magazine | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/52-editorial-magazine/) | 2026-03-04 |
 | 53 | Chromatic Aberration / RGB Split | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/53-chromatic-aberration/) | 2026-03-04 |
 | 54 | Vintage Analog / Retro Film | [Live Demo](https://yojahny55.github.io/duncan-ui-ux-demos/demos/54-vintage-analog/) | 2026-03-05 |
+| 55 | Data-Dense Dashboard | Coming soon | — |
+| 56 | Heat Map / Heatmap Style | Coming soon | — |
+| 57 | Executive Dashboard | Coming soon | — |
+| 58 | Real-Time Monitoring | Coming soon | — |
+| 59 | Drill-Down Analytics | Coming soon | — |
+| 60 | Comparative Analysis Dashboard | Coming soon | — |
+| 61 | Predictive Analytics | Coming soon | — |
+| 62 | User Behavior Analytics | Coming soon | — |
+| 63 | Financial Dashboard | Coming soon | — |
+| 64 | Sales Intelligence Dashboard | Coming soon | — |
+| 65 | Bento Grids (Apple/Linear) | Coming soon | — |
+| 66 | Voice-First Multimodal | Coming soon | — |
+| 67 | 3D Product Preview | Coming soon | — |
 
 ## About
 
