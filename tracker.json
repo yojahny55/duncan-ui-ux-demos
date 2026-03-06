@@ -1,5 +1,5 @@
 {
-  "nextIndex": 56,
+  "nextIndex": 57,
   "totalStyles": 68,
   "styles": [
     {
@@ -384,6 +384,13 @@
       "id": 55,
       "name": "Spatial UI (VisionOS) Extended",
       "slug": "55-spatial-visionos",
+      "status": "done",
+      "date": "2026-03-06"
+    },
+    {
+      "id": 56,
+      "name": "E-Ink / Paper",
+      "slug": "56-eink-paper",
       "status": "done",
       "date": "2026-03-06"
     }
