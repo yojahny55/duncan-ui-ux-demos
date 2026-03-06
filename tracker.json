@@ -1,6 +1,6 @@
 {
-  "nextIndex": 55,
-  "totalStyles": 54,
+  "nextIndex": 56,
+  "totalStyles": 68,
   "styles": [
     {
       "id": 1,
@@ -379,6 +379,13 @@
       "slug": "54-vintage-analog",
       "status": "done",
       "date": "2026-03-05"
+    },
+    {
+      "id": 55,
+      "name": "Spatial UI (VisionOS) Extended",
+      "slug": "55-spatial-visionos",
+      "status": "done",
+      "date": "2026-03-06"
     }
   ]
 }
