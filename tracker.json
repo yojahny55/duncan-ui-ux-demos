@@ -1,5 +1,5 @@
 {
-  "nextIndex": 57,
+  "nextIndex": 58,
   "totalStyles": 68,
   "styles": [
     {
@@ -393,6 +393,13 @@
       "slug": "56-eink-paper",
       "status": "done",
       "date": "2026-03-06"
+    },
+    {
+      "id": 57,
+      "name": "Gen Z Chaos / Maximalism",
+      "slug": "57-genz-chaos",
+      "status": "done",
+      "date": "2026-03-07"
     }
   ]
 }
