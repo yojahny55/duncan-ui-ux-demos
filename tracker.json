@@ -1,5 +1,5 @@
 {
-  "nextIndex": 58,
+  "nextIndex": 59,
   "totalStyles": 68,
   "styles": [
     {
@@ -398,6 +398,13 @@
       "id": 57,
       "name": "Gen Z Chaos / Maximalism",
       "slug": "57-genz-chaos",
+      "status": "done",
+      "date": "2026-03-07"
+    },
+    {
+      "id": 58,
+      "name": "Biomimetic / Organic 2.0",
+      "slug": "58-biomimetic-organic",
       "status": "done",
       "date": "2026-03-07"
     }

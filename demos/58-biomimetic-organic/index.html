@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomimetic / Organic 2.0 - UI/UX Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Organic Background Canvas -->
+    <canvas id="organicBg"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-cell"></div>
+                <span>BioFlow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Stories</a></li>
+                <li><a href="#contact">Connect</a></li>
+            </ul>
+            <button class="nav-cta breathing-btn">
+                <i data-lucide="sparkles"></i>
+                <span>Get Started</span>
+            </button>
+            <button class="mobile-menu" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-cells">
+            <div class="cell cell-1"></div>
+            <div class="cell cell-2"></div>
+            <div class="cell cell-3"></div>
+            <div class="cell cell-4"></div>
+            <div class="cell cell-5"></div>
+        </div>
+        <div class="hero-content">
+            <div class="bio-badge">
+                <div class="badge-pulse"></div>
+                <i data-lucide="dna"></i>
+                <span>Nature-Inspired Technology</span>
+            </div>
+            <h1 class="hero-title">
+                Design That <span class="gradient-text">Breathes</span> With Life
+            </h1>
+            <p class="hero-subtitle">
+                Experience interfaces inspired by nature's algorithms. Fluid, organic, 
+                and beautifully alive—technology that feels as natural as breathing.
+            </p>
+            <div class="hero-actions">
+                <button class="btn-primary breathing-btn">
+                    <i data-lucide="play-circle"></i>
+                    <span>Explore Now</span>
+                </button>
+                <button class="btn-secondary">
+                    <i data-lucide="leaf"></i>
+                    <span>Learn More</span>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-cell"></div>
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Organic Feel</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-cell"></div>
+                    <span class="stat-number">2M+</span>
+                    <span class="stat-label">Living Patterns</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-cell"></div>
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Possibilities</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="organism">
+                <div class="nucleus"></div>
+                <div class="membrane"></div>
+                <div class="organelle organelle-1"></div>
+                <div class="organelle organelle-2"></div>
+                <div class="organelle organelle-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="dna-helix">
+                        <div class="helix-strand strand-1"></div>
+                        <div class="helix-strand strand-2"></div>
+                        <div class="helix-rungs"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="section-badge">
+                        <i data-lucide="heart-pulse"></i>
+                        <span>About Us</span>
+                    </div>
+                    <h2>Born from Nature's <span class="gradient-text">Blueprint</span></h2>
+                    <p class="about-text">
+                        We study the elegant algorithms of nature—from cellular division to 
+                        neural networks, from coral growth to mycelium webs. Then we translate 
+                        these patterns into digital experiences that feel intuitively alive.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-cell">
+                            <div class="cell-icon breathing-icon">
+                                <i data-lucide="brain"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Neural Patterns</h4>
+                                <p>Interfaces that learn and adapt like living systems</p>
+                            </div>
+                        </div>
+                        <div class="feature-cell">
+                            <div class="cell-icon breathing-icon">
+                                <i data-lucide="waves"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Fluid Motion</h4>
+                                <p>Animations inspired by water and wind currents</p>
+                            </div>
+                        </div>
+                        <div class="feature-cell">
+                            <div class="cell-icon breathing-icon">
+                                <i data-lucide="flower-2"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Growth Systems</h4>
+                                <p>Generative designs that evolve over time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="shapes"></i>
+                    <span>Our Services</span>
+                </div>
+                <h2>Organic <span class="gradient-text">Solutions</span></h2>
+                <p>Technology that grows with your needs, adapts to change, and feels naturally intuitive</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card cellular-card">
+                    <div class="card-membrane"></div>
+                    <div class="card-nucleus">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3>Biomimetic Design</h3>
+                    <p>Interfaces inspired by cellular structures, coral formations, and natural growth patterns that feel alive.</p>
+                    <a href="#" class="card-link">
+                        <span>Discover</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card cellular-card">
+                    <div class="card-membrane"></div>
+                    <div class="card-nucleus">
+                        <i data-lucide="activity"></i>
+                    </div>
+                    <h3>Breathing Animations</h3>
+                    <p>Subtle, rhythmic motion that mimics natural breathing cycles, creating calm and engaging experiences.</p>
+                    <a href="#" class="card-link">
+                        <span>Discover</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card cellular-card">
+                    <div class="card-membrane"></div>
+                    <div class="card-nucleus">
+                        <i data-lucide="git-branch"></i>
+                    </div>
+                    <h3>Generative Systems</h3>
+                    <p>Algorithmic designs that grow, branch, and evolve—creating unique patterns for every user.</p>
+                    <a href="#" class="card-link">
+                        <span>Discover</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card cellular-card">
+                    <div class="card-membrane"></div>
+                    <div class="card-nucleus">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3>Bioluminescent UI</h3>
+                    <p>Glowing interfaces inspired by deep-sea creatures, with ethereal light effects and ambient energy.</p>
+                    <a href="#" class="card-link">
+                        <span>Discover</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card cellular-card">
+                    <div class="card-membrane"></div>
+                    <div class="card-nucleus">
+                        <i data-lucide="network"></i>
+                    </div>
+                    <h3>Mycelium Networks</h3>
+                    <p>Connected systems that communicate and share data like fungal networks beneath the forest floor.</p>
+                    <a href="#" class="card-link">
+                        <span>Discover</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card cellular-card">
+                    <div class="card-membrane"></div>
+                    <div class="card-nucleus">
+                        <i data-lucide="droplets"></i>
+                    </div>
+                    <h3>Fluid Interactions</h3>
+                    <p>Touch and gesture responses that flow like water, with physics-based movement and natural resistance.</p>
+                    <a href="#" class="card-link">
+                        <span>Discover</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="message-circle-heart"></i>
+                    <span>Stories</span>
+                </div>
+                <h2>Voices from Our <span class="gradient-text">Ecosystem</span></h2>
+                <p>Hear from those who've experienced the organic difference</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-cell">
+                    <div class="cell-membrane"></div>
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"The breathing animations create such a calming experience. Our users spend 40% more time engaged with the interface. It truly feels alive."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <div class="avatar-cell"></div>
+                                <span>EM</span>
+                            </div>
+                            <div class="author-info">
+                                <h4>Elena Martinez</h4>
+                                <span>Wellness App Founder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-cell">
+                    <div class="cell-membrane"></div>
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"The generative patterns make every session unique. Our biotech dashboard feels less like software and more like observing a living organism."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <div class="avatar-cell"></div>
+                                <span>DK</span>
+                            </div>
+                            <div class="author-info">
+                                <h4>Dr. James Kimura</h4>
+                                <span>Biotech Research Lead</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-cell">
+                    <div class="cell-membrane"></div>
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i data-lucide="quote"></i>
+                        </div>
+                        <p>"The fluid interactions are mesmerizing. Our meditation app retention increased by 65% after implementing the biomimetic design system."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <div class="avatar-cell"></div>
+                                <span>SA</span>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Anderson</h4>
+                                <span>Mindfulness Platform CEO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-badge">
+                        <i data-lucide="send"></i>
+                        <span>Connect</span>
+                    </div>
+                    <h2>Let's <span class="gradient-text">Grow</span> Together</h2>
+                    <p>Ready to bring organic life to your digital experience? Reach out and let's explore the possibilities.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon breathing-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Email</span>
+                                <a href="mailto:hello@bioflow.io">hello@bioflow.io</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon breathing-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Phone</span>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon breathing-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Location</span>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form organic-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <div class="input-cell">
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-cell">
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <div class="input-cell textarea-cell">
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your vision..." required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary breathing-btn">
+                            <i data-lucide="send"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-cell"></div>
+                        <span>BioFlow</span>
+                    </a>
+                    <p>Technology inspired by nature's infinite wisdom. Design that breathes, grows, and evolves.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-cell" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-cell" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-cell" aria-label="GitHub">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="#" class="social-cell" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Stories</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Design System</a></li>
+                        <li><a href="#">Patterns Library</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Licenses</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BioFlow. Designed with nature's algorithms.</p>
+                <div class="footer-cells">
+                    <div class="mini-cell"></div>
+                    <div class="mini-cell"></div>
+                    <div class="mini-cell"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
