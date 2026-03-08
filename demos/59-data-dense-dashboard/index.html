@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Dense Dashboard | BI Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Analytics Pro</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="trending-up"></i>
+                    <span>Performance</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="users"></i>
+                    <span>Customers</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="shopping-cart"></i>
+                    <span>Orders</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="package"></i>
+                    <span>Products</span>
+                </a>
+            </nav>
+            
+            <div class="filter-section">
+                <h4><i data-lucide="filter"></i> Filters</h4>
+                
+                <div class="filter-group">
+                    <label>Date Range</label>
+                    <select id="dateRange">
+                        <option value="7d">Last 7 Days</option>
+                        <option value="30d" selected>Last 30 Days</option>
+                        <option value="90d">Last 90 Days</option>
+                        <option value="1y">Last Year</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Region</label>
+                    <select id="region">
+                        <option value="all">All Regions</option>
+                        <option value="na">North America</option>
+                        <option value="eu">Europe</option>
+                        <option value="apac">Asia Pacific</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select id="category">
+                        <option value="all">All Categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="home">Home & Garden</option>
+                    </select>
+                </div>
+                
+                <button class="apply-filters">
+                    <i data-lucide="check"></i> Apply Filters
+                </button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>Business Intelligence Dashboard</h1>
+                    <span class="last-updated"><i data-lucide="clock"></i> Updated 2 min ago</span>
+                </div>
+                <div class="header-right">
+                    <button class="btn-icon" title="Refresh">
+                        <i data-lucide="refresh-cw"></i>
+                    </button>
+                    <button class="btn-icon" title="Export">
+                        <i data-lucide="download"></i>
+                    </button>
+                    <button class="btn-icon" title="Settings">
+                        <i data-lucide="settings"></i>
+                    </button>
+                </div>
+            </header>
+            
+            <!-- KPI Cards Row -->
+            <section class="kpi-row">
+                <div class="kpi-card">
+                    <div class="kpi-icon revenue">
+                        <i data-lucide="dollar-sign"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Total Revenue</span>
+                        <span class="kpi-value">$2,847,392</span>
+                        <span class="kpi-change positive">
+                            <i data-lucide="trending-up"></i> +12.5%
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-icon orders">
+                        <i data-lucide="shopping-bag"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Total Orders</span>
+                        <span class="kpi-value">18,429</span>
+                        <span class="kpi-change positive">
+                            <i data-lucide="trending-up"></i> +8.2%
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-icon customers">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Active Customers</span>
+                        <span class="kpi-value">12,847</span>
+                        <span class="kpi-change positive">
+                            <i data-lucide="trending-up"></i> +5.7%
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-icon aov">
+                        <i data-lucide="receipt"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Avg Order Value</span>
+                        <span class="kpi-value">$154.52</span>
+                        <span class="kpi-change negative">
+                            <i data-lucide="trending-down"></i> -2.3%
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-icon conversion">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Conversion Rate</span>
+                        <span class="kpi-value">3.42%</span>
+                        <span class="kpi-change positive">
+                            <i data-lucide="trending-up"></i> +0.8%
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-icon returns">
+                        <i data-lucide="rotate-ccw"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Return Rate</span>
+                        <span class="kpi-value">2.18%</span>
+                        <span class="kpi-change positive">
+                            <i data-lucide="trending-down"></i> -0.5%
+                        </span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Charts Grid -->
+            <section class="charts-grid">
+                <div class="chart-card wide">
+                    <div class="card-header">
+                        <h3><i data-lucide="line-chart"></i> Revenue Trend</h3>
+                        <div class="card-actions">
+                            <button class="btn-sm active">Daily</button>
+                            <button class="btn-sm">Weekly</button>
+                            <button class="btn-sm">Monthly</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3><i data-lucide="pie-chart"></i> Sales by Category</h3>
+                    </div>
+                    <div class="chart-container small">
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3><i data-lucide="bar-chart"></i> Top Regions</h3>
+                    </div>
+                    <div class="chart-container small">
+                        <canvas id="regionChart"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Data Tables -->
+            <section class="tables-grid">
+                <div class="table-card">
+                    <div class="card-header">
+                        <h3><i data-lucide="package"></i> Top Products</h3>
+                        <div class="table-search">
+                            <i data-lucide="search"></i>
+                            <input type="text" placeholder="Search products...">
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th class="sortable" data-sort="product">Product <i data-lucide="chevrons-up-down"></i></th>
+                                    <th class="sortable" data-sort="sku">SKU <i data-lucide="chevrons-up-down"></i></th>
+                                    <th class="sortable" data-sort="sales">Sales <i data-lucide="chevrons-up-down"></i></th>
+                                    <th class="sortable" data-sort="revenue">Revenue <i data-lucide="chevrons-up-down"></i></th>
+                                    <th class="sortable" data-sort="stock">Stock <i data-lucide="chevrons-up-down"></i></th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productsTableBody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <span class="showing">Showing 1-10 of 248 products</span>
+                        <div class="pagination">
+                            <button class="page-btn" disabled><i data-lucide="chevron-left"></i></button>
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <span>...</span>
+                            <button class="page-btn">25</button>
+                            <button class="page-btn"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-card compact">
+                    <div class="card-header">
+                        <h3><i data-lucide="activity"></i> Recent Activity</h3>
+                        <button class="btn-sm">View All</button>
+                    </div>
+                    <div class="activity-list" id="activityList">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Bottom Stats Row -->
+            <section class="stats-row">
+                <div class="stats-card">
+                    <div class="stats-header">
+                        <h4>Traffic Sources</h4>
+                    </div>
+                    <div class="stats-bars">
+                        <div class="stat-bar">
+                            <div class="bar-label">
+                                <span>Direct</span>
+                                <span>42%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 42%; background: #3B82F6;"></div>
+                            </div>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="bar-label">
+                                <span>Organic Search</span>
+                                <span>28%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 28%; background: #22C55E;"></div>
+                            </div>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="bar-label">
+                                <span>Social Media</span>
+                                <span>18%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 18%; background: #F59E0B;"></div>
+                            </div>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="bar-label">
+                                <span>Referral</span>
+                                <span>12%</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 12%; background: #8B5CF6;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats-card">
+                    <div class="stats-header">
+                        <h4>Device Breakdown</h4>
+                    </div>
+                    <div class="device-stats">
+                        <div class="device-item">
+                            <i data-lucide="monitor"></i>
+                            <div class="device-info">
+                                <span class="device-name">Desktop</span>
+                                <span class="device-value">54.2%</span>
+                            </div>
+                            <span class="device-change positive">+2.1%</span>
+                        </div>
+                        <div class="device-item">
+                            <i data-lucide="smartphone"></i>
+                            <div class="device-info">
+                                <span class="device-name">Mobile</span>
+                                <span class="device-value">38.7%</span>
+                            </div>
+                            <span class="device-change negative">-1.4%</span>
+                        </div>
+                        <div class="device-item">
+                            <i data-lucide="tablet"></i>
+                            <div class="device-info">
+                                <span class="device-name">Tablet</span>
+                                <span class="device-value">7.1%</span>
+                            </div>
+                            <span class="device-change negative">-0.7%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats-card">
+                    <div class="stats-header">
+                        <h4>Quick Actions</h4>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="action-btn">
+                            <i data-lucide="file-text"></i>
+                            <span>Generate Report</span>
+                        </button>
+                        <button class="action-btn">
+                            <i data-lucide="mail"></i>
+                            <span>Email Summary</span>
+                        </button>
+                        <button class="action-btn">
+                            <i data-lucide="calendar"></i>
+                            <span>Schedule Export</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
