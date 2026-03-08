@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Dashboard | Q4 2025 Overview</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <i data-lucide="layout-dashboard"></i>
+          <span>Executive View</span>
+        </div>
+        <div class="period-selector">
+          <button class="period-btn active">Q4 2025</button>
+          <button class="period-btn">Q3 2025</button>
+          <button class="period-btn">YTD</button>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="last-updated">
+          <i data-lucide="refresh-cw"></i>
+          <span>Updated 2 min ago</span>
+        </div>
+        <button class="action-btn">
+          <i data-lucide="download"></i>
+          Export PDF
+        </button>
+      </div>
+    </header>
+
+    <!-- Main KPI Grid -->
+    <main class="main-content">
+      <!-- Top Row: Primary KPIs -->
+      <section class="kpi-row primary-kpis">
+        <article class="kpi-card" data-status="positive">
+          <div class="kpi-header">
+            <span class="kpi-label">Total Revenue</span>
+            <div class="status-indicator positive">
+              <i data-lucide="trending-up"></i>
+            </div>
+          </div>
+          <div class="kpi-value">
+            <span class="currency">$</span>
+            <span class="number" data-target="24.8">0</span>
+            <span class="unit">M</span>
+          </div>
+          <div class="kpi-trend positive">
+            <i data-lucide="arrow-up"></i>
+            <span>+12.4%</span>
+            <span class="vs-period">vs Q3</span>
+          </div>
+          <div class="sparkline" id="sparkline-revenue"></div>
+        </article>
+
+        <article class="kpi-card" data-status="positive">
+          <div class="kpi-header">
+            <span class="kpi-label">Operating Profit</span>
+            <div class="status-indicator positive">
+              <i data-lucide="trending-up"></i>
+            </div>
+          </div>
+          <div class="kpi-value">
+            <span class="currency">$</span>
+            <span class="number" data-target="6.2">0</span>
+            <span class="unit">M</span>
+          </div>
+          <div class="kpi-trend positive">
+            <i data-lucide="arrow-up"></i>
+            <span>+8.7%</span>
+            <span class="vs-period">vs Q3</span>
+          </div>
+          <div class="sparkline" id="sparkline-profit"></div>
+        </article>
+
+        <article class="kpi-card" data-status="warning">
+          <div class="kpi-header">
+            <span class="kpi-label">Customer Count</span>
+            <div class="status-indicator warning">
+              <i data-lucide="minus"></i>
+            </div>
+          </div>
+          <div class="kpi-value">
+            <span class="number" data-target="12847">0</span>
+          </div>
+          <div class="kpi-trend neutral">
+            <i data-lucide="arrow-right"></i>
+            <span>+0.3%</span>
+            <span class="vs-period">vs Q3</span>
+          </div>
+          <div class="sparkline" id="sparkline-customers"></div>
+        </article>
+
+        <article class="kpi-card" data-status="positive">
+          <div class="kpi-header">
+            <span class="kpi-label">Net Promoter Score</span>
+            <div class="status-indicator positive">
+              <i data-lucide="trending-up"></i>
+            </div>
+          </div>
+          <div class="kpi-value">
+            <span class="number" data-target="72">0</span>
+          </div>
+          <div class="kpi-trend positive">
+            <i data-lucide="arrow-up"></i>
+            <span>+6 pts</span>
+            <span class="vs-period">vs Q3</span>
+          </div>
+          <div class="sparkline" id="sparkline-nps"></div>
+        </article>
+      </section>
+
+      <!-- Bottom Row: Secondary Metrics -->
+      <section class="kpi-row secondary-kpis">
+        <article class="kpi-card secondary" data-status="negative">
+          <div class="kpi-header">
+            <span class="kpi-label">Churn Rate</span>
+            <div class="status-indicator negative">
+              <i data-lucide="trending-down"></i>
+            </div>
+          </div>
+          <div class="kpi-value">
+            <span class="number" data-target="2.4">0</span>
+            <span class="unit">%</span>
+          </div>
+          <div class="kpi-trend negative">
+            <i data-lucide="arrow-up"></i>
+            <span>+0.3%</span>
+            <span class="vs-period">vs Q3</span>
+          </div>
+        </article>
+
+        <article class="kpi-card secondary" data-status="positive">
+          <div class="kpi-header">
+            <span class="kpi-label">ARR Growth</span>
+            <div class="status-indicator positive">
+              <i data-lucide="trending-up"></i>
+            </div>
+          </div>
+          <div class="kpi-value">
+            <span class="number" data-target="34">0</span>
+            <span class="unit">%</span>
+          </div>
+          <div class="kpi-trend positive">
+            <i data-lucide="arrow-up"></i>
+            <span>+5%</span>
+            <span class="vs-period">vs Q3</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- Insights Row -->
+      <section class="insights-row">
+        <div class="insight-card">
+          <div class="insight-icon positive">
+            <i data-lucide="check-circle-2"></i>
+          </div>
+          <div class="insight-content">
+            <h3>Revenue Target Exceeded</h3>
+            <p>Q4 revenue exceeded forecast by $1.2M (5.1%). Enterprise segment led growth at +18% YoY.</p>
+          </div>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-icon warning">
+            <i data-lucide="alert-triangle"></i>
+          </div>
+          <div class="insight-content">
+            <h3>Customer Acquisition Slowing</h3>
+            <p>New customer growth flat vs Q3. Marketing CAC increased 12%. Review acquisition strategy recommended.</p>
+          </div>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-icon info">
+            <i data-lucide="info"></i>
+          </div>
+          <div class="insight-content">
+            <h3>NPS Trending Positive</h3>
+            <p>NPS increased 6 points following support improvements. Customer satisfaction at 18-month high.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Traffic Light Summary -->
+      <section class="traffic-light-summary">
+        <h2 class="section-title">
+          <i data-lucide="target"></i>
+          Strategic Objectives Status
+        </h2>
+        <div class="objectives-grid">
+          <div class="objective-item">
+            <div class="traffic-light green"></div>
+            <div class="objective-details">
+              <span class="objective-name">Revenue Growth</span>
+              <span class="objective-status">On Track</span>
+            </div>
+          </div>
+          <div class="objective-item">
+            <div class="traffic-light green"></div>
+            <div class="objective-details">
+              <span class="objective-name">Profitability</span>
+              <span class="objective-status">On Track</span>
+            </div>
+          </div>
+          <div class="objective-item">
+            <div class="traffic-light yellow"></div>
+            <div class="objective-details">
+              <span class="objective-name">Market Expansion</span>
+              <span class="objective-status">At Risk</span>
+            </div>
+          </div>
+          <div class="objective-item">
+            <div class="traffic-light green"></div>
+            <div class="objective-details">
+              <span class="objective-name">Customer Satisfaction</span>
+              <span class="objective-status">On Track</span>
+            </div>
+          </div>
+          <div class="objective-item">
+            <div class="traffic-light red"></div>
+            <div class="objective-details">
+              <span class="objective-name">Talent Acquisition</span>
+              <span class="objective-status">Behind</span>
+            </div>
+          </div>
+          <div class="objective-item">
+            <div class="traffic-light green"></div>
+            <div class="objective-details">
+              <span class="objective-name">Product Roadmap</span>
+              <span class="objective-status">On Track</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>Executive Dashboard • Confidential</span>
+      <span>Generated: March 8, 2026</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
