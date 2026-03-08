@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatmap Visualization | BI Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="flame"></i>
+                    <span>HeatView</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <i data-lucide="grid-3x3"></i>
+                    <span>Correlation Matrix</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="map"></i>
+                    <span>Geographic Heat</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Time Activity</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="users"></i>
+                    <span>User Behavior</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="trending-up"></i>
+                    <span>Performance</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <i data-lucide="settings"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>Heatmap Visualization</h1>
+                    <p class="subtitle">Data intensity analysis and correlation mapping</p>
+                </div>
+                <div class="header-right">
+                    <div class="color-scheme-toggle">
+                        <button class="scheme-btn active" data-scheme="divergent">
+                            <i data-lucide="contrast"></i>
+                            Divergent
+                        </button>
+                        <button class="scheme-btn" data-scheme="sequential">
+                            <i data-lucide="palette"></i>
+                            Sequential
+                        </button>
+                        <button class="scheme-btn" data-scheme="accessible">
+                            <i data-lucide="eye"></i>
+                            Accessible
+                        </button>
+                    </div>
+                    <button class="btn-icon">
+                        <i data-lucide="download"></i>
+                    </button>
+                    <button class="btn-icon">
+                        <i data-lucide="maximize-2"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Correlation Matrix -->
+                <section class="card card-large">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <i data-lucide="grid-3x3"></i>
+                            <h2>Correlation Matrix</h2>
+                        </div>
+                        <div class="card-actions">
+                            <select class="select-metric" id="matrixDataset">
+                                <option value="financial">Financial Metrics</option>
+                                <option value="marketing">Marketing KPIs</option>
+                                <option value="operations">Operations Data</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="heatmap-container">
+                            <div class="heatmap-wrapper">
+                                <div class="y-axis-labels" id="yAxisLabels"></div>
+                                <div class="heatmap-grid" id="correlationMatrix"></div>
+                            </div>
+                            <div class="x-axis-labels" id="xAxisLabels"></div>
+                        </div>
+                        <div class="legend-container">
+                            <div class="legend-scale">
+                                <span class="legend-label">-1.0</span>
+                                <div class="legend-gradient" id="legendGradient"></div>
+                                <span class="legend-label">+1.0</span>
+                            </div>
+                            <div class="legend-description">
+                                <span><i data-lucide="circle" class="neg-indicator"></i> Negative Correlation</span>
+                                <span><i data-lucide="circle" class="neutral-indicator"></i> No Correlation</span>
+                                <span><i data-lucide="circle" class="pos-indicator"></i> Positive Correlation</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Time-based Activity Heatmap -->
+                <section class="card card-medium">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <i data-lucide="clock"></i>
+                            <h2>Weekly Activity Pattern</h2>
+                        </div>
+                        <div class="card-actions">
+                            <span class="badge">Live</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="activity-heatmap">
+                            <div class="time-labels">
+                                <span>12am</span>
+                                <span>6am</span>
+                                <span>12pm</span>
+                                <span>6pm</span>
+                                <span>11pm</span>
+                            </div>
+                            <div class="activity-grid" id="activityGrid">
+                                <!-- Generated by JS -->
+                            </div>
+                            <div class="day-labels">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+                        </div>
+                        <div class="mini-legend">
+                            <span>Low</span>
+                            <div class="mini-gradient"></div>
+                            <span>High</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Geographic Heatmap -->
+                <section class="card card-medium">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <i data-lucide="globe"></i>
+                            <h2>Regional Performance</h2>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-text">
+                                <i data-lucide="zoom-in"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="geo-heatmap" id="geoHeatmap">
+                            <div class="region" data-region="north" data-value="87">
+                                <span class="region-label">North</span>
+                                <span class="region-value">87%</span>
+                            </div>
+                            <div class="region" data-region="south" data-value="62">
+                                <span class="region-label">South</span>
+                                <span class="region-value">62%</span>
+                            </div>
+                            <div class="region" data-region="east" data-value="94">
+                                <span class="region-label">East</span>
+                                <span class="region-value">94%</span>
+                            </div>
+                            <div class="region" data-region="west" data-value="71">
+                                <span class="region-label">West</span>
+                                <span class="region-value">71%</span>
+                            </div>
+                            <div class="region" data-region="central" data-value="83">
+                                <span class="region-label">Central</span>
+                                <span class="region-value">83%</span>
+                            </div>
+                        </div>
+                        <div class="geo-stats">
+                            <div class="stat">
+                                <span class="stat-value positive">+12%</span>
+                                <span class="stat-label">vs Last Quarter</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">79.4%</span>
+                                <span class="stat-label">Avg Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Intensity Summary Cards -->
+                <section class="card card-small">
+                    <div class="intensity-card hot">
+                        <div class="intensity-icon">
+                            <i data-lucide="flame"></i>
+                        </div>
+                        <div class="intensity-info">
+                            <span class="intensity-value">847</span>
+                            <span class="intensity-label">Hotspots Detected</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card card-small">
+                    <div class="intensity-card cold">
+                        <div class="intensity-icon">
+                            <i data-lucide="snowflake"></i>
+                        </div>
+                        <div class="intensity-info">
+                            <span class="intensity-value">156</span>
+                            <span class="intensity-label">Cold Zones</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card card-small">
+                    <div class="intensity-card neutral">
+                        <div class="intensity-icon">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <div class="intensity-info">
+                            <span class="intensity-value">0.72</span>
+                            <span class="intensity-label">Avg Correlation</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- User Behavior Cohort Heatmap -->
+                <section class="card card-wide">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <i data-lucide="users"></i>
+                            <h2>User Retention Cohort</h2>
+                        </div>
+                        <div class="card-actions">
+                            <select class="select-metric" id="cohortPeriod">
+                                <option value="weekly">Weekly</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="cohort-table-wrapper">
+                            <table class="cohort-table" id="cohortTable">
+                                <thead>
+                                    <tr>
+                                        <th>Cohort</th>
+                                        <th>Users</th>
+                                        <th>Week 1</th>
+                                        <th>Week 2</th>
+                                        <th>Week 3</th>
+                                        <th>Week 4</th>
+                                        <th>Week 5</th>
+                                        <th>Week 6</th>
+                                        <th>Week 7</th>
+                                        <th>Week 8</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cohortBody">
+                                    <!-- Generated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip">
+        <div class="tooltip-header">
+            <span class="tooltip-title"></span>
+        </div>
+        <div class="tooltip-body">
+            <span class="tooltip-value"></span>
+            <span class="tooltip-description"></span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
