@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <i data-lucide="activity" class="logo-icon"></i>
+                    <span>SystemPulse</span>
+                </div>
+                <div class="connection-status" id="connectionStatus">
+                    <span class="status-dot live"></span>
+                    <span class="status-text">Connected</span>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="last-update">
+                    <i data-lucide="refresh-cw" class="refresh-icon spinning"></i>
+                    <span>Last update: <span id="lastUpdate">--:--:--</span></span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="alert-btn" id="alertToggle">
+                    <i data-lucide="bell"></i>
+                    <span class="alert-badge" id="alertBadge">3</span>
+                </button>
+                <div class="user-menu">
+                    <i data-lucide="user-circle"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Alert Notifications Panel -->
+        <div class="alerts-panel" id="alertsPanel">
+            <div class="alerts-header">
+                <h3><i data-lucide="alert-triangle"></i> Active Alerts</h3>
+                <button class="close-alerts" id="closeAlerts"><i data-lucide="x"></i></button>
+            </div>
+            <div class="alerts-list" id="alertsList">
+                <!-- Alerts populated by JS -->
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- System Status Overview -->
+            <section class="status-overview">
+                <div class="status-card critical" id="statusCritical">
+                    <div class="status-indicator">
+                        <span class="pulse-dot critical"></span>
+                    </div>
+                    <div class="status-info">
+                        <span class="status-count" id="criticalCount">2</span>
+                        <span class="status-label">Critical</span>
+                    </div>
+                    <i data-lucide="alert-octagon" class="status-icon"></i>
+                </div>
+                <div class="status-card warning" id="statusWarning">
+                    <div class="status-indicator">
+                        <span class="pulse-dot warning"></span>
+                    </div>
+                    <div class="status-info">
+                        <span class="status-count" id="warningCount">5</span>
+                        <span class="status-label">Warning</span>
+                    </div>
+                    <i data-lucide="alert-triangle" class="status-icon"></i>
+                </div>
+                <div class="status-card healthy" id="statusHealthy">
+                    <div class="status-indicator">
+                        <span class="pulse-dot healthy"></span>
+                    </div>
+                    <div class="status-info">
+                        <span class="status-count" id="healthyCount">42</span>
+                        <span class="status-label">Healthy</span>
+                    </div>
+                    <i data-lucide="check-circle" class="status-icon"></i>
+                </div>
+                <div class="status-card offline" id="statusOffline">
+                    <div class="status-indicator">
+                        <span class="pulse-dot offline"></span>
+                    </div>
+                    <div class="status-info">
+                        <span class="status-count" id="offlineCount">1</span>
+                        <span class="status-label">Offline</span>
+                    </div>
+                    <i data-lucide="wifi-off" class="status-icon"></i>
+                </div>
+            </section>
+
+            <!-- Charts Grid -->
+            <section class="charts-grid">
+                <!-- CPU Usage Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            <i data-lucide="cpu"></i>
+                            <span>CPU Usage</span>
+                        </div>
+                        <div class="chart-live">
+                            <span class="live-indicator"></span>
+                            <span>LIVE</span>
+                        </div>
+                    </div>
+                    <div class="chart-value">
+                        <span class="big-value" id="cpuValue">67</span>
+                        <span class="unit">%</span>
+                        <span class="trend up" id="cpuTrend">
+                            <i data-lucide="trending-up"></i> +3.2%
+                        </span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="cpuChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Memory Usage Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            <i data-lucide="hard-drive"></i>
+                            <span>Memory Usage</span>
+                        </div>
+                        <div class="chart-live">
+                            <span class="live-indicator"></span>
+                            <span>LIVE</span>
+                        </div>
+                    </div>
+                    <div class="chart-value">
+                        <span class="big-value" id="memValue">82</span>
+                        <span class="unit">%</span>
+                        <span class="trend warning" id="memTrend">
+                            <i data-lucide="trending-up"></i> +8.1%
+                        </span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="memChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Network Traffic Chart -->
+                <div class="chart-card wide">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            <i data-lucide="network"></i>
+                            <span>Network Traffic</span>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-item"><span class="legend-color inbound"></span> Inbound</span>
+                            <span class="legend-item"><span class="legend-color outbound"></span> Outbound</span>
+                        </div>
+                        <div class="chart-live">
+                            <span class="live-indicator"></span>
+                            <span>LIVE</span>
+                        </div>
+                    </div>
+                    <div class="network-stats">
+                        <div class="net-stat">
+                            <i data-lucide="arrow-down-circle" class="inbound-icon"></i>
+                            <span class="net-value" id="inboundValue">847</span>
+                            <span class="net-unit">Mbps</span>
+                        </div>
+                        <div class="net-stat">
+                            <i data-lucide="arrow-up-circle" class="outbound-icon"></i>
+                            <span class="net-value" id="outboundValue">324</span>
+                            <span class="net-unit">Mbps</span>
+                        </div>
+                    </div>
+                    <div class="chart-container wide">
+                        <canvas id="networkChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Response Time Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            <i data-lucide="timer"></i>
+                            <span>Response Time</span>
+                        </div>
+                        <div class="chart-live">
+                            <span class="live-indicator"></span>
+                            <span>LIVE</span>
+                        </div>
+                    </div>
+                    <div class="chart-value">
+                        <span class="big-value" id="latencyValue">48</span>
+                        <span class="unit">ms</span>
+                        <span class="trend down" id="latencyTrend">
+                            <i data-lucide="trending-down"></i> -12ms
+                        </span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="latencyChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Error Rate Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            <i data-lucide="bug"></i>
+                            <span>Error Rate</span>
+                        </div>
+                        <div class="chart-live">
+                            <span class="live-indicator"></span>
+                            <span>LIVE</span>
+                        </div>
+                    </div>
+                    <div class="chart-value">
+                        <span class="big-value" id="errorValue">0.12</span>
+                        <span class="unit">%</span>
+                        <span class="trend down" id="errorTrend">
+                            <i data-lucide="trending-down"></i> -0.03%
+                        </span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="errorChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Status -->
+            <section class="services-section">
+                <div class="section-header">
+                    <h2><i data-lucide="server"></i> Service Health</h2>
+                    <div class="auto-refresh">
+                        <i data-lucide="refresh-cw" class="spinning"></i>
+                        <span>Auto-refresh: 5s</span>
+                    </div>
+                </div>
+                <div class="services-grid" id="servicesGrid">
+                    <!-- Services populated by JS -->
+                </div>
+            </section>
+
+            <!-- Recent Events Log -->
+            <section class="events-section">
+                <div class="section-header">
+                    <h2><i data-lucide="scroll-text"></i> Live Event Stream</h2>
+                    <div class="stream-status">
+                        <span class="stream-dot"></span>
+                        <span>Streaming</span>
+                    </div>
+                </div>
+                <div class="events-log" id="eventsLog">
+                    <!-- Events populated by JS -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Toast Notifications Container -->
+        <div class="toast-container" id="toastContainer"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
