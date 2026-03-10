@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill-Down Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <i data-lucide="layers"></i>
+                    <span>DrillView Analytics</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="date-range">
+                    <i data-lucide="calendar"></i>
+                    <span>Q4 2025</span>
+                </div>
+                <button class="export-btn">
+                    <i data-lucide="download"></i>
+                    Export
+                </button>
+            </div>
+        </header>
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav" id="breadcrumb">
+            <button class="back-btn" id="backBtn" disabled>
+                <i data-lucide="arrow-left"></i>
+            </button>
+            <div class="breadcrumb-trail" id="breadcrumbTrail">
+                <span class="breadcrumb-item active" data-level="0">
+                    <i data-lucide="globe"></i>
+                    All Regions
+                </span>
+            </div>
+            <div class="level-indicator" id="levelIndicator">
+                <span class="level-dot active"></span>
+                <span class="level-dot"></span>
+                <span class="level-dot"></span>
+                <span class="level-dot"></span>
+            </div>
+        </nav>
+
+        <!-- Context Bar -->
+        <div class="context-bar" id="contextBar">
+            <div class="context-summary">
+                <div class="context-item">
+                    <span class="context-label">Current View</span>
+                    <span class="context-value" id="currentViewLabel">All Regions</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-label">Total Revenue</span>
+                    <span class="context-value" id="contextRevenue">$24.8M</span>
+                </div>
+                <div class="context-item">
+                    <span class="context-label">Items</span>
+                    <span class="context-value" id="contextItems">4 Regions</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Summary Cards -->
+            <div class="summary-cards" id="summaryCards">
+                <div class="summary-card">
+                    <div class="summary-icon revenue">
+                        <i data-lucide="dollar-sign"></i>
+                    </div>
+                    <div class="summary-info">
+                        <span class="summary-label">Total Revenue</span>
+                        <span class="summary-value" id="totalRevenue">$24.8M</span>
+                        <span class="summary-change positive">
+                            <i data-lucide="trending-up"></i>
+                            +12.4%
+                        </span>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon orders">
+                        <i data-lucide="shopping-cart"></i>
+                    </div>
+                    <div class="summary-info">
+                        <span class="summary-label">Total Orders</span>
+                        <span class="summary-value" id="totalOrders">48,392</span>
+                        <span class="summary-change positive">
+                            <i data-lucide="trending-up"></i>
+                            +8.2%
+                        </span>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon avg">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <div class="summary-info">
+                        <span class="summary-label">Avg Order Value</span>
+                        <span class="summary-value" id="avgOrder">$512</span>
+                        <span class="summary-change positive">
+                            <i data-lucide="trending-up"></i>
+                            +3.8%
+                        </span>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon customers">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div class="summary-info">
+                        <span class="summary-label">Active Customers</span>
+                        <span class="summary-value" id="totalCustomers">12,847</span>
+                        <span class="summary-change negative">
+                            <i data-lucide="trending-down"></i>
+                            -2.1%
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drill-Down Grid -->
+            <div class="drill-section">
+                <div class="section-header">
+                    <h2 id="sectionTitle">Regional Performance</h2>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">
+                            <i data-lucide="grid-3x3"></i>
+                        </button>
+                        <button class="view-btn" data-view="table">
+                            <i data-lucide="list"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Grid View -->
+                <div class="drill-grid" id="drillGrid">
+                    <!-- Items will be populated by JS -->
+                </div>
+
+                <!-- Table View (hidden by default) -->
+                <div class="drill-table-container hidden" id="drillTableContainer">
+                    <table class="drill-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Revenue</th>
+                                <th>Orders</th>
+                                <th>Growth</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="drillTableBody">
+                            <!-- Rows will be populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Detail Panel (expandable) -->
+            <div class="detail-panel" id="detailPanel">
+                <details class="expandable-section" id="trendSection">
+                    <summary class="section-summary">
+                        <i data-lucide="activity"></i>
+                        <span>Trend Analysis</span>
+                        <i data-lucide="chevron-down" class="chevron"></i>
+                    </summary>
+                    <div class="section-content">
+                        <div class="chart-container">
+                            <div class="mini-chart" id="trendChart">
+                                <div class="chart-bars">
+                                    <div class="chart-bar" style="height: 60%"><span>Jan</span></div>
+                                    <div class="chart-bar" style="height: 75%"><span>Feb</span></div>
+                                    <div class="chart-bar" style="height: 65%"><span>Mar</span></div>
+                                    <div class="chart-bar" style="height: 80%"><span>Apr</span></div>
+                                    <div class="chart-bar" style="height: 90%"><span>May</span></div>
+                                    <div class="chart-bar" style="height: 85%"><span>Jun</span></div>
+                                    <div class="chart-bar highlight" style="height: 95%"><span>Jul</span></div>
+                                    <div class="chart-bar" style="height: 88%"><span>Aug</span></div>
+                                    <div class="chart-bar" style="height: 92%"><span>Sep</span></div>
+                                    <div class="chart-bar" style="height: 100%"><span>Oct</span></div>
+                                    <div class="chart-bar" style="height: 97%"><span>Nov</span></div>
+                                    <div class="chart-bar active" style="height: 105%"><span>Dec</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="expandable-section" id="breakdownSection">
+                    <summary class="section-summary">
+                        <i data-lucide="pie-chart"></i>
+                        <span>Distribution Breakdown</span>
+                        <i data-lucide="chevron-down" class="chevron"></i>
+                    </summary>
+                    <div class="section-content">
+                        <div class="distribution-chart" id="distributionChart">
+                            <!-- Will be populated by JS -->
+                        </div>
+                    </div>
+                </details>
+
+                <details class="expandable-section" id="topItemsSection">
+                    <summary class="section-summary">
+                        <i data-lucide="award"></i>
+                        <span>Top Performers</span>
+                        <i data-lucide="chevron-down" class="chevron"></i>
+                    </summary>
+                    <div class="section-content">
+                        <div class="top-items-list" id="topItemsList">
+                            <!-- Will be populated by JS -->
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </main>
+
+        <!-- Drill Tooltip -->
+        <div class="drill-tooltip" id="drillTooltip">
+            <span class="tooltip-text">Click to drill down</span>
+            <i data-lucide="chevron-right"></i>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
