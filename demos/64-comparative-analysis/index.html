@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparative Analysis Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i data-lucide="git-compare"></i>
+                <span>CompareIQ</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="flask-conical"></i>
+                    <span>A/B Tests</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="globe"></i>
+                    <span>Regions</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="calendar-range"></i>
+                    <span>Period Analysis</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="target"></i>
+                    <span>Benchmarks</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="download"></i>
+                    <span>Export</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="avatar">YC</div>
+                    <div>
+                        <div class="user-name">Yojahny C.</div>
+                        <div class="user-role">Analyst</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Top Bar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <h1>Comparative Analysis</h1>
+                    <span class="subtitle">Performance Benchmarking & Period Comparison</span>
+                </div>
+                <div class="topbar-right">
+                    <div class="period-selector">
+                        <button class="period-btn" data-period="week">This Week</button>
+                        <button class="period-btn active" data-period="month">This Month</button>
+                        <button class="period-btn" data-period="quarter">This Quarter</button>
+                        <button class="period-btn" data-period="year">This Year</button>
+                    </div>
+                    <div class="vs-badge">
+                        <i data-lucide="arrow-left-right"></i>
+                        <span>vs Previous Period</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="content">
+                <!-- Delta KPI Row -->
+                <section class="kpi-row">
+                    <div class="kpi-card" data-trend="up">
+                        <div class="kpi-header">
+                            <span class="kpi-label">Revenue</span>
+                            <i data-lucide="dollar-sign"></i>
+                        </div>
+                        <div class="kpi-values">
+                            <div class="kpi-current">$2.84M</div>
+                            <div class="kpi-previous">$2.41M</div>
+                        </div>
+                        <div class="kpi-delta positive">
+                            <i data-lucide="trending-up"></i>
+                            <span>+17.8%</span>
+                            <span class="delta-abs">+$430K</span>
+                        </div>
+                        <div class="kpi-bar">
+                            <div class="bar-current" style="width: 85%"></div>
+                            <div class="bar-previous" style="width: 72%"></div>
+                        </div>
+                    </div>
+                    <div class="kpi-card" data-trend="up">
+                        <div class="kpi-header">
+                            <span class="kpi-label">Conversion Rate</span>
+                            <i data-lucide="percent"></i>
+                        </div>
+                        <div class="kpi-values">
+                            <div class="kpi-current">4.2%</div>
+                            <div class="kpi-previous">3.8%</div>
+                        </div>
+                        <div class="kpi-delta positive">
+                            <i data-lucide="trending-up"></i>
+                            <span>+10.5%</span>
+                            <span class="delta-abs">+0.4pp</span>
+                        </div>
+                        <div class="kpi-bar">
+                            <div class="bar-current" style="width: 84%"></div>
+                            <div class="bar-previous" style="width: 76%"></div>
+                        </div>
+                    </div>
+                    <div class="kpi-card" data-trend="down">
+                        <div class="kpi-header">
+                            <span class="kpi-label">Bounce Rate</span>
+                            <i data-lucide="log-out"></i>
+                        </div>
+                        <div class="kpi-values">
+                            <div class="kpi-current">32.1%</div>
+                            <div class="kpi-previous">28.7%</div>
+                        </div>
+                        <div class="kpi-delta negative">
+                            <i data-lucide="trending-down"></i>
+                            <span>+11.8%</span>
+                            <span class="delta-abs">+3.4pp</span>
+                        </div>
+                        <div class="kpi-bar">
+                            <div class="bar-current" style="width: 64%"></div>
+                            <div class="bar-previous" style="width: 57%"></div>
+                        </div>
+                    </div>
+                    <div class="kpi-card" data-trend="up">
+                        <div class="kpi-header">
+                            <span class="kpi-label">Active Users</span>
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div class="kpi-values">
+                            <div class="kpi-current">148.3K</div>
+                            <div class="kpi-previous">132.1K</div>
+                        </div>
+                        <div class="kpi-delta positive">
+                            <i data-lucide="trending-up"></i>
+                            <span>+12.3%</span>
+                            <span class="delta-abs">+16.2K</span>
+                        </div>
+                        <div class="kpi-bar">
+                            <div class="bar-current" style="width: 89%"></div>
+                            <div class="bar-previous" style="width: 79%"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Side-by-Side Charts -->
+                <section class="comparison-charts">
+                    <div class="chart-panel">
+                        <div class="panel-header">
+                            <h3>Revenue Trend — Side-by-Side</h3>
+                            <div class="legend">
+                                <span class="legend-item current"><span class="dot"></span> Current Period</span>
+                                <span class="legend-item previous"><span class="dot"></span> Previous Period</span>
+                            </div>
+                        </div>
+                        <div class="dual-chart">
+                            <canvas id="revenueChart" width="800" height="280"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- A/B Test Comparison -->
+                <section class="ab-test-section">
+                    <div class="panel-header">
+                        <h3>A/B Test Results</h3>
+                        <div class="test-status running">
+                            <i data-lucide="play-circle"></i>
+                            <span>2 Active Tests</span>
+                        </div>
+                    </div>
+                    <div class="ab-tests">
+                        <div class="ab-card">
+                            <div class="ab-header">
+                                <div class="ab-title">
+                                    <i data-lucide="flask-conical"></i>
+                                    <span>Checkout Flow Redesign</span>
+                                </div>
+                                <span class="ab-badge winner">Winner Found</span>
+                            </div>
+                            <div class="ab-variants">
+                                <div class="variant variant-a">
+                                    <div class="variant-label">
+                                        <span class="variant-tag">A</span>
+                                        <span>Control</span>
+                                    </div>
+                                    <div class="variant-metric">3.2%</div>
+                                    <div class="variant-bar-wrap">
+                                        <div class="variant-bar" style="width: 64%"></div>
+                                    </div>
+                                    <div class="variant-details">
+                                        <span>12,480 visitors</span>
+                                        <span>399 conversions</span>
+                                    </div>
+                                </div>
+                                <div class="variant variant-b winning">
+                                    <div class="variant-label">
+                                        <span class="variant-tag">B</span>
+                                        <span>New Flow</span>
+                                        <i data-lucide="trophy" class="winner-icon"></i>
+                                    </div>
+                                    <div class="variant-metric">4.7%</div>
+                                    <div class="variant-bar-wrap">
+                                        <div class="variant-bar" style="width: 94%"></div>
+                                    </div>
+                                    <div class="variant-details">
+                                        <span>12,340 visitors</span>
+                                        <span>580 conversions</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab-footer">
+                                <span class="confidence">Statistical Confidence: <strong>98.7%</strong></span>
+                                <span class="uplift positive">
+                                    <i data-lucide="arrow-up-right"></i>
+                                    +46.9% uplift
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ab-card">
+                            <div class="ab-header">
+                                <div class="ab-title">
+                                    <i data-lucide="flask-conical"></i>
+                                    <span>Pricing Page Layout</span>
+                                </div>
+                                <span class="ab-badge running">Running</span>
+                            </div>
+                            <div class="ab-variants">
+                                <div class="variant variant-a">
+                                    <div class="variant-label">
+                                        <span class="variant-tag">A</span>
+                                        <span>Horizontal Cards</span>
+                                    </div>
+                                    <div class="variant-metric">6.1%</div>
+                                    <div class="variant-bar-wrap">
+                                        <div class="variant-bar" style="width: 76%"></div>
+                                    </div>
+                                    <div class="variant-details">
+                                        <span>8,210 visitors</span>
+                                        <span>501 conversions</span>
+                                    </div>
+                                </div>
+                                <div class="variant variant-b">
+                                    <div class="variant-label">
+                                        <span class="variant-tag">B</span>
+                                        <span>Vertical Stacked</span>
+                                    </div>
+                                    <div class="variant-metric">5.8%</div>
+                                    <div class="variant-bar-wrap">
+                                        <div class="variant-bar" style="width: 72%"></div>
+                                    </div>
+                                    <div class="variant-details">
+                                        <span>8,190 visitors</span>
+                                        <span>475 conversions</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab-footer">
+                                <span class="confidence">Statistical Confidence: <strong>62.3%</strong></span>
+                                <span class="uplift neutral">
+                                    <i data-lucide="minus"></i>
+                                    Not significant yet
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Regional Comparison Table -->
+                <section class="region-section">
+                    <div class="panel-header">
+                        <h3>Regional Performance Comparison</h3>
+                        <div class="table-controls">
+                            <button class="sort-btn active" data-sort="revenue">
+                                <i data-lucide="arrow-up-down"></i> Revenue
+                            </button>
+                            <button class="sort-btn" data-sort="growth">
+                                <i data-lucide="arrow-up-down"></i> Growth
+                            </button>
+                            <button class="export-btn">
+                                <i data-lucide="download"></i> Export
+                            </button>
+                        </div>
+                    </div>
+                    <div class="comparison-table-wrap">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Region</th>
+                                    <th>Current Revenue</th>
+                                    <th>Previous Revenue</th>
+                                    <th>Delta</th>
+                                    <th>Conv. Rate (Curr)</th>
+                                    <th>Conv. Rate (Prev)</th>
+                                    <th>Delta</th>
+                                    <th>Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody id="regionTable">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Benchmark Comparison -->
+                <section class="benchmark-section">
+                    <div class="panel-header">
+                        <h3>Industry Benchmark Comparison</h3>
+                        <span class="benchmark-label">SaaS Industry Average</span>
+                    </div>
+                    <div class="benchmark-cards">
+                        <div class="bench-card">
+                            <div class="bench-metric">CAC</div>
+                            <div class="bench-values">
+                                <div class="bench-yours">
+                                    <span class="bench-tag">You</span>
+                                    <span class="bench-val">$142</span>
+                                </div>
+                                <div class="bench-industry">
+                                    <span class="bench-tag">Industry</span>
+                                    <span class="bench-val">$205</span>
+                                </div>
+                            </div>
+                            <div class="bench-bar-wrap">
+                                <div class="bench-bar yours" style="width: 69%"></div>
+                                <div class="bench-bar industry" style="width: 100%"></div>
+                            </div>
+                            <div class="bench-verdict positive">
+                                <i data-lucide="check-circle"></i>
+                                30.7% below industry avg
+                            </div>
+                        </div>
+                        <div class="bench-card">
+                            <div class="bench-metric">LTV</div>
+                            <div class="bench-values">
+                                <div class="bench-yours">
+                                    <span class="bench-tag">You</span>
+                                    <span class="bench-val">$4,280</span>
+                                </div>
+                                <div class="bench-industry">
+                                    <span class="bench-tag">Industry</span>
+                                    <span class="bench-val">$3,650</span>
+                                </div>
+                            </div>
+                            <div class="bench-bar-wrap">
+                                <div class="bench-bar yours" style="width: 100%"></div>
+                                <div class="bench-bar industry" style="width: 85%"></div>
+                            </div>
+                            <div class="bench-verdict positive">
+                                <i data-lucide="check-circle"></i>
+                                17.3% above industry avg
+                            </div>
+                        </div>
+                        <div class="bench-card">
+                            <div class="bench-metric">Churn Rate</div>
+                            <div class="bench-values">
+                                <div class="bench-yours">
+                                    <span class="bench-tag">You</span>
+                                    <span class="bench-val">5.2%</span>
+                                </div>
+                                <div class="bench-industry">
+                                    <span class="bench-tag">Industry</span>
+                                    <span class="bench-val">4.8%</span>
+                                </div>
+                            </div>
+                            <div class="bench-bar-wrap">
+                                <div class="bench-bar yours warning" style="width: 100%"></div>
+                                <div class="bench-bar industry" style="width: 92%"></div>
+                            </div>
+                            <div class="bench-verdict negative">
+                                <i data-lucide="alert-circle"></i>
+                                8.3% above industry avg
+                            </div>
+                        </div>
+                        <div class="bench-card">
+                            <div class="bench-metric">NPS Score</div>
+                            <div class="bench-values">
+                                <div class="bench-yours">
+                                    <span class="bench-tag">You</span>
+                                    <span class="bench-val">62</span>
+                                </div>
+                                <div class="bench-industry">
+                                    <span class="bench-tag">Industry</span>
+                                    <span class="bench-val">41</span>
+                                </div>
+                            </div>
+                            <div class="bench-bar-wrap">
+                                <div class="bench-bar yours" style="width: 100%"></div>
+                                <div class="bench-bar industry" style="width: 66%"></div>
+                            </div>
+                            <div class="bench-verdict positive">
+                                <i data-lucide="check-circle"></i>
+                                51.2% above industry avg
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
