@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predictive Analytics Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon"><i data-lucide="brain-circuit"></i></div>
+        <span class="brand-text">PredictIQ</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active"><i data-lucide="line-chart"></i><span>Forecasts</span></a>
+        <a href="#" class="nav-item"><i data-lucide="search"></i><span>Anomalies</span></a>
+        <a href="#" class="nav-item"><i data-lucide="layers"></i><span>Scenarios</span></a>
+        <a href="#" class="nav-item"><i data-lucide="target"></i><span>Accuracy</span></a>
+        <a href="#" class="nav-item"><i data-lucide="database"></i><span>Data Sources</span></a>
+        <a href="#" class="nav-item"><i data-lucide="settings"></i><span>Settings</span></a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="model-status">
+          <div class="status-dot pulse"></div>
+          <span>Model v3.2 Active</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Top Bar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1>Revenue Forecast</h1>
+          <span class="badge badge-ai"><i data-lucide="sparkles"></i> AI-Powered</span>
+        </div>
+        <div class="topbar-right">
+          <div class="date-range">
+            <button class="range-btn" data-range="3m">3M</button>
+            <button class="range-btn active" data-range="6m">6M</button>
+            <button class="range-btn" data-range="1y">1Y</button>
+            <button class="range-btn" data-range="2y">2Y</button>
+          </div>
+          <button class="btn-icon" id="refreshBtn"><i data-lucide="refresh-cw"></i></button>
+          <button class="btn-icon"><i data-lucide="download"></i></button>
+        </div>
+      </header>
+
+      <!-- KPI Row -->
+      <section class="kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Predicted Revenue (Q2)</span>
+            <div class="kpi-icon forecast"><i data-lucide="trending-up"></i></div>
+          </div>
+          <div class="kpi-value">$4.2M</div>
+          <div class="kpi-meta">
+            <span class="confidence high">94% confidence</span>
+            <span class="delta positive">+12.3% vs Q1</span>
+          </div>
+          <div class="confidence-bar"><div class="confidence-fill" style="width:94%"></div></div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Anomalies Detected</span>
+            <div class="kpi-icon anomaly"><i data-lucide="alert-triangle"></i></div>
+          </div>
+          <div class="kpi-value">3</div>
+          <div class="kpi-meta">
+            <span class="confidence medium">2 high severity</span>
+            <span class="delta negative">+1 this week</span>
+          </div>
+          <div class="severity-dots">
+            <span class="dot high"></span><span class="dot high"></span><span class="dot low"></span>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Model Accuracy (30d)</span>
+            <div class="kpi-icon accuracy"><i data-lucide="crosshair"></i></div>
+          </div>
+          <div class="kpi-value">96.7%</div>
+          <div class="kpi-meta">
+            <span class="confidence high">MAPE: 3.3%</span>
+            <span class="delta positive">+0.8% improvement</span>
+          </div>
+          <div class="confidence-bar"><div class="confidence-fill" style="width:96.7%"></div></div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Trend Direction</span>
+            <div class="kpi-icon trend"><i data-lucide="compass"></i></div>
+          </div>
+          <div class="kpi-value trend-up"><i data-lucide="arrow-up-right"></i> Bullish</div>
+          <div class="kpi-meta">
+            <span class="confidence high">Strong signal</span>
+            <span class="delta neutral">Since Feb 2026</span>
+          </div>
+          <div class="trend-indicator"><div class="trend-arrow up"></div></div>
+        </div>
+      </section>
+
+      <!-- Scenario Toggles -->
+      <section class="scenario-controls">
+        <h3><i data-lucide="git-branch"></i> Scenario Modeling</h3>
+        <div class="toggle-group">
+          <label class="toggle-label">
+            <input type="checkbox" class="scenario-toggle" data-scenario="optimistic" checked>
+            <span class="toggle-switch"></span>
+            <span class="toggle-text optimistic-text">Optimistic (+15%)</span>
+          </label>
+          <label class="toggle-label">
+            <input type="checkbox" class="scenario-toggle" data-scenario="baseline" checked>
+            <span class="toggle-switch"></span>
+            <span class="toggle-text baseline-text">Baseline</span>
+          </label>
+          <label class="toggle-label">
+            <input type="checkbox" class="scenario-toggle" data-scenario="pessimistic" checked>
+            <span class="toggle-switch"></span>
+            <span class="toggle-text pessimistic-text">Pessimistic (-10%)</span>
+          </label>
+          <label class="toggle-label">
+            <input type="checkbox" class="scenario-toggle" data-scenario="confidence">
+            <span class="toggle-switch"></span>
+            <span class="toggle-text">Confidence Bands</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Main Chart -->
+      <section class="chart-section">
+        <div class="chart-header">
+          <h2>Revenue Forecast with Confidence Intervals</h2>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-line actual"></span> Actual</span>
+            <span class="legend-item"><span class="legend-line forecast"></span> Forecast</span>
+            <span class="legend-item"><span class="legend-line optimistic"></span> Optimistic</span>
+            <span class="legend-item"><span class="legend-line pessimistic"></span> Pessimistic</span>
+            <span class="legend-item"><span class="legend-band"></span> Confidence Band</span>
+            <span class="legend-item"><span class="legend-dot anomaly-dot"></span> Anomaly</span>
+          </div>
+        </div>
+        <div class="chart-container">
+          <canvas id="forecastChart"></canvas>
+          <div class="chart-tooltip" id="chartTooltip"></div>
+        </div>
+      </section>
+
+      <!-- Bottom Grid -->
+      <section class="bottom-grid">
+        <!-- AI Insights -->
+        <div class="panel insights-panel">
+          <div class="panel-header">
+            <h3><i data-lucide="lightbulb"></i> AI Insights</h3>
+            <span class="badge badge-new">3 New</span>
+          </div>
+          <div class="insights-list">
+            <div class="insight-card high-priority">
+              <div class="insight-icon"><i data-lucide="zap"></i></div>
+              <div class="insight-content">
+                <div class="insight-title">Revenue spike predicted for March 18-22</div>
+                <div class="insight-detail">Based on seasonal patterns and current pipeline velocity, expect a 23% increase in daily revenue during this period.</div>
+                <div class="insight-meta">
+                  <span class="probability">87% probability</span>
+                  <span class="insight-time">2h ago</span>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card medium-priority">
+              <div class="insight-icon"><i data-lucide="alert-circle"></i></div>
+              <div class="insight-content">
+                <div class="insight-title">Anomaly: Unusual drop in Enterprise segment</div>
+                <div class="insight-detail">Enterprise revenue deviated -8.4% from predicted values on Mar 8. Investigating correlation with competitor launch.</div>
+                <div class="insight-meta">
+                  <span class="probability">92% confidence</span>
+                  <span class="insight-time">5h ago</span>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card low-priority">
+              <div class="insight-icon"><i data-lucide="trending-up"></i></div>
+              <div class="insight-content">
+                <div class="insight-title">SMB segment outperforming forecast by 6%</div>
+                <div class="insight-detail">Small business segment showing stronger-than-expected growth. Consider adjusting Q3 targets upward.</div>
+                <div class="insight-meta">
+                  <span class="probability">78% probability</span>
+                  <span class="insight-time">1d ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anomaly Detection -->
+        <div class="panel anomaly-panel">
+          <div class="panel-header">
+            <h3><i data-lucide="scan"></i> Anomaly Detection</h3>
+            <button class="btn-text">View All</button>
+          </div>
+          <div class="anomaly-list">
+            <div class="anomaly-item critical">
+              <div class="anomaly-severity"><span class="severity-badge critical">CRITICAL</span></div>
+              <div class="anomaly-info">
+                <div class="anomaly-title">Revenue drop — Enterprise</div>
+                <div class="anomaly-date">Mar 8, 2026</div>
+              </div>
+              <div class="anomaly-deviation">-8.4%</div>
+            </div>
+            <div class="anomaly-item warning">
+              <div class="anomaly-severity"><span class="severity-badge warning">WARNING</span></div>
+              <div class="anomaly-info">
+                <div class="anomaly-title">Unusual churn spike</div>
+                <div class="anomaly-date">Mar 5, 2026</div>
+              </div>
+              <div class="anomaly-deviation">+34%</div>
+            </div>
+            <div class="anomaly-item info">
+              <div class="anomaly-severity"><span class="severity-badge info">INFO</span></div>
+              <div class="anomaly-info">
+                <div class="anomaly-title">Traffic pattern shift</div>
+                <div class="anomaly-date">Mar 2, 2026</div>
+              </div>
+              <div class="anomaly-deviation">+12%</div>
+            </div>
+          </div>
+
+          <!-- Probability Indicators -->
+          <div class="probability-section">
+            <h4>Scenario Probabilities</h4>
+            <div class="prob-item">
+              <span class="prob-label">Growth &gt; 15%</span>
+              <div class="prob-bar"><div class="prob-fill optimistic" style="width:35%"></div></div>
+              <span class="prob-value">35%</span>
+            </div>
+            <div class="prob-item">
+              <span class="prob-label">Growth 5-15%</span>
+              <div class="prob-bar"><div class="prob-fill baseline" style="width:48%"></div></div>
+              <span class="prob-value">48%</span>
+            </div>
+            <div class="prob-item">
+              <span class="prob-label">Growth &lt; 5%</span>
+              <div class="prob-bar"><div class="prob-fill pessimistic" style="width:17%"></div></div>
+              <span class="prob-value">17%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
