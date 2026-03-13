@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Behavior Analytics — Duncan UI/UX Demo #66</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i data-lucide="activity" class="brand-icon"></i>
+                <span>BehaviorIQ</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active"><i data-lucide="funnel"></i> Funnels</a>
+                <a href="#" class="nav-item"><i data-lucide="git-branch"></i> User Flows</a>
+                <a href="#" class="nav-item"><i data-lucide="users"></i> Cohorts</a>
+                <a href="#" class="nav-item"><i data-lucide="trending-up"></i> Retention</a>
+                <a href="#" class="nav-item"><i data-lucide="mouse-pointer-click"></i> Heatmaps</a>
+                <a href="#" class="nav-item"><i data-lucide="play-circle"></i> Sessions</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="avatar">YC</div>
+                    <div class="user-meta">
+                        <span class="user-name">Yojahny C.</span>
+                        <span class="user-role">Admin</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>User Behavior Analytics</h1>
+                    <span class="header-subtitle">Last 30 days · 142,387 users tracked</span>
+                </div>
+                <div class="header-right">
+                    <div class="date-picker">
+                        <i data-lucide="calendar"></i>
+                        <span>Feb 11 – Mar 13, 2026</span>
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                    <button class="btn-secondary"><i data-lucide="download"></i> Export</button>
+                    <button class="btn-primary"><i data-lucide="share-2"></i> Share</button>
+                </div>
+            </header>
+
+            <!-- KPI Strip -->
+            <section class="kpi-strip">
+                <div class="kpi-card">
+                    <div class="kpi-icon blue"><i data-lucide="users"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Total Users</span>
+                        <span class="kpi-value">142,387</span>
+                        <span class="kpi-delta positive"><i data-lucide="trending-up"></i> +12.4%</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon green"><i data-lucide="target"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Conversion Rate</span>
+                        <span class="kpi-value">4.82%</span>
+                        <span class="kpi-delta positive"><i data-lucide="trending-up"></i> +0.34%</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon purple"><i data-lucide="clock"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Avg. Session</span>
+                        <span class="kpi-value">6m 42s</span>
+                        <span class="kpi-delta negative"><i data-lucide="trending-down"></i> -8.1%</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon orange"><i data-lucide="repeat"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Retention (D7)</span>
+                        <span class="kpi-value">38.2%</span>
+                        <span class="kpi-delta positive"><i data-lucide="trending-up"></i> +2.1%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Grid -->
+            <div class="dashboard-grid">
+                <!-- Conversion Funnel -->
+                <section class="card funnel-card">
+                    <div class="card-header">
+                        <h2><i data-lucide="funnel"></i> Conversion Funnel</h2>
+                        <div class="card-actions">
+                            <select class="select-sm">
+                                <option>Signup Flow</option>
+                                <option>Purchase Flow</option>
+                                <option>Onboarding</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="funnel-container" id="funnel"></div>
+                </section>
+
+                <!-- Retention Curve -->
+                <section class="card retention-card">
+                    <div class="card-header">
+                        <h2><i data-lucide="trending-up"></i> Retention Curve</h2>
+                        <div class="card-actions">
+                            <button class="tab-btn active">Weekly</button>
+                            <button class="tab-btn">Monthly</button>
+                        </div>
+                    </div>
+                    <canvas id="retentionChart" height="260"></canvas>
+                </section>
+
+                <!-- Sankey / User Flow -->
+                <section class="card flow-card">
+                    <div class="card-header">
+                        <h2><i data-lucide="git-branch"></i> User Flow (Sankey)</h2>
+                        <div class="card-actions">
+                            <select class="select-sm">
+                                <option>All Users</option>
+                                <option>New Users</option>
+                                <option>Returning</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="sankey-container" id="sankey"></div>
+                </section>
+
+                <!-- Cohort Table -->
+                <section class="card cohort-card">
+                    <div class="card-header">
+                        <h2><i data-lucide="grid-3x3"></i> Cohort Analysis</h2>
+                        <div class="card-actions">
+                            <button class="tab-btn active">Retention</button>
+                            <button class="tab-btn">Revenue</button>
+                        </div>
+                    </div>
+                    <div class="cohort-table-wrapper">
+                        <table class="cohort-table" id="cohortTable"></table>
+                    </div>
+                </section>
+
+                <!-- Engagement Breakdown -->
+                <section class="card engagement-card">
+                    <div class="card-header">
+                        <h2><i data-lucide="bar-chart-3"></i> Engagement Levels</h2>
+                    </div>
+                    <div class="engagement-bars" id="engagementBars"></div>
+                </section>
+
+                <!-- Session Timeline -->
+                <section class="card sessions-card">
+                    <div class="card-header">
+                        <h2><i data-lucide="play-circle"></i> Recent Sessions</h2>
+                        <a href="#" class="card-link">View all <i data-lucide="arrow-right"></i></a>
+                    </div>
+                    <div class="sessions-list" id="sessionsList"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
