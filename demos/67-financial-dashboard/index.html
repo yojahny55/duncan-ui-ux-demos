@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard — Acme Corp FY2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon"><i data-lucide="landmark"></i></div>
+            <span class="logo-text">Acme Finance</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <i data-lucide="layout-dashboard"></i><span>Overview</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="trending-up"></i><span>Revenue</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="receipt"></i><span>Expenses</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="wallet"></i><span>Cash Flow</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="file-text"></i><span>P&L Statement</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="pie-chart"></i><span>Budget</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="scroll-text"></i><span>Audit Trail</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar"><i data-lucide="user"></i></div>
+                <div class="user-details">
+                    <span class="user-name">Sarah Chen</span>
+                    <span class="user-role">CFO</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1>Financial Overview</h1>
+                <span class="header-period">FY2026 — Q1 (Jan–Mar)</span>
+            </div>
+            <div class="header-right">
+                <div class="period-selector">
+                    <button class="period-btn">Monthly</button>
+                    <button class="period-btn active">Quarterly</button>
+                    <button class="period-btn">YTD</button>
+                </div>
+                <button class="btn-export"><i data-lucide="download"></i> Export</button>
+                <button class="btn-icon"><i data-lucide="bell"></i><span class="badge">3</span></button>
+            </div>
+        </header>
+
+        <!-- KPI Row -->
+        <section class="kpi-row">
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-label">Total Revenue</span>
+                    <div class="kpi-icon revenue"><i data-lucide="dollar-sign"></i></div>
+                </div>
+                <div class="kpi-value" data-target="4285000" data-prefix="$">$0</div>
+                <div class="kpi-trend up">
+                    <i data-lucide="trending-up"></i>
+                    <span>+12.4% vs Q4 2025</span>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-label">Net Profit</span>
+                    <div class="kpi-icon profit"><i data-lucide="badge-dollar-sign"></i></div>
+                </div>
+                <div class="kpi-value" data-target="892000" data-prefix="$">$0</div>
+                <div class="kpi-trend up">
+                    <i data-lucide="trending-up"></i>
+                    <span>+8.7% vs Q4 2025</span>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-label">Operating Expenses</span>
+                    <div class="kpi-icon expense"><i data-lucide="credit-card"></i></div>
+                </div>
+                <div class="kpi-value" data-target="3393000" data-prefix="$">$0</div>
+                <div class="kpi-trend down">
+                    <i data-lucide="trending-down"></i>
+                    <span>-3.2% vs Q4 2025</span>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-label">Profit Margin</span>
+                    <div class="kpi-icon margin"><i data-lucide="percent"></i></div>
+                </div>
+                <div class="kpi-value" data-target="20.8" data-suffix="%">0%</div>
+                <div class="kpi-trend up">
+                    <i data-lucide="trending-up"></i>
+                    <span>+2.1pp vs Q4 2025</span>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-label">Cash Position</span>
+                    <div class="kpi-icon cash"><i data-lucide="banknote"></i></div>
+                </div>
+                <div class="kpi-value" data-target="7140000" data-prefix="$">$0</div>
+                <div class="kpi-trend up">
+                    <i data-lucide="trending-up"></i>
+                    <span>+$420K net inflow</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Row 1 -->
+        <section class="charts-row">
+            <div class="chart-card wide">
+                <div class="chart-header">
+                    <h3>Revenue vs Expenses</h3>
+                    <div class="chart-legend">
+                        <span class="legend-item"><span class="dot revenue"></span>Revenue</span>
+                        <span class="legend-item"><span class="dot expense"></span>Expenses</span>
+                        <span class="legend-item"><span class="dot profit"></span>Net Profit</span>
+                    </div>
+                </div>
+                <canvas id="revenueExpenseChart"></canvas>
+            </div>
+            <div class="chart-card narrow">
+                <div class="chart-header">
+                    <h3>Expense Breakdown</h3>
+                </div>
+                <canvas id="expenseBreakdownChart"></canvas>
+                <div class="expense-list" id="expenseList"></div>
+            </div>
+        </section>
+
+        <!-- Charts Row 2 -->
+        <section class="charts-row">
+            <div class="chart-card narrow">
+                <div class="chart-header">
+                    <h3>Cash Flow Waterfall</h3>
+                    <span class="chart-subtitle">Q1 2026</span>
+                </div>
+                <canvas id="waterfallChart"></canvas>
+            </div>
+            <div class="chart-card wide">
+                <div class="chart-header">
+                    <h3>Budget vs Actual</h3>
+                    <div class="chart-legend">
+                        <span class="legend-item"><span class="dot budget"></span>Budget</span>
+                        <span class="legend-item"><span class="dot actual"></span>Actual</span>
+                    </div>
+                </div>
+                <canvas id="budgetActualChart"></canvas>
+            </div>
+        </section>
+
+        <!-- P&L Table -->
+        <section class="table-section">
+            <div class="table-header">
+                <h3>Profit & Loss Statement</h3>
+                <div class="table-actions">
+                    <button class="btn-sm"><i data-lucide="filter"></i> Filter</button>
+                    <button class="btn-sm"><i data-lucide="download"></i> CSV</button>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table class="financial-table" id="plTable">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th class="num">Jan 2026</th>
+                            <th class="num">Feb 2026</th>
+                            <th class="num">Mar 2026</th>
+                            <th class="num">Q1 Total</th>
+                            <th class="num">Budget</th>
+                            <th class="num">Variance</th>
+                            <th class="num">Var %</th>
+                        </tr>
+                    </thead>
+                    <tbody id="plBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Audit Trail -->
+        <section class="table-section">
+            <div class="table-header">
+                <h3>Recent Audit Trail</h3>
+                <button class="btn-sm"><i data-lucide="external-link"></i> View All</button>
+            </div>
+            <div class="table-wrapper">
+                <table class="audit-table">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>User</th>
+                            <th>Action</th>
+                            <th>Category</th>
+                            <th class="num">Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="auditBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Financial Ratios -->
+        <section class="ratios-section">
+            <h3>Key Financial Ratios</h3>
+            <div class="ratios-grid" id="ratiosGrid"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
